@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WDG Proposals &mdash; Internal Tracker</title>
+<style>
+:root {
+  color-scheme: light;
+  --surface-0: #fcfcfb; --surface-1: #f3f2ef; --surface-2: #e8e7e2;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #7a7974;
+  --border: #e0ded8;
+  --navy: #1F3864; --navy-ink: #ffffff;
+  --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --info: #2a78d6; --muted-badge: #8a8980;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface-0: #15150f; --surface-1: #1c1c17; --surface-2: #26261f;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #96958a;
+    --border: #35342c;
+    --navy: #2a4a84; --navy-ink: #ffffff;
+    --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+    --info: #5c9ae8; --muted-badge: #9a998e;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-0: #15150f; --surface-1: #1c1c17; --surface-2: #26261f;
+  --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #96958a;
+  --border: #35342c;
+  --navy: #2a4a84; --navy-ink: #ffffff;
+  --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+  --info: #5c9ae8; --muted-badge: #9a998e;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--surface-0); color: var(--text-primary); line-height: 1.5;
+}
+.topbar {
+  background: var(--navy); color: var(--navy-ink); padding: 18px 24px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+}
+.topbar h1 { font-size: 18px; margin: 0; font-weight: 700; }
+.topbar .asof { font-size: 13px; opacity: 0.85; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+.note {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin-bottom: 20px; font-size: 14px; color: var(--text-secondary);
+  white-space: pre-line;
+}
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+.card {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; display: flex; flex-direction: column; gap: 8px;
+}
+.card h3 { margin: 0; font-size: 15px; font-weight: 700; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; padding: 3px 9px; border-radius: 999px;
+  width: fit-content;
+}
+.badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.badge.good { color: var(--good); background: color-mix(in srgb, var(--good) 15%, transparent); }
+.badge.warning { color: var(--warning); background: color-mix(in srgb, var(--warning) 18%, transparent); }
+.badge.serious { color: var(--serious); background: color-mix(in srgb, var(--serious) 18%, transparent); }
+.badge.critical { color: var(--critical); background: color-mix(in srgb, var(--critical) 15%, transparent); }
+.badge.info { color: var(--info); background: color-mix(in srgb, var(--info) 15%, transparent); }
+.badge.muted { color: var(--muted-badge); background: color-mix(in srgb, var(--muted-badge) 15%, transparent); }
+.card p { margin: 0; font-size: 13.5px; color: var(--text-secondary); }
+.card .meta { font-size: 12.5px; color: var(--text-muted); }
+.card .date { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+section { margin-bottom: 30px; }
+section > h2 {
+  font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);
+  border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 14px;
+}
+.footer { text-align: center; font-size: 12px; color: var(--text-muted); padding: 30px 0 10px; }
+.footer a { color: var(--text-muted); }
+.list-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+.list-row:last-child { border-bottom: none; }
+.list-row .who { color: var(--text-muted); font-size: 12.5px; white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <h1>WDG &middot; Proposal Tracker (Internal)</h1>
+  <div class="asof">As of Monday, October 26, 2026</div>
+</div>
+<div class="wrap">
+  <div class="note">- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab&#x27;s go/no-go.
+- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect&#x27;s next steps.
+- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC&#x27;s Q&amp;A. Ab confirming attendees.
+- Tinuiti&#x27;s case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).
+- Heritage sent a list of follow-up questions after last week&#x27;s in-person meeting; Ab is drafting responses.
+- Columbia Association remains in contracting.
+- Community of Christ and NLC: no new update this week, both still reviewing internally.</div>
+  <section><h2>Waiting on a Decision</h2><div class="list-row"><span><strong>UAE Embassy</strong> &mdash; Back under consideration as of Oct 26 after being marked withdrawn Oct 19. Due Nov 5. Still pending Agital legal follow-up and Ab&#x27;s go/no-go call.</span><span class="who">Ab, Agital</span></div></section>
+  <section><h2>This Week, Day by Day</h2><div class="list-row"><span><strong>Heritage</strong> &mdash; Draft responses to Heritage&#x27;s follow-up questions</span><span class="who">Ab</span></div><div class="list-row"><span><strong>ARC</strong> &mdash; Presentation meeting with ARC: 10-min overview, rest is Q&amp;A</span><span class="who">Ab to confirm participants</span></div><div class="list-row"><span><strong>Tinuiti</strong> &mdash; Walk-through presentation, 2-4pm Central. Doug OOO; Vajaah/Dario assumed, Ab to confirm.</span><span class="who">Vajaah, Dario (assumed; Ab to confirm)</span></div></section>
+  <section>
+    <h2>All Pursuits</h2>
+    <div class="grid">
+      <div class="card">
+  <span class="badge muted">WAITING</span>
+  <h3>AGA</h3>
+  <p>Lost Oct 19 — AGA selected another vendor</p>
+  <div class="meta">Owner: Ab, Homiera (spec work: Dario, Vajaah; Vajaah owns opportunities and insights)</div>
+</div><div class="card">
+  <span class="badge warning">COMING UP</span>
+  <h3>UAE Embassy</h3>
+  <p>Active again as of Oct 26 (was withdrawn Oct 19). Due Nov 5, pending legal and Ab&#x27;s decision</p>
+  <div class="date">Thu, Nov 5 &mdash; New proposal due date, if WDG proceeds; go/no-go not yet made</div><div class="meta">Owner: TBD</div>
+</div><div class="card">
+  <span class="badge critical">CONFIRM</span>
+  <h3>AKF</h3>
+  <p>Submitted Oct 23 (Fri night); pending AKF&#x27;s next steps</p>
+  <div class="date">Fri, Oct 23 &mdash; Proposal due; no time or time zone stated</div><div class="meta">Owner: Vajaah, Dario (proposal); Homiera, Ab (pricing)</div>
+</div><div class="card">
+  <span class="badge critical">CONFIRM</span>
+  <h3>Open Technology Fund</h3>
+  <p>Submitted Oct 22 (Thu); pending OTF&#x27;s next steps</p>
+  <div class="date">Fri, Oct 23 &mdash; Proposal due 5:00 PM ET</div><div class="meta">Owner: Homiera (drafting, pricing)</div>
+</div><div class="card">
+  <span class="badge critical">CONFIRM</span>
+  <h3>Community of Christ</h3>
+  <p>Awaiting decision after Oct 14 meeting; possibly this week or next</p>
+  <div class="date">Wed, Sep 30 &mdash; Proposals due; no time stated</div><div class="meta">Owner: Ab (submitted questions); Doug, Homiera (consolidated); Jake Reid (discovery)</div>
+</div><div class="card">
+  <span class="badge muted">WAITING</span>
+  <h3>PHI</h3>
+  <p>Declined — PHI selected another vendor (Oct 13)</p>
+  <div class="meta">Owner: Ab (owner; drafting lead TBD)</div>
+</div><div class="card">
+  <span class="badge serious">NEXT 7 DAYS</span>
+  <h3>ARC</h3>
+  <p>Presentation meeting Thu Oct 29 (overview and Q&amp;A)</p>
+  <div class="date">Thu, Oct 29 &mdash; Presentation meeting with ARC: 10-minute overview, rest of the hour is ARC&#x27;s Q&amp;A</div><div class="meta">Owner: Ab (owner; drafting lead TBD)</div>
+</div><div class="card">
+  <span class="badge muted">WAITING</span>
+  <h3>Columbia Association</h3>
+  <p>Awarded; in contracting</p>
+  <div class="meta">Owner: Ab (to confirm)</div>
+</div><div class="card">
+  <span class="badge critical">CONFIRM</span>
+  <h3>Tinuiti</h3>
+  <p>Walk-through presentation scheduled Wed Oct 28, 2-4pm Central</p>
+  <div class="date">Wed, Sep 30 &mdash; Client decision target (verbal)</div><div class="meta">Owner: Ab (owner, quote, submits); Doug (follow-up deliverable)</div>
+</div><div class="card">
+  <span class="badge muted">WAITING</span>
+  <h3>Heritage</h3>
+  <p>In-person meeting held; Ab drafting responses to Heritage&#x27;s follow-up questions</p>
+  <div class="meta">Owner: Kurtis, Josh, Ab, Homiera</div>
+</div><div class="card">
+  <span class="badge muted">WAITING</span>
+  <h3>Aspen Digital</h3>
+  <p>Helping shape their RFP this week</p>
+  <div class="meta">Owner: TBD</div>
+</div>
+    </div>
+  </section>
+  <div class="footer">Internal use only &middot; do not share this link externally</div>
+</div>
+</body>
+</html>
