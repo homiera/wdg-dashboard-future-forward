@@ -439,7 +439,6 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
   <div class="grid">
     {CARDS_HTML}
   </div>
-  <footer>Tier, deck link, and Slack link are placeholders until that data is provided per pursuit.</footer>
   {MODAL_HTML}
 </body>
 </html>
