@@ -33,6 +33,18 @@ CONTRACTING = {"Columbia Association", "Heritage Action"}   # status shown as "I
 # left out of this set on purpose.
 AWAITING_DECISION = {"AKF", "Open Technology Fund"}
 
+# Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
+# Falls back to "In Flight" for anything not listed here.
+STATUS_OVERRIDE = {
+    "UAE Embassy": "In Progress",
+    "AKF": "Submitted",
+    "Open Technology Fund": "Submitted",
+    "ARC": "Submitted",
+    "Tinuiti": "Submitted",
+    "Heritage.org": "Submitted",
+    "NTSB": "Submitted",
+}
+
 rows_by_prop = {}
 for r in s["rows"]:
     rows_by_prop.setdefault(r["proposal"], []).append(r)
@@ -56,6 +68,8 @@ def status_label(prop):
         return "In Contract", "good"
     if prop in PRE_RFP:
         return "Pre-RFP", "muted"
+    if prop in STATUS_OVERRIDE:
+        return STATUS_OVERRIDE[prop], "warning"
     return "In Flight", "warning"
 
 # ---------------------------------------------------------------------------
