@@ -45,6 +45,22 @@ STATUS_OVERRIDE = {
     "NTSB": "Submitted",
 }
 
+# Tier assignments per Homiera 10/28. Drives the pursuit card's top-border
+# color (tier-specific when set, the default neutral --rule gray otherwise).
+TIER = {
+    "UAE Embassy": 3,
+    "American Kidney Fund": 1,
+    "Open Technology Fund": 2,
+    "Appalachian Regional Commission": 3,
+    "Columbia Association": 1,
+    "Tinuiti": 1,
+    "Heritage.org": 2,
+    "Aspen Digital": 2,
+    "Heritage Action": 2,
+    "NTSB": 2,
+    "GSA.gov": 1,
+}
+
 rows_by_prop = {}
 for r in s["rows"]:
     rows_by_prop.setdefault(r["proposal"], []).append(r)
@@ -182,7 +198,7 @@ def card_data(prop):
         "owners": su.get("owners") or "TBD",          # Assigned People
         "stage": su.get("stage", ""),                 # Stage details
         "notes": su.get("notes", ""),                 # Description / latest notes
-        "tier": "TBD",
+        "tier": TIER.get(prop, "TBD"),
         "deck_link": None,
         "slack_link": None,
         "rfp_folder_link": None,            # Link to RFP docs folder (Google Drive)
@@ -279,6 +295,13 @@ h2.section{ font-family:var(--font-sans); font-size:18px; font-weight:500; margi
   padding:16px 18px; cursor:pointer; position:relative;
   transition:border-color .15s ease, background .15s ease;
 }
+/* Tier-specific top border. Unassigned pursuits keep the default neutral
+   gray (--rule) set above. Picked yellow/iris/slate rather than red or
+   mint so a tier color is never confused with the Lost or In-Contract
+   badge colors sitting on the same card. */
+.pcard.tier-1{ border-top-color:var(--wdg-yellow); }
+.pcard.tier-2{ border-top-color:var(--wdg-iris); }
+.pcard.tier-3{ border-top-color:var(--wdg-slate); }
 .pcard:hover, .pcard:focus{ background:var(--surface-hover); border-top-color:var(--ink); }
 .pcard:focus{ outline:2px solid var(--ink); outline-offset:2px; }
 .pname{ font-weight:500; font-size:15px; margin-bottom:6px; padding-right:90px; font-family:var(--font-sans); }
@@ -394,13 +417,14 @@ TILES_HTML = f"""
 """
 
 def card_html(c, i):
-    tier = f'<span class="placeholder">TBD</span>' if c["tier"] == "TBD" else esc(c["tier"])
+    tier = f'<span class="placeholder">TBD</span>' if c["tier"] == "TBD" else f"Tier {esc(c['tier'])}"
+    tier_class = f" tier-{c['tier']}" if c["tier"] != "TBD" else ""
     deck = f'<a href="{esc(c["deck_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open deck</a>' if c["deck_link"] else '<span class="placeholder">not linked yet</span>'
     slack = f'<a href="{esc(c["slack_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open channel</a>' if c["slack_link"] else '<span class="placeholder">not linked yet</span>'
     rfp_folder = (f'<a href="{esc(c["rfp_folder_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open folder</a>'
                   if c["rfp_folder_link"] else '<span class="placeholder">not linked yet</span>')
     return f"""
-    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard{tier_class}" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
       <div class="badge {c['tone']}">{esc(c['label'])}</div>
       <div class="pname">{esc(c['prop'])}</div>
