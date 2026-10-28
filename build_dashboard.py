@@ -285,14 +285,12 @@ def loss_reason(prop):
     return stage or "No reason recorded."
 
 # $ per loss, per Ab 10/28, with a total in the section header. Reuses
-# parse_budget() for consistency with the active-pursuit cards, with one
-# deliberate exception: Community of Christ's budget field ("About $5,000
-# to $10,000 a year recurring platform costs; project budget not stated")
-# is a recurring hosting-cost estimate, not the actual proposal/deal size -
-# the real figure was explicitly never stated. Counting that $5k-10k toward
-# "total lost" would overstate a real number with the wrong one, so it's
-# shown on the card (for context) but excluded from the quantified total.
-LOSS_BUDGET_EXCLUDE_FROM_TOTAL = {"Community of Christ"}
+# parse_budget() for consistency with the active-pursuit cards. Community
+# of Christ was excluded here until Homiera confirmed the real deal size
+# ($310,000, 10/28) - its budget field previously held only a recurring
+# platform-cost estimate, not the actual proposal value. Now that the real
+# figure is in state.json, it counts toward the total like everything else.
+LOSS_BUDGET_EXCLUDE_FROM_TOTAL = set()
 
 def loss_budget(prop):
     su = next((x for x in s["summary"] if x["proposal"] == prop), None)
