@@ -16,9 +16,10 @@ def fmt_date(d):
     return dt.strftime("%a, %b ") + str(dt.day)
 
 # ---------------------------------------------------------------------------
-# Classification (manual, since this isn't in the schema): lost pursuits are
-# dropped from the visible card list per Homiera's instruction. Won/closing
-# pursuits stay visible with a Won badge. Everything else is "in flight."
+# Classification (manual, since this isn't in the schema): lost pursuits get
+# their own Losses section rather than being dropped entirely. Won/closing
+# pursuits stay visible with an In Contract badge. Everything else is
+# bucketed by its own stage text into "in flight."
 # ---------------------------------------------------------------------------
 LOST = {"PHI", "AGA", "Community of Christ"}
 WON = {"Columbia Association", "Heritage Action"}       # used for win-rate (decided bids)
@@ -34,7 +35,9 @@ CONTRACTING = {"Columbia Association", "Heritage Action"}   # status shown as "I
 AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund"}
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
-# Falls back to "In Flight" for anything not listed here.
+# Falls back to "In Flight" for anything not listed here. This also drives
+# which grouped section (In Contract / Submitted / In Progress / Pre-RFP)
+# a card lands in on the grouped-by-stage layout per Homiera + Dario 10/28.
 STATUS_OVERRIDE = {
     "UAE Embassy": "In Progress",
     "American Kidney Fund": "Submitted",
@@ -137,8 +140,17 @@ for r in s["rows"]:
         continue
     delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
     if 0 <= delta <= 7:
-        presentations_this_week.append((r["proposal"], r["date"]))
-presentations_this_week.sort(key=lambda x: x[1])
+        presentations_this_week.append((r["proposal"], r["date"], "Presentation"))
+
+due_this_week_rows = []
+for p in due_this_week:
+    d, what = next_proposal_due(p)
+    due_this_week_rows.append((p, d, "Proposal due"))
+
+# Consolidated "What's coming up" list: proposals due and presentations in
+# the next 7 days, merged and sorted by date, per Homiera + Dario 10/28
+# (replaces two separate stat tiles).
+upcoming = sorted(due_this_week_rows + presentations_this_week, key=lambda x: x[1])
 
 contracts_in_progress = [p for p in all_props if p in CONTRACTING]
 
@@ -181,7 +193,7 @@ def fmt_money(n):
     return f"${n:,.0f}"
 
 # ---------------------------------------------------------------------------
-# Card data (visible list excludes LOST)
+# Card data (visible list excludes LOST; those get their own Losses section)
 # ---------------------------------------------------------------------------
 visible = [p for p in s["prop_order"] if p not in LOST]
 
@@ -189,13 +201,20 @@ def card_data(prop):
     su = next(x for x in s["summary"] if x["proposal"] == prop)
     d, what = next_due(prop)
     label, tone = status_label(prop)
+    date_passed = bool(d and datetime.date.fromisoformat(d) < AS_OF)
     return {
         "prop": prop,                       # Prospect Name
         "label": label,                     # Status
         "tone": tone,
         "due": fmt_date(d) if d else "No date set",   # Due Date for Proposal
         "due_what": what or "",
-        "owners": su.get("owners") or "TBD",          # Assigned People
+        "date_passed": date_passed,
+        "owners": su.get("owners") or "TBD",          # Assigned People (full list, kept in detail view)
+        # Single-owner field per Homiera 10/28. No per-pursuit owner field
+        # exists in state.json yet, so every card defaults to her until
+        # real ownership is assigned per pursuit - this is a placeholder,
+        # not a finding that she solely owns all 11 pursuits.
+        "owner": "Homiera",
         "stage": su.get("stage", ""),                 # Stage details
         "notes": su.get("notes", ""),                 # Description / latest notes
         "tier": TIER.get(prop, "TBD"),
@@ -205,6 +224,32 @@ def card_data(prop):
     }
 
 cards = [card_data(p) for p in visible]
+no_date_count = sum(1 for c in cards if c["due"] == "No date set")
+
+# Group cards by status label into the four stage sections, in a fixed
+# display order, per Homiera + Dario 10/28.
+GROUP_ORDER = ["In Contract", "Submitted", "In Progress", "Pre-RFP"]
+GROUP_TONE = {"In Contract": "progress", "Submitted": "data", "In Progress": "yellow", "Pre-RFP": "neutral"}
+groups = {g: [] for g in GROUP_ORDER}
+for c in cards:
+    groups.setdefault(c["label"], []).append(c)
+for label in list(groups.keys()):
+    if label not in GROUP_ORDER:
+        GROUP_ORDER.append(label)
+
+# Losses: reason comes from state.json's "loss_reason" field (Homiera 10/28),
+# falling back to parsing the stage text if a reason hasn't been recorded.
+def loss_reason(prop):
+    su = next((x for x in s["summary"] if x["proposal"] == prop), None)
+    su = su or {}
+    if su.get("loss_reason"):
+        return su["loss_reason"]
+    stage = su.get("stage", "") or ""
+    if "—" in stage:
+        return stage.split("—", 1)[1].strip()
+    return stage or "No reason recorded."
+
+losses = [{"prop": p, "reason": loss_reason(p)} for p in sorted(LOST)]
 
 # ---------------------------------------------------------------------------
 # HTML / CSS
@@ -245,6 +290,7 @@ HEAD = """<!doctype html>
   --status-progress:#A8EEB4; --status-progress-ink:#141414;
   --status-data:#C9BDF2; --status-data-ink:#141414;
   --status-neutral:#E3E1DA; --status-neutral-ink:#57554F;
+  --status-yellow:#FFD400; --status-yellow-ink:#141414;
 }
 *{box-sizing:border-box;}
 body{
@@ -255,15 +301,16 @@ body{
 .brandbar{ display:flex; align-items:center; gap:10px; margin-bottom:28px; }
 .brandbar img{ height:33px; width:auto; display:block; }
 h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacing:-.02em; margin:0 0 4px 0; }
-.sub{ color:var(--ink-muted); font-size:14px; margin:0; font-family:var(--font-sans); }
-.topline{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:30px; flex-wrap:wrap; gap:16px; }
+.sub{ color:var(--ink-muted); font-size:14px; margin:0 0 6px 0; font-family:var(--font-sans); }
+.subcount{ color:var(--ink-muted); font-size:13.5px; margin:0; font-family:var(--font-sans); }
+.topline{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:30px; flex-wrap:wrap; gap:16px; }
 .asof{ text-align:left; }
 .asof-label{ font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:2px; }
 .asof-date{ font-family:var(--font-sans); font-weight:500; font-size:16px; color:var(--ink); }
 @media (max-width:640px){
   .topline{ flex-direction:column; align-items:flex-start; }
 }
-.tiles{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px; }
+.tiles{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:16px; }
 .tile{
   background:var(--surface); border-radius:0; border-left:3px solid var(--rule);
   padding:18px 20px; position:relative;
@@ -271,16 +318,6 @@ h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacin
 .tile.mint{ border-left-color:var(--wdg-mint); }
 .tile.iris{ border-left-color:var(--wdg-iris); }
 .tile.yellow{ border-left-color:var(--wdg-yellow); }
-.tile-wide{ grid-column:span 3; }
-.volbar{ display:flex; width:100%; height:10px; border-radius:0; overflow:hidden; background:var(--surface); margin-top:8px; }
-.volseg{ height:100%; transform-origin:left; transform:scaleX(0); animation:wdgBarFill .6s ease-out forwards; }
-.volseg.known{ animation-delay:.15s; }
-.volseg.unknown{ animation-delay:.7s; }
-@keyframes wdgBarFill{ to{ transform:scaleX(1); } }
-@media (prefers-reduced-motion: reduce){ .volseg{ animation:none; transform:scaleX(1); } }
-.volseg.known{ background:var(--wdg-mint); } .volseg.unknown{ background:var(--wdg-stone); border-right:1px solid var(--rule); }
-@media (max-width:900px){ .tiles{ grid-template-columns:repeat(2,1fr); } .tile-wide{ grid-column:span 2; } }
-@media (max-width:560px){ .tiles{ grid-template-columns:1fr; } .tile-wide{ grid-column:span 1; } }
 .tlabel{ font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-muted); font-weight:400; margin-bottom:10px; }
 .tnum{ font-family:var(--font-sans); font-weight:500; font-size:34px; line-height:1; color:var(--ink); letter-spacing:-.02em; }
 .tbreak{ margin-top:8px; font-size:12px; color:var(--ink-muted); font-family:var(--font-sans); }
@@ -289,8 +326,35 @@ h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacin
 .dot.data{ background:var(--status-data); } .dot.neutral{ background:var(--ink-muted); }
 .wl{ display:flex; gap:14px; margin-top:6px; font-size:12px; color:var(--ink-muted); font-family:var(--font-sans); }
 
-h2.section{ font-family:var(--font-sans); font-size:18px; font-weight:500; margin:0 0 16px 0; color:var(--ink); letter-spacing:-.01em; }
-.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.row2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:40px; }
+@media (max-width:900px){ .tiles{ grid-template-columns:repeat(2,1fr); } .row2{ grid-template-columns:1fr; } }
+@media (max-width:560px){ .tiles{ grid-template-columns:1fr; } }
+
+.upcoming-tile{ background:var(--surface); border-left:3px solid var(--rule); padding:18px 20px; }
+.upcoming-title{ font-family:var(--font-sans); font-weight:500; font-size:16px; margin:0 0 4px 0; }
+.upcoming-sub{ font-size:12.5px; color:var(--ink-muted); margin-bottom:14px; font-family:var(--font-sans); }
+.uprow{ display:flex; justify-content:space-between; align-items:baseline; padding:8px 0; border-top:1px solid var(--rule); font-size:13.5px; }
+.uprow:first-of-type{ border-top:none; }
+.update{ font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; letter-spacing:.03em; min-width:78px; }
+.upname{ font-weight:500; flex:1; padding:0 10px; }
+.uptype{ color:var(--ink-muted); font-size:12px; }
+
+.volbar{ display:flex; width:100%; height:10px; border-radius:0; overflow:hidden; background:var(--surface); margin-top:8px; }
+.volseg{ height:100%; transform-origin:left; transform:scaleX(0); animation:wdgBarFill .6s ease-out forwards; }
+.volseg.known{ animation-delay:.15s; }
+.volseg.unknown{ animation-delay:.7s; }
+@keyframes wdgBarFill{ to{ transform:scaleX(1); } }
+@media (prefers-reduced-motion: reduce){ .volseg{ animation:none; transform:scaleX(1); } }
+.volseg.known{ background:var(--wdg-mint); } .volseg.unknown{ background:var(--wdg-stone); border-right:1px solid var(--rule); }
+
+h2.section{ font-family:var(--font-sans); font-size:16px; font-weight:500; margin:0 0 14px 0; color:var(--ink); letter-spacing:-.01em;
+  display:flex; align-items:center; gap:8px; padding-top:18px; border-top:1px solid var(--rule); }
+h2.section:first-of-type{ border-top:none; padding-top:0; }
+.section-dot{ width:8px; height:8px; display:inline-block; }
+.section-dot.progress{ background:var(--status-progress); } .section-dot.data{ background:var(--status-data); }
+.section-dot.yellow{ background:var(--status-yellow); } .section-dot.neutral{ background:var(--status-neutral); }
+.section-count{ margin-left:auto; color:var(--ink-muted); font-size:13px; font-weight:400; }
+.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:8px; }
 @media (max-width:820px){ .grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:520px){ .grid{ grid-template-columns:1fr; } }
 
@@ -317,15 +381,22 @@ h2.section{ font-family:var(--font-sans); font-size:18px; font-weight:500; margi
 .badge.progress{ background:var(--status-progress); color:var(--status-progress-ink); }
 .badge.data{ background:var(--status-data); color:var(--status-data-ink); }
 .badge.neutral{ background:var(--status-neutral); color:var(--status-neutral-ink); }
-.pdue{ font-size:13px; color:var(--ink-muted); margin-bottom:4px; font-family:var(--font-sans); }
+.badge.yellow{ background:var(--status-yellow); color:var(--status-yellow-ink); }
+.pdue{ font-size:13px; color:var(--ink-muted); margin-bottom:4px; font-family:var(--font-sans); display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
 .pdue b{ color:var(--ink); font-weight:500; }
+.datepassed{ font-family:var(--font-mono); font-size:9px; letter-spacing:.04em; text-transform:uppercase; background:var(--wdg-red); color:#141414; padding:2px 7px; border-radius:999px; }
 .powners{ font-family:var(--font-mono); font-size:13px; letter-spacing:.02em; color:var(--ink-muted); }
+.powners .k{ color:var(--ink-muted); text-transform:uppercase; letter-spacing:.05em; font-size:11px; margin-right:6px; }
 .hint{ font-family:var(--font-mono); font-size:10px; color:var(--ink-muted); margin-top:10px; letter-spacing:.05em; text-transform:uppercase; }
 
 .pdetail{ display:none; }
 .pdetail .row{ margin-bottom:6px; }
 .pdetail .k{ color:var(--ink); font-weight:500; }
 .placeholder{ color:var(--ink-muted); font-style:italic; }
+
+.losscard{ background:var(--surface); border-radius:0; border-top:3px solid var(--status-lost); padding:16px 18px; position:relative; }
+.lossname{ font-weight:500; font-size:15px; margin-bottom:8px; padding-right:60px; font-family:var(--font-sans); }
+.lossreason{ font-size:13px; color:var(--ink-muted); line-height:1.5; font-family:var(--font-sans); }
 
 /* ---- modal ---- */
 .modal-backdrop{
@@ -352,6 +423,7 @@ h2.section{ font-family:var(--font-sans); font-size:18px; font-weight:500; margi
 .modal-badge.progress{ background:var(--status-progress); color:var(--status-progress-ink); }
 .modal-badge.data{ background:var(--status-data); color:var(--status-data-ink); }
 .modal-badge.neutral{ background:var(--status-neutral); color:var(--status-neutral-ink); }
+.modal-badge.yellow{ background:var(--status-yellow); color:var(--status-yellow-ink); }
 .modal-title{ font-family:var(--font-sans); font-weight:500; font-size:22px; margin:0 0 16px 0; letter-spacing:-.01em; }
 .modal-box .row{ margin-bottom:10px; font-size:13.5px; color:var(--ink-muted); line-height:1.5; font-family:var(--font-sans); }
 .modal-box .k{ color:var(--ink); font-weight:500; }
@@ -364,9 +436,6 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 pipeline_total = len([p for p in all_props if p not in LOST])
 def seg_pct(n):
     return round(100 * n / pipeline_total) if pipeline_total else 0
-
-presentations_label = (', '.join(f"{p} ({fmt_date(d)})" for p, d in presentations_this_week)
-                        if presentations_this_week else "none scheduled")
 
 TILES_HTML = f"""
 <div class="tiles">
@@ -385,16 +454,6 @@ TILES_HTML = f"""
     <div class="tnum">{len(contracts_in_progress)}</div>
     <div class="tbreak">{esc(', '.join(contracts_in_progress)) if contracts_in_progress else 'none currently'}</div>
   </div>
-  <div class="tile">
-    <div class="tlabel">Proposals Due This Week</div>
-    <div class="tnum">{len(due_this_week)}</div>
-    <div class="tbreak"><span class="dot neutral"></span>{esc(', '.join(due_this_week)) if due_this_week else 'nothing pending'}</div>
-  </div>
-  <div class="tile">
-    <div class="tlabel">Presentations This Week</div>
-    <div class="tnum">{len(presentations_this_week)}</div>
-    <div class="tbreak"><span class="dot neutral"></span>{esc(presentations_label)}</div>
-  </div>
   <div class="tile yellow">
     <div class="tlabel">Win Rate (decided)</div>
     <div class="tnum">{win_rate}%</div>
@@ -403,7 +462,22 @@ TILES_HTML = f"""
       <span><span class="dot lost"></span>{len(lost_list)} lost</span>
     </div>
   </div>
-  <div class="tile tile-wide iris">
+</div>
+"""
+
+up_rows_html = "".join(
+    f"""<div class="uprow"><span class="update">{esc(fmt_date(d))}</span><span class="upname">{esc(p)}</span><span class="uptype">{esc(t)}</span></div>"""
+    for p, d, t in upcoming
+) or '<div class="uprow" style="border-top:none; color:var(--ink-muted);">Nothing in the next 7 days.</div>'
+
+ROW2_HTML = f"""
+<div class="row2">
+  <div class="upcoming-tile">
+    <div class="upcoming-title">What's coming up</div>
+    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}</div>
+    {up_rows_html}
+  </div>
+  <div class="tile iris" style="padding:18px 20px;">
     <div class="tlabel">Pipeline Volume &mdash; Total Projected</div>
     <div class="tnum" style="font-size:28px;">
       {fmt_money(known_low) if known_low == known_high else f"{fmt_money(known_low)}&ndash;{fmt_money(known_high)}"}
@@ -423,6 +497,7 @@ TILES_HTML = f"""
 def card_html(c, i):
     tier = f'<span class="placeholder">TBD</span>' if c["tier"] == "TBD" else f"Tier {esc(c['tier'])}"
     tier_class = f" tier-{c['tier']}" if c["tier"] != "TBD" else ""
+    passed = '<span class="datepassed">date passed</span>' if c["date_passed"] else ""
     deck = f'<a href="{esc(c["deck_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open deck</a>' if c["deck_link"] else '<span class="placeholder">not linked yet</span>'
     slack = f'<a href="{esc(c["slack_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open channel</a>' if c["slack_link"] else '<span class="placeholder">not linked yet</span>'
     rfp_folder = (f'<a href="{esc(c["rfp_folder_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open folder</a>'
@@ -432,15 +507,16 @@ def card_html(c, i):
          onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
       <div class="badge {c['tone']}">{esc(c['label'])}</div>
       <div class="pname">{esc(c['prop'])}</div>
-      <div class="pdue">Next: <b>{esc(c['due'])}</b></div>
-      <div class="powners">{esc(c['owners'])}</div>
+      <div class="pdue">Next: <b>{esc(c['due'])}</b>{passed}</div>
+      <div class="powners"><span class="k">Owner</span>{esc(c['owner'])}</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-{i}">
         <div class="row"><span class="k">Prospect:</span> {esc(c['prop'])}</div>
         <div class="row"><span class="k">Status:</span> {esc(c['label'])}</div>
         <div class="row"><span class="k">Stage details:</span> {esc(c['stage'])}</div>
         <div class="row"><span class="k">Due date for proposal:</span> {esc(c['due'])}{(' — ' + esc(c['due_what'])) if c['due_what'] else ''}</div>
-        <div class="row"><span class="k">Assigned people:</span> {esc(c['owners'])}</div>
+        <div class="row"><span class="k">Owner:</span> {esc(c['owner'])}</div>
+        <div class="row"><span class="k">All assigned people:</span> {esc(c['owners'])}</div>
         <div class="row"><span class="k">Tier:</span> {tier}</div>
         <div class="row"><span class="k">Deck:</span> {deck}</div>
         <div class="row"><span class="k">Slack channel:</span> {slack}</div>
@@ -450,11 +526,49 @@ def card_html(c, i):
     </div>
     """
 
-CARDS_HTML = "\n".join(card_html(c, i) for i, c in enumerate(cards))
+# Cards render grouped by stage, not in prop_order, so the modal's index
+# has to follow the SAME order they're drawn in - otherwise card i's
+# "click for details" opens card j's data. Build the grouped order once and
+# use it for both the card markup and MODAL_DATA below.
+ordered_cards = []
+for g in GROUP_ORDER:
+    ordered_cards.extend(groups.get(g, []))
+
+SECTIONS_HTML = ""
+card_index = 0
+for g in GROUP_ORDER:
+    items = groups.get(g, [])
+    if not items:
+        continue
+    tone = GROUP_TONE.get(g, "neutral")
+    cards_html_parts = []
+    for c in items:
+        cards_html_parts.append(card_html(c, card_index))
+        card_index += 1
+    cards_html = "\n".join(cards_html_parts)
+    SECTIONS_HTML += f"""
+    <h2 class="section"><span class="section-dot {tone}"></span>{esc(g)}<span class="section-count">{len(items)}</span></h2>
+    <div class="grid">{cards_html}</div>
+    """
+
+def loss_card_html(l):
+    return f"""
+    <div class="losscard">
+      <div class="lossname">{esc(l['prop'])}</div>
+      <div class="lossreason">{esc(l['reason'])}</div>
+    </div>
+    """
+
+if losses:
+    loss_cards_html = "\n".join(loss_card_html(l) for l in losses)
+    SECTIONS_HTML += f"""
+    <h2 class="section"><span class="section-dot" style="background:var(--status-lost);"></span>Losses<span class="section-count">{len(losses)}</span></h2>
+    <div class="grid">{loss_cards_html}</div>
+    """
 
 MODAL_DATA = {
     i: {"name": c["prop"], "label": c["label"], "tone": c["tone"]}
-    for i, c in enumerate(cards)
+    for i, c in enumerate(ordered_cards)
 }
 
 MODAL_HTML = """
@@ -491,6 +605,8 @@ def quarter_label(d):
     q = (d.month - 1) // 3 + 1
     return f"Q{q} {d.year}"
 
+subcount = f"{len(in_flight)} active pursuits. {len(awaiting_decision)} are waiting on a client decision, and {no_date_count} have no next date set."
+
 INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
 <body>
 <div class="page">
@@ -499,6 +615,7 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
     <div>
       <h1>New Business Pipeline Dashboard</h1>
       <p class="sub">{quarter_label(AS_OF)} &middot; internal view</p>
+      <p class="subcount">{esc(subcount)}</p>
     </div>
     <div class="asof">
       <div class="asof-label">As of</div>
@@ -506,10 +623,8 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
     </div>
   </div>
   {TILES_HTML}
-  <h2 class="section">Active Pursuits</h2>
-  <div class="grid">
-    {CARDS_HTML}
-  </div>
+  {ROW2_HTML}
+  {SECTIONS_HTML}
 </div>
   {MODAL_HTML}
 </body>
