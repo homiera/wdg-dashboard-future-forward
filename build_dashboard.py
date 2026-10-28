@@ -427,7 +427,7 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
   <div class="topline">
     <div>
       <h1>WDG's New Business Pipeline Overview</h1>
-      <p class="sub">{quarter_label(AS_OF)} &middot; internal view &middot; lost pursuits removed from the list below</p>
+      <p class="sub">{quarter_label(AS_OF)} &middot; internal view</p>
     </div>
     <div class="asof">
       <div class="asof-label">As of</div>
