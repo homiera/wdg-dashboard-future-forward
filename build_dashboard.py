@@ -551,13 +551,10 @@ def card_html(c, i):
       <div class="powners"><span class="k">Owner</span>{esc(c['owner'])}</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-{i}">
-        <div class="row"><span class="k">Prospect:</span> {esc(c['prop'])}</div>
-        <div class="row"><span class="k">Status:</span> {esc(c['label'])}</div>
-        <div class="row"><span class="k">Stage details:</span> {esc(c['stage'])}</div>
-        <div class="row"><span class="k">Due date for proposal:</span> {esc(c['due'])}{(' — ' + esc(c['due_what'])) if c['due_what'] else ''}</div>
-        <div class="row"><span class="k">Owner:</span> {esc(c['owner'])}</div>
-        <div class="row"><span class="k">All assigned people:</span> {esc(c['owners'])}</div>
         <div class="row"><span class="k">Tier:</span> {tier}</div>
+        <div class="row"><span class="k">Stage details:</span> {esc(c['stage'])}</div>
+        <div class="row"><span class="k">Next Due Date:</span> {esc(c['due'])}{(' — ' + esc(c['due_what'])) if c['due_what'] else ''}</div>
+        <div class="row"><span class="k">All assigned people:</span> {esc(c['owners'])}</div>
         <div class="row"><span class="k">Deck:</span> {deck}</div>
         <div class="row"><span class="k">RFP docs folder:</span> {rfp_folder}</div>
         <div class="row"><span class="k">Notes:</span> {esc(c['notes'])}</div>
