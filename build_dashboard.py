@@ -204,12 +204,11 @@ body{
 h1{ font-family:'Playfair Display',serif; font-weight:800; font-size:30px; margin:0 0 4px 0; }
 .sub{ color:var(--ink-muted); font-size:14px; margin:0; }
 .topline{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:30px; flex-wrap:wrap; gap:16px; }
-.asof{ text-align:right; }
+.asof{ text-align:left; }
 .asof-label{ font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:2px; }
 .asof-date{ font-family:'Playfair Display',serif; font-weight:700; font-size:16px; color:var(--neon); }
 @media (max-width:640px){
   .topline{ flex-direction:column; align-items:flex-start; }
-  .asof{ text-align:left; }
 }
 .tiles{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px; }
 .tile{
