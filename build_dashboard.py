@@ -363,7 +363,7 @@ TILES_HTML = f"""
     </div>
     <div class="volbar">
       <div class="volseg olive" style="width:{seg_pct(len(quantified))}%" title="{len(quantified)} quantified"></div>
-      <div class="volseg muted" style="width:{seg_pct(len(unquantified))}%" title="{len(unquantified)} unquantified"></div>
+      <div class="volseg muted" style="width:{seg_pct(len(unquantified))}%" title="Unquantified: {esc(', '.join(unquantified)) if unquantified else 'none'}"></div>
     </div>
     <div class="wl" style="margin-top:10px;">
       <span><span class="dot good"></span>{len(quantified)} of {pipeline_total} pursuits have a real budget figure</span>
