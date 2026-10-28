@@ -197,9 +197,10 @@ HEAD = """<!doctype html>
 }
 *{box-sizing:border-box;}
 body{
-  margin:0; padding:32px 40px 60px; background:var(--bg-1);
+  margin:0; padding:0; background:var(--bg-1);
   font-family:'Poppins',sans-serif; color:var(--ink);
 }
+.page{ max-width:1440px; margin:0 auto; padding:32px 40px 60px; }
 h1{ font-family:'Playfair Display',serif; font-weight:800; font-size:30px; margin:0 0 4px 0; }
 .sub{ color:var(--ink-muted); font-size:14px; margin:0; }
 .topline{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:30px; flex-wrap:wrap; gap:16px; }
@@ -230,7 +231,10 @@ h1{ font-family:'Playfair Display',serif; font-weight:800; font-size:30px; margi
 .wl{ display:flex; gap:14px; margin-top:6px; font-size:12px; }
 
 h2.section{ font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin:0 0 16px 0; color:var(--ink); }
-.grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:16px; }
+.grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+@media (max-width:1150px){ .grid{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:820px){ .grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:520px){ .grid{ grid-template-columns:1fr; } }
 
 .pcard{
   background:var(--card); border:1px solid var(--card-border); border-radius:10px;
@@ -424,6 +428,7 @@ def quarter_label(d):
 
 INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
 <body>
+<div class="page">
   <div class="topline">
     <div>
       <h1>WDG's New Business Pipeline Overview</h1>
@@ -439,6 +444,7 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
   <div class="grid">
     {CARDS_HTML}
   </div>
+</div>
   {MODAL_HTML}
 </body>
 </html>
