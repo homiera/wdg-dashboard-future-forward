@@ -64,6 +64,23 @@ TIER = {
     "GSA.gov": 1,
 }
 
+# Owner (who's accountable for the pursuit) vs. assigned team (everyone
+# working it, still shown in the detail view) are different things, per
+# Homiera 10/28. Falls back to "TBD" for anything not listed here.
+OWNER = {
+    "Columbia Association": "Ab",
+    "Heritage Action": "Ab, Kurt Shadle",
+    "American Kidney Fund": "Homiera, Ab",
+    "Open Technology Fund": "Homiera, Ab",
+    "Appalachian Regional Commission": "Ab",
+    "Tinuiti": "Ab, Vaj, Kurtis",
+    "Heritage.org": "Ab",
+    "NTSB": "Homiera",
+    "UAE Embassy": "Homiera",
+    "Aspen Digital": "Kurt Shadle",
+    "GSA.gov": "Homiera",
+}
+
 rows_by_prop = {}
 for r in s["rows"]:
     rows_by_prop.setdefault(r["proposal"], []).append(r)
@@ -220,11 +237,7 @@ def card_data(prop):
         "due_what": what or "",
         "date_passed": date_passed,
         "owners": su.get("owners") or "TBD",          # Assigned People (full list, kept in detail view)
-        # Single-owner field per Homiera 10/28. No per-pursuit owner field
-        # exists in state.json yet, so every card defaults to her until
-        # real ownership is assigned per pursuit - this is a placeholder,
-        # not a finding that she solely owns all 11 pursuits.
-        "owner": "Homiera",
+        "owner": OWNER.get(prop, "TBD"),               # Owner (accountable party), per Homiera 10/28
         "stage": su.get("stage", ""),                 # Stage details
         "notes": su.get("notes", ""),                 # Description / latest notes
         "tier": TIER.get(prop, "TBD"),
