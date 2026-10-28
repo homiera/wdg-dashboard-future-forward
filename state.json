@@ -1343,14 +1343,14 @@
       "proposal": "NLC",
       "client": "NLC proposal",
       "type": "Submitted",
-      "stage": "Presented Oct 14; NLC reviewing internally, no timeline given",
-      "key_date": "2026-10-14",
-      "key_detail": "Presentation to NLC",
+      "stage": "Submitted \u2014 2nd Round presentation held, pending decision",
+      "key_date": null,
+      "key_detail": "Pending decision; no next date set",
       "submit_to": "Not applicable",
-      "owners": "TBD",
+      "owners": "Vajaah, Jake Reid, Dario, Kurtis, Doug, Ab, Homiera",
       "named_staff": "TBD",
-      "budget": "$348,000",
-      "notes": "Second-round presentation Wed Oct 14, following the Aug 31 submission. Oct 19 update: NLC is reviewing internally. No word on timing."
+      "budget": "$348,500",
+      "notes": "Proposal submitted 08/31. 2nd Round Presentation was on 10/14/2026. Pending decision."
     },
     {
       "proposal": "Aspen Digital",
@@ -1469,6 +1469,7 @@
     "Aspen Digital",
     "Heritage Action",
     "NTSB",
-    "GSA.gov"
+    "GSA.gov",
+    "NLC"
   ]
 }

@@ -32,7 +32,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action"}   # status shown as "I
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund"}
+AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC"}
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
@@ -46,6 +46,7 @@ STATUS_OVERRIDE = {
     "Tinuiti": "Submitted",
     "Heritage.org": "Submitted",
     "NTSB": "Submitted",
+    "NLC": "Submitted",
 }
 
 # Tier assignments per Homiera 10/28. Drives the pursuit card's top-border
@@ -62,6 +63,7 @@ TIER = {
     "Heritage Action": 2,
     "NTSB": 2,
     "GSA.gov": 1,
+    "NLC": 1,
 }
 
 # Owner (who's accountable for the pursuit) vs. assigned team (everyone
@@ -79,6 +81,7 @@ OWNER = {
     "UAE Embassy": "Homiera",
     "Aspen Digital": "Kurt Shadle",
     "GSA.gov": "Homiera",
+    "NLC": "Ab",
 }
 
 # Slack channel per pursuit, per Homiera 10/28. Deliberately excludes
@@ -97,6 +100,16 @@ SLACK = {
     "Heritage.org": "https://wdg.slack.com/archives/C0BLQ3GL933",
     "Tinuiti": "https://wdg.slack.com/archives/C0BTBEGTABV",
     "Appalachian Regional Commission": "https://wdg.slack.com/archives/C0BUAV1M3PW",
+}
+
+# Deck and RFP-folder links, per pursuit, where known. Only NLC is populated
+# so far (Homiera 10/28); everything else still shows "not linked yet" in
+# the detail view until a link is provided.
+DECK_LINK = {
+    "NLC": "https://www.figma.com/slides/NrrNVzBOrKLITZCILPu6BF/NLC-2026-Proposal?node-id=0-1&p=f&t=WY9zS0PHBngP8gGD-0",
+}
+RFP_FOLDER_LINK = {
+    "NLC": "https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-",
 }
 
 rows_by_prop = {}
@@ -271,9 +284,9 @@ def card_data(prop):
         "tier": TIER.get(prop, "TBD"),
         "budget_display": budget_display,   # Clean $ figure for the card face
         "budget_raw": budget_raw,           # Full budget text (caveats etc.) for the detail view
-        "deck_link": None,
+        "deck_link": DECK_LINK.get(prop),
         "slack_link": SLACK.get(prop),
-        "rfp_folder_link": None,            # Link to RFP docs folder (Google Drive)
+        "rfp_folder_link": RFP_FOLDER_LINK.get(prop),   # Link to RFP docs folder (Google Drive)
     }
 
 cards = [card_data(p) for p in visible]

@@ -204,7 +204,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div>
       <h1>New Business Pipeline Dashboard</h1>
       <p class="sub">Q4 2026 &middot; internal view</p>
-      <p class="subcount">10 active pursuits. 2 are waiting on a client decision, and 6 have no next date set.</p>
+      <p class="subcount">10 active pursuits. 3 are waiting on a client decision, and 7 have no next date set.</p>
     </div>
     <div class="asof">
       <div class="asof-label">As of</div>
@@ -220,8 +220,8 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
   <div class="tile">
     <div class="tlabel">Awaiting Decision</div>
-    <div class="tnum">2</div>
-    <div class="tbreak">American Kidney Fund, Open Technology Fund</div>
+    <div class="tnum">3</div>
+    <div class="tbreak">American Kidney Fund, Open Technology Fund, NLC</div>
   </div>
   <div class="tile mint">
     <div class="tlabel">Contracts In Progress</div>
@@ -248,15 +248,15 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   <div class="tile iris" style="padding:18px 20px;">
     <div class="tlabel">Pipeline Volume &mdash; Total Projected</div>
     <div class="tnum" style="font-size:28px;">
-      $1,725,000&ndash;$1,740,000
+      $2,073,500&ndash;$2,088,500
       <span style="font-size:13px; color:var(--ink-muted); font-family:var(--font-sans); font-weight:400;"> known</span>
     </div>
     <div class="volbar">
-      <div class="volseg known" style="width:67%" title="8 quantified"></div>
+      <div class="volseg known" style="width:75%" title="9 quantified"></div>
       <div class="volseg unknown" style="width:25%" title="Unquantified: UAE Embassy, Aspen Digital, GSA.gov"></div>
     </div>
     <div class="wl" style="margin-top:10px;">
-      <span><span class="dot progress"></span>8 of 12 pursuits have a real budget figure</span>
+      <span><span class="dot progress"></span>9 of 12 pursuits have a real budget figure</span>
     </div>
   </div>
 </div>
@@ -315,7 +315,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     </div>
     
-    <h2 class="section"><span class="section-dot data"></span>Submitted<span class="section-count">6</span></h2>
+    <h2 class="section"><span class="section-dot data"></span>Submitted<span class="section-count">7</span></h2>
     <div class="grid">
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(2);}">
@@ -447,19 +447,41 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
         <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0AJYUGSHS8" class="slacklink">Go to Slack &rarr;</a></div>
       </div>
     </div>
+    
+
+    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(8)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(8);}">
+      <div class="badge neutral">Submitted</div>
+      <div class="pname">NLC</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners"><span class="k">Owner</span>Ab</div>
+      <div class="pbudget">$348,500</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-8">
+        <div class="row"><span class="k">Tier:</span> Tier 1</div>
+        <div class="row"><span class="k">Budget:</span> $348,500</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted — 2nd Round presentation held, pending decision</div>
+        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
+        <div class="row"><span class="k">All assigned people:</span> Vajaah, Jake Reid, Dario, Kurtis, Doug, Ab, Homiera</div>
+        <div class="row"><span class="k">Deck:</span> <a href="https://www.figma.com/slides/NrrNVzBOrKLITZCILPu6BF/NLC-2026-Proposal?node-id=0-1&amp;p=f&amp;t=WY9zS0PHBngP8gGD-0" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <a href="https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-" style="color:var(--emphasis); text-decoration:underline;">Open folder</a></div>
+        <div class="row"><span class="k">Notes:</span> Proposal submitted 08/31. 2nd Round Presentation was on 10/14/2026. Pending decision.</div>
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0AFGQF1UF8" class="slacklink">Go to Slack &rarr;</a></div>
+      </div>
+    </div>
     </div>
     
     <h2 class="section"><span class="section-dot yellow"></span>In Progress<span class="section-count">1</span></h2>
     <div class="grid">
     <div class="pcard tier-3" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(8)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(8);}">
+         onclick="openModal(9)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(9);}">
       <div class="badge neutral">In Progress</div>
       <div class="pname">UAE Embassy</div>
       <div class="pdue">Next: <b>Mon, Nov 2</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera</div>
       <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-8">
+      <div class="pdetail" id="detail-9">
         <div class="row"><span class="k">Tier:</span> Tier 3</div>
         <div class="row"><span class="k">Budget:</span> Not stated in RFP</div>
         <div class="row"><span class="k">Stage details:</span> Active again as of Oct 26 (was withdrawn Oct 19). Due Nov 2 at 5pm, pending legal and Ab&#x27;s decision</div>
@@ -476,14 +498,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <h2 class="section"><span class="section-dot neutral"></span>Pre-RFP<span class="section-count">2</span></h2>
     <div class="grid">
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(9)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(9);}">
+         onclick="openModal(10)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(10);}">
       <div class="badge data">Pre-RFP</div>
       <div class="pname">Aspen Digital</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Kurt Shadle</div>
       <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-9">
+      <div class="pdetail" id="detail-10">
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> TBD</div>
         <div class="row"><span class="k">Stage details:</span> Helping shape their RFP this week</div>
@@ -498,14 +520,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     
 
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(10)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(10);}">
+         onclick="openModal(11)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(11);}">
       <div class="badge data">Pre-RFP</div>
       <div class="pname">GSA.gov</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera</div>
       <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-10">
+      <div class="pdetail" id="detail-11">
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> TBD</div>
         <div class="row"><span class="k">Stage details:</span> Added to tracker 10/28 per Homiera; no further detail provided yet</div>
@@ -559,7 +581,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
 </div>
 <script>
-const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "2": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "3": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Heritage.org", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "9": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "10": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}};
+const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "2": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "3": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Heritage.org", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "10": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}};
 function openModal(i){
   const meta = MODAL_META[i];
   const detail = document.getElementById('detail-' + i);
