@@ -284,7 +284,40 @@ def loss_reason(prop):
         return stage.split("—", 1)[1].strip()
     return stage or "No reason recorded."
 
-losses = [{"prop": p, "reason": loss_reason(p)} for p in sorted(LOST)]
+# $ per loss, per Ab 10/28, with a total in the section header. Reuses
+# parse_budget() for consistency with the active-pursuit cards, with one
+# deliberate exception: Community of Christ's budget field ("About $5,000
+# to $10,000 a year recurring platform costs; project budget not stated")
+# is a recurring hosting-cost estimate, not the actual proposal/deal size -
+# the real figure was explicitly never stated. Counting that $5k-10k toward
+# "total lost" would overstate a real number with the wrong one, so it's
+# shown on the card (for context) but excluded from the quantified total.
+LOSS_BUDGET_EXCLUDE_FROM_TOTAL = {"Community of Christ"}
+
+def loss_budget(prop):
+    su = next((x for x in s["summary"] if x["proposal"] == prop), None)
+    raw = (su or {}).get("budget") or "Not stated"
+    rng = parse_budget((su or {}).get("budget"))
+    return raw, rng
+
+losses = []
+loss_known_low = loss_known_high = 0
+loss_quantified_count = 0
+for p in sorted(LOST):
+    raw, rng = loss_budget(p)
+    display = None
+    if rng and p not in LOSS_BUDGET_EXCLUDE_FROM_TOTAL:
+        low, high = rng
+        display = fmt_money(low) if low == high else f"{fmt_money(low)}&ndash;{fmt_money(high)}"
+        loss_known_low += low
+        loss_known_high += high
+        loss_quantified_count += 1
+    losses.append({"prop": p, "reason": loss_reason(p), "budget_raw": raw, "budget_display": display})
+
+loss_total_display = None
+if loss_quantified_count:
+    loss_total_display = (fmt_money(loss_known_low) if loss_known_low == loss_known_high
+                           else f"{fmt_money(loss_known_low)}&ndash;{fmt_money(loss_known_high)}")
 
 # ---------------------------------------------------------------------------
 # HTML / CSS
@@ -398,6 +431,8 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .section-dot.progress{ background:var(--status-progress); } .section-dot.data{ background:var(--status-data); }
 .section-dot.yellow{ background:var(--status-yellow); } .section-dot.neutral{ background:var(--status-neutral); }
 .section-count{ margin-left:auto; color:var(--ink-muted); font-size:13px; font-weight:400; }
+.section-total{ margin-left:auto; color:var(--ink-muted); font-size:13px; font-weight:400; font-family:var(--font-sans); }
+.section-total + .section-count{ margin-left:14px; }
 .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:8px; }
 @media (max-width:820px){ .grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:520px){ .grid{ grid-template-columns:1fr; } }
@@ -446,7 +481,10 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .loss-tile{ background:var(--surface); border-left:3px solid var(--status-lost); padding:18px 20px; margin-bottom:8px; }
 .lossrow{ padding:10px 0; border-top:1px solid var(--rule); }
 .lossrow:first-of-type{ border-top:none; }
-.lossname{ font-weight:500; font-size:14px; font-family:var(--font-sans); margin-bottom:3px; }
+.lossrow-top{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:3px; }
+.lossname{ font-weight:500; font-size:14px; font-family:var(--font-sans); }
+.lossbudget{ font-weight:500; font-size:13.5px; color:var(--ink); font-family:var(--font-sans); white-space:nowrap; }
+.lossbudget.placeholder{ font-weight:400; color:var(--ink-muted); font-style:italic; }
 .lossreason{ font-size:13px; color:var(--ink-muted); line-height:1.5; font-family:var(--font-sans); }
 
 /* ---- modal ---- */
@@ -605,17 +643,24 @@ for g in GROUP_ORDER:
     """
 
 def loss_row_html(l):
+    budget_html = (f'<div class="lossbudget">{l["budget_display"]}</div>' if l["budget_display"]
+                   else '<div class="lossbudget placeholder">Not yet quantified</div>')
     return f"""
     <div class="lossrow">
-      <div class="lossname">{esc(l['prop'])}</div>
+      <div class="lossrow-top">
+        <div class="lossname">{esc(l['prop'])}</div>
+        {budget_html}
+      </div>
       <div class="lossreason">{esc(l['reason'])}</div>
     </div>
     """
 
 if losses:
     loss_rows_html = "\n".join(loss_row_html(l) for l in losses)
+    loss_total_html = (f'<span class="section-total">{loss_total_display} lost &middot; {loss_quantified_count} of {len(losses)} quantified</span>'
+                        if loss_total_display else '<span class="section-total">Not yet quantified</span>')
     SECTIONS_HTML += f"""
-    <h2 class="section"><span class="section-dot" style="background:var(--status-lost);"></span>Losses<span class="section-count">{len(losses)}</span></h2>
+    <h2 class="section"><span class="section-dot" style="background:var(--status-lost);"></span>Losses{loss_total_html}<span class="section-count">{len(losses)}</span></h2>
     <div class="loss-tile">{loss_rows_html}</div>
     """
 
