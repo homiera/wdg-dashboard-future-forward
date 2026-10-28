@@ -106,7 +106,13 @@ SLACK = {
 # so far (Homiera 10/28); everything else still shows "not linked yet" in
 # the detail view until a link is provided.
 DECK_LINK = {
-    "NLC": "https://www.figma.com/slides/NrrNVzBOrKLITZCILPu6BF/NLC-2026-Proposal?node-id=0-1&p=f&t=WY9zS0PHBngP8gGD-0",
+    "NLC": "https://www.figma.com/slides/NrrNVzBOrKLITZCILPu6BF/NLC-2026-Proposal?t=NmAJoEPcestqr4qc-6",
+    "Appalachian Regional Commission": "https://www.figma.com/slides/YUJIbGsp0N15tx7RDLPhuG/Appalachian-Regional-Commission-Presentation-Deck?t=NmAJoEPcestqr4qc-6",
+    "Columbia Association": "https://drive.google.com/file/d/1O6_9zL6M8xK3p2yt9f7vdTjNAF-BeHX1/view?usp=drive_link",
+    "American Kidney Fund": "https://www.figma.com/slides/Uy77ZyrMMlildeNuSoazh7/American-Kidney-Fund--due-October-23-?t=NmAJoEPcestqr4qc-6",
+    "NTSB": "https://docs.google.com/document/d/1bIiIscBSR-t2XClHABswupvT5R79rQdD/view",
+    "Open Technology Fund": "https://www.figma.com/slides/Q16rA4qWvjVSWIyZ91vvXb/Open-Tech-Fund-Proposal?t=NmAJoEPcestqr4qc-6",
+    "Heritage.org": "https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6",
 }
 RFP_FOLDER_LINK = {
     "NLC": "https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-",
