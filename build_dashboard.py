@@ -69,15 +69,25 @@ for r in s["rows"]:
     rows_by_prop.setdefault(r["proposal"], []).append(r)
 
 def next_due(prop):
-    """Earliest non-complete row on/after as_of; falls back to summary key_date."""
-    cands = [r for r in rows_by_prop.get(prop, [])
+    """Earliest non-complete row on/after as_of; falls back to summary key_date -
+    but only when that key_date hasn't already been closed out by a row.
+    Without this check, a pursuit's own deadline row could be marked Complete
+    (the real, current status) while summary.key_date still echoes that same
+    date, making the card wrongly show a passed deadline as "next" and flag
+    it DATE PASSED even though it was tracked and resolved - that's what
+    happened to Open Technology Fund's Oct 23 submission deadline."""
+    rows = rows_by_prop.get(prop, [])
+    cands = [r for r in rows
              if r["status"] not in ("Complete", "Cancelled") and r["date"] and r["date"] >= s["as_of"]]
     if cands:
         cands.sort(key=lambda r: r["date"])
         return cands[0]["date"], cands[0]["milestone"]
     su = next((x for x in s["summary"] if x["proposal"] == prop), None)
-    if su and su.get("key_date"):
-        return su["key_date"], su.get("key_detail", "")
+    key_date = su.get("key_date") if su else None
+    if key_date:
+        closed = any(r["date"] == key_date and r["status"] in ("Complete", "Cancelled") for r in rows)
+        if not closed:
+            return key_date, su.get("key_detail", "")
     return None, None
 
 def status_label(prop):
