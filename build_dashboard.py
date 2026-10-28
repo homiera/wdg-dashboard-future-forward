@@ -348,10 +348,6 @@ TILES_HTML = f"""
     <div class="wl" style="margin-top:10px;">
       <span><span class="dot good"></span>{len(quantified)} of {pipeline_total} pursuits have a real budget figure</span>
     </div>
-    <div class="tbreak" style="margin-top:6px;">
-      Not yet quantified, no real number in state.json: {esc(', '.join(unquantified)) if unquantified else 'none'}.
-      This total excludes them rather than guessing &mdash; give me budget figures for those and the total updates.
-    </div>
   </div>
 </div>
 """
