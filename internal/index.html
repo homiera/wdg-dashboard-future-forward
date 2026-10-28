@@ -20,12 +20,23 @@ body{
   font-family:'Poppins',sans-serif; color:var(--ink);
 }
 h1{ font-family:'Playfair Display',serif; font-weight:800; font-size:30px; margin:0 0 4px 0; }
-.sub{ color:var(--ink-muted); font-size:14px; margin:0 0 30px 0; }
-.tiles{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:40px; }
+.sub{ color:var(--ink-muted); font-size:14px; margin:0; }
+.topline{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:30px; flex-wrap:wrap; gap:16px; }
+.asof{ text-align:right; }
+.asof-label{ font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:2px; }
+.asof-date{ font-family:'Playfair Display',serif; font-weight:700; font-size:16px; color:var(--neon); }
+.tiles{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:40px; }
 .tile{
   background:var(--card); border:1px solid var(--card-border); border-radius:10px;
   padding:18px 20px; position:relative; overflow:hidden;
 }
+.tile-wide{ grid-column:span 3; }
+.volbar{ display:flex; width:100%; height:14px; border-radius:7px; overflow:hidden; background:var(--bg-2); margin-top:6px; }
+.volseg{ height:100%; }
+.volseg.good{ background:var(--good); } .volseg.warning{ background:var(--warning); } .volseg.muted{ background:var(--muted); }
+.volseg.olive{ background:var(--olive); }
+@media (max-width:900px){ .tiles{ grid-template-columns:repeat(2,1fr); } .tile-wide{ grid-column:span 2; } }
+@media (max-width:560px){ .tiles{ grid-template-columns:1fr; } .tile-wide{ grid-column:span 1; } }
 .tile::before{ content:""; position:absolute; top:0; left:0; right:0; height:3px; background:var(--olive); }
 .tile.accent::before{ background:var(--neon); }
 .tlabel{ font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); font-weight:500; margin-bottom:8px; }
@@ -45,7 +56,7 @@ h2.section{ font-family:'Playfair Display',serif; font-size:20px; font-weight:70
   padding:16px 18px; cursor:pointer; position:relative;
   transition:background .15s ease, border-color .15s ease;
 }
-.pcard:hover, .pcard:focus-within, .pcard.open{ background:var(--card-hover); border-color:var(--olive); }
+.pcard:hover, .pcard:focus{ background:var(--card-hover); border-color:var(--olive); }
 .pcard:focus{ outline:2px solid var(--neon); outline-offset:2px; }
 .pname{ font-weight:600; font-size:15px; margin-bottom:6px; padding-right:70px; }
 .badge{
@@ -61,30 +72,82 @@ h2.section{ font-family:'Playfair Display',serif; font-size:20px; font-weight:70
 .powners{ font-size:12px; color:var(--ink-muted); }
 .hint{ font-size:10px; color:var(--muted); margin-top:10px; letter-spacing:.03em; text-transform:uppercase; }
 
-.pdetail{
-  max-height:0; overflow:hidden; opacity:0; transition:max-height .2s ease, opacity .2s ease, margin-top .2s ease;
-  font-size:12.5px; color:var(--ink-muted); line-height:1.5;
-}
-.pcard:hover .pdetail, .pcard:focus-within .pdetail, .pcard.open .pdetail{
-  max-height:400px; opacity:1; margin-top:12px; border-top:1px solid var(--card-border); padding-top:12px;
-}
+.pdetail{ display:none; }
 .pdetail .row{ margin-bottom:6px; }
 .pdetail .k{ color:var(--ink); font-weight:600; }
 .placeholder{ color:var(--muted); font-style:italic; }
+
+/* ---- modal ---- */
+.modal-backdrop{
+  position:fixed; inset:0; background:rgba(8,16,18,.72); backdrop-filter:blur(2px);
+  display:none; align-items:center; justify-content:center; z-index:100; padding:24px;
+}
+.modal-backdrop.show{ display:flex; }
+.modal-box{
+  background:var(--card-hover); border:1px solid var(--olive); border-radius:14px;
+  max-width:480px; width:100%; padding:28px 28px 24px; position:relative;
+  box-shadow:0 24px 60px rgba(0,0,0,.55);
+  animation:modalIn .15s ease;
+}
+@keyframes modalIn{ from{ opacity:0; transform:translateY(8px) scale(.98);} to{ opacity:1; transform:none; } }
+.modal-close{
+  position:absolute; top:14px; right:16px; background:none; border:none; color:var(--ink-muted);
+  font-size:20px; line-height:1; cursor:pointer; padding:4px;
+}
+.modal-close:hover{ color:var(--neon); }
+.modal-badge{
+  display:inline-block; font-size:10px; letter-spacing:.04em; text-transform:uppercase;
+  padding:3px 8px; border-radius:20px; font-weight:600; margin-bottom:10px;
+}
+.modal-badge.good{ background:rgba(12,163,12,.18); color:#7fe07f; }
+.modal-badge.warning{ background:rgba(250,178,25,.18); color:#ffcf6b; }
+.modal-badge.critical{ background:rgba(208,59,59,.18); color:#ff9b9b; }
+.modal-badge.muted{ background:rgba(107,140,135,.2); color:var(--ink-muted); }
+.modal-title{ font-family:'Playfair Display',serif; font-weight:700; font-size:22px; margin:0 0 16px 0; }
+.modal-box .row{ margin-bottom:10px; font-size:13.5px; color:var(--ink-muted); line-height:1.5; }
+.modal-box .k{ color:var(--ink); font-weight:600; }
 
 footer{ margin-top:48px; font-size:11px; color:var(--muted); }
 </style>
 </head>
 
 <body>
-  <h1>Proposals Overview</h1>
-  <p class="sub">As of Oct 26, 2026 &middot; internal view &middot; lost pursuits removed from the list below</p>
+  <div class="topline">
+    <div>
+      <h1>WDG's New Business Pipeline Overview</h1>
+      <p class="sub">Q4 2026 &middot; internal view &middot; lost pursuits removed from the list below</p>
+    </div>
+    <div class="asof">
+      <div class="asof-label">As of</div>
+      <div class="asof-date">Tuesday, October 27, 2026</div>
+    </div>
+  </div>
   
 <div class="tiles">
   <div class="tile">
     <div class="tlabel">In Flight</div>
-    <div class="tnum">7</div>
-    <div class="tbreak">pursuits with no decision yet</div>
+    <div class="tnum">10</div>
+    <div class="tbreak">active pursuits</div>
+  </div>
+  <div class="tile">
+    <div class="tlabel">Awaiting Decision</div>
+    <div class="tnum">2</div>
+    <div class="tbreak">AKF, Open Technology Fund</div>
+  </div>
+  <div class="tile olive">
+    <div class="tlabel">Contracts In Progress</div>
+    <div class="tnum">2</div>
+    <div class="tbreak">Heritage Action, Columbia Association</div>
+  </div>
+  <div class="tile">
+    <div class="tlabel">Proposals Due This Week</div>
+    <div class="tnum">1</div>
+    <div class="tbreak"><span class="dot warning"></span>UAE Embassy</div>
+  </div>
+  <div class="tile">
+    <div class="tlabel">Presentations This Week</div>
+    <div class="tnum">2</div>
+    <div class="tbreak"><span class="dot muted"></span>Tinuiti (Wed, Oct 28), ARC (Thu, Oct 29)</div>
   </div>
   <div class="tile accent">
     <div class="tlabel">Win Rate (decided)</div>
@@ -94,174 +157,300 @@ footer{ margin-top:48px; font-size:11px; color:var(--muted); }
       <span><span class="dot critical"></span>3 lost</span>
     </div>
   </div>
-  <div class="tile olive">
-    <div class="tlabel">Won &amp; Closing</div>
-    <div class="tnum">2</div>
-    <div class="tbreak">Heritage Action, Columbia Association</div>
-  </div>
-  <div class="tile">
-    <div class="tlabel">Due This Week</div>
-    <div class="tnum">3</div>
-    <div class="tbreak"><span class="dot warning"></span>Heritage.org, Tinuiti, ARC</div>
+  <div class="tile tile-wide">
+    <div class="tlabel">Pipeline Volume &mdash; Total Projected</div>
+    <div class="tnum" style="font-size:28px;">
+      $1,725,000&ndash;$1,740,000
+      <span style="font-size:13px; color:var(--ink-muted); font-family:'Poppins',sans-serif; font-weight:500;"> known</span>
+    </div>
+    <div class="volbar">
+      <div class="volseg olive" style="width:67%" title="8 quantified"></div>
+      <div class="volseg muted" style="width:25%" title="3 unquantified"></div>
+    </div>
+    <div class="wl" style="margin-top:10px;">
+      <span><span class="dot good"></span>8 of 12 pursuits have a real budget figure</span>
+    </div>
+    <div class="tbreak" style="margin-top:6px;">
+      Not yet quantified, no real number in state.json: UAE Embassy, Aspen Digital, GSA.gov.
+      This total excludes them rather than guessing &mdash; give me budget figures for those and the total updates.
+    </div>
   </div>
 </div>
 
   <h2 class="section">Active Pursuits</h2>
   <div class="grid">
     
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(0)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(0);}">
       <div class="badge warning">In Flight</div>
       <div class="pname">UAE Embassy</div>
-      <div class="pdue">Next: <b>Thu, Nov 5</b></div>
-      <div class="powners">TBD</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Active again as of Oct 26 (was withdrawn Oct 19). Due Nov 5, pending legal and Ab&#x27;s decision</div>
-        <div class="row"><span class="k">Due:</span> Thu, Nov 5 — Proposal due (new target, if WDG proceeds)</div>
+      <div class="pdue">Next: <b>Mon, Nov 2</b></div>
+      <div class="powners">Homiera, Design Team, Ab, GoFish Digital</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-0">
+        <div class="row"><span class="k">Prospect:</span> UAE Embassy</div>
+        <div class="row"><span class="k">Status:</span> In Flight</div>
+        <div class="row"><span class="k">Stage details:</span> Active again as of Oct 26 (was withdrawn Oct 19). Due Nov 2 at 5pm, pending legal and Ab&#x27;s decision</div>
+        <div class="row"><span class="k">Due date for proposal:</span> Mon, Nov 2 — Proposal due, 5:00 PM (new target, if WDG proceeds)</div>
+        <div class="row"><span class="k">Assigned people:</span> Homiera, Design Team, Ab, GoFish Digital</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">Deadline conflict in Section XII (Oct 2 vs Oct 7). Team is working to Oct 7 without written confirmation. Embassy answers were promised Sept 23 and have not arrived. Content drafted by EOD Thu Oct 1. Figma deck in progress; team adds content in the collaborative doc. Oct 13 update: Homiera has not received a clear go/no-go signal. Treat as an open risk, not a loss, until confirmed. Oct 19 update: Homiera confirmed WDG is leaving this one out. No longer an open decision. Oct 26 correction: Homiera&#x27;s update shows this is back under consideration, due Nov 5. Still pending Agital legal follow-up and Ab&#x27;s go/no-go call. This is the second time this decision has come up unresolved (first flagged Oct 13, marked withdrawn Oct 19, now active again).</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Deadline conflict in Section XII (Oct 2 vs Oct 7). Team is working to Oct 7 without written confirmation. Embassy answers were promised Sept 23 and have not arrived. Content drafted by EOD Thu Oct 1. Figma deck in progress; team adds content in the collaborative doc. Oct 13 update: Homiera has not received a clear go/no-go signal. Treat as an open risk, not a loss, until confirmed. Oct 19 update: Homiera confirmed WDG is leaving this one out. No longer an open decision. Oct 26 correction: Homiera&#x27;s update shows this is back under consideration, due Nov 5. Still pending Agital legal follow-up and Ab&#x27;s go/no-go call. This is the second time this decision has come up unresolved (first flagged Oct 13, marked withdrawn Oct 19, now active again).</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(1);}">
       <div class="badge warning">In Flight</div>
       <div class="pname">AKF</div>
       <div class="pdue">Next: <b>Mon, Nov 9</b></div>
-      <div class="powners">Vajaah, Dario (proposal); Homiera, Ab (pricing)</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Submitted Oct 23 (Fri night); pending AKF&#x27;s next steps</div>
-        <div class="row"><span class="k">Due:</span> Mon, Nov 9 — Round 1: general pitch (90 minutes)</div>
+      <div class="powners">Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-1">
+        <div class="row"><span class="k">Prospect:</span> AKF</div>
+        <div class="row"><span class="k">Status:</span> In Flight</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted</div>
+        <div class="row"><span class="k">Due date for proposal:</span> Mon, Nov 9 — Round 1: general pitch (90 minutes)</div>
+        <div class="row"><span class="k">Assigned people:</span> Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">Jake Reid is leading questions and discovery. Questions deadline conflict in the RFP (Sept 24 vs Oct 1). Round 1 pitch Nov 9 to 18; Round 2 Nov 30 to Dec 4; kickoff Dec 14. Next priority after AGA submits (Oct 9). No change to the Oct 23 due date. Q&amp;A received (confirmed Oct 13); team is now drafting. Oct 19 update: Vajaah and Dario are working the proposal; Homiera and Ab are finalizing pricing. Oct 26 update: submitted Friday night. Awaiting AKF&#x27;s next steps. Oct 26 update: AKF confirmed receipt.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Jake Reid is leading questions and discovery. Questions deadline conflict in the RFP (Sept 24 vs Oct 1). Round 1 pitch Nov 9 to 18; Round 2 Nov 30 to Dec 4; kickoff Dec 14. Next priority after AGA submits (Oct 9). No change to the Oct 23 due date. Q&amp;A received (confirmed Oct 13); team is now drafting. Oct 19 update: Vajaah and Dario are working the proposal; Homiera and Ab are finalizing pricing. Oct 26 update: submitted Friday night. Awaiting AKF&#x27;s next steps. Oct 26 update: AKF confirmed receipt.</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(2);}">
       <div class="badge warning">In Flight</div>
       <div class="pname">Open Technology Fund</div>
       <div class="pdue">Next: <b>Fri, Oct 23</b></div>
-      <div class="powners">Homiera (drafting, pricing)</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Submitted Oct 22 (Thu); pending OTF&#x27;s next steps</div>
-        <div class="row"><span class="k">Due:</span> Fri, Oct 23 — Proposal due 5:00 PM ET</div>
+      <div class="powners">Homiera, Zaid, Doug, Vajaah</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-2">
+        <div class="row"><span class="k">Prospect:</span> Open Technology Fund</div>
+        <div class="row"><span class="k">Status:</span> In Flight</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted</div>
+        <div class="row"><span class="k">Due date for proposal:</span> Fri, Oct 23 — Proposal due 5:00 PM ET</div>
+        <div class="row"><span class="k">Assigned people:</span> Homiera, Zaid, Doug, Vajaah</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">One deliverables-based contract across four tasks: Discovery, Design, Implementation, Training and Maintenance. CMS is not predetermined; Task 1 may recommend leaving WordPress. USG flow-down clauses apply (OTF is funded through USAGM). Publicity about the engagement requires OTF&#x27;s written approval. Modern Signal has indicated intent to bid. Price is 15 of 65 evaluation points; experience and approach carry equal or greater weight. Completion timeline capped at end of June 2027 (5 points). Award date not stated. Erik and Josh suggested as tentative owners. Oct 13 update: OTF has not published Q&amp;A answers yet. Proposal due date remains Oct 23, 5:00 PM ET — same day as AKF&#x27;s deadline. Oct 19 update: Homiera is now the drafting owner and is working pricing with Ab. Oct 26 update: submitted Thursday, a day early. Ab confirmed receipt via text. Awaiting OTF&#x27;s next steps.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> One deliverables-based contract across four tasks: Discovery, Design, Implementation, Training and Maintenance. CMS is not predetermined; Task 1 may recommend leaving WordPress. USG flow-down clauses apply (OTF is funded through USAGM). Publicity about the engagement requires OTF&#x27;s written approval. Modern Signal has indicated intent to bid. Price is 15 of 65 evaluation points; experience and approach carry equal or greater weight. Completion timeline capped at end of June 2027 (5 points). Award date not stated. Erik and Josh suggested as tentative owners. Oct 13 update: OTF has not published Q&amp;A answers yet. Proposal due date remains Oct 23, 5:00 PM ET — same day as AKF&#x27;s deadline. Oct 19 update: Homiera is now the drafting owner and is working pricing with Ab. Oct 26 update: submitted Thursday, a day early. Ab confirmed receipt via text. Awaiting OTF&#x27;s next steps.</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(3);}">
       <div class="badge warning">In Flight</div>
       <div class="pname">ARC</div>
       <div class="pdue">Next: <b>Thu, Oct 29</b></div>
-      <div class="powners">Ab (owner; drafting lead TBD)</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Presentation meeting Thu Oct 29 (overview and Q&amp;A)</div>
-        <div class="row"><span class="k">Due:</span> Thu, Oct 29 — Presentation meeting with ARC (overview and Q&amp;A)</div>
+      <div class="powners">Ab, Michael, Kurtis, Vajaah</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-3">
+        <div class="row"><span class="k">Prospect:</span> ARC</div>
+        <div class="row"><span class="k">Status:</span> In Flight</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted</div>
+        <div class="row"><span class="k">Due date for proposal:</span> Thu, Oct 29 — Presentation meeting with ARC (overview and Q&amp;A)</div>
+        <div class="row"><span class="k">Assigned people:</span> Ab, Michael, Kurtis, Vajaah</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">One Word or PDF file, 10 to 15 pages for sections I and J combined, plus resumes and samples. U.S. citizens only; U.S.-based systems and data. Late submissions rejected; no extensions. Fourth sample must be a sanitized incident response example. Interview and award dates not stated. Submitted Oct 8 (confirmed Oct 13). No interview date given yet. Oct 19 update: still no response. The RFP never stated an interview or award date, so there&#x27;s no deadline to measure this against. Oct 26 update: ARC scheduled a presentation meeting for Thu Oct 29. Ab confirming WDG&#x27;s attendees.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> One Word or PDF file, 10 to 15 pages for sections I and J combined, plus resumes and samples. U.S. citizens only; U.S.-based systems and data. Late submissions rejected; no extensions. Fourth sample must be a sanitized incident response example. Interview and award dates not stated. Submitted Oct 8 (confirmed Oct 13). No interview date given yet. Oct 19 update: still no response. The RFP never stated an interview or award date, so there&#x27;s no deadline to measure this against. Oct 26 update: ARC scheduled a presentation meeting for Thu Oct 29. Ab confirming WDG&#x27;s attendees.</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
-      <div class="badge good">Won</div>
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(4);}">
+      <div class="badge good">In Contract</div>
       <div class="pname">Columbia Association</div>
       <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners">Ab (to confirm)</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Awarded; in contracting</div>
-        <div class="row"><span class="k">Due:</span> No date set</div>
+      <div class="powners">Ab, Homiera</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-4">
+        <div class="row"><span class="k">Prospect:</span> Columbia Association</div>
+        <div class="row"><span class="k">Status:</span> In Contract</div>
+        <div class="row"><span class="k">Stage details:</span> Signatures slated for this week</div>
+        <div class="row"><span class="k">Due date for proposal:</span> No date set</div>
+        <div class="row"><span class="k">Assigned people:</span> Ab, Homiera</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">Selected for the award. Presentation complete. Best and final offer owed Tuesday Sept 29. Decision date not yet known.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Selected for the award. Presentation complete. Best and final offer owed Tuesday Sept 29. Decision date not yet known.</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(5);}">
       <div class="badge warning">In Flight</div>
       <div class="pname">Tinuiti</div>
       <div class="pdue">Next: <b>Wed, Oct 28</b></div>
-      <div class="powners">Ab (owner, quote, submits); Doug (follow-up deliverable)</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Walk-through presentation scheduled Wed Oct 28, 2-4pm Central</div>
-        <div class="row"><span class="k">Due:</span> Wed, Oct 28 — Walk-through presentation for case study spec deck</div>
+      <div class="powners">Ab, Vajaah, Dario, Kurtis</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-5">
+        <div class="row"><span class="k">Prospect:</span> Tinuiti</div>
+        <div class="row"><span class="k">Status:</span> In Flight</div>
+        <div class="row"><span class="k">Stage details:</span> Walk-through presentation scheduled Wed Oct 28, 2-4pm Central</div>
+        <div class="row"><span class="k">Due date for proposal:</span> Wed, Oct 28 — Walk-through presentation for case study spec deck</div>
+        <div class="row"><span class="k">Assigned people:</span> Ab, Vajaah, Dario, Kurtis</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">Follow-up deliverable sent Sept 22. Confirm whether the budget covers maintenance only or maintenance plus projects. Follow-up with Creative Director and Revenue Operations to be scheduled by Jessica. Plugin list received. Oct 13 update: Homiera isn&#x27;t sure what&#x27;s happening with this pursuit right now. The Oct 19 spec-work question (see below) is still unresolved. Oct 19 update: spec work listed as due this week. Whether the team formally resolved the unpaid-work concern is not confirmed. Oct 26 update: spec deck submitted Friday morning. A walk-through presentation is being scheduled for this week, not yet confirmed. Oct 26 update: walk-through set for Wed Oct 28, 2-4pm Central. Doug is out of office; Vajaah and Dario assumed to attend, pending Ab&#x27;s confirmation. Correction Oct 26: Tinuiti is a prospect, not a current WDG client.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Follow-up deliverable sent Sept 22. Confirm whether the budget covers maintenance only or maintenance plus projects. Follow-up with Creative Director and Revenue Operations to be scheduled by Jessica. Plugin list received. Oct 13 update: Homiera isn&#x27;t sure what&#x27;s happening with this pursuit right now. The Oct 19 spec-work question (see below) is still unresolved. Oct 19 update: spec work listed as due this week. Whether the team formally resolved the unpaid-work concern is not confirmed. Oct 26 update: spec deck submitted Friday morning. A walk-through presentation is being scheduled for this week, not yet confirmed. Oct 26 update: walk-through set for Wed Oct 28, 2-4pm Central. Doug is out of office; Vajaah and Dario assumed to attend, pending Ab&#x27;s confirmation. Correction Oct 26: Tinuiti is a prospect, not a current WDG client.</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(6)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(6);}">
       <div class="badge warning">In Flight</div>
       <div class="pname">Heritage.org</div>
-      <div class="pdue">Next: <b>Mon, Oct 26</b></div>
-      <div class="powners">Kurtis, Josh, Ab, Homiera</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Awaiting Ab&#x27;s response to Stephanie&#x27;s post-meeting questions</div>
-        <div class="row"><span class="k">Due:</span> Mon, Oct 26 — Respond to Heritage&#x27;s post-meeting questions</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners">Ab, Homiera, Kurtis</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-6">
+        <div class="row"><span class="k">Prospect:</span> Heritage.org</div>
+        <div class="row"><span class="k">Status:</span> In Flight</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted</div>
+        <div class="row"><span class="k">Due date for proposal:</span> No date set</div>
+        <div class="row"><span class="k">Assigned people:</span> Ab, Homiera, Kurtis</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">Proposal sent; follow-up responses sent Sept 23. In-person meeting held; client contact Stephanie sent a list of post-meeting questions. Ab is drafting responses as of Oct 26; no deadline given. This is a separate engagement from Heritage Action, under the same parent organization.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Proposal sent; follow-up responses sent Sept 23. In-person meeting held; client contact Stephanie sent a list of post-meeting questions. Ab is drafting responses as of Oct 26; no deadline given. This is a separate engagement from Heritage Action, under the same parent organization.</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(7)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(7);}">
       <div class="badge muted">Pre-RFP</div>
       <div class="pname">Aspen Digital</div>
       <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners">TBD</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Helping shape their RFP this week</div>
-        <div class="row"><span class="k">Due:</span> No date set</div>
+      <div class="powners">Kurt Shadle, Ab, Vajaah</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-7">
+        <div class="row"><span class="k">Prospect:</span> Aspen Digital</div>
+        <div class="row"><span class="k">Status:</span> Pre-RFP</div>
+        <div class="row"><span class="k">Stage details:</span> Helping shape their RFP this week</div>
+        <div class="row"><span class="k">Due date for proposal:</span> No date set</div>
+        <div class="row"><span class="k">Assigned people:</span> Kurt Shadle, Ab, Vajaah</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">New as of Oct 13. Talking with Aspen Digital/Aspen Institute contacts this week to help shape their RFP before it&#x27;s issued. No document, budget, or dates exist yet — nothing to commit to on paper.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> New as of Oct 13. Talking with Aspen Digital/Aspen Institute contacts this week to help shape their RFP before it&#x27;s issued. No document, budget, or dates exist yet — nothing to commit to on paper.</div>
       </div>
     </div>
     
 
-    <div class="pcard" tabindex="0" onclick="this.classList.toggle('open')">
-      <div class="badge good">Won</div>
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(8)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(8);}">
+      <div class="badge good">In Contract</div>
       <div class="pname">Heritage Action</div>
       <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners">TBD</div>
-      <div class="hint">hover or tap for details</div>
-      <div class="pdetail">
-        <div class="row"><span class="k">Stage:</span> Discovery engagement complete; closing on Phase 2 SOW</div>
-        <div class="row"><span class="k">Due:</span> No date set</div>
+      <div class="powners">Ab, Kurt Shadle, Michael Feder</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-8">
+        <div class="row"><span class="k">Prospect:</span> Heritage Action</div>
+        <div class="row"><span class="k">Status:</span> In Contract</div>
+        <div class="row"><span class="k">Stage details:</span> Contracting</div>
+        <div class="row"><span class="k">Due date for proposal:</span> No date set</div>
+        <div class="row"><span class="k">Assigned people:</span> Ab, Kurt Shadle, Michael Feder</div>
         <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Slack:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row">Discovery engagement with Heritage Action completed. Oct 26 update from Homiera: WDG is closing on the Phase 2 SOW now. No scope, budget, timeline, or named owners provided yet. Separate engagement from heritage.org, under the same parent organization.</div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Discovery engagement with Heritage Action completed. Oct 26 update from Homiera: WDG is closing on the Phase 2 SOW now. No scope, budget, timeline, or named owners provided yet. Separate engagement from heritage.org, under the same parent organization.</div>
+      </div>
+    </div>
+    
+
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(9)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(9);}">
+      <div class="badge warning">In Flight</div>
+      <div class="pname">NTSB</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners">Homiera, Kurtis, Doug</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-9">
+        <div class="row"><span class="k">Prospect:</span> NTSB</div>
+        <div class="row"><span class="k">Status:</span> In Flight</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted</div>
+        <div class="row"><span class="k">Due date for proposal:</span> No date set</div>
+        <div class="row"><span class="k">Assigned people:</span> Homiera, Kurtis, Doug</div>
+        <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
+        <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Added to the live tracker 10/28 at Homiera&#x27;s request, classified In Flight. No stage detail, dates, owners, or budget provided yet beyond the classification itself.</div>
+      </div>
+    </div>
+    
+
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(10)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(10);}">
+      <div class="badge muted">Pre-RFP</div>
+      <div class="pname">GSA.gov</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners">Ab, Homiera, Kurtis</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-10">
+        <div class="row"><span class="k">Prospect:</span> GSA.gov</div>
+        <div class="row"><span class="k">Status:</span> Pre-RFP</div>
+        <div class="row"><span class="k">Stage details:</span> Added to tracker 10/28 per Homiera; no further detail provided yet</div>
+        <div class="row"><span class="k">Due date for proposal:</span> No date set</div>
+        <div class="row"><span class="k">Assigned people:</span> Ab, Homiera, Kurtis</div>
+        <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
+        <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Slack channel:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Added to the live tracker 10/28 at Homiera&#x27;s request, classified Pre-RFP. No stage detail, dates, owners, or budget provided yet beyond the classification itself.</div>
       </div>
     </div>
     
   </div>
   <footer>Tier, deck link, and Slack link are placeholders until that data is provided per pursuit.</footer>
+  
+<div class="modal-backdrop" id="modalBackdrop" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box" role="dialog" aria-modal="true" id="modalBox">
+    <button class="modal-close" aria-label="Close" onclick="closeModal()">&times;</button>
+    <div id="modalBadge" class="modal-badge"></div>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<script>
+const MODAL_META = {"0": {"name": "UAE Embassy", "label": "In Flight", "tone": "warning"}, "1": {"name": "AKF", "label": "In Flight", "tone": "warning"}, "2": {"name": "Open Technology Fund", "label": "In Flight", "tone": "warning"}, "3": {"name": "ARC", "label": "In Flight", "tone": "warning"}, "4": {"name": "Columbia Association", "label": "In Contract", "tone": "good"}, "5": {"name": "Tinuiti", "label": "In Flight", "tone": "warning"}, "6": {"name": "Heritage.org", "label": "In Flight", "tone": "warning"}, "7": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "muted"}, "8": {"name": "Heritage Action", "label": "In Contract", "tone": "good"}, "9": {"name": "NTSB", "label": "In Flight", "tone": "warning"}, "10": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "muted"}};
+function openModal(i){
+  const meta = MODAL_META[i];
+  const detail = document.getElementById('detail-' + i);
+  document.getElementById('modalTitle').textContent = meta.name;
+  const b = document.getElementById('modalBadge');
+  b.textContent = meta.label;
+  b.className = 'modal-badge ' + meta.tone;
+  document.getElementById('modalBody').innerHTML = detail.innerHTML;
+  document.getElementById('modalBackdrop').classList.add('show');
+}
+function closeModal(){
+  document.getElementById('modalBackdrop').classList.remove('show');
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeModal();
+});
+</script>
+
 </body>
 </html>
