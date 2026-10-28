@@ -370,6 +370,15 @@ h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacin
 @media (prefers-reduced-motion: reduce){ .volseg{ animation:none; transform:scaleX(1); } }
 .volseg.known{ background:var(--wdg-mint); } .volseg.unknown{ background:var(--wdg-stone); border-right:1px solid var(--rule); }
 
+.tier-key{ display:flex; align-items:center; gap:18px; margin-bottom:28px; font-family:var(--font-sans); font-size:12.5px; color:var(--ink-muted); flex-wrap:wrap; }
+.tier-key-label{ font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-muted); }
+.tier-key-item{ display:flex; align-items:center; gap:6px; }
+.tier-swatch{ width:14px; height:3px; display:inline-block; }
+.tier-swatch.tier-1{ background:var(--wdg-yellow); }
+.tier-swatch.tier-2{ background:var(--wdg-iris); }
+.tier-swatch.tier-3{ background:var(--wdg-slate); }
+.tier-swatch.tier-tbd{ background:var(--rule); }
+
 h2.section{ font-family:var(--font-sans); font-size:16px; font-weight:500; margin:0 0 14px 0; color:var(--ink); letter-spacing:-.01em;
   display:flex; align-items:center; gap:8px; padding-top:18px; border-top:1px solid var(--rule); }
 h2.section:first-of-type{ border-top:none; padding-top:0; }
@@ -647,6 +656,13 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
   </div>
   {TILES_HTML}
   {ROW2_HTML}
+  <div class="tier-key">
+    <span class="tier-key-label">Tier (card top border)</span>
+    <span class="tier-key-item"><span class="tier-swatch tier-1"></span>Tier 1</span>
+    <span class="tier-key-item"><span class="tier-swatch tier-2"></span>Tier 2</span>
+    <span class="tier-key-item"><span class="tier-swatch tier-3"></span>Tier 3</span>
+    <span class="tier-key-item"><span class="tier-swatch tier-tbd"></span>Not yet assigned</span>
+  </div>
   {SECTIONS_HTML}
 </div>
   {MODAL_HTML}
