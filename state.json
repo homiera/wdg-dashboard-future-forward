@@ -1174,9 +1174,9 @@
       "milestone": "Walk-through presentation for case study spec deck",
       "type": "Internal (proposed)",
       "owner": "Vajaah, Dario (assumed; Ab to confirm)",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Scheduled Wed Oct 28, 2:00 to 4:00 PM Central (3:00 to 5:00 PM ET). Doug is out of office. Current assumption is Vajaah and Dario attend; Ab to confirm.",
+      "notes": "Scheduled Wed Oct 28, 2:00 to 4:00 PM Central (3:00 to 5:00 PM ET). Doug is out of office. Current assumption is Vajaah and Dario attend; Ab to confirm. Presentation held as scheduled. Pending next steps.",
       "tag": ""
     },
     {
@@ -1250,14 +1250,14 @@
       "proposal": "Tinuiti",
       "client": "Tinuiti website maintenance and projects",
       "type": "Prospect \u2014 retainer quote",
-      "stage": "Walk-through presentation scheduled Wed Oct 28, 2-4pm Central",
-      "key_date": "2026-09-30",
-      "key_detail": "Client decision target (verbal)",
+      "stage": "Presentation complete \u2014 pending next steps",
+      "key_date": null,
+      "key_detail": "Pending next steps",
       "submit_to": "Jessica Lingle (client contact)",
       "owners": "Ab, Vajaah, Dario, Kurtis",
       "named_staff": "Ab, Vajaah, Dario, Kurtis",
       "budget": "$25,000 to $30,000 annual (client target)",
-      "notes": "Vajaah, Dario, and Ab to present on spec; Kurtis to join for the technical conversation. Informal. Reminder: this originated as a retainer opportunity."
+      "notes": "Vajaah, Dario, and Ab presented on spec Oct 28; Kurtis joined for the technical conversation. Presentation complete. Pending next steps. Reminder: this originated as a retainer opportunity."
     },
     {
       "proposal": "PHI",

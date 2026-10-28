@@ -32,7 +32,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action"}   # status shown as "I
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC"}
+AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Tinuiti"}
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
