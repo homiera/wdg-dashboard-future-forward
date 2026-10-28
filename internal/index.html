@@ -147,7 +147,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   <div class="tile">
     <div class="tlabel">Awaiting Decision</div>
     <div class="tnum">2</div>
-    <div class="tbreak">AKF, Open Technology Fund</div>
+    <div class="tbreak">American Kidney Fund, Open Technology Fund</div>
   </div>
   <div class="tile mint">
     <div class="tlabel">Contracts In Progress</div>
@@ -162,7 +162,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   <div class="tile">
     <div class="tlabel">Presentations This Week</div>
     <div class="tnum">2</div>
-    <div class="tbreak"><span class="dot neutral"></span>Tinuiti (Wed, Oct 28), ARC (Thu, Oct 29)</div>
+    <div class="tbreak"><span class="dot neutral"></span>Tinuiti (Wed, Oct 28), Appalachian Regional Commission (Thu, Oct 29)</div>
   </div>
   <div class="tile yellow">
     <div class="tlabel">Win Rate (decided)</div>
@@ -216,12 +216,12 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(1);}">
       <div class="badge neutral">Submitted</div>
-      <div class="pname">AKF</div>
+      <div class="pname">American Kidney Fund</div>
       <div class="pdue">Next: <b>Mon, Nov 9</b></div>
       <div class="powners">Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-1">
-        <div class="row"><span class="k">Prospect:</span> AKF</div>
+        <div class="row"><span class="k">Prospect:</span> American Kidney Fund</div>
         <div class="row"><span class="k">Status:</span> Submitted</div>
         <div class="row"><span class="k">Stage details:</span> Submitted</div>
         <div class="row"><span class="k">Due date for proposal:</span> Mon, Nov 9 — Round 1: general pitch (90 minutes)</div>
@@ -260,12 +260,12 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(3);}">
       <div class="badge neutral">Submitted</div>
-      <div class="pname">ARC</div>
+      <div class="pname">Appalachian Regional Commission</div>
       <div class="pdue">Next: <b>Thu, Oct 29</b></div>
       <div class="powners">Ab, Michael, Kurtis, Vajaah</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-3">
-        <div class="row"><span class="k">Prospect:</span> ARC</div>
+        <div class="row"><span class="k">Prospect:</span> Appalachian Regional Commission</div>
         <div class="row"><span class="k">Status:</span> Submitted</div>
         <div class="row"><span class="k">Stage details:</span> Submitted</div>
         <div class="row"><span class="k">Due date for proposal:</span> Thu, Oct 29 — Presentation meeting with ARC (overview and Q&amp;A)</div>
@@ -444,7 +444,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
 </div>
 <script>
-const MODAL_META = {"0": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "1": {"name": "AKF", "label": "Submitted", "tone": "neutral"}, "2": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "3": {"name": "ARC", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "5": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Heritage.org", "label": "Submitted", "tone": "neutral"}, "7": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "8": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "9": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "10": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}};
+const MODAL_META = {"0": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "1": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "2": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "3": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "5": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Heritage.org", "label": "Submitted", "tone": "neutral"}, "7": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "8": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "9": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "10": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}};
 function openModal(i){
   const meta = MODAL_META[i];
   const detail = document.getElementById('detail-' + i);

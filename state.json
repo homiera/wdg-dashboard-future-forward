@@ -6,7 +6,7 @@
   {
    "date": "2026-09-15",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Questions due",
    "type": "Prospect-set",
    "owner": "",
@@ -126,7 +126,7 @@
   {
    "date": "2026-09-24",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Vendor questions deadline",
    "type": "Prospect-set",
    "owner": "Jake Reid",
@@ -150,7 +150,7 @@
   {
    "date": "2026-09-24",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "ARC shares answers",
    "type": "Prospect-set",
    "owner": "ARC",
@@ -414,7 +414,7 @@
   {
    "date": "2026-09-30",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Work samples confirmed (three federal samples and a sanitized incident response sample)",
    "type": "Internal (proposed)",
    "owner": "Ab",
@@ -450,7 +450,7 @@
   {
    "date": "2026-10-01",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "AKF shares responses to vendor questions",
    "type": "Prospect-set",
    "owner": "AKF",
@@ -510,7 +510,7 @@
   {
    "date": "2026-10-02",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Current-site review complete (2 to 3 initial recommendations)",
    "type": "Internal (proposed)",
    "owner": "Jake Reid (to confirm)",
@@ -534,7 +534,7 @@
   {
    "date": "2026-10-02",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "First draft",
    "type": "Internal (proposed)",
    "owner": "Ab (drafting lead TBD)",
@@ -606,7 +606,7 @@
   {
    "date": "2026-10-05",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Leads review",
    "type": "Internal (proposed)",
    "owner": "Ab",
@@ -630,7 +630,7 @@
   {
    "date": "2026-10-06",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Pricing lock",
    "type": "Internal (proposed)",
    "owner": "Ab",
@@ -666,7 +666,7 @@
   {
    "date": "2026-10-07",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Final sign-off",
    "type": "Internal (proposed)",
    "owner": "Ab",
@@ -702,7 +702,7 @@
   {
    "date": "2026-10-08",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Proposal due, 5:00 PM ET",
    "type": "Prospect-set",
    "owner": "Ab",
@@ -834,7 +834,7 @@
   {
    "date": "2026-10-16",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "First draft",
    "type": "Internal (proposed)",
    "owner": "Vajaah, Dario",
@@ -906,7 +906,7 @@
   {
    "date": "2026-10-20",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Leads review",
    "type": "Internal (proposed)",
    "owner": "TBD",
@@ -942,7 +942,7 @@
   {
    "date": "2026-10-22",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Final sign-off",
    "type": "Internal (proposed)",
    "owner": "TBD",
@@ -954,7 +954,7 @@
   {
    "date": "2026-10-23",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Proposal due",
    "type": "Prospect-set",
    "owner": "TBD",
@@ -1050,7 +1050,7 @@
   {
    "date": "2026-11-09",
    "through": "2026-11-18",
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Round 1: general pitch (90 minutes)",
    "type": "Prospect-set",
    "owner": "AKF",
@@ -1074,7 +1074,7 @@
   {
    "date": "2026-11-30",
    "through": "2026-12-04",
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Round 2: finalist interviews and demos (90 minutes)",
    "type": "Prospect-set",
    "owner": "AKF",
@@ -1086,7 +1086,7 @@
   {
    "date": "2026-12-08",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Vendor selected / notice of intent to award",
    "type": "Prospect-set",
    "owner": "AKF",
@@ -1098,7 +1098,7 @@
   {
    "date": "2026-12-14",
    "through": null,
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "milestone": "Project kickoff",
    "type": "Prospect-set",
    "owner": "AKF",
@@ -1122,7 +1122,7 @@
   {
    "date": "2027-01-01",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Contract period begins (Jan 1 to Dec 31, 2027)",
    "type": "Prospect-set",
    "owner": "ARC",
@@ -1134,7 +1134,7 @@
   {
    "date": "2026-10-29",
    "through": null,
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "milestone": "Presentation meeting with ARC (overview and Q&A)",
    "type": "Prospect-set",
    "owner": "Ab to confirm participants",
@@ -1273,7 +1273,7 @@
    "notes": "Preparing proposal draft with the ARC deck as a base. Homiera to ping GFD Melissa with information needed. Targeting 5K monthly SMS, PSP hourly rate at $225 (potentially $195). Portfolio to include NYFED, WH, USIP, NACO, NFWF, Aspen, and Ford. Internal meeting scheduled with Melissa for Thursday. Target: Friday EOD to be complete and ready for final approval."
   },
   {
-   "proposal": "ARC",
+   "proposal": "Appalachian Regional Commission",
    "client": "ARC.gov Web Development and Managed Hosting Services",
    "type": "RFP",
    "stage": "Submitted",
@@ -1299,7 +1299,7 @@
    "notes": "Sept 30 stacks first draft, pricing, and design gates. Q&A received. Team content dump continues in the collaborative doc. Submitted Oct 9 (confirmed Oct 13). Waiting to hear if WDG is a finalist. Oct 19 update: AGA told WDG no. Ab offered to present WDG's spec and recommendations once AGA finishes reviewing finalists; no date set."
   },
   {
-   "proposal": "AKF",
+   "proposal": "American Kidney Fund",
    "client": "American Kidney Fund website redesign and CMS migration RFP",
    "type": "RFP",
    "stage": "Submitted",
@@ -1396,7 +1396,7 @@
     "Ab"
    ],
    [
-    "ARC",
+    "Appalachian Regional Commission",
     "Presentation meeting with ARC: 10-min overview, rest is Q&A",
     "Presentation meeting with ARC (overview and Q&A)",
     "Thu",
@@ -1430,24 +1430,24 @@
    "Tinuiti": "Walk-through presentation Wed Oct 28, 2-4pm Central. Doug OOO; Vajaah and Dario assumed to attend, Ab to confirm.",
    "PHI": "Declined Oct 13. Selected another vendor.",
    "UAE Embassy": "Active again as of Oct 26 (was withdrawn Oct 19). Due Nov 5, pending legal and Ab's decision.",
-   "ARC": "Presentation meeting Thu Oct 29 (10-min overview, rest is Q&A). Ab confirming attendees.",
    "AGA": "Lost Oct 19. Ab offered a follow-up spec/recommendations presentation, pending AGA's finalist review.",
-   "AKF": "Submitted Friday night Oct 23. AKF confirmed receipt. Pending next steps.",
    "NLC": "Presented Oct 14. Reviewing internally, no timeline given.",
    "Open Technology Fund": "Submitted Thu Oct 22, a day early. Ab confirmed receipt via text. Pending next steps.",
    "Aspen Digital": "Helping shape their RFP. No RFP issued yet.",
    "Heritage.org": "In-person meeting held. Ab drafting responses to Stephanie's post-meeting questions.",
-   "Heritage Action": "Discovery complete. Closing on Phase 2 SOW as of Oct 26."
+   "Heritage Action": "Discovery complete. Closing on Phase 2 SOW as of Oct 26.",
+   "American Kidney Fund": "Submitted Friday night Oct 23. AKF confirmed receipt. Pending next steps.",
+   "Appalachian Regional Commission": "Presentation meeting Thu Oct 29 (10-min overview, rest is Q&A). Ab confirming attendees."
   }
  },
  "prop_order": [
   "AGA",
   "UAE Embassy",
-  "AKF",
+  "American Kidney Fund",
   "Open Technology Fund",
   "Community of Christ",
   "PHI",
-  "ARC",
+  "Appalachian Regional Commission",
   "Columbia Association",
   "Tinuiti",
   "Heritage.org",
