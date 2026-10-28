@@ -231,8 +231,7 @@ h1{ font-family:'Playfair Display',serif; font-weight:800; font-size:30px; margi
 .wl{ display:flex; gap:14px; margin-top:6px; font-size:12px; }
 
 h2.section{ font-family:'Playfair Display',serif; font-size:20px; font-weight:700; margin:0 0 16px 0; color:var(--ink); }
-.grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-@media (max-width:1150px){ .grid{ grid-template-columns:repeat(3,1fr); } }
+.grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 @media (max-width:820px){ .grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:520px){ .grid{ grid-template-columns:1fr; } }
 
