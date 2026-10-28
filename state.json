@@ -1178,6 +1178,18 @@
    "marker": "",
    "notes": "Scheduled Wed Oct 28, 2:00 to 4:00 PM Central (3:00 to 5:00 PM ET). Doug is out of office. Current assumption is Vajaah and Dario attend; Ab to confirm.",
    "tag": ""
+  },
+  {
+   "date": "2026-11-02",
+   "through": null,
+   "proposal": "Columbia Association",
+   "milestone": "Signatures expected",
+   "type": "Prospect-set",
+   "owner": "Ab, Homiera",
+   "status": "Open",
+   "marker": "",
+   "notes": "Target date for contract signatures per Homiera 10/28.",
+   "tag": ""
   }
  ],
  "summary": [
@@ -1212,8 +1224,8 @@
    "client": "Columbia Association finalist presentation",
    "type": "Awarded",
    "stage": "Signatures slated for this week",
-   "key_date": null,
-   "key_detail": "Contract in progress; no date given",
+   "key_date": "2026-11-02",
+   "key_detail": "Signatures expected",
    "submit_to": "Not stated",
    "owners": "Ab, Homiera",
    "named_staff": "Ab, Homiera",
