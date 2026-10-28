@@ -81,6 +81,24 @@ OWNER = {
     "GSA.gov": "Homiera",
 }
 
+# Slack channel per pursuit, per Homiera 10/28. Deliberately excludes
+# Heritage Action. NLC isn't in prop_order (not a visible card today), so
+# its link is kept here for whenever it's added but won't render anywhere
+# yet.
+SLACK = {
+    "Columbia Association": "https://wdg.slack.com/archives/C046MLAN3L2",
+    "Aspen Digital": "https://wdg.slack.com/archives/C0C6NNY2W87",
+    "GSA.gov": "https://wdg.slack.com/archives/C0BF86NR3H9",
+    "American Kidney Fund": "https://wdg.slack.com/archives/C0C1JMLS62H",
+    "NLC": "https://wdg.slack.com/archives/C0AFGQF1UF8",
+    "NTSB": "https://wdg.slack.com/archives/C0AJYUGSHS8",
+    "Open Technology Fund": "https://wdg.slack.com/archives/C0C3V40DA11",
+    "UAE Embassy": "https://wdg.slack.com/archives/C0BPFB0A2SH",
+    "Heritage.org": "https://wdg.slack.com/archives/C0BLQ3GL933",
+    "Tinuiti": "https://wdg.slack.com/archives/C0BTBEGTABV",
+    "Appalachian Regional Commission": "https://wdg.slack.com/archives/C0BUAV1M3PW",
+}
+
 rows_by_prop = {}
 for r in s["rows"]:
     rows_by_prop.setdefault(r["proposal"], []).append(r)
@@ -254,7 +272,7 @@ def card_data(prop):
         "budget_display": budget_display,   # Clean $ figure for the card face
         "budget_raw": budget_raw,           # Full budget text (caveats etc.) for the detail view
         "deck_link": None,
-        "slack_link": None,
+        "slack_link": SLACK.get(prop),
         "rfp_folder_link": None,            # Link to RFP docs folder (Google Drive)
     }
 
