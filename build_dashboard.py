@@ -425,6 +425,9 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .pdetail .row{ margin-bottom:6px; }
 .pdetail .k{ color:var(--ink); font-weight:500; }
 .placeholder{ color:var(--ink-muted); font-style:italic; }
+.slackrow{ margin-top:14px !important; padding-top:14px; border-top:1px solid var(--rule); }
+.slacklink{ font-family:var(--font-sans); font-weight:500; font-size:13.5px; color:var(--emphasis); text-decoration:underline; }
+.slacklink.placeholder{ color:var(--ink-muted); font-style:italic; text-decoration:none; }
 
 .loss-tile{ background:var(--surface); border-left:3px solid var(--status-lost); padding:18px 20px; margin-bottom:8px; }
 .lossrow{ padding:10px 0; border-top:1px solid var(--rule); }
@@ -533,9 +536,12 @@ def card_html(c, i):
     tier_class = f" tier-{c['tier']}" if c["tier"] != "TBD" else ""
     passed = '<span class="datepassed">date passed</span>' if c["date_passed"] else ""
     deck = f'<a href="{esc(c["deck_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open deck</a>' if c["deck_link"] else '<span class="placeholder">not linked yet</span>'
-    slack = f'<a href="{esc(c["slack_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open channel</a>' if c["slack_link"] else '<span class="placeholder">not linked yet</span>'
     rfp_folder = (f'<a href="{esc(c["rfp_folder_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open folder</a>'
                   if c["rfp_folder_link"] else '<span class="placeholder">not linked yet</span>')
+    # Slack moved out of the field list and into a standalone link after
+    # Notes, per Ab 10/28. Still a placeholder until slack_link is set.
+    go_to_slack = (f'<a href="{esc(c["slack_link"])}" class="slacklink">Go to Slack &rarr;</a>'
+                   if c["slack_link"] else '<span class="slacklink placeholder">Go to Slack — not linked yet</span>')
     return f"""
     <div class="pcard{tier_class}" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
@@ -553,9 +559,9 @@ def card_html(c, i):
         <div class="row"><span class="k">All assigned people:</span> {esc(c['owners'])}</div>
         <div class="row"><span class="k">Tier:</span> {tier}</div>
         <div class="row"><span class="k">Deck:</span> {deck}</div>
-        <div class="row"><span class="k">Slack channel:</span> {slack}</div>
         <div class="row"><span class="k">RFP docs folder:</span> {rfp_folder}</div>
         <div class="row"><span class="k">Notes:</span> {esc(c['notes'])}</div>
+        <div class="row slackrow">{go_to_slack}</div>
       </div>
     </div>
     """
