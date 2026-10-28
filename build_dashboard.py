@@ -223,7 +223,7 @@ body{
 }
 .page{ max-width:1440px; margin:0 auto; padding:32px 40px 60px; }
 .brandbar{ display:flex; align-items:center; gap:10px; margin-bottom:28px; }
-.brandbar img{ height:22px; width:auto; display:block; }
+.brandbar img{ height:25px; width:auto; display:block; }
 h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacing:-.02em; margin:0 0 4px 0; }
 .sub{ color:var(--ink-muted); font-size:14px; margin:0; font-family:var(--font-sans); }
 .topline{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:30px; flex-wrap:wrap; gap:16px; }
@@ -455,7 +455,7 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
   <div class="brandbar"><img src="assets/wdg-logo-black.svg" alt="WDG, an Agital Company"></div>
   <div class="topline">
     <div>
-      <h1>WDG's New Business Pipeline Overview</h1>
+      <h1>New Business Pipeline Dashboard</h1>
       <p class="sub">{quarter_label(AS_OF)} &middot; internal view</p>
     </div>
     <div class="asof">
