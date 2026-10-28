@@ -376,7 +376,7 @@ h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacin
 .tier-swatch{ width:14px; height:3px; display:inline-block; }
 .tier-swatch.tier-1{ background:var(--wdg-yellow); }
 .tier-swatch.tier-2{ background:var(--wdg-iris); }
-.tier-swatch.tier-3{ background:var(--wdg-slate); }
+.tier-swatch.tier-3{ background:var(--ink); }
 .tier-swatch.tier-tbd{ background:var(--rule); }
 
 h2.section{ font-family:var(--font-sans); font-size:16px; font-weight:500; margin:0 0 14px 0; color:var(--ink); letter-spacing:-.01em;
@@ -401,7 +401,7 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
    badge colors sitting on the same card. */
 .pcard.tier-1{ border-top-color:var(--wdg-yellow); }
 .pcard.tier-2{ border-top-color:var(--wdg-iris); }
-.pcard.tier-3{ border-top-color:var(--wdg-slate); }
+.pcard.tier-3{ border-top-color:var(--ink); }
 .pcard:hover, .pcard:focus{ background:var(--surface-hover); border-top-color:var(--ink); }
 .pcard:focus{ outline:2px solid var(--ink); outline-offset:2px; }
 .pname{ font-weight:500; font-size:15px; margin-bottom:6px; padding-right:90px; font-family:var(--font-sans); }
