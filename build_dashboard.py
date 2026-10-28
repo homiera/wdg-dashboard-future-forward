@@ -203,14 +203,28 @@ HEAD = """<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* WDG Brand System v4 tokens */
+  /* WDG Brand System v4 tokens - charcoal (dark) ground per Homiera 10/28 */
   --wdg-yellow:#FFD400; --wdg-red:#E8573F; --wdg-mint:#A8EEB4; --wdg-iris:#C9BDF2;
   --wdg-paper:#F3F2EE; --wdg-stone:#E3E1DA; --wdg-slate:#575B5F; --wdg-charcoal:#171717;
-  --ink:#141414; --ink-muted:#57554F; --rule:#D3D1CA; --surface:#E7E6E1;
+  /* Ground/text pulled from the brand system's own [data-ground="charcoal"]
+     block (bone text, yellow emphasis). --rule is bumped from the brand
+     system's own charcoal --rule (#3A3936, 1.6:1 against charcoal - a
+     decorative-divider contrast, fine for a deck, too low for a card
+     boundary someone needs to see) up to the slate ground's --rule value
+     (#6E7276) to clear WCAG 1.4.11's 3:1 non-text contrast minimum for a
+     UI boundary. Verified: bone text 15.7:1, muted text 7.1:1, yellow
+     emphasis 12.5:1, rule 3.7:1, all against #171717 - every text pair
+     clears AA (4.5:1) with room, most clear AAA (7:1).
+  */
+  --ink:#F2F0EA; --ink-muted:#A6A39C; --rule:#6E7276; --surface:#232322;
+  --surface-hover:#2C2C2A; --emphasis:#FFD400;
   --font-sans:'Geist','Helvetica Neue',Arial,sans-serif;
   --font-mono:'Geist Mono','SF Mono',Menlo,monospace;
   /* status mapping onto the brand palette - color has a job, nothing
-     recolored just for variety */
+     recolored just for variety. Badge text stays #141414 (near-black) on
+     every badge background per the brand rule ("black text on every
+     color"), independent of the page's own dark ground - verified each
+     clears AA: mint 13.6:1, red 5.2:1, iris 10.6:1, stone 14.1:1. */
   --status-lost:#E8573F; --status-lost-ink:#141414;
   --status-progress:#A8EEB4; --status-progress-ink:#141414;
   --status-data:#C9BDF2; --status-data-ink:#141414;
@@ -218,7 +232,7 @@ HEAD = """<!doctype html>
 }
 *{box-sizing:border-box;}
 body{
-  margin:0; padding:0; background:var(--wdg-paper);
+  margin:0; padding:0; background:var(--wdg-charcoal);
   font-family:var(--font-sans); color:var(--ink);
 }
 .page{ max-width:1440px; margin:0 auto; padding:32px 40px 60px; }
@@ -242,7 +256,7 @@ h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacin
 .tile.iris{ border-left-color:var(--wdg-iris); }
 .tile.yellow{ border-left-color:var(--wdg-yellow); }
 .tile-wide{ grid-column:span 3; }
-.volbar{ display:flex; width:100%; height:10px; border-radius:0; overflow:hidden; background:var(--wdg-stone); margin-top:8px; }
+.volbar{ display:flex; width:100%; height:10px; border-radius:0; overflow:hidden; background:var(--surface); margin-top:8px; }
 .volseg{ height:100%; }
 .volseg.known{ background:var(--wdg-mint); } .volseg.unknown{ background:var(--wdg-stone); border-right:1px solid var(--rule); }
 @media (max-width:900px){ .tiles{ grid-template-columns:repeat(2,1fr); } .tile-wide{ grid-column:span 2; } }
@@ -265,7 +279,7 @@ h2.section{ font-family:var(--font-sans); font-size:18px; font-weight:500; margi
   padding:16px 18px; cursor:pointer; position:relative;
   transition:border-color .15s ease, background .15s ease;
 }
-.pcard:hover, .pcard:focus{ background:var(--wdg-stone); border-top-color:var(--ink); }
+.pcard:hover, .pcard:focus{ background:var(--surface-hover); border-top-color:var(--ink); }
 .pcard:focus{ outline:2px solid var(--ink); outline-offset:2px; }
 .pname{ font-weight:500; font-size:15px; margin-bottom:6px; padding-right:90px; font-family:var(--font-sans); }
 .badge{
@@ -288,21 +302,21 @@ h2.section{ font-family:var(--font-sans); font-size:18px; font-weight:500; margi
 
 /* ---- modal ---- */
 .modal-backdrop{
-  position:fixed; inset:0; background:rgba(23,23,23,.55);
+  position:fixed; inset:0; background:rgba(0,0,0,.72);
   display:none; align-items:center; justify-content:center; z-index:100; padding:24px;
 }
 .modal-backdrop.show{ display:flex; }
 .modal-box{
-  background:var(--wdg-paper); border-left:4px solid var(--ink); border-radius:0;
+  background:var(--surface-hover); border:1px solid var(--rule); border-left:4px solid var(--emphasis); border-radius:0;
   max-width:480px; width:100%; padding:28px 28px 24px; position:relative;
-  box-shadow:0 24px 60px rgba(0,0,0,.35);
+  box-shadow:0 24px 60px rgba(0,0,0,.55);
   font-family:var(--font-sans);
 }
 .modal-close{
   position:absolute; top:14px; right:16px; background:none; border:none; color:var(--ink-muted);
   font-size:20px; line-height:1; cursor:pointer; padding:4px; font-family:var(--font-sans);
 }
-.modal-close:hover{ color:var(--ink); }
+.modal-close:hover{ color:var(--emphasis); }
 .modal-badge{
   display:inline-block; font-family:var(--font-mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
   padding:3px 10px; border-radius:999px; font-weight:400; margin-bottom:10px;
@@ -381,9 +395,9 @@ TILES_HTML = f"""
 
 def card_html(c, i):
     tier = f'<span class="placeholder">TBD</span>' if c["tier"] == "TBD" else esc(c["tier"])
-    deck = f'<a href="{esc(c["deck_link"])}" style="color:var(--ink)">Open deck</a>' if c["deck_link"] else '<span class="placeholder">not linked yet</span>'
-    slack = f'<a href="{esc(c["slack_link"])}" style="color:var(--ink)">Open channel</a>' if c["slack_link"] else '<span class="placeholder">not linked yet</span>'
-    rfp_folder = (f'<a href="{esc(c["rfp_folder_link"])}" style="color:var(--ink)">Open folder</a>'
+    deck = f'<a href="{esc(c["deck_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open deck</a>' if c["deck_link"] else '<span class="placeholder">not linked yet</span>'
+    slack = f'<a href="{esc(c["slack_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open channel</a>' if c["slack_link"] else '<span class="placeholder">not linked yet</span>'
+    rfp_folder = (f'<a href="{esc(c["rfp_folder_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open folder</a>'
                   if c["rfp_folder_link"] else '<span class="placeholder">not linked yet</span>')
     return f"""
     <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
@@ -452,7 +466,7 @@ def quarter_label(d):
 INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
 <body>
 <div class="page">
-  <div class="brandbar"><img src="assets/wdg-logo-black.svg" alt="WDG, an Agital Company"></div>
+  <div class="brandbar"><img src="assets/wdg-logo-bone.svg" alt="WDG, an Agital Company"></div>
   <div class="topline">
     <div>
       <h1>New Business Pipeline Dashboard</h1>
@@ -478,7 +492,7 @@ import os, shutil
 os.makedirs(OUT_DIR, exist_ok=True)
 os.makedirs(os.path.join(OUT_DIR, "internal", "assets"), exist_ok=True)
 open(os.path.join(OUT_DIR, "internal", "index.html"), "w").write(INTERNAL_HTML)
-LOGO_SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "wdg-logo-black.svg")
+LOGO_SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "wdg-logo-bone.svg")
 if os.path.exists(LOGO_SRC):
-    shutil.copy(LOGO_SRC, os.path.join(OUT_DIR, "internal", "assets", "wdg-logo-black.svg"))
+    shutil.copy(LOGO_SRC, os.path.join(OUT_DIR, "internal", "assets", "wdg-logo-bone.svg"))
 print("built internal dashboard:", len(cards), "cards,", len(in_flight), "in flight,", win_rate, "% win rate")
