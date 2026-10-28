@@ -426,8 +426,10 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .pdetail .k{ color:var(--ink); font-weight:500; }
 .placeholder{ color:var(--ink-muted); font-style:italic; }
 
-.losscard{ background:var(--surface); border-radius:0; border-top:3px solid var(--status-lost); padding:16px 18px; position:relative; }
-.lossname{ font-weight:500; font-size:15px; margin-bottom:8px; padding-right:60px; font-family:var(--font-sans); }
+.loss-tile{ background:var(--surface); border-left:3px solid var(--status-lost); padding:18px 20px; margin-bottom:8px; }
+.lossrow{ padding:10px 0; border-top:1px solid var(--rule); }
+.lossrow:first-of-type{ border-top:none; }
+.lossname{ font-weight:500; font-size:14px; font-family:var(--font-sans); margin-bottom:3px; }
 .lossreason{ font-size:13px; color:var(--ink-muted); line-height:1.5; font-family:var(--font-sans); }
 
 /* ---- modal ---- */
@@ -583,19 +585,19 @@ for g in GROUP_ORDER:
     <div class="grid">{cards_html}</div>
     """
 
-def loss_card_html(l):
+def loss_row_html(l):
     return f"""
-    <div class="losscard">
+    <div class="lossrow">
       <div class="lossname">{esc(l['prop'])}</div>
       <div class="lossreason">{esc(l['reason'])}</div>
     </div>
     """
 
 if losses:
-    loss_cards_html = "\n".join(loss_card_html(l) for l in losses)
+    loss_rows_html = "\n".join(loss_row_html(l) for l in losses)
     SECTIONS_HTML += f"""
     <h2 class="section"><span class="section-dot" style="background:var(--status-lost);"></span>Losses<span class="section-count">{len(losses)}</span></h2>
-    <div class="grid">{loss_cards_html}</div>
+    <div class="loss-tile">{loss_rows_html}</div>
     """
 
 MODAL_DATA = {
