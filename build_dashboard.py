@@ -229,6 +229,16 @@ def card_data(prop):
     d, what = next_due(prop)
     label, tone = status_label(prop)
     date_passed = bool(d and datetime.date.fromisoformat(d) < AS_OF)
+    # $ per deal, per Ab 10/28. parse_budget() already distinguishes a real
+    # parseable dollar figure from "TBD"/"Not stated" text (used for the
+    # Pipeline Volume tile); reuse that here instead of guessing at a number.
+    budget_raw = su.get("budget") or "Not stated"
+    rng = parse_budget(su.get("budget"))
+    if rng:
+        low, high = rng
+        budget_display = fmt_money(low) if low == high else f"{fmt_money(low)}&ndash;{fmt_money(high)}"
+    else:
+        budget_display = "Not yet quantified"
     return {
         "prop": prop,                       # Prospect Name
         "label": label,                     # Status
@@ -241,6 +251,8 @@ def card_data(prop):
         "stage": su.get("stage", ""),                 # Stage details
         "notes": su.get("notes", ""),                 # Description / latest notes
         "tier": TIER.get(prop, "TBD"),
+        "budget_display": budget_display,   # Clean $ figure for the card face
+        "budget_raw": budget_raw,           # Full budget text (caveats etc.) for the detail view
         "deck_link": None,
         "slack_link": None,
         "rfp_folder_link": None,            # Link to RFP docs folder (Google Drive)
@@ -419,6 +431,8 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .datepassed{ font-family:var(--font-mono); font-size:9px; letter-spacing:.04em; text-transform:uppercase; background:var(--wdg-red); color:#141414; padding:2px 7px; border-radius:999px; }
 .powners{ font-family:var(--font-mono); font-size:13px; letter-spacing:.02em; color:var(--ink-muted); }
 .powners .k{ color:var(--ink-muted); text-transform:uppercase; letter-spacing:.05em; font-size:11px; margin-right:6px; }
+.pbudget{ font-family:var(--font-sans); font-weight:500; font-size:13.5px; color:var(--ink); margin-top:4px; }
+.pbudget.placeholder{ font-weight:400; color:var(--ink-muted); font-style:italic; }
 .hint{ font-family:var(--font-mono); font-size:10px; color:var(--ink-muted); margin-top:10px; letter-spacing:.05em; text-transform:uppercase; }
 
 .pdetail{ display:none; }
@@ -549,9 +563,11 @@ def card_html(c, i):
       <div class="pname">{esc(c['prop'])}</div>
       <div class="pdue">Next: <b>{esc(c['due'])}</b>{passed}</div>
       <div class="powners"><span class="k">Owner</span>{esc(c['owner'])}</div>
+      <div class="pbudget{' placeholder' if c['budget_display'] == 'Not yet quantified' else ''}">{c['budget_display']}</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-{i}">
         <div class="row"><span class="k">Tier:</span> {tier}</div>
+        <div class="row"><span class="k">Budget:</span> {esc(c['budget_raw'])}</div>
         <div class="row"><span class="k">Stage details:</span> {esc(c['stage'])}</div>
         <div class="row"><span class="k">Next Due Date:</span> {esc(c['due'])}{(' — ' + esc(c['due_what'])) if c['due_what'] else ''}</div>
         <div class="row"><span class="k">All assigned people:</span> {esc(c['owners'])}</div>
