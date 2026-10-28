@@ -8,8 +8,7 @@ Static site, deployed via Spacefast from this repo. Two pages:
 
 ## How this gets updated
 
-Both pages are generated from the same data that drives `WDG_Proposals_In_Flux.xlsx` (the weekly Excel
-tracker). When Homiera sends a weekly or ad hoc update in chat, Claude:
+Both pages are generated from the same data that drives `WDG_Proposals_In_Flux.xlsx`.
 
 1. Updates the shared tracker state (`state.json`, not committed here).
 2. Regenerates `index.html` and `internal/index.html` from it.
@@ -18,7 +17,3 @@ tracker). When Homiera sends a weekly or ad hoc update in chat, Claude:
 A push to the default branch triggers a Spacefast rebuild automatically (if auto-deploy is on in the
 Space's Build settings). No manual redeploy step should be needed.
 
-## Setup (one-time, in the Spacefast dashboard)
-
-Builds page → Connect GitHub → select this repository → set the production branch to the one this repo
-pushes to (`main`, unless changed).
