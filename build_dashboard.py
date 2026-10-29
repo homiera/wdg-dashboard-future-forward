@@ -118,6 +118,16 @@ RFP_FOLDER_LINK = {
     "NLC": "https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-",
 }
 
+# Spec/reference deliverables that aren't a formal proposal deck, where
+# relevant. Per Homiera 10/29: Tinuiti got a technical scenario writeup and a
+# proposal doc instead of a formal deck. List of (label, url) per pursuit.
+SPEC_LINKS = {
+    "Tinuiti": [
+        ("Technical scenario (PDF)", "https://wdg.slack.com/files/U08B3QSJK/F0C3F4PMUTD/web_development_group_-_technical_scenario_for_tinuiti_.pdf"),
+        ("Tinuiti proposal (PDF)", "https://wdg.slack.com/files/U08B3QSJK/F0CBMHV3P8E/tinuiti_wdg.pdf"),
+    ],
+}
+
 rows_by_prop = {}
 for r in s["rows"]:
     rows_by_prop.setdefault(r["proposal"], []).append(r)
@@ -291,6 +301,7 @@ def card_data(prop):
         "budget_display": budget_display,   # Clean $ figure for the card face
         "budget_raw": budget_raw,           # Full budget text (caveats etc.) for the detail view
         "deck_link": DECK_LINK.get(prop),
+        "spec_links": SPEC_LINKS.get(prop),
         "slack_link": SLACK.get(prop),
         "rfp_folder_link": RFP_FOLDER_LINK.get(prop),   # Link to RFP docs folder (Google Drive)
     }
@@ -629,6 +640,13 @@ def card_html(c, i):
     # Notes, per Ab 10/28. Still a placeholder until slack_link is set.
     go_to_slack = (f'<a href="{esc(c["slack_link"])}" class="slacklink">Go to Slack &rarr;</a>'
                    if c["slack_link"] else '<span class="slacklink placeholder">Go to Slack — not linked yet</span>')
+    spec_row = ""
+    if c.get("spec_links"):
+        links_html = " &middot; ".join(
+            f'<a href="{esc(url)}" style="color:var(--emphasis); text-decoration:underline;">{esc(label)}</a>'
+            for label, url in c["spec_links"]
+        )
+        spec_row = f'<div class="row"><span class="k">Spec deliverables:</span> {links_html}</div>'
     return f"""
     <div class="pcard{tier_class}" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
@@ -647,6 +665,7 @@ def card_html(c, i):
         <div class="row"><span class="k">Deck:</span> {deck}</div>
         <div class="row"><span class="k">RFP docs folder:</span> {rfp_folder}</div>
         <div class="row"><span class="k">Notes:</span> {esc(c['notes'])}</div>
+        {spec_row}
         <div class="row slackrow">{go_to_slack}</div>
       </div>
     </div>
