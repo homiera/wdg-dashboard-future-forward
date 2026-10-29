@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-28",
+  "as_of": "2026-10-29",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1371,12 +1371,12 @@
       "type": "TBD",
       "stage": "Submitted",
       "key_date": null,
-      "key_detail": null,
+      "key_detail": "Financial meeting pushed to November; checking in with James by mid-month",
       "submit_to": "TBD",
       "owners": "Homiera, Kurtis, Doug",
       "named_staff": "Homiera, Kurtis, Doug",
       "budget": "$250,000",
-      "notes": "Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule."
+      "notes": "Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule. Update 10/29: NTSB financial meeting has been pushed to November. Homiera to check in with James by mid-November."
     },
     {
       "proposal": "GSA.gov",
