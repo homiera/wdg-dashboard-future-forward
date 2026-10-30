@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-29",
+  "as_of": "2026-10-30",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1138,9 +1138,9 @@
       "milestone": "Presentation meeting with ARC (overview and Q&A)",
       "type": "Prospect-set",
       "owner": "Ab to confirm participants",
-      "status": "Open",
+      "status": "Complete",
       "marker": "FIXED EVENT",
-      "notes": "10-minute overview presentation of WDG's proposal, with the remaining ~50 minutes of the hour reserved for ARC's questions. Ab to confirm who from WDG is attending.",
+      "notes": "10-minute overview presentation of WDG's proposal, with the remaining ~50 minutes of the hour reserved for ARC's questions. Ab to confirm who from WDG is attending. Presentation held Thursday Oct 29. Andrea requested a copy of the deck.",
       "tag": ""
     },
     {
@@ -1290,14 +1290,14 @@
       "proposal": "Appalachian Regional Commission",
       "client": "ARC.gov Web Development and Managed Hosting Services",
       "type": "RFP",
-      "stage": "Submitted",
-      "key_date": "2026-10-29",
-      "key_detail": "Presentation meeting with ARC: 10-minute overview, rest of the hour is ARC's Q&A",
+      "stage": "Presentation complete, pending decision or next steps",
+      "key_date": null,
+      "key_detail": "Pending decision or next steps",
       "submit_to": "contracts@arc.gov",
       "owners": "Ab, Michael, Kurtis, Vajaah",
       "named_staff": "Ab, Michael, Kurtis, Vajaah",
       "budget": "$70,000 to $80,000 (includes Pantheon Performance Medium hosting)",
-      "notes": "Presentation to focus on a 10-minute presentation of our proposal and approach; the remaining hour is slated for Q&A. Kurtis, Michael F., and Ab to participate."
+      "notes": "Pending decision or next steps. Andrea requested a copy of the deck used during Thursday's presentation."
     },
     {
       "proposal": "AGA",

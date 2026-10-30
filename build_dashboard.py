@@ -32,7 +32,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action"}   # status shown as "I
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Tinuiti"}
+AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Tinuiti", "Appalachian Regional Commission"}
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
@@ -142,7 +142,8 @@ def next_due(prop):
     happened to Open Technology Fund's Oct 23 submission deadline."""
     rows = rows_by_prop.get(prop, [])
     cands = [r for r in rows
-             if r["status"] not in ("Complete", "Cancelled") and r["date"] and r["date"] >= s["as_of"]]
+             if r["status"] not in ("Complete", "Cancelled") and r["date"] and r["date"] >= s["as_of"]
+             and not r["milestone"].startswith("Contract period begins")]  # informational, not an action date
     if cands:
         cands.sort(key=lambda r: r["date"])
         return cands[0]["date"], cands[0]["milestone"]
