@@ -204,7 +204,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div>
       <h1>New Business Pipeline Dashboard</h1>
       <p class="sub">Q4 2026 &middot; internal view</p>
-      <p class="subcount">10 active pursuits. 5 are waiting on a client decision, and 9 have no next date set.</p>
+      <p class="subcount">9 active pursuits. 5 are waiting on a client decision, and 9 have no next date set.</p>
     </div>
     <div class="asof">
       <div class="asof-label">As of</div>
@@ -215,7 +215,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 <div class="tiles">
   <div class="tile">
     <div class="tlabel">In Flight</div>
-    <div class="tnum">10</div>
+    <div class="tnum">9</div>
     <div class="tbreak">active pursuits</div>
   </div>
   <div class="tile">
@@ -225,14 +225,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
   <div class="tile mint">
     <div class="tlabel">Contracts In Progress</div>
-    <div class="tnum">2</div>
-    <div class="tbreak">Heritage Action, Columbia Association</div>
+    <div class="tnum">3</div>
+    <div class="tbreak">Heritage.org, Heritage Action, Columbia Association</div>
   </div>
   <div class="tile yellow">
     <div class="tlabel">Win Rate (decided)</div>
-    <div class="tnum">40%</div>
+    <div class="tnum">50%</div>
     <div class="wl">
-      <span><span class="dot progress"></span>2 won</span>
+      <span><span class="dot progress"></span>3 won</span>
       <span><span class="dot lost"></span>3 lost</span>
     </div>
   </div>
@@ -269,7 +269,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <span class="tier-key-item"><span class="tier-swatch tier-tbd"></span>Not yet assigned</span>
   </div>
   
-    <h2 class="section"><span class="section-dot progress"></span>In Contract<span class="section-count">2</span></h2>
+    <h2 class="section"><span class="section-dot progress"></span>In Contract<span class="section-count">3</span></h2>
     <div class="grid">
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(0)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(0);}">
@@ -297,12 +297,35 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(1);}">
       <div class="badge progress">In Contract</div>
+      <div class="pname">Heritage.org</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners"><span class="k">Owner</span>Ab</div>
+      <div class="pbudget">$500,000</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-1">
+        <div class="row"><span class="k">Tier:</span> Tier 2</div>
+        <div class="row"><span class="k">Budget:</span> $500,000</div>
+        <div class="row"><span class="k">Stage details:</span> Contracting, Discovery then Implementation; MSA in legal review</div>
+        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
+        <div class="row"><span class="k">All assigned people:</span> Ab, Homiera, Kurtis</div>
+        <div class="row"><span class="k">Deck:</span> <a href="https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA.</div>
+        
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BLQ3GL933" class="slacklink">Go to Slack &rarr;</a></div>
+      </div>
+    </div>
+    
+
+    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(2);}">
+      <div class="badge progress">In Contract</div>
       <div class="pname">Heritage Action</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab, Kurt Shadle</div>
       <div class="pbudget">$300,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-1">
+      <div class="pdetail" id="detail-2">
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $300,000 (Homiera&#x27;s estimate, stated as approximate &quot;I think&quot; - not yet confirmed in writing)</div>
         <div class="row"><span class="k">Stage details:</span> Contracting</div>
@@ -317,17 +340,17 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     </div>
     
-    <h2 class="section"><span class="section-dot data"></span>Submitted<span class="section-count">7</span></h2>
+    <h2 class="section"><span class="section-dot data"></span>Submitted<span class="section-count">6</span></h2>
     <div class="grid">
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(2);}">
+         onclick="openModal(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(3);}">
       <div class="badge neutral">Submitted</div>
       <div class="pname">American Kidney Fund</div>
       <div class="pdue">Next: <b>Mon, Nov 9</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera, Ab</div>
       <div class="pbudget">$266,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-2">
+      <div class="pdetail" id="detail-3">
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $266,000</div>
         <div class="row"><span class="k">Stage details:</span> Submitted</div>
@@ -343,14 +366,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     
 
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(3);}">
+         onclick="openModal(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(4);}">
       <div class="badge neutral">Submitted</div>
       <div class="pname">Open Technology Fund</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera, Ab</div>
       <div class="pbudget">$86,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-3">
+      <div class="pdetail" id="detail-4">
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $86,000</div>
         <div class="row"><span class="k">Stage details:</span> Submitted — pending next steps</div>
@@ -366,14 +389,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     
 
     <div class="pcard tier-3" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(4);}">
+         onclick="openModal(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(5);}">
       <div class="badge neutral">Submitted</div>
       <div class="pname">Appalachian Regional Commission</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$70,000&ndash;$80,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-4">
+      <div class="pdetail" id="detail-5">
         <div class="row"><span class="k">Tier:</span> Tier 3</div>
         <div class="row"><span class="k">Budget:</span> $70,000 to $80,000 (includes Pantheon Performance Medium hosting)</div>
         <div class="row"><span class="k">Stage details:</span> Presentation complete, pending decision or next steps</div>
@@ -389,14 +412,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     
 
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(5);}">
+         onclick="openModal(6)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(6);}">
       <div class="badge neutral">Submitted</div>
       <div class="pname">Tinuiti</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab, Vaj, Kurtis</div>
       <div class="pbudget">$25,000&ndash;$30,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-5">
+      <div class="pdetail" id="detail-6">
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $25,000 to $30,000 annual (client target)</div>
         <div class="row"><span class="k">Stage details:</span> Presentation complete — pending next steps</div>
@@ -407,29 +430,6 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
         <div class="row"><span class="k">Notes:</span> This originated as a retainer opportunity. Oct 28 meeting: Vajaah to share the Go Fish Digital work discussed as a reference. Jessica Lingle to regroup internally on priorities and budget, aiming to follow up with WDG within the week. Ab to review the proposed engagement options. Likely a 2027 starting engagement. We did not do a formal deck for this proposal.</div>
         <div class="row"><span class="k">Spec deliverables:</span> <a href="https://wdg.slack.com/files/U08B3QSJK/F0C3F4PMUTD/web_development_group_-_technical_scenario_for_tinuiti_.pdf" style="color:var(--emphasis); text-decoration:underline;">Technical scenario (PDF)</a> &middot; <a href="https://wdg.slack.com/files/U08B3QSJK/F0CBMHV3P8E/tinuiti_wdg.pdf" style="color:var(--emphasis); text-decoration:underline;">Tinuiti proposal (PDF)</a></div>
         <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BTBEGTABV" class="slacklink">Go to Slack &rarr;</a></div>
-      </div>
-    </div>
-    
-
-    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(6)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(6);}">
-      <div class="badge neutral">Submitted</div>
-      <div class="pname">Heritage.org</div>
-      <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners"><span class="k">Owner</span>Ab</div>
-      <div class="pbudget">$500,000</div>
-      <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-6">
-        <div class="row"><span class="k">Tier:</span> Tier 2</div>
-        <div class="row"><span class="k">Budget:</span> $500,000</div>
-        <div class="row"><span class="k">Stage details:</span> Submitted, being set up as Discovery then Implementation; MSA in legal review</div>
-        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
-        <div class="row"><span class="k">All assigned people:</span> Ab, Homiera, Kurtis</div>
-        <div class="row"><span class="k">Deck:</span> <a href="https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA.</div>
-        
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BLQ3GL933" class="slacklink">Go to Slack &rarr;</a></div>
       </div>
     </div>
     
@@ -593,7 +593,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
 </div>
 <script>
-const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "2": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "3": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Heritage.org", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "10": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}};
+const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "3": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "10": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}};
 function openModal(i){
   const meta = MODAL_META[i];
   const detail = document.getElementById('detail-' + i);

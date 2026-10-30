@@ -22,9 +22,9 @@ def fmt_date(d):
 # bucketed by its own stage text into "in flight."
 # ---------------------------------------------------------------------------
 LOST = {"PHI", "AGA", "Community of Christ"}
-WON = {"Columbia Association", "Heritage Action"}       # used for win-rate (decided bids)
+WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
 PRE_RFP = {"Aspen Digital", "GSA.gov"}
-CONTRACTING = {"Columbia Association", "Heritage Action"}   # status shown as "In Contract"
+CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the
 # CLIENT's decision, as opposed to still drafting/shaping/presenting.
