@@ -218,6 +218,17 @@ for r in s["rows"]:
     if 0 <= delta <= 7:
         presentations_this_week.append((r["proposal"], r["date"], "Presentation"))
 
+# Clarifying-question deadlines (e.g. Studio.One 11/2), shown in the same list.
+questions_this_week = []
+for r in s["rows"]:
+    if r["status"] in ("Cancelled", "Complete") or r["proposal"] in LOST or not r["date"]:
+        continue
+    if not r["milestone"].lower().startswith("questions"):
+        continue
+    delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
+    if 0 <= delta <= 7:
+        questions_this_week.append((r["proposal"], r["date"], "Questions due"))
+
 due_this_week_rows = []
 for p in due_this_week:
     d, what = next_proposal_due(p)
@@ -226,7 +237,7 @@ for p in due_this_week:
 # Consolidated "What's coming up" list: proposals due and presentations in
 # the next 7 days, merged and sorted by date, per Homiera + Dario 10/28
 # (replaces two separate stat tiles).
-upcoming = sorted(due_this_week_rows + presentations_this_week, key=lambda x: x[1])
+upcoming = sorted(due_this_week_rows + presentations_this_week + questions_this_week, key=lambda x: x[1])
 
 contracts_in_progress = [p for p in all_props if p in CONTRACTING]
 
@@ -251,6 +262,14 @@ def parse_budget(text):
     high = nums[1] if len(nums) > 1 and nums[1] >= nums[0] else nums[0]
     return (low, high)
 
+# Total $ of wins, shown beside the win rate (Homiera 10/30).
+won_low = won_high = 0
+for _p in won_list:
+    _su = next(x for x in s["summary"] if x["proposal"] == _p)
+    _rng = parse_budget(_su.get("budget"))
+    if _rng:
+        won_low += _rng[0]; won_high += _rng[1]
+
 active_props_all = [p for p in s["prop_order"] if p not in LOST]
 quantified = []
 unquantified = []
@@ -267,6 +286,8 @@ known_high = sum(r[1] for _, r in quantified)
 
 def fmt_money(n):
     return f"${n:,.0f}"
+
+won_volume_display = (fmt_money(won_low) if won_low == won_high else f"{fmt_money(won_low)}&ndash;{fmt_money(won_high)}")
 
 # ---------------------------------------------------------------------------
 # Card data (visible list excludes LOST; those get their own Losses section)
@@ -594,7 +615,7 @@ TILES_HTML = f"""
   </div>
   <div class="tile yellow">
     <div class="tlabel">Win Rate (decided)</div>
-    <div class="tnum">{win_rate}%</div>
+    <div class="tnum">{win_rate}% <span style="font-size:15px;color:var(--ink-muted);font-weight:400;font-family:var(--font-sans);letter-spacing:0;">&middot; {won_volume_display} won</span></div>
     <div class="wl">
       <span><span class="dot progress"></span>{len(won_list)} won</span>
       <span><span class="dot lost"></span>{len(lost_list)} lost</span>
@@ -612,7 +633,7 @@ ROW2_HTML = f"""
 <div class="row2">
   <div class="upcoming-tile">
     <div class="upcoming-title">What's coming up</div>
-    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}</div>
+    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}{(" &middot; Questions due: " + str(len(questions_this_week))) if questions_this_week else ""}</div>
     {up_rows_html}
   </div>
   <div class="tile iris" style="padding:18px 20px;">
