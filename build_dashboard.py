@@ -83,6 +83,7 @@ OWNER = {
     "GSA.gov": "Homiera",
     "NLC": "Ab",
     "Studio.One": "Ab",
+    "Fairfax County EDA": "Maria Russell",
 }
 
 # Slack channel per pursuit, per Homiera 10/28. Deliberately excludes
