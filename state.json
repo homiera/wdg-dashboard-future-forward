@@ -1190,6 +1190,78 @@
       "marker": "",
       "notes": "Target date for contract signatures per Homiera 10/28.",
       "tag": ""
+    },
+    {
+      "date": "2026-10-30",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "NDA signed and brief sent",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Complete",
+      "marker": "",
+      "notes": "Studio.One RFP brief received.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-02",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "Questions to Studio.One, EOD",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "Submit clarifying questions by end of day.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-03",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "Studio.One shares answers with all respondents",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "",
+      "notes": "EOD.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-06",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "Responses due",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "Concise document or short deck: who we are, approach, team, Release 1 estimates (front-end only and full-stack), R2/R3 order of magnitude, AI in practice, risks, references.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-09",
+      "through": "2026-11-11",
+      "proposal": "Studio.One",
+      "milestone": "Conversations with shortlisted partners",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "",
+      "notes": "Nov 9 to 11.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-16",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "Partner selected",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "",
+      "notes": "Kickoff TBD, pending client budget approval.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1390,6 +1462,19 @@
       "named_staff": "Ab, Homiera, Kurtis",
       "budget": "TBD",
       "notes": "Lead from WPVIP with the intent to partner. Pending funding and RFP issuance. Potential 2027-2028 opportunity."
+    },
+    {
+      "proposal": "Studio.One",
+      "client": "Web Platform Technology Partner RFP (Studio.One)",
+      "type": "RFP (partner / subcontractor to lead agency)",
+      "stage": "RFP received 10/29; under consideration",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "Kourtney Wong, Studio.One",
+      "owners": "Ab, Homiera",
+      "named_staff": "Ab, Homiera",
+      "budget": "TBD",
+      "notes": "Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. RFP is confidential under NDA."
     }
   ],
   "focus": {
@@ -1470,6 +1555,7 @@
     "Heritage Action",
     "NTSB",
     "GSA.gov",
-    "NLC"
+    "NLC",
+    "Studio.One"
   ]
 }

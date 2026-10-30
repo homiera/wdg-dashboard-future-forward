@@ -23,7 +23,7 @@ def fmt_date(d):
 # ---------------------------------------------------------------------------
 LOST = {"PHI", "AGA", "Community of Christ"}
 WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
-PRE_RFP = {"Aspen Digital", "GSA.gov"}
+PRE_RFP = {"Aspen Digital", "GSA.gov", "Studio.One"}
 CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the
@@ -82,6 +82,7 @@ OWNER = {
     "Aspen Digital": "Kurt Shadle",
     "GSA.gov": "Homiera",
     "NLC": "Ab",
+    "Studio.One": "Ab",
 }
 
 # Slack channel per pursuit, per Homiera 10/28. Deliberately excludes
@@ -312,6 +313,7 @@ no_date_count = sum(1 for c in cards if c["due"] == "No date set")
 
 # Group cards by status label into the four stage sections, in a fixed
 # display order, per Homiera + Dario 10/28.
+GROUP_TITLE = {"Pre-RFP": "Pre-RFPs & Under Consideration"}
 GROUP_ORDER = ["In Contract", "Submitted", "In Progress", "Pre-RFP"]
 GROUP_TONE = {"In Contract": "progress", "Submitted": "data", "In Progress": "yellow", "Pre-RFP": "neutral"}
 groups = {g: [] for g in GROUP_ORDER}
@@ -693,7 +695,7 @@ for g in GROUP_ORDER:
         card_index += 1
     cards_html = "\n".join(cards_html_parts)
     SECTIONS_HTML += f"""
-    <h2 class="section"><span class="section-dot {tone}"></span>{esc(g)}<span class="section-count">{len(items)}</span></h2>
+    <h2 class="section"><span class="section-dot {tone}"></span>{esc(GROUP_TITLE.get(g, g))}<span class="section-count">{len(items)}</span></h2>
     <div class="grid">{cards_html}</div>
     """
 
