@@ -1262,6 +1262,42 @@
       "marker": "",
       "notes": "Kickoff TBD, pending client budget approval.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-18",
+      "through": null,
+      "proposal": "Fairfax County EDA",
+      "milestone": "Proposal due, 2:00 PM ET",
+      "type": "Prospect-set",
+      "owner": "TBD",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "Single PDF via the Euna Procurement (Bonfire) portal; must complete 'Submit & Finalize'. Technical and business proposals, three references, financials, Form 2022-TS-PI.",
+      "tag": ""
+    },
+    {
+      "date": "2027-01-25",
+      "through": "2027-02-05",
+      "proposal": "Fairfax County EDA",
+      "milestone": "Oral presentations (highest-rated bidders)",
+      "type": "Prospect-set",
+      "owner": "TBD",
+      "status": "Open",
+      "marker": "",
+      "notes": "Weeks of Jan 25 and Feb 5, 2027, in Tysons, VA or via Teams.",
+      "tag": ""
+    },
+    {
+      "date": "2027-04-01",
+      "through": null,
+      "proposal": "Fairfax County EDA",
+      "milestone": "Contract begins (anticipated)",
+      "type": "Prospect-set",
+      "owner": "TBD",
+      "status": "Open",
+      "marker": "",
+      "notes": "One-year term with two one-year renewals.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1475,6 +1511,19 @@
       "named_staff": "Ab, Homiera",
       "budget": "TBD",
       "notes": "Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. RFP is confidential under NDA."
+    },
+    {
+      "proposal": "Fairfax County EDA",
+      "client": "FCEDA RFP 2027-03, Integrated Marketing and Communications Services",
+      "type": "RFP (collaboration with REQ)",
+      "stage": "RFP under consideration; debrief with Maria's team next week",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "Euna Procurement (Bonfire) portal, PDF only",
+      "owners": "TBD",
+      "named_staff": "TBD",
+      "budget": "$800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)",
+      "notes": "Opportunity in collaboration with REQ. Debriefing with Maria's team next week. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm: strategy, media relations, digital and website experience, performance measurement. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Questions deadline (10/28) has passed."
     }
   ],
   "focus": {
@@ -1556,6 +1605,7 @@
     "NTSB",
     "GSA.gov",
     "NLC",
-    "Studio.One"
+    "Studio.One",
+    "Fairfax County EDA"
   ]
 }

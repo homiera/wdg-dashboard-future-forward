@@ -23,7 +23,7 @@ def fmt_date(d):
 # ---------------------------------------------------------------------------
 LOST = {"PHI", "AGA", "Community of Christ"}
 WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
-PRE_RFP = {"Aspen Digital", "GSA.gov", "Studio.One"}
+PRE_RFP = {"Aspen Digital", "GSA.gov", "Studio.One", "Fairfax County EDA"}
 CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the

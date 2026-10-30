@@ -204,7 +204,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div>
       <h1>New Business Pipeline Dashboard</h1>
       <p class="sub">Q4 2026 &middot; internal view</p>
-      <p class="subcount">10 active pursuits. 5 are waiting on a client decision, and 9 have no next date set.</p>
+      <p class="subcount">11 active pursuits. 5 are waiting on a client decision, and 9 have no next date set.</p>
     </div>
     <div class="asof">
       <div class="asof-label">As of</div>
@@ -215,7 +215,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 <div class="tiles">
   <div class="tile">
     <div class="tlabel">In Flight</div>
-    <div class="tnum">10</div>
+    <div class="tnum">11</div>
     <div class="tbreak">active pursuits</div>
   </div>
   <div class="tile">
@@ -248,15 +248,15 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   <div class="tile iris" style="padding:18px 20px;">
     <div class="tlabel">Pipeline Volume &mdash; Total Projected</div>
     <div class="tnum" style="font-size:28px;">
-      $2,073,500&ndash;$2,088,500
+      $2,873,500&ndash;$2,888,500
       <span style="font-size:13px; color:var(--ink-muted); font-family:var(--font-sans); font-weight:400;"> known</span>
     </div>
     <div class="volbar">
-      <div class="volseg known" style="width:69%" title="9 quantified"></div>
-      <div class="volseg unknown" style="width:31%" title="Unquantified: UAE Embassy, Aspen Digital, GSA.gov, Studio.One"></div>
+      <div class="volseg known" style="width:71%" title="10 quantified"></div>
+      <div class="volseg unknown" style="width:29%" title="Unquantified: UAE Embassy, Aspen Digital, GSA.gov, Studio.One"></div>
     </div>
     <div class="wl" style="margin-top:10px;">
-      <span><span class="dot progress"></span>9 of 13 pursuits have a real budget figure</span>
+      <span><span class="dot progress"></span>10 of 14 pursuits have a real budget figure</span>
     </div>
   </div>
 </div>
@@ -505,7 +505,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     </div>
     
-    <h2 class="section"><span class="section-dot neutral"></span>Pre-RFPs &amp; Under Consideration<span class="section-count">3</span></h2>
+    <h2 class="section"><span class="section-dot neutral"></span>Pre-RFPs &amp; Under Consideration<span class="section-count">4</span></h2>
     <div class="grid">
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(10)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(10);}">
@@ -574,6 +574,29 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
         <div class="row slackrow"><span class="slacklink placeholder">Go to Slack — not linked yet</span></div>
       </div>
     </div>
+    
+
+    <div class="pcard" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(13)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(13);}">
+      <div class="badge data">Pre-RFP</div>
+      <div class="pname">Fairfax County EDA</div>
+      <div class="pdue">Next: <b>Wed, Nov 18</b></div>
+      <div class="powners"><span class="k">Owner</span>TBD</div>
+      <div class="pbudget">$800,000</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-13">
+        <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
+        <div class="row"><span class="k">Budget:</span> $800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)</div>
+        <div class="row"><span class="k">Stage details:</span> RFP under consideration; debrief with Maria&#x27;s team next week</div>
+        <div class="row"><span class="k">Next Due Date:</span> Wed, Nov 18 — Proposal due, 2:00 PM ET</div>
+        <div class="row"><span class="k">All assigned people:</span> TBD</div>
+        <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Opportunity in collaboration with REQ. Debriefing with Maria&#x27;s team next week. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm: strategy, media relations, digital and website experience, performance measurement. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Questions deadline (10/28) has passed.</div>
+        
+        <div class="row slackrow"><span class="slacklink placeholder">Go to Slack — not linked yet</span></div>
+      </div>
+    </div>
     </div>
     
     <h2 class="section"><span class="section-dot" style="background:var(--status-lost);"></span>Losses<span class="section-total">$787,000 lost &middot; 3 of 3 quantified</span><span class="section-count">3</span></h2>
@@ -616,7 +639,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
 </div>
 <script>
-const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "3": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "10": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "Studio.One", "label": "Pre-RFP", "tone": "data"}};
+const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "3": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Tinuiti", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "In Progress", "tone": "neutral"}, "10": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "Studio.One", "label": "Pre-RFP", "tone": "data"}, "13": {"name": "Fairfax County EDA", "label": "Pre-RFP", "tone": "data"}};
 function openModal(i){
   const meta = MODAL_META[i];
   const detail = document.getElementById('detail-' + i);
