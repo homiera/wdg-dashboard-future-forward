@@ -477,6 +477,11 @@ h1{ font-family:var(--font-sans); font-weight:500; font-size:30px; letter-spacin
 .update{ font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); text-transform:uppercase; letter-spacing:.03em; min-width:78px; }
 .upname{ font-weight:500; flex:1; padding:0 10px; }
 .uptype{ color:var(--ink-muted); font-size:12px; }
+.uprow.today{ background:rgba(255,212,0,.09); box-shadow:inset 3px 0 0 var(--wdg-yellow); padding-left:10px; margin-left:-10px; }
+.uprow.today .update{ color:var(--ink); }
+.uprow.today .upname{ font-weight:600; }
+.uprow.today .uptype{ color:var(--ink); }
+.todaypill{ display:inline-block; background:var(--wdg-yellow); color:#141414; font-family:var(--font-mono); font-size:10px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:2px 7px; border-radius:3px; margin-left:8px; vertical-align:1px; }
 
 .volbar{ display:flex; width:100%; height:10px; border-radius:0; overflow:hidden; background:var(--surface); margin-top:8px; }
 .volseg{ height:100%; transform-origin:left; transform:scaleX(0); animation:wdgBarFill .6s ease-out forwards; }
@@ -626,7 +631,7 @@ TILES_HTML = f"""
 """
 
 up_rows_html = "".join(
-    f"""<div class="uprow"><span class="update">{esc(fmt_date(d))}</span><span class="upname">{esc(p)}</span><span class="uptype">{esc(t)}</span></div>"""
+    f"""<div class="uprow{' today' if d == s['as_of'] else ''}"><span class="update">{esc(fmt_date(d))}</span><span class="upname">{esc(p)}{'<span class="todaypill">Due today</span>' if d == s['as_of'] else ''}</span><span class="uptype">{esc(t)}</span></div>"""
     for p, d, t in upcoming
 ) or '<div class="uprow" style="border-top:none; color:var(--ink-muted);">Nothing in the next 7 days.</div>'
 
