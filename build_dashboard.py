@@ -797,7 +797,6 @@ INTERNAL_HTML = HEAD.replace("__PAGE_TITLE__", "Internal") + f"""
     <div>
       <h1>New Business Pipeline Dashboard</h1>
       <p class="sub">{quarter_label(AS_OF)} &middot; internal view</p>
-      <p class="subcount">{esc(subcount)}</p>
     </div>
     <div class="asof">
       <div class="asof-label">As of</div>
