@@ -23,6 +23,7 @@ def fmt_date(d):
 # ---------------------------------------------------------------------------
 LOST = {"PHI", "AGA", "Community of Christ"}
 WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
+PAUSED = {"Tinuiti"}   # client paused the process; shown in the Pre-RFPs & Under Consideration section
 PRE_RFP = {"Aspen Digital", "GSA.gov", "Studio.One", "Fairfax County EDA"}
 CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
@@ -32,7 +33,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # st
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Tinuiti", "Appalachian Regional Commission", "UAE Embassy"}
+AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Appalachian Regional Commission", "UAE Embassy"}
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
@@ -163,6 +164,8 @@ def status_label(prop):
         return "Lost", "lost"
     if prop in CONTRACTING:
         return "In Contract", "progress"
+    if prop in PAUSED:
+        return "Paused", "neutral"
     if prop in PRE_RFP:
         return "Pre-RFP", "data"
     if prop in STATUS_OVERRIDE:
@@ -177,7 +180,7 @@ all_props = [x["proposal"] for x in s["summary"]]
 # progress, or pending a decision - i.e. everything that isn't lost and
 # isn't already in contract. Pre-RFP and awaiting-decision pursuits are
 # both part of this count.
-in_flight = [p for p in all_props if p not in LOST and p not in CONTRACTING]
+in_flight = [p for p in all_props if p not in LOST and p not in CONTRACTING and p not in PAUSED]
 awaiting_decision = [p for p in all_props if p in AWAITING_DECISION]
 won_list = [p for p in all_props if p in WON]
 lost_list = [p for p in all_props if p in LOST]
@@ -341,7 +344,7 @@ GROUP_ORDER = ["In Contract", "Submitted", "In Progress", "Pre-RFP"]
 GROUP_TONE = {"In Contract": "progress", "Submitted": "data", "In Progress": "yellow", "Pre-RFP": "neutral"}
 groups = {g: [] for g in GROUP_ORDER}
 for c in cards:
-    groups.setdefault(c["label"], []).append(c)
+    groups.setdefault({"Paused": "Pre-RFP"}.get(c["label"], c["label"]), []).append(c)
 for label in list(groups.keys()):
     if label not in GROUP_ORDER:
         GROUP_ORDER.append(label)
