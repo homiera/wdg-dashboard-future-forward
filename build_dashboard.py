@@ -65,6 +65,7 @@ TIER = {
     "NTSB": 2,
     "GSA.gov": 1,
     "NLC": 1,
+    "Studio.One": 2, "Fairfax County EDA": 1,
 }
 
 # Owner (who's accountable for the pursuit) vs. assigned team (everyone
