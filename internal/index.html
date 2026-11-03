@@ -162,6 +162,10 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .loss-tile{ background:var(--surface); border-left:3px solid var(--status-lost); padding:18px 20px; margin-bottom:8px; }
 .lossrow{ padding:10px 0; border-top:1px solid var(--rule); }
 .lossrow:first-of-type{ border-top:none; }
+.lossrow.clickable{ cursor:pointer; margin:0 -12px; padding:10px 12px; }
+.lossrow.clickable:hover, .lossrow.clickable:focus{ background:var(--surface-hover); }
+.lossrow.clickable:focus{ outline:2px solid var(--ink); outline-offset:-2px; }
+.losshint{ font-family:var(--font-mono); font-size:10px; color:var(--ink-muted); margin-top:6px; letter-spacing:.05em; text-transform:uppercase; }
 .lossrow-top{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:3px; }
 .lossname{ font-weight:500; font-size:14px; font-family:var(--font-sans); }
 .lossbudget{ font-weight:500; font-size:13.5px; color:var(--ink); font-family:var(--font-sans); white-space:nowrap; }
@@ -603,30 +607,48 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     
     <h2 class="section"><span class="section-dot" style="background:var(--status-lost);"></span>Losses<span class="section-total">$787,000 lost &middot; 3 of 3 quantified</span><span class="section-count">3</span></h2>
     <div class="loss-tile">
-    <div class="lossrow">
+    <div class="lossrow clickable" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(14)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(14);}">
       <div class="lossrow-top">
         <div class="lossname">AGA</div>
         <div class="lossbudget">$300,000</div>
       </div>
       <div class="lossreason">Selected another vendor.</div>
+      <div class="losshint">click for details</div>
+      <div class="pdetail" id="detail-14"><div class="row"><span class="k">Loss reason:</span> Selected another vendor.</div>
+<div class="row"><span class="k">Budget:</span> $300,000 (full budget, no phasing); support near $6,500 a month</div>
+<div class="row"><span class="k">All assigned people:</span> Ab, Homiera (spec work: Dario, Vajaah; Vajaah owns opportunities and insights)</div>
+<div class="row"><span class="k">What happened:</span> Submitted Oct 9. AGA told WDG no on Oct 19. Ab offered to present WDG&#x27;s spec and recommendations once AGA finishes reviewing finalists; no date set.</div></div>
     </div>
     
 
-    <div class="lossrow">
+    <div class="lossrow clickable" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(15)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(15);}">
       <div class="lossrow-top">
         <div class="lossname">Community of Christ</div>
         <div class="lossbudget">$310,000</div>
       </div>
       <div class="lossreason">Selected a vendor with more experience for international orgs and multilingual capabilities.</div>
+      <div class="losshint">click for details</div>
+      <div class="pdetail" id="detail-15"><div class="row"><span class="k">Loss reason:</span> Selected a vendor with more experience for international orgs and multilingual capabilities.</div>
+<div class="row"><span class="k">Budget:</span> $310,000 (recurring platform cost estimate of $5,000 to $10,000 a year was given earlier, before the full project budget was confirmed)</div>
+<div class="row"><span class="k">All assigned people:</span> Ab (submitted questions); Doug, Homiera (consolidated); Jake Reid (discovery)</div>
+<div class="row"><span class="k">What happened:</span> Submitted on time Sept 30 with spec work included. WDG was the only respondent to do both. Met with the client Oct 14 (&quot;Christ Conversations&quot;). Told no, Oct 26.</div></div>
     </div>
     
 
-    <div class="lossrow">
+    <div class="lossrow clickable" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(16)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(16);}">
       <div class="lossrow-top">
         <div class="lossname">PHI</div>
         <div class="lossbudget">$177,000</div>
       </div>
       <div class="lossreason">Lost on price. Our proposal was priced too high.</div>
+      <div class="losshint">click for details</div>
+      <div class="pdetail" id="detail-16"><div class="row"><span class="k">Loss reason:</span> Lost on price. Our proposal was priced too high.</div>
+<div class="row"><span class="k">Budget:</span> $177,000 ($27,000 initial investment + $150,000 redesign)</div>
+<div class="row"><span class="k">All assigned people:</span> Ab (owner; drafting lead TBD)</div>
+<div class="row"><span class="k">What happened:</span> Submitted Oct 2 as a single PDF, 12 pages maximum. PHI told WDG no on Oct 13.</div></div>
     </div>
     </div>
     
@@ -641,7 +663,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
 </div>
 <script>
-const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "3": {"name": "UAE Embassy", "label": "Submitted", "tone": "neutral"}, "4": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "Tinuiti", "label": "Paused", "tone": "neutral"}, "10": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "Studio.One", "label": "Pre-RFP", "tone": "data"}, "13": {"name": "Fairfax County EDA", "label": "Pre-RFP", "tone": "data"}};
+const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "3": {"name": "UAE Embassy", "label": "Submitted", "tone": "neutral"}, "4": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "Tinuiti", "label": "Paused", "tone": "neutral"}, "10": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "Studio.One", "label": "Pre-RFP", "tone": "data"}, "13": {"name": "Fairfax County EDA", "label": "Pre-RFP", "tone": "data"}, "14": {"name": "AGA", "label": "Lost", "tone": "lost"}, "15": {"name": "Community of Christ", "label": "Lost", "tone": "lost"}, "16": {"name": "PHI", "label": "Lost", "tone": "lost"}};
 function openModal(i){
   const meta = MODAL_META[i];
   const detail = document.getElementById('detail-' + i);

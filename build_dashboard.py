@@ -562,6 +562,10 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .loss-tile{ background:var(--surface); border-left:3px solid var(--status-lost); padding:18px 20px; margin-bottom:8px; }
 .lossrow{ padding:10px 0; border-top:1px solid var(--rule); }
 .lossrow:first-of-type{ border-top:none; }
+.lossrow.clickable{ cursor:pointer; margin:0 -12px; padding:10px 12px; }
+.lossrow.clickable:hover, .lossrow.clickable:focus{ background:var(--surface-hover); }
+.lossrow.clickable:focus{ outline:2px solid var(--ink); outline-offset:-2px; }
+.losshint{ font-family:var(--font-mono); font-size:10px; color:var(--ink-muted); margin-top:6px; letter-spacing:.05em; text-transform:uppercase; }
 .lossrow-top{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:3px; }
 .lossname{ font-weight:500; font-size:14px; font-family:var(--font-sans); }
 .lossbudget{ font-weight:500; font-size:13.5px; color:var(--ink); font-family:var(--font-sans); white-space:nowrap; }
@@ -731,21 +735,42 @@ for g in GROUP_ORDER:
     <div class="grid">{cards_html}</div>
     """
 
-def loss_row_html(l):
+LOSS_BASE_INDEX = len(ordered_cards)
+
+def loss_detail_html(l):
+    su = next(x for x in s["summary"] if x["proposal"] == l["prop"])
+    rows_ = [f'<div class="row"><span class="k">Loss reason:</span> {esc(l["reason"])}</div>',
+             f'<div class="row"><span class="k">Budget:</span> {esc(l["budget_raw"])}</div>']
+    if su.get("owners") and su["owners"] != "TBD":
+        rows_.append(f'<div class="row"><span class="k">All assigned people:</span> {esc(su["owners"])}</div>')
+    if su.get("loss_notes"):
+        rows_.append(f'<div class="row"><span class="k">What happened:</span> {esc(su["loss_notes"])}</div>')
+    if DECK_LINK.get(l["prop"]):
+        rows_.append(f'<div class="row"><span class="k">Deck:</span> <a href="{esc(DECK_LINK[l["prop"]])}" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>')
+    if RFP_FOLDER_LINK.get(l["prop"]):
+        rows_.append(f'<div class="row"><span class="k">RFP docs folder:</span> <a href="{esc(RFP_FOLDER_LINK[l["prop"]])}" style="color:var(--emphasis); text-decoration:underline;">Open folder</a></div>')
+    if SLACK.get(l["prop"]):
+        rows_.append(f'<div class="row slackrow"><a href="{esc(SLACK[l["prop"]])}" class="slacklink">Go to Slack &rarr;</a></div>')
+    return "\n".join(rows_)
+
+def loss_row_html(l, i):
     budget_html = (f'<div class="lossbudget">{l["budget_display"]}</div>' if l["budget_display"]
                    else '<div class="lossbudget placeholder">Not yet quantified</div>')
     return f"""
-    <div class="lossrow">
+    <div class="lossrow clickable" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
       <div class="lossrow-top">
         <div class="lossname">{esc(l['prop'])}</div>
         {budget_html}
       </div>
       <div class="lossreason">{esc(l['reason'])}</div>
+      <div class="losshint">click for details</div>
+      <div class="pdetail" id="detail-{i}">{loss_detail_html(l)}</div>
     </div>
     """
 
 if losses:
-    loss_rows_html = "\n".join(loss_row_html(l) for l in losses)
+    loss_rows_html = "\n".join(loss_row_html(l, LOSS_BASE_INDEX + n) for n, l in enumerate(losses))
     loss_total_html = (f'<span class="section-total">{loss_total_display} lost &middot; {loss_quantified_count} of {len(losses)} quantified</span>'
                         if loss_total_display else '<span class="section-total">Not yet quantified</span>')
     SECTIONS_HTML += f"""
@@ -757,6 +782,8 @@ MODAL_DATA = {
     i: {"name": c["prop"], "label": c["label"], "tone": c["tone"]}
     for i, c in enumerate(ordered_cards)
 }
+for _n, _l in enumerate(losses):
+    MODAL_DATA[LOSS_BASE_INDEX + _n] = {"name": _l["prop"], "label": "Lost", "tone": "lost"}
 
 MODAL_HTML = """
 <div class="modal-backdrop" id="modalBackdrop" onclick="if(event.target===this)closeModal()">
