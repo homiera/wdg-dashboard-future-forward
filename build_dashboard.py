@@ -741,7 +741,7 @@ LOSS_BASE_INDEX = len(ordered_cards)
 
 def loss_detail_html(l):
     su = next(x for x in s["summary"] if x["proposal"] == l["prop"])
-    rows_ = []
+    rows_ = [f'<div class="row"><span class="k">Submitted budget:</span> {esc(l["budget_raw"])}</div>']
     tl = su.get("loss_timeline") or []
     if tl:
         items = "".join(f'<div class="tlitem">{esc(x)}</div>' for x in tl)
