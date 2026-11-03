@@ -1365,7 +1365,11 @@
       "budget": "$310,000 (recurring platform cost estimate of $5,000 to $10,000 a year was given earlier, before the full project budget was confirmed)",
       "notes": "Jake Reid did discovery. Additional questions went to Ab to submit Sept 21 (confirm answers received). RFP and PRD conflict on scope (unified Resources site). Finalist interviews and selection in October, contract in November, completion required July 1, 2028. CoC requested a meeting this week; Homiera proposed the week of Oct 12 instead. Oct 13 update: the Becca Loving meeting (\u201cChrist Conversations\u201d) is now slated for Oct 14. Oct 19 update: meeting held Oct 14 (\"Christ Conversations\"). Reviewing internally; Homiera expects to hear this week or next. Confirmed Oct 19: the Sept 30 proposal was submitted on time, with spec work included. WDG was the only respondent to do both. Oct 26 update: lost. Submitted on time Sept 30 with spec work, only respondent to do both, met Oct 14, but did not win. Reason given: selected a vendor with more experience for international orgs and multilingual capabilities.",
       "loss_reason": "Selected a vendor with more experience for international orgs and multilingual capabilities.",
-      "loss_notes": "Submitted on time Sept 30 with spec work included. WDG was the only respondent to do both. Met with the client Oct 14 (\"Christ Conversations\"). Told no, Oct 26."
+      "loss_timeline": [
+        "Sept 30: Proposal submitted on time, with spec work included. WDG was the only respondent to do both.",
+        "Oct 14: Met with the client (\"Christ Conversations\").",
+        "Oct 26: Loss confirmed."
+      ]
     },
     {
       "proposal": "Tinuiti",
@@ -1393,7 +1397,10 @@
       "budget": "$177,000 ($27,000 initial investment + $150,000 redesign)",
       "notes": "Submitted Oct 2 as a single PDF, 12 pages maximum. Phase 1 must finish before Jan 8, 2027 (schedule table says Jan 11). Interviews week of Oct 12; selection by Nov 1. Oct 13 update: PHI told WDG no. Reason: price. Remaining 2026 interview/kickoff dates below will not occur for WDG; left in the timeline for the record.",
       "loss_reason": "Lost on price. Our proposal was priced too high.",
-      "loss_notes": "Submitted Oct 2 as a single PDF, 12 pages maximum. PHI told WDG no on Oct 13."
+      "loss_timeline": [
+        "Oct 2: Proposal submitted as a single PDF, 12 pages maximum.",
+        "Oct 13: PHI told WDG no."
+      ]
     },
     {
       "proposal": "UAE Embassy",
@@ -1434,7 +1441,10 @@
       "budget": "$300,000 (full budget, no phasing); support near $6,500 a month",
       "notes": "Sept 30 stacks first draft, pricing, and design gates. Q&A received. Team content dump continues in the collaborative doc. Submitted Oct 9 (confirmed Oct 13). Waiting to hear if WDG is a finalist. Oct 19 update: AGA told WDG no. Ab offered to present WDG's spec and recommendations once AGA finishes reviewing finalists; no date set.",
       "loss_reason": "Selected another vendor.",
-      "loss_notes": "Submitted Oct 9. AGA told WDG no on Oct 19. Ab offered to present WDG's spec and recommendations once AGA finishes reviewing finalists; no date set."
+      "loss_timeline": [
+        "Oct 9: Proposal submitted.",
+        "Oct 19: AGA told WDG no. Ab offered to present WDG's spec and recommendations once AGA finishes reviewing finalists; no date set."
+      ]
     },
     {
       "proposal": "American Kidney Fund",

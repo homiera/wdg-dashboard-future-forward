@@ -565,6 +565,8 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .lossrow.clickable{ cursor:pointer; margin:0 -12px; padding:10px 12px; }
 .lossrow.clickable:hover, .lossrow.clickable:focus{ background:var(--surface-hover); }
 .lossrow.clickable:focus{ outline:2px solid var(--ink); outline-offset:-2px; }
+.tllist{ margin:0 0 10px; }
+.tlitem{ font-size:13.5px; color:var(--ink-muted); font-family:var(--font-sans); padding:3px 0 3px 12px; border-left:2px solid var(--rule); margin-bottom:4px; line-height:1.5; }
 .losshint{ font-family:var(--font-mono); font-size:10px; color:var(--ink-muted); margin-top:6px; letter-spacing:.05em; text-transform:uppercase; }
 .lossrow-top{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:3px; }
 .lossname{ font-weight:500; font-size:14px; font-family:var(--font-sans); }
@@ -739,18 +741,12 @@ LOSS_BASE_INDEX = len(ordered_cards)
 
 def loss_detail_html(l):
     su = next(x for x in s["summary"] if x["proposal"] == l["prop"])
-    rows_ = [f'<div class="row"><span class="k">Loss reason:</span> {esc(l["reason"])}</div>',
-             f'<div class="row"><span class="k">Budget:</span> {esc(l["budget_raw"])}</div>']
-    if su.get("owners") and su["owners"] != "TBD":
-        rows_.append(f'<div class="row"><span class="k">All assigned people:</span> {esc(su["owners"])}</div>')
-    if su.get("loss_notes"):
-        rows_.append(f'<div class="row"><span class="k">What happened:</span> {esc(su["loss_notes"])}</div>')
-    if DECK_LINK.get(l["prop"]):
-        rows_.append(f'<div class="row"><span class="k">Deck:</span> <a href="{esc(DECK_LINK[l["prop"]])}" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>')
-    if RFP_FOLDER_LINK.get(l["prop"]):
-        rows_.append(f'<div class="row"><span class="k">RFP docs folder:</span> <a href="{esc(RFP_FOLDER_LINK[l["prop"]])}" style="color:var(--emphasis); text-decoration:underline;">Open folder</a></div>')
-    if SLACK.get(l["prop"]):
-        rows_.append(f'<div class="row slackrow"><a href="{esc(SLACK[l["prop"]])}" class="slacklink">Go to Slack &rarr;</a></div>')
+    rows_ = []
+    tl = su.get("loss_timeline") or []
+    if tl:
+        items = "".join(f'<div class="tlitem">{esc(x)}</div>' for x in tl)
+        rows_.append(f'<div class="row"><span class="k">Our timeline:</span></div><div class="tllist">{items}</div>')
+    rows_.append(f'<div class="row"><span class="k">Reason for loss:</span> {esc(l["reason"])}</div>')
     return "\n".join(rows_)
 
 def loss_row_html(l, i):
