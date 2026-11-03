@@ -1180,15 +1180,15 @@
       "tag": ""
     },
     {
-      "date": "2026-11-02",
+      "date": "2026-11-05",
       "through": null,
       "proposal": "Columbia Association",
-      "milestone": "Signatures expected",
+      "milestone": "Check-in on contracting; signatures still pending",
       "type": "Prospect-set",
       "owner": "Ab, Homiera",
       "status": "Open",
       "marker": "",
-      "notes": "Target date for contract signatures per Homiera 10/28.",
+      "notes": "Signatures were expected week of Nov 2; still in contracting as of 11/3. Homiera checking in again by 11/5.",
       "tag": ""
     },
     {
@@ -1343,14 +1343,14 @@
       "proposal": "Columbia Association",
       "client": "Columbia Association finalist presentation",
       "type": "Awarded",
-      "stage": "Signatures slated for this week",
-      "key_date": "2026-11-02",
-      "key_detail": "Signatures expected",
+      "stage": "Contracting; signatures pending",
+      "key_date": "2026-11-05",
+      "key_detail": "Homiera check-in on contracting status",
       "submit_to": "Not stated",
       "owners": "Ab, Homiera",
       "named_staff": "Ab, Homiera",
       "budget": "$228,000",
-      "notes": "Signatures expected this week. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase."
+      "notes": "Still in contracting as of 11/3. Homiera checking in again by 11/5. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase."
     },
     {
       "proposal": "Community of Christ",
