@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-02",
+  "as_of": "2026-11-03",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -688,15 +688,15 @@
       "tag": ""
     },
     {
-      "date": "2026-10-08",
-      "through": "2026-10-13",
+      "date": "2026-11-03",
+      "through": "2026-11-06",
       "proposal": "UAE Embassy",
-      "milestone": "Initial evaluation of proposals",
+      "milestone": "Initial evaluation of proposals (Embassy)",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Confirm",
+      "status": "Open",
       "marker": "",
-      "notes": "",
+      "notes": "Embassy-side evaluation window.",
       "tag": ""
     },
     {
@@ -868,15 +868,15 @@
       "tag": ""
     },
     {
-      "date": "2026-10-19",
-      "through": "2026-10-23",
+      "date": "2026-11-09",
+      "through": "2026-11-13",
       "proposal": "UAE Embassy",
-      "milestone": "Vendor interviews and oral presentations (if needed)",
+      "milestone": "Vendor interviews, if we advance (scheduling anticipated week of Nov 9)",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Cancelled",
+      "status": "Open",
       "marker": "",
-      "notes": "WDG decided not to pursue UAE Embassy (Oct 19); this will not occur for WDG. Week of Oct 19.",
+      "notes": "Only if WDG advances to this round.",
       "tag": ""
     },
     {
@@ -928,15 +928,15 @@
       "tag": ""
     },
     {
-      "date": "2026-10-22",
-      "through": "2026-10-26",
+      "date": "2026-11-12",
+      "through": "2026-11-16",
       "proposal": "UAE Embassy",
       "milestone": "Reference checks and final evaluation",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Cancelled",
+      "status": "Open",
       "marker": "",
-      "notes": "WDG decided not to pursue UAE Embassy (Oct 19); this will not occur for WDG. ",
+      "notes": "",
       "tag": ""
     },
     {
@@ -988,15 +988,15 @@
       "tag": ""
     },
     {
-      "date": "2026-10-27",
+      "date": "2026-11-17",
       "through": null,
       "proposal": "UAE Embassy",
       "milestone": "Notice of intent to award",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Cancelled",
+      "status": "Open",
       "marker": "",
-      "notes": "WDG decided not to pursue UAE Embassy (Oct 19); this will not occur for WDG. ",
+      "notes": "Contract negotiation and finalization Nov 17 to Dec 1.",
       "tag": ""
     },
     {
@@ -1024,27 +1024,27 @@
       "tag": ""
     },
     {
-      "date": "2026-11-06",
+      "date": "2026-12-02",
       "through": null,
       "proposal": "UAE Embassy",
       "milestone": "Anticipated contract award",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Cancelled",
+      "status": "Open",
       "marker": "",
-      "notes": "WDG decided not to pursue UAE Embassy (Oct 19); this will not occur for WDG. ",
+      "notes": "",
       "tag": ""
     },
     {
-      "date": "2026-11-09",
-      "through": "2026-11-13",
+      "date": "2026-12-07",
+      "through": "2026-12-11",
       "proposal": "UAE Embassy",
-      "milestone": "Project kickoff (week of Nov 9)",
+      "milestone": "Project kickoff (week of Dec 7)",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Cancelled",
+      "status": "Open",
       "marker": "",
-      "notes": "WDG decided not to pursue UAE Embassy (Oct 19); this will not occur for WDG. ",
+      "notes": "",
       "tag": ""
     },
     {
@@ -1147,12 +1147,12 @@
       "date": "2026-11-02",
       "through": null,
       "proposal": "UAE Embassy",
-      "milestone": "Proposal due, 5:00 PM (new target, if WDG proceeds)",
+      "milestone": "Proposal submitted (was due 5:00 PM)",
       "type": "Prospect-set",
       "owner": "TBD",
-      "status": "Open",
+      "status": "Complete",
       "marker": "HARD DEADLINE",
-      "notes": "New target date per Homiera's Oct 26 update, superseding the earlier Oct 7 working date that passed without a go/no-go decision. Still pending Agital legal follow-up and Ab's decision on whether WDG proceeds at all.",
+      "notes": "Submitted 11/2 by Melissa (GFD) via email, cc'ing and introducing Ab/WDG. Bid $234,000 initial year investment.",
       "tag": ""
     },
     {
@@ -1210,9 +1210,9 @@
       "milestone": "Questions to Studio.One, EOD",
       "type": "Prospect-set",
       "owner": "Ab",
-      "status": "Open",
+      "status": "Complete",
       "marker": "HARD DEADLINE",
-      "notes": "Submit clarifying questions by end of day.",
+      "notes": "Ab submitted questions 11/2.",
       "tag": ""
     },
     {
@@ -1297,6 +1297,18 @@
       "status": "Open",
       "marker": "",
       "notes": "One-year term with two one-year renewals.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-04",
+      "through": null,
+      "proposal": "Fairfax County EDA",
+      "milestone": "Internal debrief with REQ and WDG",
+      "type": "Internal (team-set)",
+      "owner": "REQ",
+      "status": "Open",
+      "marker": "",
+      "notes": "Review the RFP, delegate, and set direction.",
       "tag": ""
     }
   ],
@@ -1385,14 +1397,14 @@
       "proposal": "UAE Embassy",
       "client": "Website Operations and Strategic Digital Services, RFP Ver. 2.1",
       "type": "RFP",
-      "stage": "Active again as of Oct 26 (was withdrawn Oct 19). Due Nov 2 at 5pm, pending legal and Ab's decision",
-      "key_date": "2026-11-02",
-      "key_detail": "New proposal due date, if WDG proceeds; go/no-go not yet made",
+      "stage": "Submitted 11/2; pending Embassy evaluation",
+      "key_date": null,
+      "key_detail": "Interview scheduling anticipated week of Nov 9, if we advance",
       "submit_to": "Jeff Joseph, at the address the RFP came from",
       "owners": "Homiera, Design Team, Ab, GoFish Digital",
       "named_staff": "Homiera, Design Team, Ab, GoFish Digital",
-      "budget": "Not stated in RFP",
-      "notes": "Preparing proposal draft with the ARC deck as a base. Homiera to ping GFD Melissa with information needed. Targeting 5K monthly SMS, PSP hourly rate at $225 (potentially $195). Portfolio to include NYFED, WH, USIP, NACO, NFWF, Aspen, and Ford. Internal meeting scheduled with Melissa for Thursday. Target: Friday EOD to be complete and ready for final approval."
+      "budget": "$234,000 (initial year investment)",
+      "notes": "Proposal submitted 11/2 by Melissa (GFD) via email, cc'ing and introducing Ab/WDG. Bid: $234,000 initial year investment. Anticipated next step: interview scheduling the week of Nov 9, if we advance to that round. Embassy timeline: initial evaluation Nov 3 to 6, interviews week of Nov 9, reference checks Nov 12 to 16, notice of intent to award Nov 17, contract negotiation Nov 17 to Dec 1, anticipated award Dec 2, kickoff week of Dec 7."
     },
     {
       "proposal": "Appalachian Regional Commission",
@@ -1503,27 +1515,27 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "RFP received 10/29; under consideration",
+      "stage": "RFP under consideration; questions submitted",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
-      "owners": "Ab, Homiera",
-      "named_staff": "Ab, Homiera",
+      "owners": "Josh, Amanda, Ab, Homiera",
+      "named_staff": "Josh, Amanda, Ab, Homiera",
       "budget": "TBD",
-      "notes": "Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. RFP is confidential under NDA."
+      "notes": "Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. RFP is confidential under NDA."
     },
     {
       "proposal": "Fairfax County EDA",
       "client": "FCEDA RFP 2027-03, Integrated Marketing and Communications Services",
       "type": "RFP (collaboration with REQ)",
-      "stage": "RFP under consideration; debrief with Maria's team next week",
+      "stage": "REQ owning; internal REQ and WDG debrief 11/4",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Euna Procurement (Bonfire) portal, PDF only",
-      "owners": "Homiera, Ab",
-      "named_staff": "Homiera, Ab",
+      "owners": "Vajaah, Kurtis, Ab, Homiera",
+      "named_staff": "Vajaah, Kurtis, Ab, Homiera",
       "budget": "$800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)",
-      "notes": "Opportunity in collaboration with REQ. Debriefing with Maria's team next week. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm: strategy, media relations, digital and website experience, performance measurement. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Questions deadline (10/28) has passed."
+      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG on the RFP, with delegation and direction, scheduled 11/4. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals."
     }
   ],
   "focus": {

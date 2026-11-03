@@ -32,14 +32,14 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # st
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Tinuiti", "Appalachian Regional Commission"}
+AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Tinuiti", "Appalachian Regional Commission", "UAE Embassy"}
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
 # which grouped section (In Contract / Submitted / In Progress / Pre-RFP)
 # a card lands in on the grouped-by-stage layout per Homiera + Dario 10/28.
 STATUS_OVERRIDE = {
-    "UAE Embassy": "In Progress",
+    "UAE Embassy": "Submitted",
     "American Kidney Fund": "Submitted",
     "Open Technology Fund": "Submitted",
     "Appalachian Regional Commission": "Submitted",
@@ -83,7 +83,7 @@ OWNER = {
     "GSA.gov": "Homiera",
     "NLC": "Ab",
     "Studio.One": "Ab",
-    "Fairfax County EDA": "Maria Russell",
+    "Fairfax County EDA": "REQ (Maria Russell)",
 }
 
 # Slack channel per pursuit, per Homiera 10/28. Deliberately excludes
@@ -115,6 +115,7 @@ DECK_LINK = {
     "NTSB": "https://docs.google.com/document/d/1bIiIscBSR-t2XClHABswupvT5R79rQdD/view",
     "Open Technology Fund": "https://www.figma.com/slides/Q16rA4qWvjVSWIyZ91vvXb/Open-Tech-Fund-Proposal?t=NmAJoEPcestqr4qc-6",
     "Heritage.org": "https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6",
+    "UAE Embassy": "https://drive.google.com/file/d/1frGcapfotw9wXn3I2urDm_15y_wi9l7x/view?usp=drive_link",
 }
 RFP_FOLDER_LINK = {
     "NLC": "https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-",
@@ -145,7 +146,7 @@ def next_due(prop):
     rows = rows_by_prop.get(prop, [])
     cands = [r for r in rows
              if r["status"] not in ("Complete", "Cancelled") and r["date"] and r["date"] >= s["as_of"]
-             and not r["milestone"].startswith("Contract period begins")]  # informational, not an action date
+             and not r["milestone"].startswith(("Contract period begins", "Initial evaluation"))]  # informational, not an action date
     if cands:
         cands.sort(key=lambda r: r["date"])
         return cands[0]["date"], cands[0]["milestone"]
