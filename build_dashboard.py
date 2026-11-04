@@ -103,6 +103,8 @@ SLACK = {
     "UAE Embassy": "https://wdg.slack.com/archives/C0BPFB0A2SH",
     "Heritage.org": "https://wdg.slack.com/archives/C0BLQ3GL933",
     "Tinuiti": "https://wdg.slack.com/archives/C0BTBEGTABV",
+    "Fairfax County EDA": "https://wdg.slack.com/archives/C0CED810960",
+    "Studio.One": "https://wdg.slack.com/archives/C0CE28Q6H45",
     "Appalachian Regional Commission": "https://wdg.slack.com/archives/C0BUAV1M3PW",
 }
 
@@ -120,15 +122,20 @@ DECK_LINK = {
     "Heritage.org": "https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6",
     "UAE Embassy": "https://drive.google.com/file/d/1frGcapfotw9wXn3I2urDm_15y_wi9l7x/view?usp=drive_link",
 }
+RFP_LINK_TEXT = {"Fairfax County EDA": "Open RFP"}   # default is "Open folder"
 RFP_FOLDER_LINK = {
+    "Fairfax County EDA": "https://drive.google.com/file/d/1RUJGd6u3tCSLUMkHNHAHkxILKPRgO17P/view?usp=sharing",
     "NLC": "https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-",
 }
 
 # Spec/reference deliverables that aren't a formal proposal deck, where
 # relevant. Per Homiera 10/29: Tinuiti got a technical scenario writeup and a
 # proposal doc instead of a formal deck. List of (label, url) per pursuit.
-SPEC_LABEL = {"Columbia Association": "Contract review"}   # row label; default is "Spec deliverables"
+SPEC_LABEL = {"Columbia Association": "Contract review", "Fairfax County EDA": "Teams"}   # row label; default is "Spec deliverables"
 SPEC_LINKS = {
+    "Fairfax County EDA": [
+        ("FCEDA RFP chat", "https://teams.microsoft.com/l/chat/19%3A4c6ebc8510cd4b11b211f5674028252a%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"),
+    ],
     "Columbia Association": [
         ("Contract vs. RFP comparison", "https://claude.ai/artifact/BGoCAN6Y5GXuu1Cqw3kyGe"),
     ],
@@ -240,6 +247,17 @@ for r in s["rows"]:
     if 0 <= delta <= 7:
         questions_this_week.append((r["proposal"], r["date"], "Questions due"))
 
+# Tagged meetings (state.json row tag "MEETING"), e.g. internal REQ/WDG debriefs.
+meetings_this_week = []
+for r in s["rows"]:
+    if r["status"] in ("Cancelled", "Complete") or r["proposal"] in LOST or not r["date"]:
+        continue
+    if r.get("tag") != "MEETING":
+        continue
+    delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
+    if 0 <= delta <= 7:
+        meetings_this_week.append((r["proposal"], r["date"], "Meeting"))
+
 due_this_week_rows = []
 for p in due_this_week:
     d, what = next_proposal_due(p)
@@ -248,7 +266,7 @@ for p in due_this_week:
 # Consolidated "What's coming up" list: proposals due and presentations in
 # the next 7 days, merged and sorted by date, per Homiera + Dario 10/28
 # (replaces two separate stat tiles).
-upcoming = sorted(due_this_week_rows + presentations_this_week + questions_this_week, key=lambda x: x[1])
+upcoming = sorted(due_this_week_rows + presentations_this_week + questions_this_week + meetings_this_week, key=lambda x: x[1])
 
 contracts_in_progress = [p for p in all_props if p in CONTRACTING]
 
@@ -646,16 +664,20 @@ TILES_HTML = f"""
 </div>
 """
 
-up_rows_html = "".join(
-    f"""<div class="uprow{' today' if d == s['as_of'] else ''}"><span class="update">{esc(fmt_date(d))}</span><span class="upname">{esc(p)}{'<span class="todaypill">Due today</span>' if d == s['as_of'] else ''}</span><span class="uptype">{esc(t)}</span></div>"""
-    for p, d, t in upcoming
-) or '<div class="uprow" style="border-top:none; color:var(--ink-muted);">Nothing in the next 7 days.</div>'
+def up_row(p, d, typ):
+    is_today = (d == s["as_of"])
+    pill = ('<span class="todaypill">' + ("Today" if typ == "Meeting" else "Due today") + '</span>') if is_today else ""
+    cls = "uprow today" if is_today else "uprow"
+    return (f'<div class="{cls}"><span class="update">{esc(fmt_date(d))}</span>'
+            f'<span class="upname">{esc(p)}{pill}</span><span class="uptype">{esc(typ)}</span></div>')
+
+up_rows_html = "".join(up_row(p, d, typ) for p, d, typ in upcoming) or '<div class="uprow" style="border-top:none; color:var(--ink-muted);">Nothing in the next 7 days.</div>'
 
 ROW2_HTML = f"""
 <div class="row2">
   <div class="upcoming-tile">
     <div class="upcoming-title">What's coming up</div>
-    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}{(" &middot; Questions due: " + str(len(questions_this_week))) if questions_this_week else ""}</div>
+    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}{(" &middot; Questions due: " + str(len(questions_this_week))) if questions_this_week else ""}{(" &middot; Meetings: " + str(len(meetings_this_week))) if meetings_this_week else ""}</div>
     {up_rows_html}
   </div>
   <div class="tile iris" style="padding:18px 20px;">
@@ -680,7 +702,7 @@ def card_html(c, i):
     tier_class = f" tier-{c['tier']}" if c["tier"] != "TBD" else ""
     passed = '<span class="datepassed">date passed</span>' if c["date_passed"] else ""
     deck = f'<a href="{esc(c["deck_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open deck</a>' if c["deck_link"] else '<span class="placeholder">not linked yet</span>'
-    rfp_folder = (f'<a href="{esc(c["rfp_folder_link"])}" style="color:var(--emphasis); text-decoration:underline;">Open folder</a>'
+    rfp_folder = (f'<a href="{esc(c["rfp_folder_link"])}" style="color:var(--emphasis); text-decoration:underline;">{esc(RFP_LINK_TEXT.get(c["prop"], "Open folder"))}</a>'
                   if c["rfp_folder_link"] else '<span class="placeholder">not linked yet</span>')
     # Slack moved out of the field list and into a standalone link after
     # Notes, per Ab 10/28. Still a placeholder until slack_link is set.
