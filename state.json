@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-03",
+  "as_of": "2026-11-04",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1310,6 +1310,18 @@
       "marker": "",
       "notes": "Review the RFP, delegate, and set direction.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-04",
+      "through": null,
+      "proposal": "Columbia Association",
+      "milestone": "Internal contract review, then meeting with Sheila",
+      "type": "Internal (team-set)",
+      "owner": "Ab, Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "Reviewing current contract verbiage against RFP requirements and what we proposed. Ab and Homiera meet with Sheila after the internal review.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1343,14 +1355,14 @@
       "proposal": "Columbia Association",
       "client": "Columbia Association finalist presentation",
       "type": "Awarded",
-      "stage": "Contracting; signatures pending",
-      "key_date": "2026-11-05",
-      "key_detail": "Homiera check-in on contracting status",
+      "stage": "Contracting; internal contract review underway",
+      "key_date": "2026-11-04",
+      "key_detail": "Internal contract review, then meeting with Sheila",
       "submit_to": "Not stated",
       "owners": "Ab, Homiera",
       "named_staff": "Ab, Homiera",
       "budget": "$228,000",
-      "notes": "Still in contracting as of 11/3. Homiera checking in again by 11/5. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase."
+      "notes": "Still in contracting. Internal review of the current contract verbiage against the RFP requirements and what we ultimately proposed (comparison visual linked). Ab and Homiera meet with Sheila after the internal review on 11/4. Homiera checking in again by 11/5. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase."
     },
     {
       "proposal": "Community of Christ",
@@ -1528,14 +1540,14 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "RFP under consideration; questions submitted",
+      "stage": "RFP under consideration; proposal being staged",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
       "owners": "Josh, Amanda, Ab, Homiera",
       "named_staff": "Josh, Amanda, Ab, Homiera",
       "budget": "$150,000 to $200,000 (our planned bid)",
-      "notes": "Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. We plan to bid $150,000 to $200,000. Josh and Amanda assigned to the proposal effort. RFP is confidential under NDA."
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. We plan to bid $150,000 to $200,000. Josh and Amanda assigned to the proposal effort. RFP is confidential under NDA."
     },
     {
       "proposal": "Fairfax County EDA",

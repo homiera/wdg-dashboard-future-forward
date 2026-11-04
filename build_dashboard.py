@@ -110,6 +110,7 @@ SLACK = {
 # so far (Homiera 10/28); everything else still shows "not linked yet" in
 # the detail view until a link is provided.
 DECK_LINK = {
+    "Studio.One": "https://claude.ai/artifact/Hsyn8XJjgATV2LhQpHFon6?sk=WgvLblq347wW8Ccq3gEvWA#slide-3dd33bdac6c2",
     "NLC": "https://www.figma.com/slides/NrrNVzBOrKLITZCILPu6BF/NLC-2026-Proposal?t=NmAJoEPcestqr4qc-6",
     "Appalachian Regional Commission": "https://www.figma.com/slides/YUJIbGsp0N15tx7RDLPhuG/Appalachian-Regional-Commission-Presentation-Deck?t=NmAJoEPcestqr4qc-6",
     "Columbia Association": "https://drive.google.com/file/d/1O6_9zL6M8xK3p2yt9f7vdTjNAF-BeHX1/view?usp=drive_link",
@@ -126,7 +127,11 @@ RFP_FOLDER_LINK = {
 # Spec/reference deliverables that aren't a formal proposal deck, where
 # relevant. Per Homiera 10/29: Tinuiti got a technical scenario writeup and a
 # proposal doc instead of a formal deck. List of (label, url) per pursuit.
+SPEC_LABEL = {"Columbia Association": "Contract review"}   # row label; default is "Spec deliverables"
 SPEC_LINKS = {
+    "Columbia Association": [
+        ("Contract vs. RFP comparison", "https://claude.ai/artifact/BGoCAN6Y5GXuu1Cqw3kyGe"),
+    ],
     "Tinuiti": [
         ("Technical scenario (PDF)", "https://wdg.slack.com/files/U08B3QSJK/F0C3F4PMUTD/web_development_group_-_technical_scenario_for_tinuiti_.pdf"),
         ("Tinuiti proposal (PDF)", "https://wdg.slack.com/files/U08B3QSJK/F0CBMHV3P8E/tinuiti_wdg.pdf"),
@@ -687,7 +692,7 @@ def card_html(c, i):
             f'<a href="{esc(url)}" style="color:var(--emphasis); text-decoration:underline;">{esc(label)}</a>'
             for label, url in c["spec_links"]
         )
-        spec_row = f'<div class="row"><span class="k">Spec deliverables:</span> {links_html}</div>'
+        spec_row = f'<div class="row"><span class="k">{esc(SPEC_LABEL.get(c["prop"], "Spec deliverables"))}:</span> {links_html}</div>'
     return f"""
     <div class="pcard{tier_class}" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
