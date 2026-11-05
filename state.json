@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-04",
+  "as_of": "2026-11-05",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1183,12 +1183,12 @@
       "date": "2026-11-05",
       "through": null,
       "proposal": "Columbia Association",
-      "milestone": "Check-in on contracting; signatures still pending",
+      "milestone": "Send new redlines to Columbia's lawyer",
       "type": "Prospect-set",
       "owner": "Ab, Homiera",
       "status": "Open",
       "marker": "",
-      "notes": "Signatures were expected week of Nov 2; still in contracting as of 11/3. Homiera checking in again by 11/5.",
+      "notes": "New redlines going back to their lawyer for review. Homiera checking in on contracting status.",
       "tag": ""
     },
     {
@@ -1300,7 +1300,7 @@
       "tag": ""
     },
     {
-      "date": "2026-11-04",
+      "date": "2026-11-05",
       "through": null,
       "proposal": "Fairfax County EDA",
       "milestone": "Internal debrief with REQ and WDG",
@@ -1308,7 +1308,7 @@
       "owner": "REQ",
       "status": "Open",
       "marker": "",
-      "notes": "Internal REQ and WDG meeting today to discuss the RFP, delegate, and set direction.",
+      "notes": "Internal REQ and WDG meeting (moved from 11/4) to discuss the RFP, delegate, and set direction.",
       "tag": "MEETING"
     },
     {
@@ -1318,9 +1318,33 @@
       "milestone": "Internal contract review, then meeting with Sheila",
       "type": "Internal (team-set)",
       "owner": "Ab, Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
       "notes": "Reviewing current contract verbiage against RFP requirements and what we proposed. Ab and Homiera meet with Sheila after the internal review.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-05",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "Internal working session on the proposal",
+      "type": "Internal (team-set)",
+      "owner": "Ab, Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "Josh, Amanda, Kurtis, Ab, Homiera. Submission due tomorrow, 11/6.",
+      "tag": "MEETING"
+    },
+    {
+      "date": "2026-11-05",
+      "through": null,
+      "proposal": "Heritage Action",
+      "milestone": "Scope and price the SMS support SOW",
+      "type": "Internal (team-set)",
+      "owner": "Ab, Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "SMS support on the current site until the new site launches at the end of Phase 2. Scoping and pricing to be determined today.",
       "tag": ""
     }
   ],
@@ -1342,27 +1366,27 @@
       "proposal": "Heritage Action",
       "client": "Heritage Action Phase 2",
       "type": "Existing engagement, next phase",
-      "stage": "Contracting",
+      "stage": "Contracting; adding a new SOW for SMS support",
       "key_date": null,
-      "key_detail": "Phase 2 SOW with client for review as of Oct 30",
+      "key_detail": "Scope and price the SMS support SOW (5 Nov)",
       "submit_to": "TBD",
       "owners": "Ab, Kurt Shadle, Michael Feder",
       "named_staff": "Ab, Kurt Shadle, Michael Feder",
       "budget": "$300,000 (Homiera's estimate, stated as approximate \"I think\" - not yet confirmed in writing)",
-      "notes": "Discovery engagement complete. Phase 2 SOW is with the client for review as of 10/30. Discovery invoices all due."
+      "notes": "Discovery engagement complete. Phase 2 SOW is with the client for review as of 10/30. Adding a new SOW for SMS support on their current site until the new site launches at the end of Phase 2. Scoping and pricing to be determined 11/5. Discovery invoices all due."
     },
     {
       "proposal": "Columbia Association",
       "client": "Columbia Association finalist presentation",
       "type": "Awarded",
-      "stage": "Contracting; internal contract review underway",
-      "key_date": "2026-11-04",
-      "key_detail": "Internal contract review, then meeting with Sheila",
+      "stage": "Contracting; new redlines going to their lawyer",
+      "key_date": "2026-11-05",
+      "key_detail": "Sending new redlines to Columbia's lawyer for review",
       "submit_to": "Not stated",
       "owners": "Ab, Homiera",
       "named_staff": "Ab, Homiera",
       "budget": "$228,000",
-      "notes": "Still in contracting. Internal review of the current contract verbiage against the RFP requirements and what we ultimately proposed (comparison visual linked). Ab and Homiera meet with Sheila after the internal review on 11/4. Homiera checking in again by 11/5. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase."
+      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, we are sending new redlines back to their lawyer for review. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase."
     },
     {
       "proposal": "Community of Christ",
@@ -1540,27 +1564,27 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "RFP under consideration; proposal being staged",
+      "stage": "Proposal in progress; due 11/6",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
-      "owners": "Josh, Amanda, Ab, Homiera",
-      "named_staff": "Josh, Amanda, Ab, Homiera",
-      "budget": "$150,000 to $200,000 (our planned bid)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. We plan to bid $150,000 to $200,000. Josh and Amanda assigned to the proposal effort. RFP is confidential under NDA."
+      "owners": "Josh, Amanda, Kurtis, Ab, Homiera",
+      "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera",
+      "budget": "$500,000 to $600,000 (targeted bid, all three phases)",
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session on the proposal 11/5 with Josh, Amanda, and Kurtis. Submission due 11/6. Targeting $500,000 to $600,000 for all three phases (previously planned $150,000 to $200,000). RFP is confidential under NDA."
     },
     {
       "proposal": "Fairfax County EDA",
       "client": "FCEDA RFP 2027-03, Integrated Marketing and Communications Services",
       "type": "RFP (collaboration with REQ)",
-      "stage": "REQ owning; internal REQ and WDG debrief today (11/4)",
+      "stage": "REQ owning; internal REQ and WDG debrief today (11/5)",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Euna Procurement (Bonfire) portal, PDF only",
       "owners": "Vajaah, Kurtis, Ab, Homiera",
       "named_staff": "Vajaah, Kurtis, Ab, Homiera",
       "budget": "$800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)",
-      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG on the RFP, with delegation and direction, happening today, 11/4. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely)."
+      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG on the RFP, with delegation and direction, moved to today, 11/5. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely)."
     }
   ],
   "focus": {
