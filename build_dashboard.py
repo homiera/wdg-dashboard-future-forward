@@ -24,7 +24,7 @@ def fmt_date(d):
 LOST = {"PHI", "AGA", "Community of Christ"}
 WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
 PAUSED = {"Tinuiti"}   # client paused the process; shown in the Pre-RFPs & Under Consideration section
-PRE_RFP = {"Aspen Digital", "GSA.gov", "Studio.One", "Fairfax County EDA"}
+PRE_RFP = {"Aspen Digital", "GSA.gov", "Fairfax County EDA"}
 CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the
@@ -41,6 +41,7 @@ AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "App
 # a card lands in on the grouped-by-stage layout per Homiera + Dario 10/28.
 STATUS_OVERRIDE = {
     "UAE Embassy": "Submitted",
+    "Studio.One": "In Progress",
     "American Kidney Fund": "Submitted",
     "Open Technology Fund": "Submitted",
     "Appalachian Regional Commission": "Submitted",
