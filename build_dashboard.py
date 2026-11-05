@@ -365,7 +365,7 @@ no_date_count = sum(1 for c in cards if c["due"] == "No date set")
 # Group cards by status label into the four stage sections, in a fixed
 # display order, per Homiera + Dario 10/28.
 GROUP_TITLE = {"Pre-RFP": "Pre-RFPs & Under Consideration"}
-GROUP_ORDER = ["In Contract", "Submitted", "In Progress", "Pre-RFP"]
+GROUP_ORDER = ["In Contract", "In Progress", "Submitted", "Pre-RFP"]
 GROUP_TONE = {"In Contract": "progress", "Submitted": "data", "In Progress": "yellow", "Pre-RFP": "neutral"}
 groups = {g: [] for g in GROUP_ORDER}
 for c in cards:
