@@ -33,7 +33,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # st
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"American Kidney Fund", "Open Technology Fund", "NLC", "Appalachian Regional Commission", "UAE Embassy"}
+AWAITING_DECISION = {"NLC", "UAE Embassy"}   # nothing pending on our side; AKF, OTF, ARC have next steps
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
@@ -259,6 +259,15 @@ for r in s["rows"]:
     if 0 <= delta <= 7:
         meetings_this_week.append((r["proposal"], r["date"], "Meeting"))
 
+# Tagged response deadlines (state.json row tag "DEADLINE"), e.g. answering a client's pricing questions.
+responses_this_week = []
+for r in s["rows"]:
+    if r["status"] in ("Cancelled", "Complete") or r["proposal"] in LOST or not r["date"] or r.get("tag") != "DEADLINE":
+        continue
+    delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
+    if 0 <= delta <= 7:
+        responses_this_week.append((r["proposal"], r["date"], "Response due"))
+
 due_this_week_rows = []
 for p in due_this_week:
     d, what = next_proposal_due(p)
@@ -267,7 +276,7 @@ for p in due_this_week:
 # Consolidated "What's coming up" list: proposals due and presentations in
 # the next 7 days, merged and sorted by date, per Homiera + Dario 10/28
 # (replaces two separate stat tiles).
-upcoming = sorted(due_this_week_rows + presentations_this_week + questions_this_week + meetings_this_week, key=lambda x: x[1])
+upcoming = sorted(due_this_week_rows + presentations_this_week + questions_this_week + meetings_this_week + responses_this_week, key=lambda x: x[1])
 
 contracts_in_progress = [p for p in all_props if p in CONTRACTING]
 
@@ -678,7 +687,7 @@ ROW2_HTML = f"""
 <div class="row2">
   <div class="upcoming-tile">
     <div class="upcoming-title">What's coming up</div>
-    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}{(" &middot; Questions due: " + str(len(questions_this_week))) if questions_this_week else ""}{(" &middot; Meetings: " + str(len(meetings_this_week))) if meetings_this_week else ""}</div>
+    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}{(" &middot; Questions due: " + str(len(questions_this_week))) if questions_this_week else ""}{(" &middot; Meetings: " + str(len(meetings_this_week))) if meetings_this_week else ""}{(" &middot; Responses due: " + str(len(responses_this_week))) if responses_this_week else ""}</div>
     {up_rows_html}
   </div>
   <div class="tile iris" style="padding:18px 20px;">

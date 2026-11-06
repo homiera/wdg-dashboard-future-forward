@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-05",
+  "as_of": "2026-11-06",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1054,9 +1054,9 @@
       "milestone": "Round 1: general pitch (90 minutes)",
       "type": "Prospect-set",
       "owner": "AKF",
-      "status": "Open",
+      "status": "Cancelled",
       "marker": "FIXED EVENT",
-      "notes": "",
+      "notes": " Superseded: invited to second round, presentation booked 11/18.",
       "tag": ""
     },
     {
@@ -1072,15 +1072,15 @@
       "tag": ""
     },
     {
-      "date": "2026-11-30",
-      "through": "2026-12-04",
+      "date": "2026-11-18",
+      "through": null,
       "proposal": "American Kidney Fund",
-      "milestone": "Round 2: finalist interviews and demos (90 minutes)",
+      "milestone": "Round 2 presentation (1.5 to 2 hours)",
       "type": "Prospect-set",
       "owner": "AKF",
       "status": "Open",
       "marker": "FIXED EVENT",
-      "notes": "",
+      "notes": "Presenting: Dario, Doug, Erik, Vajaah, Kurtis, Mary, Ab. AKF supplied a script covering 6 topics.",
       "tag": ""
     },
     {
@@ -1346,6 +1346,30 @@
       "marker": "",
       "notes": "SMS support on the current site until the new site launches at the end of Phase 2. Scoping and pricing to be determined today.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-13",
+      "through": null,
+      "proposal": "Open Technology Fund",
+      "milestone": "Second round presentation and Q&A (being scheduled)",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "",
+      "notes": "Presenting: Doug, Vaj, Dario, Ab. Scheduling in progress.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-12",
+      "through": null,
+      "proposal": "Appalachian Regional Commission",
+      "milestone": "Pricing responses back to ARC (Homiera drafting)",
+      "type": "Prospect-set",
+      "owner": "Homiera",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "ARC sent pricing questions. Homiera drafting responses.",
+      "tag": "DEADLINE"
     }
   ],
   "summary": [
@@ -1455,14 +1479,14 @@
       "proposal": "Appalachian Regional Commission",
       "client": "ARC.gov Web Development and Managed Hosting Services",
       "type": "RFP",
-      "stage": "Presentation complete, pending decision or next steps",
+      "stage": "Pricing questions from ARC; responses due 11/12",
       "key_date": null,
       "key_detail": "Pending decision or next steps",
       "submit_to": "contracts@arc.gov",
       "owners": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "named_staff": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "budget": "$70,000 to $80,000 (includes Pantheon Performance Medium hosting)",
-      "notes": "Pending decision or next steps. Andrea requested a copy of the deck used during Thursday's presentation."
+      "notes": "ARC has pricing questions. Homiera is drafting responses, due back to ARC 11/12. Andrea requested a copy of the deck used during Thursday's presentation (10/29)."
     },
     {
       "proposal": "AGA",
@@ -1486,27 +1510,27 @@
       "proposal": "American Kidney Fund",
       "client": "American Kidney Fund website redesign and CMS migration RFP",
       "type": "RFP",
-      "stage": "Submitted",
-      "key_date": "2026-10-23",
+      "stage": "Invited to second round; presentation 11/18",
+      "key_date": null,
       "key_detail": "Proposal due; no time or time zone stated",
       "submit_to": "Christine Jackson, digital@kidneyfund.org",
       "owners": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "named_staff": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "budget": "$266,000",
-      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Pending next steps."
+      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Invited to the second round presentations, booked for 11/18 (1.5 to 2 hours). Presenting: Dario, Doug, Erik, Vajaah, Kurtis, Mary, Ab. AKF provided a script for the presentation focused on 6 topics to address."
     },
     {
       "proposal": "Open Technology Fund",
       "client": "OTF website redesign RFP (opentech.fund)",
       "type": "RFP",
-      "stage": "Submitted \u2014 pending next steps",
-      "key_date": "2026-10-23",
+      "stage": "Second round presentation and Q&A being scheduled for 11/13",
+      "key_date": null,
       "key_detail": "Submitted; pending OTF next steps",
       "submit_to": "proposals@opentech.fund",
       "owners": "Homiera, Zaid, Doug, Vajaah",
       "named_staff": "Homiera, Zaid, Doug, Vajaah",
       "budget": "$86,000",
-      "notes": "Submitted 10/23. Confirmed receipt via text with Ab. Pending next steps."
+      "notes": "Submitted 10/23. Confirmed receipt via text with Ab. Scheduling a second round presentation and Q&A with OTF for 11/13. Presenting: Doug, Vaj, Dario, Ab."
     },
     {
       "proposal": "NLC",
