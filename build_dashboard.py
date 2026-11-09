@@ -573,6 +573,7 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .pcard.tier-3{ border-top-color:var(--ink); }
 .pcard:hover, .pcard:focus{ background:var(--surface-hover); border-top-color:var(--ink); }
 .pcard:focus{ outline:2px solid var(--ink); outline-offset:2px; }
+.pausedline{ font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); margin:-2px 0 6px; }
 .pname{ font-weight:500; font-size:15px; margin-bottom:6px; padding-right:90px; font-family:var(--font-sans); }
 .badge{
   position:absolute; top:16px; right:16px; font-family:var(--font-mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
@@ -736,6 +737,7 @@ def card_html(c, i):
             for label, url in c["spec_links"]
         )
         spec_row = f'<div class="row"><span class="k">{esc(SPEC_LABEL.get(c["prop"], "Spec deliverables"))}:</span> {links_html}</div>'
+    paused_line = '<div class="pausedline">Paused</div>' if c["label"] == "Paused" else ""
     upd_attr = f' data-updated="{esc(c["updated_at"])}"' if c.get("updated_at") else ""
     upd_tag = '<div class="badge newupd">New Updates</div>' if c.get("updated_at") else ""
     last_update = (f'<div class="row"><span class="k">Last update:</span> {esc(fmt_date(c["updated_at"]))}'
@@ -744,7 +746,7 @@ def card_html(c, i):
     <div class="pcard{tier_class}"{upd_attr} tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
       <div class="badge statusbadge {c['tone']}">{esc(c['label'])}</div>{upd_tag}
-      <div class="pname">{esc(c['prop'])}</div>
+      <div class="pname">{esc(c['prop'])}</div>{paused_line}
       <div class="pdue">Next: <b>{esc(c['due'])}</b>{passed}</div>
       <div class="powners"><span class="k">Owner</span>{esc(c['owner'])}</div>
       <div class="pbudget{' placeholder' if c['budget_display'] == 'Not yet quantified' else ''}">{c['budget_display']}</div>

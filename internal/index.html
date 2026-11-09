@@ -132,6 +132,7 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .pcard.tier-3{ border-top-color:var(--ink); }
 .pcard:hover, .pcard:focus{ background:var(--surface-hover); border-top-color:var(--ink); }
 .pcard:focus{ outline:2px solid var(--ink); outline-offset:2px; }
+.pausedline{ font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); margin:-2px 0 6px; }
 .pname{ font-weight:500; font-size:15px; margin-bottom:6px; padding-right:90px; font-family:var(--font-sans); }
 .badge{
   position:absolute; top:16px; right:16px; font-family:var(--font-mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
@@ -627,7 +628,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(14)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(14);}">
       <div class="badge statusbadge neutral">Paused</div>
-      <div class="pname">Tinuiti</div>
+      <div class="pname">Tinuiti</div><div class="pausedline">Paused</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab, Vaj, Kurtis</div>
       <div class="pbudget">$25,000&ndash;$30,000</div>
