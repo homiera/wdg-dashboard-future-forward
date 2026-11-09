@@ -1186,9 +1186,9 @@
       "milestone": "Send new redlines to Columbia's lawyer",
       "type": "Prospect-set",
       "owner": "Ab, Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "New redlines going back to their lawyer for review. Homiera checking in on contracting status.",
+      "notes": "Redlines sent and resolved; WDG signed 11/9. Awaiting Columbia's signature.",
       "tag": ""
     },
     {
@@ -1451,14 +1451,16 @@
       "proposal": "Columbia Association",
       "client": "Columbia Association finalist presentation",
       "type": "Awarded",
-      "stage": "Contracting; new redlines going to their lawyer",
-      "key_date": "2026-11-05",
-      "key_detail": "Sending new redlines to Columbia's lawyer for review",
+      "stage": "Contracting; WDG has signed, awaiting Columbia's signature",
+      "key_date": null,
+      "key_detail": null,
       "submit_to": "Not stated",
       "owners": "Ab, Homiera",
       "named_staff": "Ab, Homiera",
       "budget": "$228,000",
-      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, we are sending new redlines back to their lawyer for review. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase."
+      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is now in Columbia's queue for signature. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
+      "updated_at": "2026-11-09",
+      "update_note": "WDG signed; contract is in Columbia's queue for signature"
     },
     {
       "proposal": "Community of Christ",
