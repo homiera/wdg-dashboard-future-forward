@@ -107,6 +107,7 @@ SLACK = {
     "Tinuiti": "https://wdg.slack.com/archives/C0BTBEGTABV",
     "Fairfax County EDA": "https://wdg.slack.com/archives/C0CED810960",
     "Studio.One": "https://wdg.slack.com/archives/C0CE28Q6H45",
+    "American Red Cross": "https://wdg.slack.com/archives/C0CG3N4E6DC",
     "Appalachian Regional Commission": "https://wdg.slack.com/archives/C0BUAV1M3PW",
 }
 
@@ -128,6 +129,7 @@ RFP_LINK_TEXT = {"Fairfax County EDA": "Open RFP"}   # default is "Open folder"
 RFP_FOLDER_LINK = {
     "Fairfax County EDA": "https://drive.google.com/file/d/1RUJGd6u3tCSLUMkHNHAHkxILKPRgO17P/view?usp=sharing",
     "NLC": "https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-",
+    "American Red Cross": "https://drive.google.com/drive/folders/10hEygEDeeuB5EcQMwPcvd6VUIp4s4t-t?usp=drive_link",
 }
 
 # Spec/reference deliverables that aren't a formal proposal deck, where
