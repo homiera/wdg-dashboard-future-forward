@@ -1676,12 +1676,12 @@
       "key_date": null,
       "key_detail": null,
       "submit_to": "TBD",
-      "owners": "Ab",
-      "named_staff": "Ab",
+      "owners": "Ab, Mary, Vajaah, Dario, Kurtis",
+      "named_staff": "Ab, Mary, Vajaah, Dario, Kurtis",
       "budget": "TBD",
-      "notes": "New RFP in review. Objective is a full rebuild, redesign, and migration of preparecenter.org. Ab is reviewing and determining tier (TBD). Intent to submit 11/13. Questions 11/18. Proposal 12/6.",
+      "notes": "New RFP in review. Objective is a full rebuild, redesign, and migration of preparecenter.org. Ab leads and is reviewing to determine tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Intent to submit 11/13. Questions 11/18. Proposal 12/6.",
       "updated_at": "2026-11-09",
-      "update_note": "New RFP added; Slack channel and RFP docs folder linked; Ab reviewing and determining tier"
+      "update_note": "Team assigned (Mary, Vajaah, Dario, Kurtis; Ab leads); links added; tier TBD"
     }
   ],
   "focus": {
