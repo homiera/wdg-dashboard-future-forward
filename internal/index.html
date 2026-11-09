@@ -138,7 +138,7 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
   padding:3px 10px; border-radius:999px; font-weight:400;
 }
 .badge.newupd{ display:none; background:var(--wdg-yellow); color:#141414; font-weight:600; }
-.pcard.has-new .badge.statusbadge{ display:none; }
+.pcard .badge.statusbadge{ display:none; }   /* status shown by section heading and in the pop-up */
 .pcard.has-new .badge.newupd{ display:inline-block; }
 .badge.lost{ background:var(--status-lost); color:var(--status-lost-ink); }
 .badge.progress{ background:var(--status-progress); color:var(--status-progress-ink); }
@@ -311,36 +311,12 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(1);}">
       <div class="badge statusbadge progress">In Contract</div>
-      <div class="pname">Heritage.org</div>
-      <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners"><span class="k">Owner</span>Ab</div>
-      <div class="pbudget">$500,000</div>
-      <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-1">
-        
-        <div class="row"><span class="k">Tier:</span> Tier 2</div>
-        <div class="row"><span class="k">Budget:</span> $500,000</div>
-        <div class="row"><span class="k">Stage details:</span> Contracting, Discovery then Implementation; MSA in legal review</div>
-        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
-        <div class="row"><span class="k">All assigned people:</span> Ab, Homiera, Kurtis, Michael F.</div>
-        <div class="row"><span class="k">Deck:</span> <a href="https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA.</div>
-        
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BLQ3GL933" class="slacklink">Go to Slack &rarr;</a></div>
-      </div>
-    </div>
-    
-
-    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(2);}">
-      <div class="badge statusbadge progress">In Contract</div>
       <div class="pname">Heritage Action</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab, Kurt Shadle</div>
       <div class="pbudget">$300,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-2">
+      <div class="pdetail" id="detail-1">
         
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $300,000 (Homiera&#x27;s estimate, stated as approximate &quot;I think&quot; - not yet confirmed in writing)</div>
@@ -354,43 +330,43 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
         <div class="row slackrow"><span class="slacklink placeholder">Go to Slack — not linked yet</span></div>
       </div>
     </div>
+    
+
+    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(2);}">
+      <div class="badge statusbadge progress">In Contract</div>
+      <div class="pname">Heritage.org</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners"><span class="k">Owner</span>Ab</div>
+      <div class="pbudget">$500,000</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-2">
+        
+        <div class="row"><span class="k">Tier:</span> Tier 2</div>
+        <div class="row"><span class="k">Budget:</span> $500,000</div>
+        <div class="row"><span class="k">Stage details:</span> Contracting, Discovery then Implementation; MSA in legal review</div>
+        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
+        <div class="row"><span class="k">All assigned people:</span> Ab, Homiera, Kurtis, Michael F.</div>
+        <div class="row"><span class="k">Deck:</span> <a href="https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA.</div>
+        
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BLQ3GL933" class="slacklink">Go to Slack &rarr;</a></div>
+      </div>
+    </div>
     </div>
     
     <h2 class="section"><span class="section-dot data"></span>Submitted<span class="section-count">7</span></h2>
     <div class="grid">
-    <div class="pcard tier-3" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(3);}">
-      <div class="badge statusbadge neutral">Submitted</div>
-      <div class="pname">UAE Embassy</div>
-      <div class="pdue">Next: <b>Mon, Nov 9</b></div>
-      <div class="powners"><span class="k">Owner</span>Homiera</div>
-      <div class="pbudget">$234,000</div>
-      <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-3">
-        
-        <div class="row"><span class="k">Tier:</span> Tier 3</div>
-        <div class="row"><span class="k">Budget:</span> $234,000 (initial year investment)</div>
-        <div class="row"><span class="k">Stage details:</span> Submitted 11/2 (confirmed 11/5); pending Embassy evaluation</div>
-        <div class="row"><span class="k">Next Due Date:</span> Mon, Nov 9 — Vendor interviews, if we advance (scheduling anticipated week of Nov 9)</div>
-        <div class="row"><span class="k">All assigned people:</span> Homiera, Design Team, Ab, GoFish Digital</div>
-        <div class="row"><span class="k">Deck:</span> <a href="https://drive.google.com/file/d/1frGcapfotw9wXn3I2urDm_15y_wi9l7x/view?usp=drive_link" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Proposal submitted 11/2 by Melissa (GFD) via email, cc&#x27;ing and introducing Ab/WDG. Submission confirmed with Melissa on 11/5. Bid: $234,000 initial year investment. Anticipated next step: interview scheduling the week of Nov 9, if we advance to that round. Embassy timeline: initial evaluation Nov 3 to 6, interviews week of Nov 9, reference checks Nov 12 to 16, notice of intent to award Nov 17, contract negotiation Nov 17 to Dec 1, anticipated award Dec 2, kickoff week of Dec 7.</div>
-        
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BPFB0A2SH" class="slacklink">Go to Slack &rarr;</a></div>
-      </div>
-    </div>
-    
-
     <div class="pcard tier-1" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(4);}">
+         onclick="openModal(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(3);}">
       <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
       <div class="pname">American Kidney Fund</div>
       <div class="pdue">Next: <b>Wed, Nov 18</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera, Ab</div>
       <div class="pbudget">$266,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-4">
+      <div class="pdetail" id="detail-3">
         <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Round 2 presenting team confirmed for 11/18</div>
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $266,000</div>
@@ -406,39 +382,15 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-2" data-updated="2026-11-06" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(5);}">
-      <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
-      <div class="pname">Open Technology Fund</div>
-      <div class="pdue">Next: <b>Fri, Nov 13</b></div>
-      <div class="powners"><span class="k">Owner</span>Homiera, Ab</div>
-      <div class="pbudget">$86,000</div>
-      <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-5">
-        <div class="row"><span class="k">Last update:</span> Fri, Nov 6 — Second round presentation and Q&amp;A being scheduled for 11/13</div>
-        <div class="row"><span class="k">Tier:</span> Tier 2</div>
-        <div class="row"><span class="k">Budget:</span> $86,000</div>
-        <div class="row"><span class="k">Stage details:</span> Second round presentation and Q&amp;A being scheduled for 11/13</div>
-        <div class="row"><span class="k">Next Due Date:</span> Fri, Nov 13 — Second round presentation and Q&amp;A (being scheduled)</div>
-        <div class="row"><span class="k">All assigned people:</span> Homiera, Zaid, Doug, Vajaah</div>
-        <div class="row"><span class="k">Deck:</span> <a href="https://www.figma.com/slides/Q16rA4qWvjVSWIyZ91vvXb/Open-Tech-Fund-Proposal?t=NmAJoEPcestqr4qc-6" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Submitted 10/23. Confirmed receipt via text with Ab. Scheduling a second round presentation and Q&amp;A with OTF for 11/13. Presenting: Doug, Vaj, Dario, Ab.</div>
-        
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0C3V40DA11" class="slacklink">Go to Slack &rarr;</a></div>
-      </div>
-    </div>
-    
-
     <div class="pcard tier-3" data-updated="2026-11-06" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(6)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(6);}">
+         onclick="openModal(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(4);}">
       <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
       <div class="pname">Appalachian Regional Commission</div>
       <div class="pdue">Next: <b>Thu, Nov 12</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$70,000&ndash;$80,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-6">
+      <div class="pdetail" id="detail-4">
         <div class="row"><span class="k">Last update:</span> Fri, Nov 6 — Pricing questions received; responses due 11/12</div>
         <div class="row"><span class="k">Tier:</span> Tier 3</div>
         <div class="row"><span class="k">Budget:</span> $70,000 to $80,000 (includes Pantheon Performance Medium hosting)</div>
@@ -454,39 +406,15 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(7)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(7);}">
-      <div class="badge statusbadge neutral">Submitted</div>
-      <div class="pname">NTSB</div>
-      <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners"><span class="k">Owner</span>Homiera</div>
-      <div class="pbudget">$250,000</div>
-      <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-7">
-        
-        <div class="row"><span class="k">Tier:</span> Tier 2</div>
-        <div class="row"><span class="k">Budget:</span> $250,000</div>
-        <div class="row"><span class="k">Stage details:</span> Submitted</div>
-        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
-        <div class="row"><span class="k">All assigned people:</span> Homiera, Kurtis, Doug</div>
-        <div class="row"><span class="k">Deck:</span> <a href="https://docs.google.com/document/d/1bIiIscBSR-t2XClHABswupvT5R79rQdD/view" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule. Update 10/29: NTSB financial meeting has been pushed to November. Homiera to check in with James by mid-November.</div>
-        
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0AJYUGSHS8" class="slacklink">Go to Slack &rarr;</a></div>
-      </div>
-    </div>
-    
-
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(8)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(8);}">
+         onclick="openModal(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(5);}">
       <div class="badge statusbadge neutral">Submitted</div>
       <div class="pname">NLC</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$348,500</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-8">
+      <div class="pdetail" id="detail-5">
         
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $348,500</div>
@@ -502,15 +430,63 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
+    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(6)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(6);}">
+      <div class="badge statusbadge neutral">Submitted</div>
+      <div class="pname">NTSB</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners"><span class="k">Owner</span>Homiera</div>
+      <div class="pbudget">$250,000</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-6">
+        
+        <div class="row"><span class="k">Tier:</span> Tier 2</div>
+        <div class="row"><span class="k">Budget:</span> $250,000</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted</div>
+        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
+        <div class="row"><span class="k">All assigned people:</span> Homiera, Kurtis, Doug</div>
+        <div class="row"><span class="k">Deck:</span> <a href="https://docs.google.com/document/d/1bIiIscBSR-t2XClHABswupvT5R79rQdD/view" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule. Update 10/29: NTSB financial meeting has been pushed to November. Homiera to check in with James by mid-November.</div>
+        
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0AJYUGSHS8" class="slacklink">Go to Slack &rarr;</a></div>
+      </div>
+    </div>
+    
+
+    <div class="pcard tier-2" data-updated="2026-11-06" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(7)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(7);}">
+      <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
+      <div class="pname">Open Technology Fund</div>
+      <div class="pdue">Next: <b>Fri, Nov 13</b></div>
+      <div class="powners"><span class="k">Owner</span>Homiera, Ab</div>
+      <div class="pbudget">$86,000</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-7">
+        <div class="row"><span class="k">Last update:</span> Fri, Nov 6 — Second round presentation and Q&amp;A being scheduled for 11/13</div>
+        <div class="row"><span class="k">Tier:</span> Tier 2</div>
+        <div class="row"><span class="k">Budget:</span> $86,000</div>
+        <div class="row"><span class="k">Stage details:</span> Second round presentation and Q&amp;A being scheduled for 11/13</div>
+        <div class="row"><span class="k">Next Due Date:</span> Fri, Nov 13 — Second round presentation and Q&amp;A (being scheduled)</div>
+        <div class="row"><span class="k">All assigned people:</span> Homiera, Zaid, Doug, Vajaah</div>
+        <div class="row"><span class="k">Deck:</span> <a href="https://www.figma.com/slides/Q16rA4qWvjVSWIyZ91vvXb/Open-Tech-Fund-Proposal?t=NmAJoEPcestqr4qc-6" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Submitted 10/23. Confirmed receipt via text with Ab. Scheduling a second round presentation and Q&amp;A with OTF for 11/13. Presenting: Doug, Vaj, Dario, Ab.</div>
+        
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0C3V40DA11" class="slacklink">Go to Slack &rarr;</a></div>
+      </div>
+    </div>
+    
+
     <div class="pcard tier-2" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(9)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(9);}">
+         onclick="openModal(8)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(8);}">
       <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
       <div class="pname">Studio.One</div>
       <div class="pdue">Next: <b>Fri, Nov 13</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$400,000&ndash;$500,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-9">
+      <div class="pdetail" id="detail-8">
         <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Proposal submitted by email at $400k to $500k (Release 1 at $120k); next round anticipated this week</div>
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)</div>
@@ -524,30 +500,54 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
         <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0CE28Q6H45" class="slacklink">Go to Slack &rarr;</a></div>
       </div>
     </div>
+    
+
+    <div class="pcard tier-3" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(9)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(9);}">
+      <div class="badge statusbadge neutral">Submitted</div>
+      <div class="pname">UAE Embassy</div>
+      <div class="pdue">Next: <b>Mon, Nov 9</b></div>
+      <div class="powners"><span class="k">Owner</span>Homiera</div>
+      <div class="pbudget">$234,000</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-9">
+        
+        <div class="row"><span class="k">Tier:</span> Tier 3</div>
+        <div class="row"><span class="k">Budget:</span> $234,000 (initial year investment)</div>
+        <div class="row"><span class="k">Stage details:</span> Submitted 11/2 (confirmed 11/5); pending Embassy evaluation</div>
+        <div class="row"><span class="k">Next Due Date:</span> Mon, Nov 9 — Vendor interviews, if we advance (scheduling anticipated week of Nov 9)</div>
+        <div class="row"><span class="k">All assigned people:</span> Homiera, Design Team, Ab, GoFish Digital</div>
+        <div class="row"><span class="k">Deck:</span> <a href="https://drive.google.com/file/d/1frGcapfotw9wXn3I2urDm_15y_wi9l7x/view?usp=drive_link" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Proposal submitted 11/2 by Melissa (GFD) via email, cc&#x27;ing and introducing Ab/WDG. Submission confirmed with Melissa on 11/5. Bid: $234,000 initial year investment. Anticipated next step: interview scheduling the week of Nov 9, if we advance to that round. Embassy timeline: initial evaluation Nov 3 to 6, interviews week of Nov 9, reference checks Nov 12 to 16, notice of intent to award Nov 17, contract negotiation Nov 17 to Dec 1, anticipated award Dec 2, kickoff week of Dec 7.</div>
+        
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BPFB0A2SH" class="slacklink">Go to Slack &rarr;</a></div>
+      </div>
+    </div>
     </div>
     
     <h2 class="section"><span class="section-dot neutral"></span>Pre-RFPs &amp; Under Consideration<span class="section-count">5</span></h2>
     <div class="grid">
-    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(10)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(10);}">
-      <div class="badge statusbadge neutral">Paused</div>
-      <div class="pname">Tinuiti</div>
-      <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners"><span class="k">Owner</span>Ab, Vaj, Kurtis</div>
-      <div class="pbudget">$25,000&ndash;$30,000</div>
+      <div class="badge statusbadge data">Pre-RFP</div><div class="badge newupd">New Updates</div>
+      <div class="pname">American Red Cross</div>
+      <div class="pdue">Next: <b>Fri, Nov 13</b></div>
+      <div class="powners"><span class="k">Owner</span>Ab</div>
+      <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-10">
-        
-        <div class="row"><span class="k">Tier:</span> Tier 1</div>
-        <div class="row"><span class="k">Budget:</span> $25,000 to $30,000 annual (client target)</div>
-        <div class="row"><span class="k">Stage details:</span> Paused by client (internal reshuffling); targeting Q1 2027</div>
-        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
-        <div class="row"><span class="k">All assigned people:</span> Ab, Vajaah, Dario, Kurtis</div>
+        <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Team assigned (Mary, Vajaah, Dario, Kurtis; Ab leads); links added; tier TBD</div>
+        <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
+        <div class="row"><span class="k">Budget:</span> TBD</div>
+        <div class="row"><span class="k">Stage details:</span> RFP in review; Ab determining tier. Intent to submit 11/13</div>
+        <div class="row"><span class="k">Next Due Date:</span> Fri, Nov 13 — Intent to submit</div>
+        <div class="row"><span class="k">All assigned people:</span> Ab, Mary, Vajaah, Dario, Kurtis</div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Update 11/3: Tinuiti paused its RFP process due to internal reshuffling. Targeting Q1 2027. This originated as a retainer opportunity. Oct 28 meeting: Vajaah to share the Go Fish Digital work discussed as a reference. Jessica Lingle to regroup internally on priorities and budget. Ab to review the proposed engagement options. We did not do a formal deck for this proposal.</div>
-        <div class="row"><span class="k">Spec deliverables:</span> <a href="https://wdg.slack.com/files/U08B3QSJK/F0C3F4PMUTD/web_development_group_-_technical_scenario_for_tinuiti_.pdf" style="color:var(--emphasis); text-decoration:underline;">Technical scenario (PDF)</a> &middot; <a href="https://wdg.slack.com/files/U08B3QSJK/F0CBMHV3P8E/tinuiti_wdg.pdf" style="color:var(--emphasis); text-decoration:underline;">Tinuiti proposal (PDF)</a></div>
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BTBEGTABV" class="slacklink">Go to Slack &rarr;</a></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <a href="https://drive.google.com/drive/folders/10hEygEDeeuB5EcQMwPcvd6VUIp4s4t-t?usp=drive_link" style="color:var(--emphasis); text-decoration:underline;">Open folder</a></div>
+        <div class="row"><span class="k">Notes:</span> New RFP in review. Objective is a full rebuild, redesign, and migration of preparecenter.org. Ab leads and is reviewing to determine tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Intent to submit 11/13. Questions 11/18. Proposal 12/6.</div>
+        
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0CG3N4E6DC" class="slacklink">Go to Slack &rarr;</a></div>
       </div>
     </div>
     
@@ -576,39 +576,15 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(12)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(12);}">
-      <div class="badge statusbadge data">Pre-RFP</div>
-      <div class="pname">GSA.gov</div>
-      <div class="pdue">Next: <b>No date set</b></div>
-      <div class="powners"><span class="k">Owner</span>Homiera</div>
-      <div class="pbudget placeholder">Not yet quantified</div>
-      <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-12">
-        
-        <div class="row"><span class="k">Tier:</span> Tier 1</div>
-        <div class="row"><span class="k">Budget:</span> TBD</div>
-        <div class="row"><span class="k">Stage details:</span> Added to tracker 10/28 per Homiera; no further detail provided yet</div>
-        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
-        <div class="row"><span class="k">All assigned people:</span> Ab, Homiera, Kurtis</div>
-        <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Lead from WPVIP with the intent to partner. Pending funding and RFP issuance. Potential 2027-2028 opportunity.</div>
-        
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BF86NR3H9" class="slacklink">Go to Slack &rarr;</a></div>
-      </div>
-    </div>
-    
-
     <div class="pcard tier-1" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(13)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(13);}">
+         onclick="openModal(12)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(12);}">
       <div class="badge statusbadge data">Pre-RFP</div><div class="badge newupd">New Updates</div>
       <div class="pname">Fairfax County EDA</div>
       <div class="pdue">Next: <b>Mon, Nov 9</b></div>
       <div class="powners"><span class="k">Owner</span>REQ (Maria Russell)</div>
       <div class="pbudget">$800,000</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-13">
+      <div class="pdetail" id="detail-12">
         <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Team Activation Brainstorm with REQ today at 2:30 PM; collaborative RFP content doc linked</div>
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)</div>
@@ -624,26 +600,50 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
-         onclick="openModal(14)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(14);}">
-      <div class="badge statusbadge data">Pre-RFP</div><div class="badge newupd">New Updates</div>
-      <div class="pname">American Red Cross</div>
-      <div class="pdue">Next: <b>Fri, Nov 13</b></div>
-      <div class="powners"><span class="k">Owner</span>Ab</div>
+    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(13)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(13);}">
+      <div class="badge statusbadge data">Pre-RFP</div>
+      <div class="pname">GSA.gov</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners"><span class="k">Owner</span>Homiera</div>
       <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
-      <div class="pdetail" id="detail-14">
-        <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Team assigned (Mary, Vajaah, Dario, Kurtis; Ab leads); links added; tier TBD</div>
-        <div class="row"><span class="k">Tier:</span> <span class="placeholder">TBD</span></div>
-        <div class="row"><span class="k">Budget:</span> TBD</div>
-        <div class="row"><span class="k">Stage details:</span> RFP in review; Ab determining tier. Intent to submit 11/13</div>
-        <div class="row"><span class="k">Next Due Date:</span> Fri, Nov 13 — Intent to submit</div>
-        <div class="row"><span class="k">All assigned people:</span> Ab, Mary, Vajaah, Dario, Kurtis</div>
-        <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">RFP docs folder:</span> <a href="https://drive.google.com/drive/folders/10hEygEDeeuB5EcQMwPcvd6VUIp4s4t-t?usp=drive_link" style="color:var(--emphasis); text-decoration:underline;">Open folder</a></div>
-        <div class="row"><span class="k">Notes:</span> New RFP in review. Objective is a full rebuild, redesign, and migration of preparecenter.org. Ab leads and is reviewing to determine tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Intent to submit 11/13. Questions 11/18. Proposal 12/6.</div>
+      <div class="pdetail" id="detail-13">
         
-        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0CG3N4E6DC" class="slacklink">Go to Slack &rarr;</a></div>
+        <div class="row"><span class="k">Tier:</span> Tier 1</div>
+        <div class="row"><span class="k">Budget:</span> TBD</div>
+        <div class="row"><span class="k">Stage details:</span> Added to tracker 10/28 per Homiera; no further detail provided yet</div>
+        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
+        <div class="row"><span class="k">All assigned people:</span> Ab, Homiera, Kurtis</div>
+        <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Lead from WPVIP with the intent to partner. Pending funding and RFP issuance. Potential 2027-2028 opportunity.</div>
+        
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BF86NR3H9" class="slacklink">Go to Slack &rarr;</a></div>
+      </div>
+    </div>
+    
+
+    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
+         onclick="openModal(14)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(14);}">
+      <div class="badge statusbadge neutral">Paused</div>
+      <div class="pname">Tinuiti</div>
+      <div class="pdue">Next: <b>No date set</b></div>
+      <div class="powners"><span class="k">Owner</span>Ab, Vaj, Kurtis</div>
+      <div class="pbudget">$25,000&ndash;$30,000</div>
+      <div class="hint">click for details</div>
+      <div class="pdetail" id="detail-14">
+        
+        <div class="row"><span class="k">Tier:</span> Tier 1</div>
+        <div class="row"><span class="k">Budget:</span> $25,000 to $30,000 annual (client target)</div>
+        <div class="row"><span class="k">Stage details:</span> Paused by client (internal reshuffling); targeting Q1 2027</div>
+        <div class="row"><span class="k">Next Due Date:</span> No date set</div>
+        <div class="row"><span class="k">All assigned people:</span> Ab, Vajaah, Dario, Kurtis</div>
+        <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
+        <div class="row"><span class="k">Notes:</span> Update 11/3: Tinuiti paused its RFP process due to internal reshuffling. Targeting Q1 2027. This originated as a retainer opportunity. Oct 28 meeting: Vajaah to share the Go Fish Digital work discussed as a reference. Jessica Lingle to regroup internally on priorities and budget. Ab to review the proposed engagement options. We did not do a formal deck for this proposal.</div>
+        <div class="row"><span class="k">Spec deliverables:</span> <a href="https://wdg.slack.com/files/U08B3QSJK/F0C3F4PMUTD/web_development_group_-_technical_scenario_for_tinuiti_.pdf" style="color:var(--emphasis); text-decoration:underline;">Technical scenario (PDF)</a> &middot; <a href="https://wdg.slack.com/files/U08B3QSJK/F0CBMHV3P8E/tinuiti_wdg.pdf" style="color:var(--emphasis); text-decoration:underline;">Tinuiti proposal (PDF)</a></div>
+        <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BTBEGTABV" class="slacklink">Go to Slack &rarr;</a></div>
       </div>
     </div>
     </div>
@@ -703,7 +703,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
 </div>
 <script>
-const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "3": {"name": "UAE Embassy", "label": "Submitted", "tone": "neutral"}, "4": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "5": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "6": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "7": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "8": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "9": {"name": "Studio.One", "label": "Submitted", "tone": "neutral"}, "10": {"name": "Tinuiti", "label": "Paused", "tone": "neutral"}, "11": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}, "13": {"name": "Fairfax County EDA", "label": "Pre-RFP", "tone": "data"}, "14": {"name": "American Red Cross", "label": "Pre-RFP", "tone": "data"}, "15": {"name": "AGA", "label": "Lost", "tone": "lost"}, "16": {"name": "Community of Christ", "label": "Lost", "tone": "lost"}, "17": {"name": "PHI", "label": "Lost", "tone": "lost"}};
+const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "3": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "5": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "6": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "7": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "8": {"name": "Studio.One", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "Submitted", "tone": "neutral"}, "10": {"name": "American Red Cross", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "Fairfax County EDA", "label": "Pre-RFP", "tone": "data"}, "13": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}, "14": {"name": "Tinuiti", "label": "Paused", "tone": "neutral"}, "15": {"name": "AGA", "label": "Lost", "tone": "lost"}, "16": {"name": "Community of Christ", "label": "Lost", "tone": "lost"}, "17": {"name": "PHI", "label": "Lost", "tone": "lost"}};
 function openModal(i){
   const meta = MODAL_META[i];
   const detail = document.getElementById('detail-' + i);

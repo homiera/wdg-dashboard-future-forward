@@ -385,6 +385,8 @@ GROUP_TONE = {"In Contract": "progress", "Submitted": "data", "In Progress": "ye
 groups = {g: [] for g in GROUP_ORDER}
 for c in cards:
     groups.setdefault({"Paused": "Pre-RFP"}.get(c["label"], c["label"]), []).append(c)
+for _g in groups:
+    groups[_g].sort(key=lambda c: c["prop"].lower())   # alphabetical within each status section
 for label in list(groups.keys()):
     if label not in GROUP_ORDER:
         GROUP_ORDER.append(label)
@@ -577,7 +579,7 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
   padding:3px 10px; border-radius:999px; font-weight:400;
 }
 .badge.newupd{ display:none; background:var(--wdg-yellow); color:#141414; font-weight:600; }
-.pcard.has-new .badge.statusbadge{ display:none; }
+.pcard .badge.statusbadge{ display:none; }   /* status shown by section heading and in the pop-up */
 .pcard.has-new .badge.newupd{ display:inline-block; }
 .badge.lost{ background:var(--status-lost); color:var(--status-lost-ink); }
 .badge.progress{ background:var(--status-progress); color:var(--status-progress-ink); }
