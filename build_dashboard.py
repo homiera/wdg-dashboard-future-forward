@@ -270,7 +270,7 @@ for r in s["rows"]:
         continue
     delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
     if 0 <= delta <= 7:
-        responses_this_week.append((r["proposal"], r["date"], "Response due"))
+        responses_this_week.append((r["proposal"], r["date"], "Intent to bid due" if r["milestone"].lower().startswith("intent to") else "Response due"))
 
 due_this_week_rows = []
 for p in due_this_week:
