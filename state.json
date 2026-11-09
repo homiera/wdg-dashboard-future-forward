@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-06",
+  "as_of": "2026-11-09",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1234,21 +1234,21 @@
       "milestone": "Responses due",
       "type": "Prospect-set",
       "owner": "Ab",
-      "status": "Open",
+      "status": "Complete",
       "marker": "HARD DEADLINE",
-      "notes": "Concise document or short deck: who we are, approach, team, Release 1 estimates (front-end only and full-stack), R2/R3 order of magnitude, AI in practice, risks, references.",
+      "notes": "Submitted by email the morning of 11/9.",
       "tag": ""
     },
     {
-      "date": "2026-11-09",
-      "through": "2026-11-11",
+      "date": "2026-11-13",
+      "through": null,
       "proposal": "Studio.One",
-      "milestone": "Conversations with shortlisted partners",
+      "milestone": "Next round, anticipated later this week (timing TBD)",
       "type": "Prospect-set",
       "owner": "Ab",
       "status": "Open",
       "marker": "",
-      "notes": "Nov 9 to 11.",
+      "notes": "Conversations with shortlisted partners. Timing TBD; shown as the end of this week until confirmed.",
       "tag": ""
     },
     {
@@ -1306,7 +1306,7 @@
       "milestone": "Internal debrief with REQ and WDG",
       "type": "Internal (team-set)",
       "owner": "REQ",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
       "notes": "Internal REQ and WDG meeting (moved from 11/4) to discuss the RFP, delegate, and set direction.",
       "tag": "MEETING"
@@ -1330,7 +1330,7 @@
       "milestone": "Internal working session on the proposal",
       "type": "Internal (team-set)",
       "owner": "Ab, Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
       "notes": "Josh, Amanda, Kurtis, Ab, Homiera. Submission due tomorrow, 11/6.",
       "tag": "MEETING"
@@ -1370,6 +1370,18 @@
       "marker": "HARD DEADLINE",
       "notes": "ARC sent pricing questions. Homiera drafting responses.",
       "tag": "DEADLINE"
+    },
+    {
+      "date": "2026-11-09",
+      "through": null,
+      "proposal": "Fairfax County EDA",
+      "milestone": "Team Activation Brainstorm with REQ, 2:30 PM",
+      "type": "Internal (team-set)",
+      "owner": "REQ",
+      "status": "Open",
+      "marker": "",
+      "notes": "Collaborative session with REQ. WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, practical AI recommendations.",
+      "tag": "MEETING"
     }
   ],
   "summary": [
@@ -1588,27 +1600,27 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "Proposal in progress; due 11/6",
+      "stage": "Submitted 11/9; next round anticipated this week (timing TBD)",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
       "owners": "Josh, Amanda, Kurtis, Ab, Homiera",
       "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera",
       "budget": "$500,000 to $600,000 (targeted bid, all three phases)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session on the proposal 11/5 with Josh, Amanda, and Kurtis. Submission due 11/6. Targeting $500,000 to $600,000 for all three phases (previously planned $150,000 to $200,000). RFP is confidential under NDA."
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Targeting $500,000 to $600,000 for all three phases (previously planned $150,000 to $200,000). RFP is confidential under NDA. Anticipated next round later this week, timing TBD."
     },
     {
       "proposal": "Fairfax County EDA",
       "client": "FCEDA RFP 2027-03, Integrated Marketing and Communications Services",
       "type": "RFP (collaboration with REQ)",
-      "stage": "REQ owning; internal REQ and WDG debrief today (11/5)",
+      "stage": "Proposal in development with REQ; Team Activation Brainstorm 11/9",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Euna Procurement (Bonfire) portal, PDF only",
       "owners": "Vajaah, Kurtis, Ab, Homiera",
       "named_staff": "Vajaah, Kurtis, Ab, Homiera",
       "budget": "$800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)",
-      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG on the RFP, with delegation and direction, moved to today, 11/5. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely)."
+      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked."
     }
   ],
   "focus": {

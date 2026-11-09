@@ -33,7 +33,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # st
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"NLC", "UAE Embassy"}   # nothing pending on our side; AKF, OTF, ARC have next steps
+AWAITING_DECISION = {"NLC", "UAE Embassy", "Studio.One"}   # nothing pending on our side; AKF, OTF, ARC have next steps
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
@@ -41,7 +41,7 @@ AWAITING_DECISION = {"NLC", "UAE Embassy"}   # nothing pending on our side; AKF,
 # a card lands in on the grouped-by-stage layout per Homiera + Dario 10/28.
 STATUS_OVERRIDE = {
     "UAE Embassy": "Submitted",
-    "Studio.One": "In Progress",
+    "Studio.One": "Submitted",
     "American Kidney Fund": "Submitted",
     "Open Technology Fund": "Submitted",
     "Appalachian Regional Commission": "Submitted",
@@ -132,9 +132,10 @@ RFP_FOLDER_LINK = {
 # Spec/reference deliverables that aren't a formal proposal deck, where
 # relevant. Per Homiera 10/29: Tinuiti got a technical scenario writeup and a
 # proposal doc instead of a formal deck. List of (label, url) per pursuit.
-SPEC_LABEL = {"Columbia Association": "Contract review", "Fairfax County EDA": "Teams"}   # row label; default is "Spec deliverables"
+SPEC_LABEL = {"Columbia Association": "Contract review", "Fairfax County EDA": "Collaboration"}   # row label; default is "Spec deliverables"
 SPEC_LINKS = {
     "Fairfax County EDA": [
+        ("RFP content doc", "https://docs.google.com/document/d/15bEoVU6Q30d91XgjFphm4lAi-kSD4heIf-jARkCKnbg/edit?tab=t.0"),
         ("FCEDA RFP chat", "https://teams.microsoft.com/l/chat/19%3A4c6ebc8510cd4b11b211f5674028252a%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"),
     ],
     "Columbia Association": [
