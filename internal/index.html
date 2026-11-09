@@ -137,6 +137,9 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
   position:absolute; top:16px; right:16px; font-family:var(--font-mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
   padding:3px 10px; border-radius:999px; font-weight:400;
 }
+.badge.newupd{ display:none; background:var(--wdg-yellow); color:#141414; font-weight:600; }
+.pcard.has-new .badge.statusbadge{ display:none; }
+.pcard.has-new .badge.newupd{ display:inline-block; }
 .badge.lost{ background:var(--status-lost); color:var(--status-lost-ink); }
 .badge.progress{ background:var(--status-progress); color:var(--status-progress-ink); }
 .badge.data{ background:var(--status-data); color:var(--status-data-ink); }
@@ -258,7 +261,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   <div class="tile iris" style="padding:18px 20px;">
     <div class="tlabel">Pipeline Volume &mdash; Total Projected</div>
     <div class="tnum" style="font-size:28px;">
-      $3,607,500&ndash;$3,722,500
+      $3,507,500&ndash;$3,622,500
       <span style="font-size:13px; color:var(--ink-muted); font-family:var(--font-sans); font-weight:400;"> known</span>
     </div>
     <div class="volbar">
@@ -283,13 +286,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="grid">
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(0)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(0);}">
-      <div class="badge progress">In Contract</div>
+      <div class="badge statusbadge progress">In Contract</div>
       <div class="pname">Columbia Association</div>
       <div class="pdue">Next: <b>Thu, Nov 5</b><span class="datepassed">date passed</span></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$228,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-0">
+        
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $228,000</div>
         <div class="row"><span class="k">Stage details:</span> Contracting; new redlines going to their lawyer</div>
@@ -306,13 +310,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(1);}">
-      <div class="badge progress">In Contract</div>
+      <div class="badge statusbadge progress">In Contract</div>
       <div class="pname">Heritage.org</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$500,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-1">
+        
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $500,000</div>
         <div class="row"><span class="k">Stage details:</span> Contracting, Discovery then Implementation; MSA in legal review</div>
@@ -329,13 +334,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(2);}">
-      <div class="badge progress">In Contract</div>
+      <div class="badge statusbadge progress">In Contract</div>
       <div class="pname">Heritage Action</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab, Kurt Shadle</div>
       <div class="pbudget">$300,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-2">
+        
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $300,000 (Homiera&#x27;s estimate, stated as approximate &quot;I think&quot; - not yet confirmed in writing)</div>
         <div class="row"><span class="k">Stage details:</span> Contracting; adding a new SOW for SMS support</div>
@@ -354,13 +360,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="grid">
     <div class="pcard tier-3" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(3);}">
-      <div class="badge neutral">Submitted</div>
+      <div class="badge statusbadge neutral">Submitted</div>
       <div class="pname">UAE Embassy</div>
       <div class="pdue">Next: <b>Mon, Nov 9</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera</div>
       <div class="pbudget">$234,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-3">
+        
         <div class="row"><span class="k">Tier:</span> Tier 3</div>
         <div class="row"><span class="k">Budget:</span> $234,000 (initial year investment)</div>
         <div class="row"><span class="k">Stage details:</span> Submitted 11/2 (confirmed 11/5); pending Embassy evaluation</div>
@@ -375,15 +382,16 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard tier-1" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(4);}">
-      <div class="badge neutral">Submitted</div>
+      <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
       <div class="pname">American Kidney Fund</div>
       <div class="pdue">Next: <b>Wed, Nov 18</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera, Ab</div>
       <div class="pbudget">$266,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-4">
+        <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Round 2 presenting team confirmed for 11/18</div>
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $266,000</div>
         <div class="row"><span class="k">Stage details:</span> Invited to second round; presentation 11/18</div>
@@ -398,15 +406,16 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard tier-2" data-updated="2026-11-06" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(5);}">
-      <div class="badge neutral">Submitted</div>
+      <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
       <div class="pname">Open Technology Fund</div>
       <div class="pdue">Next: <b>Fri, Nov 13</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera, Ab</div>
       <div class="pbudget">$86,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-5">
+        <div class="row"><span class="k">Last update:</span> Fri, Nov 6 — Second round presentation and Q&amp;A being scheduled for 11/13</div>
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $86,000</div>
         <div class="row"><span class="k">Stage details:</span> Second round presentation and Q&amp;A being scheduled for 11/13</div>
@@ -421,15 +430,16 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-3" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard tier-3" data-updated="2026-11-06" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(6)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(6);}">
-      <div class="badge neutral">Submitted</div>
+      <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
       <div class="pname">Appalachian Regional Commission</div>
       <div class="pdue">Next: <b>Thu, Nov 12</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$70,000&ndash;$80,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-6">
+        <div class="row"><span class="k">Last update:</span> Fri, Nov 6 — Pricing questions received; responses due 11/12</div>
         <div class="row"><span class="k">Tier:</span> Tier 3</div>
         <div class="row"><span class="k">Budget:</span> $70,000 to $80,000 (includes Pantheon Performance Medium hosting)</div>
         <div class="row"><span class="k">Stage details:</span> Pricing questions from ARC; responses due 11/12</div>
@@ -446,13 +456,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(7)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(7);}">
-      <div class="badge neutral">Submitted</div>
+      <div class="badge statusbadge neutral">Submitted</div>
       <div class="pname">NTSB</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera</div>
       <div class="pbudget">$250,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-7">
+        
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> $250,000</div>
         <div class="row"><span class="k">Stage details:</span> Submitted</div>
@@ -469,13 +480,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(8)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(8);}">
-      <div class="badge neutral">Submitted</div>
+      <div class="badge statusbadge neutral">Submitted</div>
       <div class="pname">NLC</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
       <div class="pbudget">$348,500</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-8">
+        
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $348,500</div>
         <div class="row"><span class="k">Stage details:</span> Submitted — 2nd Round presentation held, pending decision</div>
@@ -490,23 +502,24 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard tier-2" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(9)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(9);}">
-      <div class="badge neutral">Submitted</div>
+      <div class="badge statusbadge neutral">Submitted</div><div class="badge newupd">New Updates</div>
       <div class="pname">Studio.One</div>
       <div class="pdue">Next: <b>Fri, Nov 13</b></div>
       <div class="powners"><span class="k">Owner</span>Ab</div>
-      <div class="pbudget">$500,000&ndash;$600,000</div>
+      <div class="pbudget">$400,000&ndash;$500,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-9">
+        <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Proposal submitted by email at $400k to $500k (Release 1 at $120k); next round anticipated this week</div>
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
-        <div class="row"><span class="k">Budget:</span> $500,000 to $600,000 (targeted bid, all three phases)</div>
+        <div class="row"><span class="k">Budget:</span> $400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)</div>
         <div class="row"><span class="k">Stage details:</span> Submitted 11/9; next round anticipated this week (timing TBD)</div>
         <div class="row"><span class="k">Next Due Date:</span> Fri, Nov 13 — Next round, anticipated later this week (timing TBD)</div>
         <div class="row"><span class="k">All assigned people:</span> Josh, Amanda, Kurtis, Ab, Homiera</div>
         <div class="row"><span class="k">Deck:</span> <a href="https://claude.ai/artifact/Hsyn8XJjgATV2LhQpHFon6?sk=WgvLblq347wW8Ccq3gEvWA#slide-3dd33bdac6c2" style="color:var(--emphasis); text-decoration:underline;">Open deck</a></div>
         <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Targeting $500,000 to $600,000 for all three phases (previously planned $150,000 to $200,000). RFP is confidential under NDA. Anticipated next round later this week, timing TBD.</div>
+        <div class="row"><span class="k">Notes:</span> End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Anticipated next round later this week, timing TBD.</div>
         
         <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0CE28Q6H45" class="slacklink">Go to Slack &rarr;</a></div>
       </div>
@@ -517,13 +530,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     <div class="grid">
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(10)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(10);}">
-      <div class="badge neutral">Paused</div>
+      <div class="badge statusbadge neutral">Paused</div>
       <div class="pname">Tinuiti</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Ab, Vaj, Kurtis</div>
       <div class="pbudget">$25,000&ndash;$30,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-10">
+        
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $25,000 to $30,000 annual (client target)</div>
         <div class="row"><span class="k">Stage details:</span> Paused by client (internal reshuffling); targeting Q1 2027</div>
@@ -540,13 +554,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 
     <div class="pcard tier-2" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(11)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(11);}">
-      <div class="badge data">Pre-RFP</div>
+      <div class="badge statusbadge data">Pre-RFP</div>
       <div class="pname">Aspen Digital</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Kurt Shadle</div>
       <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-11">
+        
         <div class="row"><span class="k">Tier:</span> Tier 2</div>
         <div class="row"><span class="k">Budget:</span> TBD</div>
         <div class="row"><span class="k">Stage details:</span> Helping shape their RFP this week</div>
@@ -563,13 +578,14 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 
     <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(12)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(12);}">
-      <div class="badge data">Pre-RFP</div>
+      <div class="badge statusbadge data">Pre-RFP</div>
       <div class="pname">GSA.gov</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera</div>
       <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-12">
+        
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> TBD</div>
         <div class="row"><span class="k">Stage details:</span> Added to tracker 10/28 per Homiera; no further detail provided yet</div>
@@ -584,15 +600,16 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard tier-1" data-updated="2026-11-09" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(13)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(13);}">
-      <div class="badge data">Pre-RFP</div>
+      <div class="badge statusbadge data">Pre-RFP</div><div class="badge newupd">New Updates</div>
       <div class="pname">Fairfax County EDA</div>
       <div class="pdue">Next: <b>Mon, Nov 9</b></div>
       <div class="powners"><span class="k">Owner</span>REQ (Maria Russell)</div>
       <div class="pbudget">$800,000</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-13">
+        <div class="row"><span class="k">Last update:</span> Mon, Nov 9 — Team Activation Brainstorm with REQ today at 2:30 PM; collaborative RFP content doc linked</div>
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> $800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)</div>
         <div class="row"><span class="k">Stage details:</span> Proposal in development with REQ; Team Activation Brainstorm 11/9</div>
@@ -673,6 +690,21 @@ function openModal(i){
   document.getElementById('modalBody').innerHTML = detail.innerHTML;
   document.getElementById('modalBackdrop').classList.add('show');
 }
+// "New Updates" tag: shown from the update date through the end of the next
+// business day (Eastern time), then the normal status badge returns.
+(function(){
+  function etToday(){ return new Date().toLocaleDateString('en-CA', {timeZone:'America/New_York'}); }
+  function expiry(iso){
+    const p = iso.split('-').map(Number);
+    const d = new Date(p[0], p[1]-1, p[2]);
+    do { d.setDate(d.getDate()+1); } while (d.getDay()===0 || d.getDay()===6);
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  }
+  const today = etToday();
+  document.querySelectorAll('.pcard[data-updated]').forEach(function(el){
+    if (today <= expiry(el.getAttribute('data-updated'))) el.classList.add('has-new');
+  });
+})();
 function closeModal(){
   document.getElementById('modalBackdrop').classList.remove('show');
 }

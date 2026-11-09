@@ -1498,7 +1498,9 @@
       "owners": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "named_staff": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "budget": "$70,000 to $80,000 (includes Pantheon Performance Medium hosting)",
-      "notes": "ARC has pricing questions. Homiera is drafting responses, due back to ARC 11/12. Andrea requested a copy of the deck used during Thursday's presentation (10/29)."
+      "notes": "ARC has pricing questions. Homiera is drafting responses, due back to ARC 11/12. Andrea requested a copy of the deck used during Thursday's presentation (10/29).",
+      "updated_at": "2026-11-06",
+      "update_note": "Pricing questions received; responses due 11/12"
     },
     {
       "proposal": "AGA",
@@ -1529,7 +1531,9 @@
       "owners": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "named_staff": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "budget": "$266,000",
-      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Invited to the second round presentations, booked for 11/18 (1.5 to 2 hours). Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF provided a script for the presentation focused on 6 topics to address."
+      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Invited to the second round presentations, booked for 11/18 (1.5 to 2 hours). Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF provided a script for the presentation focused on 6 topics to address.",
+      "updated_at": "2026-11-09",
+      "update_note": "Round 2 presenting team confirmed for 11/18"
     },
     {
       "proposal": "Open Technology Fund",
@@ -1542,7 +1546,9 @@
       "owners": "Homiera, Zaid, Doug, Vajaah",
       "named_staff": "Homiera, Zaid, Doug, Vajaah",
       "budget": "$86,000",
-      "notes": "Submitted 10/23. Confirmed receipt via text with Ab. Scheduling a second round presentation and Q&A with OTF for 11/13. Presenting: Doug, Vaj, Dario, Ab."
+      "notes": "Submitted 10/23. Confirmed receipt via text with Ab. Scheduling a second round presentation and Q&A with OTF for 11/13. Presenting: Doug, Vaj, Dario, Ab.",
+      "updated_at": "2026-11-06",
+      "update_note": "Second round presentation and Q&A being scheduled for 11/13"
     },
     {
       "proposal": "NLC",
@@ -1606,8 +1612,10 @@
       "submit_to": "Kourtney Wong, Studio.One",
       "owners": "Josh, Amanda, Kurtis, Ab, Homiera",
       "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera",
-      "budget": "$500,000 to $600,000 (targeted bid, all three phases)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Targeting $500,000 to $600,000 for all three phases (previously planned $150,000 to $200,000). RFP is confidential under NDA. Anticipated next round later this week, timing TBD."
+      "budget": "$400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)",
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Anticipated next round later this week, timing TBD.",
+      "updated_at": "2026-11-09",
+      "update_note": "Proposal submitted by email at $400k to $500k (Release 1 at $120k); next round anticipated this week"
     },
     {
       "proposal": "Fairfax County EDA",
@@ -1620,7 +1628,9 @@
       "owners": "Vajaah, Kurtis, Ab, Homiera",
       "named_staff": "Vajaah, Kurtis, Ab, Homiera",
       "budget": "$800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)",
-      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked."
+      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked.",
+      "updated_at": "2026-11-09",
+      "update_note": "Team Activation Brainstorm with REQ today at 2:30 PM; collaborative RFP content doc linked"
     }
   ],
   "focus": {

@@ -360,6 +360,8 @@ def card_data(prop):
         "owner": OWNER.get(prop, "TBD"),               # Owner (accountable party), per Homiera 10/28
         "stage": su.get("stage", ""),                 # Stage details
         "notes": su.get("notes", ""),                 # Description / latest notes
+        "updated_at": su.get("updated_at"),           # date of last update Homiera gave; drives the New Updates tag
+        "update_note": su.get("update_note", ""),
         "tier": TIER.get(prop, "TBD"),
         "budget_display": budget_display,   # Clean $ figure for the card face
         "budget_raw": budget_raw,           # Full budget text (caveats etc.) for the detail view
@@ -571,6 +573,9 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
   position:absolute; top:16px; right:16px; font-family:var(--font-mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase;
   padding:3px 10px; border-radius:999px; font-weight:400;
 }
+.badge.newupd{ display:none; background:var(--wdg-yellow); color:#141414; font-weight:600; }
+.pcard.has-new .badge.statusbadge{ display:none; }
+.pcard.has-new .badge.newupd{ display:inline-block; }
 .badge.lost{ background:var(--status-lost); color:var(--status-lost-ink); }
 .badge.progress{ background:var(--status-progress); color:var(--status-progress-ink); }
 .badge.data{ background:var(--status-data); color:var(--status-data-ink); }
@@ -726,16 +731,21 @@ def card_html(c, i):
             for label, url in c["spec_links"]
         )
         spec_row = f'<div class="row"><span class="k">{esc(SPEC_LABEL.get(c["prop"], "Spec deliverables"))}:</span> {links_html}</div>'
+    upd_attr = f' data-updated="{esc(c["updated_at"])}"' if c.get("updated_at") else ""
+    upd_tag = '<div class="badge newupd">New Updates</div>' if c.get("updated_at") else ""
+    last_update = (f'<div class="row"><span class="k">Last update:</span> {esc(fmt_date(c["updated_at"]))}'
+                   f'{(" — " + esc(c["update_note"])) if c.get("update_note") else ""}</div>') if c.get("updated_at") else ""
     return f"""
-    <div class="pcard{tier_class}" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard{tier_class}"{upd_attr} tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal({i})" onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();openModal({i});}}">
-      <div class="badge {c['tone']}">{esc(c['label'])}</div>
+      <div class="badge statusbadge {c['tone']}">{esc(c['label'])}</div>{upd_tag}
       <div class="pname">{esc(c['prop'])}</div>
       <div class="pdue">Next: <b>{esc(c['due'])}</b>{passed}</div>
       <div class="powners"><span class="k">Owner</span>{esc(c['owner'])}</div>
       <div class="pbudget{' placeholder' if c['budget_display'] == 'Not yet quantified' else ''}">{c['budget_display']}</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-{i}">
+        {last_update}
         <div class="row"><span class="k">Tier:</span> {tier}</div>
         <div class="row"><span class="k">Budget:</span> {esc(c['budget_raw'])}</div>
         <div class="row"><span class="k">Stage details:</span> {esc(c['stage'])}</div>
@@ -840,6 +850,21 @@ function openModal(i){
   document.getElementById('modalBody').innerHTML = detail.innerHTML;
   document.getElementById('modalBackdrop').classList.add('show');
 }
+// "New Updates" tag: shown from the update date through the end of the next
+// business day (Eastern time), then the normal status badge returns.
+(function(){
+  function etToday(){ return new Date().toLocaleDateString('en-CA', {timeZone:'America/New_York'}); }
+  function expiry(iso){
+    const p = iso.split('-').map(Number);
+    const d = new Date(p[0], p[1]-1, p[2]);
+    do { d.setDate(d.getDate()+1); } while (d.getDay()===0 || d.getDay()===6);
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  }
+  const today = etToday();
+  document.querySelectorAll('.pcard[data-updated]').forEach(function(el){
+    if (today <= expiry(el.getAttribute('data-updated'))) el.classList.add('has-new');
+  });
+})();
 function closeModal(){
   document.getElementById('modalBackdrop').classList.remove('show');
 }
