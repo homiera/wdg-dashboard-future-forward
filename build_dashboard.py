@@ -24,7 +24,7 @@ def fmt_date(d):
 LOST = {"PHI", "AGA", "Community of Christ"}
 WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
 PAUSED = {"Tinuiti"}   # client paused the process; shown in the Pre-RFPs & Under Consideration section
-PRE_RFP = {"Aspen Digital", "GSA.gov", "Fairfax County EDA", "American Red Cross"}
+PRE_RFP = {"Aspen Digital", "GSA.gov", "Fairfax County EDA", "American Red Cross", "Virginia Tourism Corporation", "NAI Global"}
 CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the
@@ -33,7 +33,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # st
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"NLC", "UAE Embassy", "Studio.One"}   # nothing pending on our side; AKF, OTF, ARC have next steps
+AWAITING_DECISION = {"NLC", "UAE Embassy"}   # nothing pending on our side; AKF, OTF, ARC have next steps
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
@@ -87,6 +87,8 @@ OWNER = {
     "NLC": "Ab",
     "Studio.One": "Ab",
     "American Red Cross": "Ab",
+    "Virginia Tourism Corporation": "Homiera",
+    "NAI Global": "REQ (Maria Russell)",
     "Fairfax County EDA": "REQ (Maria Russell)",
 }
 

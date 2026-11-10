@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-09",
+  "as_of": "2026-11-10",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1240,16 +1240,16 @@
       "tag": ""
     },
     {
-      "date": "2026-11-13",
+      "date": "2026-11-12",
       "through": null,
       "proposal": "Studio.One",
-      "milestone": "Next round, anticipated later this week (timing TBD)",
+      "milestone": "Round 2 meeting with Studio.One (Thursday requested, time TBD)",
       "type": "Prospect-set",
-      "owner": "Ab",
+      "owner": "Ab, Homiera",
       "status": "Open",
       "marker": "",
-      "notes": "Conversations with shortlisted partners. Timing TBD; shown as the end of this week until confirmed.",
-      "tag": ""
+      "notes": "Studio.One asked to meet for round 2. Homiera asked for time Thursday; will schedule the right people after reviewing their questions.",
+      "tag": "MEETING"
     },
     {
       "date": "2026-11-16",
@@ -1390,16 +1390,16 @@
       "milestone": "Intent to submit",
       "type": "Prospect-set",
       "owner": "Ab",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Confirm intent to submit.",
+      "notes": "Ab confirmed our interest to bid with Red Cross. Intent to Submit form deadline was 11/13, 5:00 PM ET.",
       "tag": "DEADLINE"
     },
     {
       "date": "2026-11-18",
       "through": null,
       "proposal": "American Red Cross",
-      "milestone": "Questions to American Red Cross",
+      "milestone": "Questions to American Red Cross, 5:00 PM ET",
       "type": "Prospect-set",
       "owner": "Ab",
       "status": "Open",
@@ -1411,12 +1411,96 @@
       "date": "2026-12-06",
       "through": null,
       "proposal": "American Red Cross",
-      "milestone": "Proposal due",
+      "milestone": "Proposal due, 5:00 PM ET",
       "type": "Prospect-set",
       "owner": "Ab",
       "status": "Open",
       "marker": "HARD DEADLINE",
-      "notes": "Full rebuild, redesign, and migration of preparecenter.org.",
+      "notes": "Schedule table says 12/6 (a Sunday); RFP body text says on or before 12/7. Confirm the controlling date. Full rebuild, redesign, and migration of preparecenter.org.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-20",
+      "through": null,
+      "proposal": "American Red Cross",
+      "milestone": "Answers to questions returned to offerors",
+      "type": "Prospect-set",
+      "owner": "Red Cross",
+      "status": "Open",
+      "marker": "",
+      "notes": "5:00 PM ET.",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-14",
+      "through": "2026-12-18",
+      "proposal": "American Red Cross",
+      "milestone": "Shortlisted vendor presentations",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "",
+      "notes": "Week of December 14.",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-31",
+      "through": null,
+      "proposal": "American Red Cross",
+      "milestone": "Vendor selected (by)",
+      "type": "Prospect-set",
+      "owner": "Red Cross",
+      "status": "Open",
+      "marker": "",
+      "notes": "Work expected to begin around Feb 2027; launch targeted by mid-August 2027.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-11",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "Studio.One shares round 2 questions",
+      "type": "Prospect-set",
+      "owner": "Studio.One",
+      "status": "Open",
+      "marker": "",
+      "notes": "Review questions, then schedule the right people for the meeting.",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-04",
+      "through": null,
+      "proposal": "Virginia Tourism Corporation",
+      "milestone": "Pre-registration for mandatory pre-bid call, 4:00 PM EST",
+      "type": "Prospect-set",
+      "owner": "Homiera",
+      "status": "Complete",
+      "marker": "",
+      "notes": "Homiera has registered.",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-08",
+      "through": null,
+      "proposal": "Virginia Tourism Corporation",
+      "milestone": "Mandatory virtual pre-proposal conference, 10:00 AM EST",
+      "type": "Prospect-set",
+      "owner": "Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "Mandatory: proposals only accepted from attendees. Acknowledge presence at roll call; no one admitted after roll call.",
+      "tag": "MEETING"
+    },
+    {
+      "date": "2027-02-03",
+      "through": null,
+      "proposal": "Virginia Tourism Corporation",
+      "milestone": "Proposal due, 5:00 PM EST (confirm year)",
+      "type": "Prospect-set",
+      "owner": "TBD",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "Sealed hard copy plus flash drives to the VTC reception desk; no electronic submissions. Cover sheet prints 2026, assumed 2027. Questions: email WebsiteRFP2026@virginia.org at least 5 business days before.",
       "tag": ""
     }
   ],
@@ -1644,16 +1728,16 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "Submitted 11/9; next round anticipated this week (timing TBD)",
+      "stage": "Round 2: Studio.One asked to meet (Thursday requested); questions arriving 11/11",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
       "owners": "Josh, Amanda, Kurtis, Ab, Homiera",
       "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera",
       "budget": "$400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Anticipated next round later this week, timing TBD.",
-      "updated_at": "2026-11-09",
-      "update_note": "Proposal submitted by email at $400k to $500k (Release 1 at $120k); next round anticipated this week"
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them.",
+      "updated_at": "2026-11-10",
+      "update_note": "Round 2 meeting requested by Studio.One (Thursday 11/12); questions arriving 11/11"
     },
     {
       "proposal": "Fairfax County EDA",
@@ -1674,16 +1758,46 @@
       "proposal": "American Red Cross",
       "client": "American Red Cross, Prepare Center Rebuild (preparecenter.org)",
       "type": "RFP",
-      "stage": "RFP in review; Ab determining tier. Intent to submit 11/13",
+      "stage": "Pursuing: Ab confirmed our interest to bid with Red Cross; tier TBD",
       "key_date": null,
       "key_detail": null,
-      "submit_to": "TBD",
+      "submit_to": "Red Cross Supply Chain Management (per RFP)",
       "owners": "Ab, Mary, Vajaah, Dario, Kurtis",
       "named_staff": "Ab, Mary, Vajaah, Dario, Kurtis",
       "budget": "TBD",
-      "notes": "New RFP in review. Objective is a full rebuild, redesign, and migration of preparecenter.org. Ab leads and is reviewing to determine tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Intent to submit 11/13. Questions 11/18. Proposal 12/6.",
-      "updated_at": "2026-11-09",
-      "update_note": "Team assigned (Mary, Vajaah, Dario, Kurtis; Ab leads); links added; tier TBD"
+      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Ab leads and is determining tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Ab confirmed our interest to bid with Red Cross. Schedule: written questions 11/18 (5 PM ET), answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
+      "updated_at": "2026-11-10",
+      "update_note": "Ab confirmed interest to bid; RFP schedule added (presentations week of 12/14, selection by 12/31)"
+    },
+    {
+      "proposal": "Virginia Tourism Corporation",
+      "client": "Virginia Tourism Corporation (VTC), RFP 27-058, VTC Website 2026 (virginia.org)",
+      "type": "RFP",
+      "stage": "Under consideration; registered for the mandatory pre-bid call (12/8)",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "Hard copy only: VTC reception desk, 901 E. Cary St., Richmond, VA (no electronic submissions)",
+      "owners": "Homiera",
+      "named_staff": "Homiera",
+      "budget": "TBD (RFP requires one fixed price for all deliverables)",
+      "notes": "New RFP being vetted. New WordPress site and theme for virginia.org plus three microsites (Groups, Sports, Meetings), content migration from the current CMS, performance benchmarks, and at least three months of post-launch support. Build is hosted in VTC's WP Engine account; launch within six months of award. Homiera registered for the mandatory virtual pre-proposal conference: proposals are accepted only from firms that attend (10:00 AM EST, Dec 8; roll call, acknowledge presence). Sealed hard-copy proposals only with flash drives; electronic submissions are not considered. The cover sheet prints a due date of February 3, 2026, which predates the Nov 10, 2026 issue date. We are assuming Feb 3, 2027, 5:00 PM EST; confirm with the VTC contact. Offerors must be eVA registered. Contact: Ben Nicastro, WebsiteRFP2026@virginia.org.",
+      "updated_at": "2026-11-10",
+      "update_note": "New RFP added; registered for the mandatory pre-bid call on 12/8"
+    },
+    {
+      "proposal": "NAI Global",
+      "client": "NAI Global, Website Redesign and Digital Platform Modernization",
+      "type": "RFP (via REQ)",
+      "stage": "Under consideration; REQ (Maria) scheduling a debrief with us to review the RFP",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "Per invitation (PDF proposal)",
+      "owners": "TBD",
+      "named_staff": "TBD",
+      "budget": "TBD",
+      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Maria is scheduling a debrief with us to go over it. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief.",
+      "updated_at": "2026-11-10",
+      "update_note": "New RFP added; REQ (Maria) scheduling a debrief"
     }
   ],
   "focus": {
@@ -1767,6 +1881,8 @@
     "NLC",
     "Studio.One",
     "Fairfax County EDA",
-    "American Red Cross"
+    "American Red Cross",
+    "Virginia Tourism Corporation",
+    "NAI Global"
   ]
 }
