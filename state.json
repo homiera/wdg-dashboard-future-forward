@@ -1392,7 +1392,7 @@
       "owner": "Ab",
       "status": "Complete",
       "marker": "",
-      "notes": "Ab confirmed our interest to bid with Red Cross. Intent to Submit form deadline was 11/13, 5:00 PM ET.",
+      "notes": "Ab confirmed our interest to bid with Red Cross by email. Intent notice was due 11/13, 5:00 PM ET.",
       "tag": "DEADLINE"
     },
     {
@@ -1495,12 +1495,12 @@
       "date": "2027-02-03",
       "through": null,
       "proposal": "Virginia Tourism Corporation",
-      "milestone": "Proposal due, 5:00 PM EST (confirm year)",
+      "milestone": "Proposal due, 5:00 PM EST",
       "type": "Prospect-set",
       "owner": "TBD",
       "status": "Open",
       "marker": "HARD DEADLINE",
-      "notes": "Sealed hard copy plus flash drives to the VTC reception desk; no electronic submissions. Cover sheet prints 2026, assumed 2027. Questions: email WebsiteRFP2026@virginia.org at least 5 business days before.",
+      "notes": "Sealed hard copy plus flash drives to the VTC reception desk; no electronic submissions. Cover sheet misprints 2026; the due date is Feb 3, 2027. Questions: email WebsiteRFP2026@virginia.org at least 5 business days before.",
       "tag": ""
     }
   ],
@@ -1765,7 +1765,7 @@
       "owners": "Ab, Mary, Vajaah, Dario, Kurtis",
       "named_staff": "Ab, Mary, Vajaah, Dario, Kurtis",
       "budget": "TBD",
-      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Ab leads and is determining tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Ab confirmed our interest to bid with Red Cross. Schedule: written questions 11/18 (5 PM ET), answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
+      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Ab leads and is determining tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Ab confirmed our interest to bid with Red Cross by email (the intent step is an email requirement). Schedule: written questions 11/18 (5 PM ET), answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
       "updated_at": "2026-11-10",
       "update_note": "Ab confirmed interest to bid; RFP schedule added (presentations week of 12/14, selection by 12/31)"
     },
@@ -1780,7 +1780,7 @@
       "owners": "Homiera",
       "named_staff": "Homiera",
       "budget": "TBD (RFP requires one fixed price for all deliverables)",
-      "notes": "New RFP being vetted. New WordPress site and theme for virginia.org plus three microsites (Groups, Sports, Meetings), content migration from the current CMS, performance benchmarks, and at least three months of post-launch support. Build is hosted in VTC's WP Engine account; launch within six months of award. Homiera registered for the mandatory virtual pre-proposal conference: proposals are accepted only from firms that attend (10:00 AM EST, Dec 8; roll call, acknowledge presence). Sealed hard-copy proposals only with flash drives; electronic submissions are not considered. The cover sheet prints a due date of February 3, 2026, which predates the Nov 10, 2026 issue date. We are assuming Feb 3, 2027, 5:00 PM EST; confirm with the VTC contact. Offerors must be eVA registered. Contact: Ben Nicastro, WebsiteRFP2026@virginia.org.",
+      "notes": "New RFP being vetted. New WordPress site and theme for virginia.org plus three microsites (Groups, Sports, Meetings), content migration from the current CMS, performance benchmarks, and at least three months of post-launch support. Build is hosted in VTC's WP Engine account; launch within six months of award. Homiera registered for the mandatory virtual pre-proposal conference: proposals are accepted only from firms that attend (10:00 AM EST, Dec 8; roll call, acknowledge presence). Sealed hard-copy proposals only with flash drives; electronic submissions are not considered. Proposals are due Feb 3, 2027, 5:00 PM EST (the RFP cover sheet misprints the year as 2026). Offerors must be eVA registered. Contact: Ben Nicastro, WebsiteRFP2026@virginia.org.",
       "updated_at": "2026-11-10",
       "update_note": "New RFP added; registered for the mandatory pre-bid call on 12/8"
     },
