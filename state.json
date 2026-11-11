@@ -1502,6 +1502,18 @@
       "marker": "HARD DEADLINE",
       "notes": "Sealed hard copy plus flash drives to the VTC reception desk; no electronic submissions. Cover sheet misprints 2026; the due date is Feb 3, 2027. Questions: email WebsiteRFP2026@virginia.org at least 5 business days before.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-10",
+      "through": null,
+      "proposal": "Columbia Association",
+      "milestone": "Sales debrief",
+      "type": "Internal (team-set)",
+      "owner": "Ab, Homiera",
+      "status": "Complete",
+      "marker": "",
+      "notes": "Sales debrief held 11/10.",
+      "tag": "MEETING"
     }
   ],
   "summary": [
@@ -1542,9 +1554,9 @@
       "owners": "Ab, Homiera",
       "named_staff": "Ab, Homiera",
       "budget": "$228,000",
-      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is now in Columbia's queue for signature. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
-      "updated_at": "2026-11-09",
-      "update_note": "WDG signed; contract is in Columbia's queue for signature"
+      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's queue for signature (as of 11/10). The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
+      "updated_at": "2026-11-10",
+      "update_note": "Contract still in Columbia's signature queue; sales debrief held 11/10"
     },
     {
       "proposal": "Community of Christ",
