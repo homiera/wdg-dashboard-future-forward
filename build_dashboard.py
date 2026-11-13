@@ -263,7 +263,7 @@ for r in s["rows"]:
         continue
     delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
     if 0 <= delta <= 7:
-        meetings_this_week.append((r["proposal"], r["date"], "Internal working session" if "working session" in r["milestone"].lower() else "Meeting"))
+        meetings_this_week.append((r["proposal"], r["date"], "Internal working session" if ("working session" in r["milestone"].lower() or "work session" in r["milestone"].lower()) else "Meeting"))
 
 # Tagged response deadlines (state.json row tag "DEADLINE"), e.g. answering a client's pricing questions.
 responses_this_week = []
