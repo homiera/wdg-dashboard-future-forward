@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-13",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -694,9 +694,9 @@
       "milestone": "Initial evaluation of proposals (Embassy)",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Open",
+      "status": "Cancelled",
       "marker": "",
-      "notes": "Embassy-side evaluation window.",
+      "notes": "Embassy-side evaluation window. Superseded: Embassy delayed its evaluation (11/13); new dates pending.",
       "tag": ""
     },
     {
@@ -874,9 +874,9 @@
       "milestone": "Vendor interviews, if we advance (scheduling anticipated week of Nov 9)",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Open",
+      "status": "Cancelled",
       "marker": "",
-      "notes": "Only if WDG advances to this round.",
+      "notes": "Only if WDG advances to this round. Superseded: Embassy delayed its evaluation (11/13); new dates pending.",
       "tag": ""
     },
     {
@@ -934,9 +934,9 @@
       "milestone": "Reference checks and final evaluation",
       "type": "Prospect-set",
       "owner": "Embassy",
-      "status": "Open",
+      "status": "Cancelled",
       "marker": "",
-      "notes": "",
+      "notes": "Superseded: Embassy delayed its evaluation (11/13); new dates pending.",
       "tag": ""
     },
     {
@@ -996,7 +996,7 @@
       "owner": "Embassy",
       "status": "Open",
       "marker": "",
-      "notes": "Contract negotiation and finalization Nov 17 to Dec 1.",
+      "notes": "Contract negotiation and finalization Nov 17 to Dec 1. Original Embassy date; under revision after the evaluation delay.",
       "tag": ""
     },
     {
@@ -1032,7 +1032,7 @@
       "owner": "Embassy",
       "status": "Open",
       "marker": "",
-      "notes": "",
+      "notes": "Original Embassy date; under revision after the evaluation delay.",
       "tag": ""
     },
     {
@@ -1044,7 +1044,7 @@
       "owner": "Embassy",
       "status": "Open",
       "marker": "",
-      "notes": "",
+      "notes": "Original Embassy date; under revision after the evaluation delay.",
       "tag": ""
     },
     {
@@ -1240,15 +1240,15 @@
       "tag": ""
     },
     {
-      "date": "2026-11-12",
+      "date": "2026-11-16",
       "through": null,
       "proposal": "Studio.One",
-      "milestone": "Round 2 meeting with Studio.One (Thursday requested, time TBD)",
+      "milestone": "Round 2 meeting with Studio.One, 1:30 PM",
       "type": "Prospect-set",
-      "owner": "Ab, Homiera",
+      "owner": "Ab",
       "status": "Open",
       "marker": "",
-      "notes": "Studio.One asked to meet for round 2. Homiera asked for time Thursday; will schedule the right people after reviewing their questions.",
+      "notes": "Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, Ab.",
       "tag": "MEETING"
     },
     {
@@ -1366,10 +1366,10 @@
       "milestone": "Pricing responses back to ARC (Homiera drafting)",
       "type": "Prospect-set",
       "owner": "Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "HARD DEADLINE",
-      "notes": "ARC sent pricing questions. Homiera drafting responses.",
-      "tag": "DEADLINE"
+      "notes": "Responses sent 11/12. Presented a PSP/SMS approach as a simplified way.",
+      "tag": ""
     },
     {
       "date": "2026-11-09",
@@ -1462,7 +1462,7 @@
       "milestone": "Studio.One shares round 2 questions",
       "type": "Prospect-set",
       "owner": "Studio.One",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
       "notes": "Review questions, then schedule the right people for the meeting.",
       "tag": ""
@@ -1476,7 +1476,7 @@
       "owner": "Homiera",
       "status": "Complete",
       "marker": "",
-      "notes": "Homiera has registered.",
+      "notes": "Homiera and Ab have registered.",
       "tag": ""
     },
     {
@@ -1485,7 +1485,7 @@
       "proposal": "Virginia Tourism Corporation",
       "milestone": "Mandatory virtual pre-proposal conference, 10:00 AM EST",
       "type": "Prospect-set",
-      "owner": "Homiera",
+      "owner": "Homiera, Ab",
       "status": "Open",
       "marker": "",
       "notes": "Mandatory: proposals only accepted from attendees. Acknowledge presence at roll call; no one admitted after roll call.",
@@ -1514,6 +1514,42 @@
       "marker": "",
       "notes": "Sales debrief held 11/10.",
       "tag": "MEETING"
+    },
+    {
+      "date": "2026-11-16",
+      "through": null,
+      "proposal": "Columbia Association",
+      "milestone": "Check in on contract signature",
+      "type": "Internal (team-set)",
+      "owner": "Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "Contract is in Columbia's court for signature.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-17",
+      "through": null,
+      "proposal": "Fairfax County EDA",
+      "milestone": "Work session: Vajaah and Homiera (strategy review, wireframes spec)",
+      "type": "Internal (team-set)",
+      "owner": "Homiera, Vajaah",
+      "status": "Open",
+      "marker": "",
+      "notes": "Low-effort strategy review and potential wireframes spec to include in the deck.",
+      "tag": "MEETING"
+    },
+    {
+      "date": "2026-11-16",
+      "through": "2026-11-20",
+      "proposal": "UAE Embassy",
+      "milestone": "Embassy status update expected (week of Nov 16)",
+      "type": "Prospect-set",
+      "owner": "Embassy",
+      "status": "Open",
+      "marker": "",
+      "notes": "Evaluation delayed; Embassy to share our status and any next steps.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1521,14 +1557,16 @@
       "proposal": "Heritage.org",
       "client": "heritage.org website project",
       "type": "Follow-up Q&A",
-      "stage": "Contracting, Discovery then Implementation; MSA in legal review",
+      "stage": "Contracting, Discovery then Implementation; SOW and MSA in legal review",
       "key_date": null,
       "key_detail": "MSA being finalized by WDG and Heritage legal",
       "submit_to": "Stephanie (heritage.org client contact; last name/title not provided)",
       "owners": "Ab, Homiera, Kurtis, Michael F.",
       "named_staff": "Ab, Homiera, Kurtis, Michael F.",
       "budget": "$500,000",
-      "notes": "Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA."
+      "notes": "Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA. The SOW and MSA are both in legal review (as of 11/13).",
+      "updated_at": "2026-11-13",
+      "update_note": "SOW and MSA in legal review"
     },
     {
       "proposal": "Heritage Action",
@@ -1547,16 +1585,16 @@
       "proposal": "Columbia Association",
       "client": "Columbia Association finalist presentation",
       "type": "Awarded",
-      "stage": "Contracting; WDG has signed, awaiting Columbia's signature",
+      "stage": "Contracting; contract in Columbia's court for signature; check-in Mon 11/16",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Not stated",
-      "owners": "Ab, Homiera",
-      "named_staff": "Ab, Homiera",
+      "owners": "Ab, Homiera, Mary",
+      "named_staff": "Ab, Homiera, Mary",
       "budget": "$228,000",
-      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's queue for signature (as of 11/10). The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
-      "updated_at": "2026-11-10",
-      "update_note": "Contract still in Columbia's signature queue; sales debrief held 11/10"
+      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's court for signature (as of 11/13). Next check-in Monday 11/16. Mary is preparing for the project from the PM side. The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
+      "updated_at": "2026-11-13",
+      "update_note": "Still awaiting Columbia's signature; check-in Mon 11/16; Mary preparing PM side"
     },
     {
       "proposal": "Community of Christ",
@@ -1612,29 +1650,31 @@
       "proposal": "UAE Embassy",
       "client": "Website Operations and Strategic Digital Services, RFP Ver. 2.1",
       "type": "RFP",
-      "stage": "Submitted 11/2 (confirmed 11/5); pending Embassy evaluation",
+      "stage": "Submitted 11/2; Embassy evaluation delayed; status update expected next week",
       "key_date": null,
       "key_detail": "Interview scheduling anticipated week of Nov 9, if we advance",
       "submit_to": "Jeff Joseph, at the address the RFP came from",
       "owners": "Homiera, Design Team, Ab, GoFish Digital",
       "named_staff": "Homiera, Design Team, Ab, GoFish Digital",
       "budget": "$234,000 (initial year investment)",
-      "notes": "Proposal submitted 11/2 by Melissa (GFD) via email, cc'ing and introducing Ab/WDG. Submission confirmed with Melissa on 11/5. Bid: $234,000 initial year investment. Anticipated next step: interview scheduling the week of Nov 9, if we advance to that round. Embassy timeline: initial evaluation Nov 3 to 6, interviews week of Nov 9, reference checks Nov 12 to 16, notice of intent to award Nov 17, contract negotiation Nov 17 to Dec 1, anticipated award Dec 2, kickoff week of Dec 7."
+      "notes": "Proposal submitted 11/2 by Melissa (GFD) via email, cc'ing and introducing Ab/WDG. Submission confirmed with Melissa on 11/5. Bid: $234,000 initial year investment. Anticipated next step: interview scheduling the week of Nov 9, if we advance to that round. Embassy timeline: initial evaluation Nov 3 to 6, interviews week of Nov 9, reference checks Nov 12 to 16, notice of intent to award Nov 17, contract negotiation Nov 17 to Dec 1, anticipated award Dec 2, kickoff week of Dec 7. As of 11/13 the Embassy has delayed its evaluation process. An update on our status and any next steps should come next week (week of 11/16). The earlier Embassy timeline dates are under revision.",
+      "updated_at": "2026-11-13",
+      "update_note": "Embassy evaluation delayed; update on status and next steps expected next week"
     },
     {
       "proposal": "Appalachian Regional Commission",
       "client": "ARC.gov Web Development and Managed Hosting Services",
       "type": "RFP",
-      "stage": "Pricing questions from ARC; responses due 11/12",
+      "stage": "Pricing follow-up answered 11/12; awaiting ARC decision",
       "key_date": null,
       "key_detail": "Pending decision or next steps",
       "submit_to": "contracts@arc.gov",
       "owners": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "named_staff": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "budget": "$70,000 to $80,000 (includes Pantheon Performance Medium hosting)",
-      "notes": "ARC has pricing questions. Homiera is drafting responses, due back to ARC 11/12. Andrea requested a copy of the deck used during Thursday's presentation (10/29).",
-      "updated_at": "2026-11-06",
-      "update_note": "Pricing questions received; responses due 11/12"
+      "notes": "ARC sent follow-up questions about pricing; we responded 11/12 and presented a PSP/SMS approach as a simplified option. Andrea requested a copy of the deck used during the 10/29 presentation. Awaiting ARC's decision or next steps.",
+      "updated_at": "2026-11-13",
+      "update_note": "Pricing questions answered 11/12; presented PSP/SMS approach as a simplified option"
     },
     {
       "proposal": "AGA",
@@ -1701,14 +1741,16 @@
       "proposal": "Aspen Digital",
       "client": "Aspen Digital (relationship via Aspen Institute)",
       "type": "Pre-RFP relationship",
-      "stage": "Helping shape their RFP this week",
+      "stage": "Our team drafted their RFP; in internal review",
       "key_date": null,
       "key_detail": "No RFP issued yet",
       "submit_to": "TBD",
       "owners": "Kurt Shadle, Ab, Vajaah",
       "named_staff": "Kurt Shadle, Ab, Vajaah",
       "budget": "TBD",
-      "notes": "New as of Oct 13. Talking with Aspen Digital/Aspen Institute contacts this week to help shape their RFP before it's issued. No document, budget, or dates exist yet \u2014 nothing to commit to on paper."
+      "notes": "New as of Oct 13. Talking with Aspen Digital/Aspen Institute contacts this week to help shape their RFP before it's issued. No document, budget, or dates exist yet \u2014 nothing to commit to on paper. Update 11/13: our team has drafted the RFP and it is in internal review.",
+      "updated_at": "2026-11-13",
+      "update_note": "RFP drafted by our team; in internal review"
     },
     {
       "proposal": "NTSB",
@@ -1740,76 +1782,91 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "Round 2: Studio.One asked to meet (Thursday requested); questions arriving 11/11",
+      "stage": "Round 2 meeting scheduled Mon 11/16, 1:30 PM",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
-      "owners": "Josh, Amanda, Kurtis, Ab, Homiera",
-      "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera",
+      "owners": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
+      "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
       "budget": "$400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them.",
-      "updated_at": "2026-11-10",
-      "update_note": "Round 2 meeting requested by Studio.One (Thursday 11/12); questions arriving 11/11"
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them. Round 2 meeting scheduled for Monday 11/16 at 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, and Ab.",
+      "updated_at": "2026-11-13",
+      "update_note": "Round 2 meeting scheduled Mon 11/16, 1:30 PM (Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, Ab)"
     },
     {
       "proposal": "Fairfax County EDA",
       "client": "FCEDA RFP 2027-03, Integrated Marketing and Communications Services",
       "type": "RFP (collaboration with REQ)",
-      "stage": "Proposal in development with REQ; Team Activation Brainstorm 11/9",
+      "stage": "Proposal in development with REQ; due 11/18; Vajaah and Homiera work session Tue 11/17",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Euna Procurement (Bonfire) portal, PDF only",
       "owners": "Vajaah, Kurtis, Ab, Homiera",
       "named_staff": "Vajaah, Kurtis, Ab, Homiera",
       "budget": "$800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)",
-      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked.",
-      "updated_at": "2026-11-09",
-      "update_note": "Team Activation Brainstorm with REQ today at 2:30 PM; collaborative RFP content doc linked"
+      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked. Homiera is tapping Vajaah for a low-effort strategy review and a potential wireframes spec to include in the deck. Vajaah and Homiera have a work session Tuesday 11/17. Proposal still due 11/18.",
+      "updated_at": "2026-11-13",
+      "update_note": "Vajaah tapped for strategy review and possible wireframes spec; work session Tue 11/17; still due 11/18"
     },
     {
       "proposal": "American Red Cross",
       "client": "American Red Cross, Prepare Center Rebuild (preparecenter.org)",
       "type": "RFP",
-      "stage": "Pursuing: Ab confirmed our interest to bid with Red Cross; tier TBD",
+      "stage": "Pursuing (Tier 1); written questions due Wed 11/18",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Red Cross Supply Chain Management (per RFP)",
       "owners": "Ab, Mary, Vajaah, Dario, Kurtis",
       "named_staff": "Ab, Mary, Vajaah, Dario, Kurtis",
       "budget": "TBD",
-      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Ab leads and is determining tier (TBD). Assigned for now: Mary, Vajaah, Dario, Kurtis. Ab confirmed our interest to bid with Red Cross by email (the intent step is an email requirement). Schedule: written questions 11/18 (5 PM ET), answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
-      "updated_at": "2026-11-10",
-      "update_note": "Ab confirmed interest to bid; RFP schedule added (presentations week of 12/14, selection by 12/31)"
+      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Tier 1. Ab leads. Assigned for now: Mary, Vajaah, Dario, Kurtis. Ab confirmed our interest to bid with Red Cross by email (the intent step is an email requirement). Schedule: written questions 11/18 (5 PM ET), answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
+      "updated_at": "2026-11-13",
+      "update_note": "Tier 1; written questions due Wednesday 11/18"
     },
     {
       "proposal": "Virginia Tourism Corporation",
       "client": "Virginia Tourism Corporation (VTC), RFP 27-058, VTC Website 2026 (virginia.org)",
       "type": "RFP",
-      "stage": "Under consideration; registered for the mandatory pre-bid call (12/8)",
+      "stage": "Under consideration; Homiera and Ab registered for the mandatory pre-bid call (12/8)",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Hard copy only: VTC reception desk, 901 E. Cary St., Richmond, VA (no electronic submissions)",
-      "owners": "Homiera",
-      "named_staff": "Homiera",
+      "owners": "Homiera, Ab",
+      "named_staff": "Homiera, Ab",
       "budget": "TBD (RFP requires one fixed price for all deliverables)",
-      "notes": "New RFP being vetted. New WordPress site and theme for virginia.org plus three microsites (Groups, Sports, Meetings), content migration from the current CMS, performance benchmarks, and at least three months of post-launch support. Build is hosted in VTC's WP Engine account; launch within six months of award. Homiera registered for the mandatory virtual pre-proposal conference: proposals are accepted only from firms that attend (10:00 AM EST, Dec 8; roll call, acknowledge presence). Sealed hard-copy proposals only with flash drives; electronic submissions are not considered. Proposals are due Feb 3, 2027, 5:00 PM EST (the RFP cover sheet misprints the year as 2026). Offerors must be eVA registered. Contact: Ben Nicastro, WebsiteRFP2026@virginia.org.",
-      "updated_at": "2026-11-10",
-      "update_note": "New RFP added; registered for the mandatory pre-bid call on 12/8"
+      "notes": "New RFP being vetted. New WordPress site and theme for virginia.org plus three microsites (Groups, Sports, Meetings), content migration from the current CMS, performance benchmarks, and at least three months of post-launch support. Build is hosted in VTC's WP Engine account; launch within six months of award. Homiera and Ab registered for the mandatory virtual pre-proposal conference: proposals are accepted only from firms that attend (10:00 AM EST, Dec 8; roll call, acknowledge presence). Sealed hard-copy proposals only with flash drives; electronic submissions are not considered. Proposals are due Feb 3, 2027, 5:00 PM EST (the RFP cover sheet misprints the year as 2026). Offerors must be eVA registered. Contact: Ben Nicastro, WebsiteRFP2026@virginia.org.",
+      "updated_at": "2026-11-13",
+      "update_note": "Homiera and Ab both registered for the mandatory pre-bid call"
     },
     {
       "proposal": "NAI Global",
       "client": "NAI Global, Website Redesign and Digital Platform Modernization",
       "type": "RFP (via REQ)",
-      "stage": "Under consideration; REQ (Maria) scheduling a debrief with us to review the RFP",
+      "stage": "Under consideration; Homiera preparing proposal; call with NAI Global and Ab to be scheduled",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Per invitation (PDF proposal)",
+      "owners": "Homiera, Ab",
+      "named_staff": "Homiera, Ab",
+      "budget": "$100,000 ceiling (core project)",
+      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global is currently looking at a $100,000 ceiling for the core project. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief.",
+      "updated_at": "2026-11-13",
+      "update_note": "Budget ceiling $100k for core project; Homiera to schedule a call with NAI Global and Ab"
+    },
+    {
+      "proposal": "Aspire Schools",
+      "client": "Aspire Schools (California)",
+      "type": "RFP",
+      "stage": "Under consideration; details to come",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "TBD",
       "owners": "TBD",
       "named_staff": "TBD",
       "budget": "TBD",
-      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Maria is scheduling a debrief with us to go over it. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief.",
-      "updated_at": "2026-11-10",
-      "update_note": "New RFP added; REQ (Maria) scheduling a debrief"
+      "notes": "New RFP for consideration. Aspire Schools, California. Owner, team, dates, and budget to be added.",
+      "updated_at": "2026-11-13",
+      "update_note": "New RFP under consideration"
     }
   ],
   "focus": {
@@ -1895,6 +1952,7 @@
     "Fairfax County EDA",
     "American Red Cross",
     "Virginia Tourism Corporation",
-    "NAI Global"
+    "NAI Global",
+    "Aspire Schools"
   ]
 }
