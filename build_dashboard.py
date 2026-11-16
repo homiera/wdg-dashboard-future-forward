@@ -24,7 +24,7 @@ def fmt_date(d):
 LOST = {"PHI", "AGA", "Community of Christ"}
 WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
 PAUSED = {"Tinuiti"}   # client paused the process; shown in the Pre-RFPs & Under Consideration section
-PRE_RFP = {"Aspen Digital", "GSA.gov", "Fairfax County EDA", "American Red Cross", "Virginia Tourism Corporation", "NAI Global", "Aspire Schools"}
+PRE_RFP = {"Aspen Digital", "GSA.gov", "Fairfax County EDA", "American Red Cross", "Virginia Tourism Corporation", "NAI Global", "Aspire Schools", "IFRS Foundation"}
 CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the
@@ -89,6 +89,7 @@ OWNER = {
     "American Red Cross": "Ab",
     "Virginia Tourism Corporation": "Homiera",
     "NAI Global": "Homiera",
+    "IFRS Foundation": "Ab",
     "Fairfax County EDA": "REQ (Maria Russell)",
 }
 
