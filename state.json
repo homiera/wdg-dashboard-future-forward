@@ -1806,9 +1806,9 @@
       "owners": "Vajaah, Kurtis, Ab, Homiera",
       "named_staff": "Vajaah, Kurtis, Ab, Homiera",
       "budget": "$800,000 annual cap (includes up to $150,000 for Strategic Marketing and Local Partnership Initiatives)",
-      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 1 is a working assumption (likely). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked. Homiera is tapping Vajaah for a low-effort strategy review and a potential wireframes spec to include in the deck. Vajaah and Homiera have a work session Tuesday 11/17. Proposal still due 11/18.",
-      "updated_at": "2026-11-13",
-      "update_note": "Vajaah tapped for strategy review and possible wireframes spec; work session Tue 11/17; still due 11/18"
+      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 2 (updated 11/16; previously a Tier 1 working assumption). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked. Homiera is tapping Vajaah for a low-effort strategy review and a potential wireframes spec to include in the deck. Vajaah and Homiera have a work session Tuesday 11/17. Proposal still due 11/18.",
+      "updated_at": "2026-11-16",
+      "update_note": "Tier set to 2"
     },
     {
       "proposal": "American Red Cross",
@@ -1837,8 +1837,8 @@
       "named_staff": "Homiera, Ab",
       "budget": "TBD (RFP requires one fixed price for all deliverables)",
       "notes": "New RFP being vetted. New WordPress site and theme for virginia.org plus three microsites (Groups, Sports, Meetings), content migration from the current CMS, performance benchmarks, and at least three months of post-launch support. Build is hosted in VTC's WP Engine account; launch within six months of award. Homiera and Ab registered for the mandatory virtual pre-proposal conference: proposals are accepted only from firms that attend (10:00 AM EST, Dec 8; roll call, acknowledge presence). Sealed hard-copy proposals only with flash drives; electronic submissions are not considered. Proposals are due Feb 3, 2027, 5:00 PM EST (the RFP cover sheet misprints the year as 2026). Offerors must be eVA registered. Contact: Ben Nicastro, WebsiteRFP2026@virginia.org.",
-      "updated_at": "2026-11-13",
-      "update_note": "Homiera and Ab both registered for the mandatory pre-bid call"
+      "updated_at": "2026-11-16",
+      "update_note": "Tier set to 1"
     },
     {
       "proposal": "NAI Global",
@@ -1852,8 +1852,8 @@
       "named_staff": "Homiera, Ab",
       "budget": "$100,000 ceiling (core project)",
       "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global is currently looking at a $100,000 ceiling for the core project. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief.",
-      "updated_at": "2026-11-13",
-      "update_note": "Budget ceiling $100k for core project; Homiera to schedule a call with NAI Global and Ab"
+      "updated_at": "2026-11-16",
+      "update_note": "Tier set to 2"
     },
     {
       "proposal": "Aspire Schools",
