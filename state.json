@@ -1769,14 +1769,16 @@
       "proposal": "GSA.gov",
       "client": "GSA.gov",
       "type": "Pre-RFP relationship",
-      "stage": "Added to tracker 10/28 per Homiera; no further detail provided yet",
+      "stage": "Paused: pending funding and RFP issuance; no word expected until 2027",
       "key_date": null,
       "key_detail": null,
       "submit_to": "TBD",
       "owners": "Ab, Homiera, Kurtis",
       "named_staff": "Ab, Homiera, Kurtis",
       "budget": "TBD",
-      "notes": "Lead from WPVIP with the intent to partner. Pending funding and RFP issuance. Potential 2027-2028 opportunity."
+      "notes": "Lead from WPVIP with the intent to partner. Pending funding and RFP issuance. Potential 2027-2028 opportunity. Paused 11/16: we do not expect to see or hear from them until next year.",
+      "updated_at": "2026-11-16",
+      "update_note": "Marked Paused; no activity expected until 2027"
     },
     {
       "proposal": "Studio.One",

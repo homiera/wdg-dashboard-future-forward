@@ -229,7 +229,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
 <div class="tiles">
   <div class="tile">
     <div class="tlabel">In Flight</div>
-    <div class="tnum">15</div>
+    <div class="tnum">14</div>
     <div class="tbreak">active pursuits</div>
   </div>
   <div class="tile">
@@ -625,24 +625,24 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
     </div>
     
 
-    <div class="pcard tier-1" tabindex="0" role="button" aria-haspopup="dialog"
+    <div class="pcard tier-1" data-updated="2026-11-16" tabindex="0" role="button" aria-haspopup="dialog"
          onclick="openModal(14)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(14);}">
-      <div class="badge statusbadge data">Pre-RFP</div>
-      <div class="pname">GSA.gov</div>
+      <div class="badge statusbadge neutral">Paused</div><div class="badge newupd">New Updates</div>
+      <div class="pname">GSA.gov</div><div class="pausedline">Paused</div>
       <div class="pdue">Next: <b>No date set</b></div>
       <div class="powners"><span class="k">Owner</span>Homiera</div>
       <div class="pbudget placeholder">Not yet quantified</div>
       <div class="hint">click for details</div>
       <div class="pdetail" id="detail-14">
-        
+        <div class="row"><span class="k">Last update:</span> Mon, Nov 16 — Marked Paused; no activity expected until 2027</div>
         <div class="row"><span class="k">Tier:</span> Tier 1</div>
         <div class="row"><span class="k">Budget:</span> TBD</div>
-        <div class="row"><span class="k">Stage details:</span> Added to tracker 10/28 per Homiera; no further detail provided yet</div>
+        <div class="row"><span class="k">Stage details:</span> Paused: pending funding and RFP issuance; no word expected until 2027</div>
         <div class="row"><span class="k">Next Due Date:</span> No date set</div>
         <div class="row"><span class="k">All assigned people:</span> Ab, Homiera, Kurtis</div>
         <div class="row"><span class="k">Deck:</span> <span class="placeholder">not linked yet</span></div>
         <div class="row"><span class="k">RFP docs folder:</span> <span class="placeholder">not linked yet</span></div>
-        <div class="row"><span class="k">Notes:</span> Lead from WPVIP with the intent to partner. Pending funding and RFP issuance. Potential 2027-2028 opportunity.</div>
+        <div class="row"><span class="k">Notes:</span> Lead from WPVIP with the intent to partner. Pending funding and RFP issuance. Potential 2027-2028 opportunity. Paused 11/16: we do not expect to see or hear from them until next year.</div>
         
         <div class="row slackrow"><a href="https://wdg.slack.com/archives/C0BF86NR3H9" class="slacklink">Go to Slack &rarr;</a></div>
       </div>
@@ -800,7 +800,7 @@ footer{ margin-top:48px; font-size:11px; color:var(--ink-muted); font-family:var
   </div>
 </div>
 <script>
-const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "3": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "5": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "6": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "7": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "8": {"name": "Studio.One", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "Submitted", "tone": "neutral"}, "10": {"name": "American Red Cross", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "Aspire Schools", "label": "Pre-RFP", "tone": "data"}, "13": {"name": "Fairfax County EDA", "label": "Pre-RFP", "tone": "data"}, "14": {"name": "GSA.gov", "label": "Pre-RFP", "tone": "data"}, "15": {"name": "IFRS Foundation", "label": "Pre-RFP", "tone": "data"}, "16": {"name": "NAI Global", "label": "Pre-RFP", "tone": "data"}, "17": {"name": "Tinuiti", "label": "Paused", "tone": "neutral"}, "18": {"name": "Virginia Tourism Corporation", "label": "Pre-RFP", "tone": "data"}, "19": {"name": "AGA", "label": "Lost", "tone": "lost"}, "20": {"name": "Community of Christ", "label": "Lost", "tone": "lost"}, "21": {"name": "PHI", "label": "Lost", "tone": "lost"}};
+const MODAL_META = {"0": {"name": "Columbia Association", "label": "In Contract", "tone": "progress"}, "1": {"name": "Heritage Action", "label": "In Contract", "tone": "progress"}, "2": {"name": "Heritage.org", "label": "In Contract", "tone": "progress"}, "3": {"name": "American Kidney Fund", "label": "Submitted", "tone": "neutral"}, "4": {"name": "Appalachian Regional Commission", "label": "Submitted", "tone": "neutral"}, "5": {"name": "NLC", "label": "Submitted", "tone": "neutral"}, "6": {"name": "NTSB", "label": "Submitted", "tone": "neutral"}, "7": {"name": "Open Technology Fund", "label": "Submitted", "tone": "neutral"}, "8": {"name": "Studio.One", "label": "Submitted", "tone": "neutral"}, "9": {"name": "UAE Embassy", "label": "Submitted", "tone": "neutral"}, "10": {"name": "American Red Cross", "label": "Pre-RFP", "tone": "data"}, "11": {"name": "Aspen Digital", "label": "Pre-RFP", "tone": "data"}, "12": {"name": "Aspire Schools", "label": "Pre-RFP", "tone": "data"}, "13": {"name": "Fairfax County EDA", "label": "Pre-RFP", "tone": "data"}, "14": {"name": "GSA.gov", "label": "Paused", "tone": "neutral"}, "15": {"name": "IFRS Foundation", "label": "Pre-RFP", "tone": "data"}, "16": {"name": "NAI Global", "label": "Pre-RFP", "tone": "data"}, "17": {"name": "Tinuiti", "label": "Paused", "tone": "neutral"}, "18": {"name": "Virginia Tourism Corporation", "label": "Pre-RFP", "tone": "data"}, "19": {"name": "AGA", "label": "Lost", "tone": "lost"}, "20": {"name": "Community of Christ", "label": "Lost", "tone": "lost"}, "21": {"name": "PHI", "label": "Lost", "tone": "lost"}};
 function openModal(i){
   const meta = MODAL_META[i];
   const detail = document.getElementById('detail-' + i);
