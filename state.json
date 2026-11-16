@@ -1354,9 +1354,9 @@
       "milestone": "Second round presentation and Q&A (Monday morning)",
       "type": "Prospect-set",
       "owner": "Ab",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Moved from 11/13. Presenting: Doug, Vaj, Dario, Ab.",
+      "notes": "Held 11/16; went well. Presented by Doug, Vaj, Dario, Ab.",
       "tag": ""
     },
     {
@@ -1713,16 +1713,16 @@
       "proposal": "Open Technology Fund",
       "client": "OTF website redesign RFP (opentech.fund)",
       "type": "RFP",
-      "stage": "Second round presentation and Q&A moved to Monday morning 11/16",
+      "stage": "Second round presentation and Q&A held 11/16 (went well); awaiting next steps",
       "key_date": null,
       "key_detail": "Submitted; pending OTF next steps",
       "submit_to": "proposals@opentech.fund",
       "owners": "Homiera, Zaid, Doug, Vajaah",
       "named_staff": "Homiera, Zaid, Doug, Vajaah",
       "budget": "$86,000",
-      "notes": "Submitted 10/23. Confirmed receipt via text with Ab. Second round presentation and Q&A with OTF moved from 11/13 to Monday morning 11/16. Presenting: Doug, Vaj, Dario, Ab.",
-      "updated_at": "2026-11-09",
-      "update_note": "Second round presentation moved to Monday morning 11/16 (was 11/13)"
+      "notes": "Submitted 10/23. Confirmed receipt via text with Ab. Second round presentation and Q&A with OTF was held Monday morning 11/16 (moved from 11/13) and went well. Presenting: Doug, Vaj, Dario, Ab. Waiting on OTF for next steps.",
+      "updated_at": "2026-11-16",
+      "update_note": "Second round presentation held 11/16 and went well; waiting on next steps"
     },
     {
       "proposal": "NLC",
