@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-16",
+  "as_of": "2026-11-17",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1246,9 +1246,9 @@
       "milestone": "Round 2 meeting with Studio.One, 1:30 PM",
       "type": "Prospect-set",
       "owner": "Ab",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, Ab.",
+      "notes": "Held 11/16, 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, Ab.",
       "tag": "MEETING"
     },
     {
@@ -1784,16 +1784,16 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "Round 2 meeting scheduled Mon 11/16, 1:30 PM",
+      "stage": "Round 2 meeting held 11/16; following up with responses to their remaining questions",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
       "owners": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
       "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
       "budget": "$400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them. Round 2 meeting scheduled for Monday 11/16 at 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, and Ab.",
-      "updated_at": "2026-11-13",
-      "update_note": "Round 2 meeting scheduled Mon 11/16, 1:30 PM (Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, Ab)"
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them. Round 2 meeting held Monday 11/16 at 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, and Ab. We are following up with responses to the rest of their questions.",
+      "updated_at": "2026-11-17",
+      "update_note": "Round 2 meeting held 11/16; sending responses to the rest of their questions"
     },
     {
       "proposal": "Fairfax County EDA",
@@ -1850,10 +1850,10 @@
       "submit_to": "Per invitation (PDF proposal)",
       "owners": "Homiera, Ab",
       "named_staff": "Homiera, Ab",
-      "budget": "$100,000 ceiling (core project)",
-      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global is currently looking at a $100,000 ceiling for the core project. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief.",
-      "updated_at": "2026-11-16",
-      "update_note": "Tier set to 2"
+      "budget": "$400,000+ (comparable to or larger than the Big I effort)",
+      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief.",
+      "updated_at": "2026-11-17",
+      "update_note": "Budget now ~$400k+ (comparable to or bigger than the Big I effort); earlier $100k ceiling superseded"
     },
     {
       "proposal": "Aspire Schools",
