@@ -1522,9 +1522,9 @@
       "milestone": "Check in on contract signature",
       "type": "Internal (team-set)",
       "owner": "Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Contract is in Columbia's court for signature.",
+      "notes": "Checked in; Columbia says counter-signature is expected 11/17.",
       "tag": ""
     },
     {
@@ -1562,6 +1562,18 @@
       "marker": "",
       "notes": "Follow-up to the 11/16 round 2 meeting.",
       "tag": "DEADLINE"
+    },
+    {
+      "date": "2026-11-17",
+      "through": null,
+      "proposal": "Columbia Association",
+      "milestone": "Columbia counter-signature expected",
+      "type": "Prospect-set",
+      "owner": "Columbia",
+      "status": "Open",
+      "marker": "",
+      "notes": "Columbia said we should have the counter-signed contract today. Mary preparing for project kickoff.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1597,16 +1609,16 @@
       "proposal": "Columbia Association",
       "client": "Columbia Association finalist presentation",
       "type": "Awarded",
-      "stage": "Contracting; contract in Columbia's court for signature; check-in Mon 11/16",
+      "stage": "Contracting; Columbia expects to counter-sign today (11/17); Mary preparing for project kickoff",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Not stated",
       "owners": "Ab, Homiera, Mary",
       "named_staff": "Ab, Homiera, Mary",
       "budget": "$228,000",
-      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's court for signature (as of 11/13). Next check-in Monday 11/16. Mary is preparing for the project from the PM side. The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
-      "updated_at": "2026-11-13",
-      "update_note": "Still awaiting Columbia's signature; check-in Mon 11/16; Mary preparing PM side"
+      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's court for signature (as of 11/13). Columbia said on 11/17 that WDG should have their counter-signature today. Mary is preparing internally for the project kickoff (PM side). The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
+      "updated_at": "2026-11-17",
+      "update_note": "Columbia expects to counter-sign today; Mary preparing for kickoff"
     },
     {
       "proposal": "Community of Christ",
