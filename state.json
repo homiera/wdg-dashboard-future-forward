@@ -1550,6 +1550,18 @@
       "marker": "",
       "notes": "Evaluation delayed; Embassy to share our status and any next steps.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-17",
+      "through": null,
+      "proposal": "Studio.One",
+      "milestone": "Send responses to Studio.One's remaining questions (by EOD)",
+      "type": "Prospect-set",
+      "owner": "Ab, Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "Follow-up to the 11/16 round 2 meeting.",
+      "tag": "DEADLINE"
     }
   ],
   "summary": [
@@ -1784,16 +1796,16 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "Round 2 meeting held 11/16; following up with responses to their remaining questions",
+      "stage": "Round 2 meeting held 11/16; responses to their remaining questions due EOD 11/17",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
       "owners": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
       "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
       "budget": "$400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them. Round 2 meeting held Monday 11/16 at 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, and Ab. We are following up with responses to the rest of their questions.",
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them. Round 2 meeting held Monday 11/16 at 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, and Ab. We are following up with responses to the rest of their questions, due to Studio.One by end of day Tuesday 11/17.",
       "updated_at": "2026-11-17",
-      "update_note": "Round 2 meeting held 11/16; sending responses to the rest of their questions"
+      "update_note": "Round 2 meeting held 11/16; responses to remaining questions going out by EOD 11/17"
     },
     {
       "proposal": "Fairfax County EDA",
