@@ -1570,9 +1570,9 @@
       "milestone": "Columbia counter-signature expected",
       "type": "Prospect-set",
       "owner": "Columbia",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Columbia said we should have the counter-signed contract today. Mary preparing for project kickoff.",
+      "notes": "Columbia signed 11/18.",
       "tag": ""
     },
     {
@@ -1586,6 +1586,30 @@
       "marker": "HARD DEADLINE",
       "notes": "Per the UPenn Marketplace posting. Time of day and submission method to be confirmed from the RFP.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-23",
+      "through": "2026-11-27",
+      "proposal": "Columbia Association",
+      "milestone": "Administrative kickoff (week of 11/23)",
+      "type": "Internal (team-set)",
+      "owner": "Mary, Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "Exact day and time to be set.",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-01",
+      "through": "2026-12-04",
+      "proposal": "Columbia Association",
+      "milestone": "Project kickoff (early December, date TBD)",
+      "type": "Internal (team-set)",
+      "owner": "Mary",
+      "status": "Open",
+      "marker": "",
+      "notes": "Placeholder window for early December; confirm the date.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1593,16 +1617,16 @@
       "proposal": "Heritage.org",
       "client": "heritage.org website project",
       "type": "Follow-up Q&A",
-      "stage": "Contracting, Discovery then Implementation; SOW and MSA in legal review",
+      "stage": "Contracting, Discovery then Implementation; MSA redlines sent to client; SOW in legal review",
       "key_date": null,
       "key_detail": "MSA being finalized by WDG and Heritage legal",
       "submit_to": "Stephanie (heritage.org client contact; last name/title not provided)",
       "owners": "Ab, Homiera, Kurtis, Michael F.",
       "named_staff": "Ab, Homiera, Kurtis, Michael F.",
       "budget": "$500,000",
-      "notes": "Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA. The SOW and MSA are both in legal review (as of 11/13).",
-      "updated_at": "2026-11-13",
-      "update_note": "SOW and MSA in legal review"
+      "notes": "Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA. The SOW and MSA are both in legal review (as of 11/13). Update 11/18: WDG sent MSA redlines back to the client for review and agreement.",
+      "updated_at": "2026-11-18",
+      "update_note": "MSA redlines sent back to client for review and agreement"
     },
     {
       "proposal": "Heritage Action",
@@ -1621,16 +1645,16 @@
       "proposal": "Columbia Association",
       "client": "Columbia Association finalist presentation",
       "type": "Awarded",
-      "stage": "Contracting; Columbia expects to counter-sign today (11/17); Mary preparing for project kickoff",
+      "stage": "Contract fully signed 11/18; administrative kickoff next week; project kickoff early December",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Not stated",
       "owners": "Ab, Homiera, Mary",
       "named_staff": "Ab, Homiera, Mary",
       "budget": "$228,000",
-      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's court for signature (as of 11/13). Columbia said on 11/17 that WDG should have their counter-signature today. Mary is preparing internally for the project kickoff (PM side). The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
-      "updated_at": "2026-11-17",
-      "update_note": "Columbia expects to counter-sign today; Mary preparing for kickoff"
+      "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's court for signature (as of 11/13). Columbia signed on 11/18, so the contract is fully executed. Administrative kickoff is slated for next week (week of 11/23), with the project kickoff in early December. Mary is preparing for the project from the PM side. The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
+      "updated_at": "2026-11-18",
+      "update_note": "Columbia signed; administrative kickoff next week, project kickoff early December"
     },
     {
       "proposal": "Community of Christ",
