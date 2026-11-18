@@ -1078,9 +1078,9 @@
       "milestone": "Round 2 presentation (1.5 to 2 hours)",
       "type": "Prospect-set",
       "owner": "AKF",
-      "status": "Open",
+      "status": "Complete",
       "marker": "FIXED EVENT",
-      "notes": "Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF supplied a script covering 6 topics. In progress; scheduled to end at 5:00 PM.",
+      "notes": "Held 11/18. Follow-up email with the deck sent to Christine.",
       "tag": ""
     },
     {
@@ -1770,16 +1770,16 @@
       "proposal": "American Kidney Fund",
       "client": "American Kidney Fund website redesign and CMS migration RFP",
       "type": "RFP",
-      "stage": "Round 2 presentation in progress today (11/18), scheduled to end at 5:00 PM",
+      "stage": "Round 2 presentation held 11/18; follow-up email with deck sent; awaiting AKF decision",
       "key_date": null,
       "key_detail": "Proposal due; no time or time zone stated",
       "submit_to": "Christine Jackson, digital@kidneyfund.org",
       "owners": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "named_staff": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "budget": "$266,000",
-      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Invited to the second round presentations, booked for 11/18 (1.5 to 2 hours). Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF provided a script for the presentation focused on 6 topics to address. Update 11/18: the presentation is in progress and is scheduled to end at 5:00 PM.",
+      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Invited to the second round presentations, booked for 11/18 (1.5 to 2 hours). Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF provided a script for the presentation focused on 6 topics to address. Update 11/18: the round 2 presentation was held. A follow-up email with a copy of the presentation deck was sent to Christine. Awaiting AKF's decision.",
       "updated_at": "2026-11-18",
-      "update_note": "Round 2 presentation in progress; scheduled to end at 5:00 PM"
+      "update_note": "Round 2 presentation held; follow-up email and deck sent to Christine"
     },
     {
       "proposal": "Open Technology Fund",
