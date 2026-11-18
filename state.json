@@ -1080,7 +1080,7 @@
       "owner": "AKF",
       "status": "Open",
       "marker": "FIXED EVENT",
-      "notes": "Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF supplied a script covering 6 topics.",
+      "notes": "Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF supplied a script covering 6 topics. In progress; scheduled to end at 5:00 PM.",
       "tag": ""
     },
     {
@@ -1734,16 +1734,16 @@
       "proposal": "American Kidney Fund",
       "client": "American Kidney Fund website redesign and CMS migration RFP",
       "type": "RFP",
-      "stage": "Invited to second round; presentation 11/18",
+      "stage": "Round 2 presentation in progress today (11/18), scheduled to end at 5:00 PM",
       "key_date": null,
       "key_detail": "Proposal due; no time or time zone stated",
       "submit_to": "Christine Jackson, digital@kidneyfund.org",
       "owners": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "named_staff": "Homiera, Vajaah, Jake Reid, Doug, Kurtis, Dario, Zaid",
       "budget": "$266,000",
-      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Invited to the second round presentations, booked for 11/18 (1.5 to 2 hours). Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF provided a script for the presentation focused on 6 topics to address.",
-      "updated_at": "2026-11-09",
-      "update_note": "Round 2 presenting team confirmed for 11/18"
+      "notes": "Submitted 10/26 evening. Confirmed receipt 10/27. Invited to the second round presentations, booked for 11/18 (1.5 to 2 hours). Presenting: Doug, Kurtis, Vajaah, Dario, Mary, Erik G. AKF provided a script for the presentation focused on 6 topics to address. Update 11/18: the presentation is in progress and is scheduled to end at 5:00 PM.",
+      "updated_at": "2026-11-18",
+      "update_note": "Round 2 presentation in progress; scheduled to end at 5:00 PM"
     },
     {
       "proposal": "Open Technology Fund",
