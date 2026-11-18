@@ -1610,6 +1610,18 @@
       "marker": "",
       "notes": "Placeholder window for early December; confirm the date.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-19",
+      "through": null,
+      "proposal": "NAI Global",
+      "milestone": "Meeting with NAI Global and REQ decision makers",
+      "type": "Prospect-set",
+      "owner": "Homiera, Ab, Jake Rambo",
+      "status": "Open",
+      "marker": "",
+      "notes": "Learn more about their needs. Time TBD.",
+      "tag": "MEETING"
     }
   ],
   "summary": [
@@ -1823,7 +1835,9 @@
       "owners": "Homiera, Kurtis, Doug",
       "named_staff": "Homiera, Kurtis, Doug",
       "budget": "$250,000",
-      "notes": "Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule. Update 10/29: NTSB financial meeting has been pushed to November. Homiera to check in with James by mid-November."
+      "notes": "Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule. Update 10/29: NTSB financial meeting has been pushed to November. Homiera to check in with James by mid-November. Update 11/18: NTSB is reportedly meeting with its finance team in December (not yet confirmed).",
+      "updated_at": "2026-11-18",
+      "update_note": "NTSB reportedly meeting with their finance team in December"
     },
     {
       "proposal": "GSA.gov",
@@ -1904,16 +1918,16 @@
       "proposal": "NAI Global",
       "client": "NAI Global, Website Redesign and Digital Platform Modernization",
       "type": "RFP (via REQ)",
-      "stage": "Under consideration; Homiera preparing proposal; call with NAI Global and Ab to be scheduled",
+      "stage": "Under consideration; meeting with NAI Global and REQ decision makers 11/19 to learn their needs",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Per invitation (PDF proposal)",
-      "owners": "Homiera, Ab",
-      "named_staff": "Homiera, Ab",
+      "owners": "Homiera, Ab, Jake Rambo",
+      "named_staff": "Homiera, Ab, Jake Rambo",
       "budget": "$400,000+ (comparable to or larger than the Big I effort)",
-      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief.",
-      "updated_at": "2026-11-17",
-      "update_note": "Budget now ~$400k+ (comparable to or bigger than the Big I effort); earlier $100k ceiling superseded"
+      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief. Update 11/18: Homiera, Ab, and Jake Rambo are meeting 11/19 with decision makers at NAI Global and REQ to learn more about their needs.",
+      "updated_at": "2026-11-18",
+      "update_note": "Meeting tomorrow (11/19) with NAI Global and REQ decision makers; Jake Rambo, Ab, Homiera attending"
     },
     {
       "proposal": "Aspire Schools",

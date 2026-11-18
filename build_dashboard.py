@@ -33,7 +33,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # st
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"NLC", "UAE Embassy"}   # nothing pending on our side; AKF, OTF, ARC have next steps
+AWAITING_DECISION = {"NLC", "UAE Embassy", "Appalachian Regional Commission", "Open Technology Fund", "Fairfax County EDA"}   # per Homiera 11/18: nothing pending on our side
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
