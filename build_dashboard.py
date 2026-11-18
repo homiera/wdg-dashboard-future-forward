@@ -171,7 +171,7 @@ def next_due(prop):
     rows = rows_by_prop.get(prop, [])
     cands = [r for r in rows
              if r["status"] not in ("Complete", "Cancelled") and r["date"] and r["date"] >= s["as_of"]
-             and not r["milestone"].startswith(("Contract period begins", "Initial evaluation"))]  # informational, not an action date
+             and not r["milestone"].startswith(("Contract period begins", "Initial evaluation", "Answers to questions"))]  # informational, not an action date
     if cands:
         cands.sort(key=lambda r: r["date"])
         return cands[0]["date"], cands[0]["milestone"]

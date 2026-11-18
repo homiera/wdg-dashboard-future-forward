@@ -1402,9 +1402,9 @@
       "milestone": "Questions to American Red Cross, 5:00 PM ET",
       "type": "Prospect-set",
       "owner": "Ab",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Questions deadline.",
+      "notes": "Questions sent 11/18.",
       "tag": ""
     },
     {
@@ -1850,16 +1850,16 @@
       "proposal": "American Red Cross",
       "client": "American Red Cross, Prepare Center Rebuild (preparecenter.org)",
       "type": "RFP",
-      "stage": "Pursuing (Tier 1); written questions due Wed 11/18",
+      "stage": "Pursuing (Tier 1); questions sent; proposal due 12/6",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Red Cross Supply Chain Management (per RFP)",
-      "owners": "Ab, Mary, Vajaah, Dario, Kurtis",
-      "named_staff": "Ab, Mary, Vajaah, Dario, Kurtis",
-      "budget": "TBD",
-      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Tier 1. Ab leads. Assigned for now: Mary, Vajaah, Dario, Kurtis. Ab confirmed our interest to bid with Red Cross by email (the intent step is an email requirement). Schedule: written questions 11/18 (5 PM ET), answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
-      "updated_at": "2026-11-13",
-      "update_note": "Tier 1; written questions due Wednesday 11/18"
+      "owners": "Ab, Kurtis, Vajaah, Dario, Mary H.",
+      "named_staff": "Ab, Kurtis, Vajaah, Dario, Mary H.",
+      "budget": "$200,000 to $325,000 (core rebuild; blended rate based on our current GSA rates)",
+      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Tier 1. Ab leads. Assigned team: Kurtis, Vajaah, Dario, Mary H. Our questions to Red Cross were sent 11/18. Ab noted we should price with a blended rate based on the GSA rates we currently house. Current budget range: $200,000 to $325,000 for the core rebuild. Ab confirmed our interest to bid with Red Cross by email (the intent step is an email requirement). Schedule: answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
+      "updated_at": "2026-11-18",
+      "update_note": "Questions sent; team assigned; budget $200k to $325k on a GSA blended rate; proposal due 12/6"
     },
     {
       "proposal": "Virginia Tourism Corporation",
