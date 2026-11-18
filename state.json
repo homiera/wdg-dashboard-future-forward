@@ -1270,9 +1270,9 @@
       "milestone": "Proposal due, 2:00 PM ET",
       "type": "Prospect-set",
       "owner": "Maria Russell (REQ)",
-      "status": "Open",
+      "status": "Complete",
       "marker": "HARD DEADLINE",
-      "notes": "Single PDF via the Euna Procurement (Bonfire) portal; must complete 'Submit & Finalize'. Technical and business proposals, three references, financials, Form 2022-TS-PI. Being submitted by Maria Russell on 11/18.",
+      "notes": "Submitted 11/18 by Maria Russell (REQ).",
       "tag": ""
     },
     {
@@ -1835,16 +1835,16 @@
       "proposal": "Fairfax County EDA",
       "client": "FCEDA RFP 2027-03, Integrated Marketing and Communications Services",
       "type": "RFP (collaboration with REQ)",
-      "stage": "Being submitted today (11/18) before 2:00 PM ET by Maria Russell (REQ)",
+      "stage": "Submitted 11/18 by Maria Russell (REQ); orals expected weeks of Jan 25 and Feb 5, 2027",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Euna Procurement (Bonfire) portal, PDF only",
       "owners": "Vajaah, Kurtis, Ab, Homiera",
       "named_staff": "Vajaah, Kurtis, Ab, Homiera",
       "budget": "$70,000 (WDG's portion of the full REQ proposal)",
-      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 2 (updated 11/16; previously a Tier 1 working assumption). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked. Homiera is tapping Vajaah for a low-effort strategy review and a potential wireframes spec to include in the deck. Vajaah and Homiera have a work session Tuesday 11/17. Proposal still due 11/18. Update 11/18: Maria Russell (REQ) is submitting the proposal today before 2:00 PM ET. WDG's piece came in at $70,000 of the full proposal (the RFP's annual cap is $800,000). The 11/17 internal working session was held.",
+      "notes": "REQ is owning this opportunity, with WDG assigned for now. Internal debrief with REQ and WDG held 11/5. Team Activation Brainstorm with REQ on 11/9 at 2:30 PM. Fairfax County Economic Development Authority seeks an integrated marketing and communications firm. WDG fits the web and digital experience section (2.3), which asks for practical improvements to existing platforms over time, not a redesign or rebuild. SEO, AI discovery, content, and reporting need shared ownership across the team. Proposal due 11/18 at 2:00 PM ET. Orals expected weeks of Jan 25 and Feb 5, 2027. Contract begins 4/1/2027, one year plus two one-year renewals. Tier 2 (updated 11/16; previously a Tier 1 working assumption). WDG focus: website and content audit, UX, accessibility, search, analytics, conversion paths, and practical AI recommendations. Collaborative RFP content doc is linked. Homiera is tapping Vajaah for a low-effort strategy review and a potential wireframes spec to include in the deck. Vajaah and Homiera have a work session Tuesday 11/17. Proposal still due 11/18. Update 11/18: Maria Russell (REQ) submitted the proposal on 11/18, before the 2:00 PM ET deadline. WDG's piece came in at $70,000 of the full proposal (the RFP's annual cap is $800,000). The 11/17 internal working session was held.",
       "updated_at": "2026-11-18",
-      "update_note": "Being submitted today before 2 PM ET by Maria Russell; WDG's portion is $70k"
+      "update_note": "Proposal submitted 11/18 by Maria Russell; WDG portion $70k"
     },
     {
       "proposal": "American Red Cross",
