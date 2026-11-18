@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-17",
+  "as_of": "2026-11-18",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1574,6 +1574,18 @@
       "marker": "",
       "notes": "Columbia said we should have the counter-signed contract today. Mary preparing for project kickoff.",
       "tag": ""
+    },
+    {
+      "date": "2026-12-11",
+      "through": null,
+      "proposal": "FactCheck.org",
+      "milestone": "Proposal due",
+      "type": "Prospect-set",
+      "owner": "Ab",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "Per the UPenn Marketplace posting. Time of day and submission method to be confirmed from the RFP.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1908,6 +1920,21 @@
       "notes": "Inbound request from a former client. Lynne Chauncey reached out to Ab (Slack 11/15 and email) about a focused advisory UX review for the IFRS Foundation's Knowledge Hub (ifrs.org/sustainability/knowledge-hub). Their Education team is user testing a proposed information architecture, navigation and menu model, homepage, and prototype, and wants an external UX partner to independently review and stress-test the work before development. Focus areas: accessibility and UX best practice, findability across a large resource library, whether categories and menu structure make sense, the role of search, and any missed issues or opportunities. Expected output: a concise set of prioritized recommendations with reasoning on what to retain, change, or avoid, not new designs. Lynne asked for a short intro call with the Education team to walk through their work and hear how WDG would approach it, likely level of effort and timing, and availability. Ab confirmed we are open. Ab asked Mary Henkin to regroup with him on scoping and who should join. Timing, budget, and tier are not yet known; latest user research and an updated prototype are expected shortly.",
       "updated_at": "2026-11-16",
       "update_note": "New inbound UX consultation request; Ab confirmed we are open to an intro call"
+    },
+    {
+      "proposal": "FactCheck.org",
+      "client": "FactCheck.org (Annenberg Public Policy Center, University of Pennsylvania), website redesign",
+      "type": "RFP",
+      "stage": "New RFP under consideration; Ab owns",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "Via UPenn Marketplace",
+      "owners": "Ab",
+      "named_staff": "Ab",
+      "budget": "TBD",
+      "notes": "New RFP for consideration, found on the UPenn Marketplace: website redesign for factcheck.org. Proposals due 12/11/2026. Current owner is Ab. Team, tier, and budget to be determined.",
+      "updated_at": "2026-11-18",
+      "update_note": "New RFP added; proposals due 12/11; Ab owns"
     }
   ],
   "focus": {
@@ -1995,6 +2022,7 @@
     "Virginia Tourism Corporation",
     "NAI Global",
     "Aspire Schools",
-    "IFRS Foundation"
+    "IFRS Foundation",
+    "FactCheck.org"
   ]
 }
