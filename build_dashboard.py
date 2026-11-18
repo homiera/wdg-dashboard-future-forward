@@ -114,6 +114,11 @@ SLACK = {
     "Fairfax County EDA": "https://wdg.slack.com/archives/C0CED810960",
     "Studio.One": "https://wdg.slack.com/archives/C0CE28Q6H45",
     "American Red Cross": "https://wdg.slack.com/archives/C0CG3N4E6DC",
+    "NAI Global": "https://wdg.slack.com/archives/C0CHCQXTP41",
+    "FactCheck.org": "https://wdg.slack.com/archives/C0CKRNKH98Q",
+    "IFRS Foundation": "https://wdg.slack.com/archives/C0CHZJR6M6Z",
+    "Aspire Schools": "https://wdg.slack.com/archives/C0CJ592QR08",
+    "Virginia Tourism Corporation": "https://wdg.slack.com/archives/C0CGHUV8GTG",
     "Appalachian Regional Commission": "https://wdg.slack.com/archives/C0BUAV1M3PW",
 }
 
@@ -131,11 +136,16 @@ DECK_LINK = {
     "Heritage.org": "https://www.figma.com/slides/TBFvXam250oe0FTInoG85Z/Heritage-Org-Proposal-2026?t=NmAJoEPcestqr4qc-6",
     "UAE Embassy": "https://drive.google.com/file/d/1frGcapfotw9wXn3I2urDm_15y_wi9l7x/view?usp=drive_link",
 }
-RFP_LINK_TEXT = {"Fairfax County EDA": "Open RFP"}   # default is "Open folder"
+RFP_LINK_TEXT = {}   # default is "Open folder"
 RFP_FOLDER_LINK = {
-    "Fairfax County EDA": "https://drive.google.com/file/d/1RUJGd6u3tCSLUMkHNHAHkxILKPRgO17P/view?usp=sharing",
+    "Fairfax County EDA": "https://drive.google.com/drive/folders/1s4Id7UNt1CM2vIKxnL2y4ZbXt8G97qqk?usp=drive_link",
+    "FactCheck.org": "https://drive.google.com/drive/folders/1T1ef736tiM2rS6_W5lzpxtKLQWV3J1o6?usp=drive_link",
+    "NAI Global": "https://drive.google.com/drive/folders/1m1yNeuc5ljLv3aMVxjdtVvNwGs7pMRii?usp=drive_link",
+    "Studio.One": "https://drive.google.com/drive/folders/1WZu-Io-pqXaCrm46V7st6KA4G4T7VXKo?usp=drive_link",
+    "Virginia Tourism Corporation": "https://drive.google.com/drive/folders/14SsRG8_2RsxgT7vYP9xcAhAcxJQR4_mt?usp=drive_link",
+    "American Kidney Fund": "https://drive.google.com/drive/folders/1aJeMDMoOfZl9yEbFsAbk3cStYOUaNRrx?usp=drive_link",
     "NLC": "https://drive.google.com/drive/u/0/folders/1YjYrBuQmLc5fW-_4u0lRIfc-T3Dr9zK-",
-    "American Red Cross": "https://drive.google.com/drive/folders/10hEygEDeeuB5EcQMwPcvd6VUIp4s4t-t?usp=drive_link",
+    "American Red Cross": "https://drive.google.com/drive/folders/10oweEYhu8CYnG4CMyruaNnhdmiRgiPea?usp=drive_link",
 }
 
 # Spec/reference deliverables that aren't a formal proposal deck, where
@@ -144,6 +154,7 @@ RFP_FOLDER_LINK = {
 SPEC_LABEL = {"Columbia Association": "Contract review", "Fairfax County EDA": "Collaboration"}   # row label; default is "Spec deliverables"
 SPEC_LINKS = {
     "Fairfax County EDA": [
+        ("RFP document", "https://drive.google.com/file/d/1RUJGd6u3tCSLUMkHNHAHkxILKPRgO17P/view?usp=sharing"),
         ("RFP content doc", "https://docs.google.com/document/d/15bEoVU6Q30d91XgjFphm4lAi-kSD4heIf-jARkCKnbg/edit?tab=t.0"),
         ("FCEDA RFP chat", "https://teams.microsoft.com/l/chat/19%3A4c6ebc8510cd4b11b211f5674028252a%40thread.v2/conversations?context=%7B%22contextType%22%3A%22chat%22%7D"),
     ],
