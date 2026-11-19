@@ -22,10 +22,10 @@ def fmt_date(d):
 # bucketed by its own stage text into "in flight."
 # ---------------------------------------------------------------------------
 LOST = {"PHI", "AGA", "Community of Christ"}
-WON = {"Columbia Association", "Heritage Action", "Heritage.org"}       # used for win-rate (decided bids)
+WON = {"Columbia Association", "Heritage Action", "Heritage.org", "Appalachian Regional Commission"}       # used for win-rate (decided bids)
 PAUSED = {"Tinuiti", "GSA.gov"}   # client paused the process; shown in the Pre-RFPs & Under Consideration section
 PRE_RFP = {"Aspen Digital", "GSA.gov", "American Red Cross", "Virginia Tourism Corporation", "NAI Global", "Aspire Schools", "IFRS Foundation", "FactCheck.org"}
-CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # status shown as "In Contract"
+CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org", "Appalachian Regional Commission"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the
 # CLIENT's decision, as opposed to still drafting/shaping/presenting.
@@ -33,7 +33,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org"}   # st
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"NLC", "UAE Embassy", "American Kidney Fund", "Appalachian Regional Commission", "Open Technology Fund", "Fairfax County EDA"}   # per Homiera 11/18: nothing pending on our side
+AWAITING_DECISION = {"NLC", "UAE Embassy", "American Kidney Fund", "Open Technology Fund", "Fairfax County EDA"}   # per Homiera 11/18: nothing pending on our side
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives

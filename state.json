@@ -1737,16 +1737,16 @@
       "proposal": "Appalachian Regional Commission",
       "client": "ARC.gov Web Development and Managed Hosting Services",
       "type": "RFP",
-      "stage": "Pricing follow-up answered 11/12; awaiting ARC decision",
+      "stage": "Verbal award received 11/19; Ab drafting the contract",
       "key_date": null,
-      "key_detail": "Pending decision or next steps",
+      "key_detail": "Contract being drafted by Ab",
       "submit_to": "contracts@arc.gov",
       "owners": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "named_staff": "Ab, Kurt Shadle, Kurtis, Vajaah",
-      "budget": "$70,000 to $80,000 (includes Pantheon Performance Medium hosting)",
-      "notes": "ARC sent follow-up questions about pricing; we responded 11/12 and presented a PSP/SMS approach as a simplified option. Andrea requested a copy of the deck used during the 10/29 presentation. Awaiting ARC's decision or next steps.",
-      "updated_at": "2026-11-13",
-      "update_note": "Pricing questions answered 11/12; presented PSP/SMS approach as a simplified option"
+      "budget": "$71,100 (SMS retainer $36,000 + PSP retainer $35,100; PSP is 15 hours/month at $195/hour)",
+      "notes": "ARC gave WDG a verbal award notice on 11/19 for the SMS/PSP retainer model we proposed on 11/12. SMS is $36,000 and PSP is $35,100 (15 hours per month at $195 per hour), $71,100 combined. Ab is drafting the contract. Contract period begins Jan 1, 2027. Earlier: Andrea requested a copy of the deck used during the 10/29 presentation.",
+      "updated_at": "2026-11-19",
+      "update_note": "Verbal award received; SMS/PSP retainer at $71,100 total; Ab drafting the contract"
     },
     {
       "proposal": "AGA",
