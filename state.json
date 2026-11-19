@@ -1646,6 +1646,18 @@
       "marker": "",
       "notes": "Per OTF as of 11/19. If silent by 11/23, Ab or Homiera follow up.",
       "tag": ""
+    },
+    {
+      "date": "2026-12-07",
+      "through": null,
+      "proposal": "NTSB",
+      "milestone": "Check in with NTSB (by Dec 7)",
+      "type": "Internal (team-set)",
+      "owner": "Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "NTSB reportedly meets with its finance team in December.",
+      "tag": ""
     }
   ],
   "summary": [
@@ -1861,9 +1873,9 @@
       "owners": "Homiera, Kurtis, Doug",
       "named_staff": "Homiera, Kurtis, Doug",
       "budget": "$250,000",
-      "notes": "Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule. Update 10/29: NTSB financial meeting has been pushed to November. Homiera to check in with James by mid-November. Update 11/18: NTSB is reportedly meeting with its finance team in December (not yet confirmed).",
-      "updated_at": "2026-11-18",
-      "update_note": "NTSB reportedly meeting with their finance team in December"
+      "notes": "Pending NTSB financial meeting and decision. Quote submitted. WDG, WPVIP, and Vertosoft partnering for a unified contract approach under the GSA schedule. Update 10/29: NTSB financial meeting has been pushed to November. Homiera to check in with James by mid-November. Update 11/18: NTSB is reportedly meeting with its finance team in December (not yet confirmed). Next check-in with NTSB by Dec 7.",
+      "updated_at": "2026-11-19",
+      "update_note": "Next check-in with NTSB by Dec 7"
     },
     {
       "proposal": "GSA.gov",
