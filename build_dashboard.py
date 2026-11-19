@@ -625,6 +625,24 @@ h2.section:first-of-type{ border-top:none; padding-top:0; }
 .slacklink{ font-family:var(--font-sans); font-weight:500; font-size:13.5px; color:var(--emphasis); text-decoration:underline; }
 .slacklink.placeholder{ color:var(--ink-muted); font-style:italic; text-decoration:none; }
 
+.won-tile{ background:var(--surface); border-left:3px solid var(--status-progress); padding:6px 20px 10px; margin-bottom:8px; overflow-x:auto; }
+.wontable{ width:100%; border-collapse:collapse; font-family:var(--font-sans); }
+.wontable th{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); font-weight:500; text-align:left; padding:12px 12px 10px 0; border-bottom:1px solid var(--rule); white-space:nowrap; }
+.wontable td{ padding:12px 12px 12px 0; border-top:1px solid var(--rule); font-size:13.5px; vertical-align:top; }
+.wontable tbody tr:first-child td{ border-top:none; }
+.wontable .wname{ font-weight:500; font-size:14px; }
+.wontable .wnum, .wontable th.wnum{ text-align:right; padding-right:28px; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.wontable a{ color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+.wontable a:hover{ color:var(--emphasis); }
+.wontable .wnone{ color:var(--ink-muted); }
+@media(max-width:760px){
+  .wontable thead{ display:none; }
+  .wontable tr{ display:block; padding:12px 0; border-top:1px solid var(--rule); }
+  .wontable tbody tr:first-child{ border-top:none; }
+  .wontable td{ display:flex; justify-content:space-between; gap:12px; border:none; padding:3px 0; text-align:right; }
+  .wontable td::before{ content:attr(data-l); color:var(--ink-muted); font-family:var(--font-mono); font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; text-align:left; }
+  .wontable .wnum{ padding-right:0; }
+}
 .loss-tile{ background:var(--surface); border-left:3px solid var(--status-lost); padding:18px 20px; margin-bottom:8px; }
 .lossrow{ padding:10px 0; border-top:1px solid var(--rule); }
 .lossrow:first-of-type{ border-top:none; }
@@ -839,6 +857,37 @@ def loss_row_html(l, i):
       <div class="losshint">click for details</div>
       <div class="pdetail" id="detail-{i}">{loss_detail_html(l)}</div>
     </div>
+    """
+
+
+# ---------------------------------------------------------------------------
+# Won section (list view): decided wins. Close date and PM come from
+# state.json summary fields "close_date" and "pm"; folder and Slack links come
+# from the same dicts the pursuit cards use.
+# ---------------------------------------------------------------------------
+def _won_row(prop):
+    su = next((x for x in s["summary"] if x["proposal"] == prop), {})
+    card = next((c for c in ordered_cards if c["prop"] == prop), {})
+    cd = su.get("close_date")
+    close = fmt_date(cd) if cd else "Pending contract"
+    pm = su.get("pm") or "TBD"
+    folder = RFP_FOLDER_LINK.get(prop)
+    slack = SLACK.get(prop)
+    def link(u, label):
+        return (f'<a href="{esc(u)}" target="_blank" rel="noopener">{label}</a>' if u else '<span class="wnone">&mdash;</span>')
+    return (f'<tr><td data-l="Client" class="wname">{esc(prop)}</td>'
+            f'<td data-l="Total contracted" class="wnum">{card.get("budget_display") or "TBD"}</td>'
+            f'<td data-l="Close date">{esc(close)}</td>'
+            f'<td data-l="Project folder">{link(folder, "Open folder")}</td>'
+            f'<td data-l="Slack">{link(slack, "Go to Slack")}</td>'
+            f'<td data-l="Assigned PM">{esc(pm)}</td></tr>')
+
+won_list = sorted(p for p in WON if any(c["prop"] == p for c in ordered_cards))
+if won_list:
+    SECTIONS_HTML += f"""
+    <h2 class="section"><span class="section-dot progress"></span>Won<span class="section-count">{len(won_list)}</span></h2>
+    <div class="won-tile"><table class="wontable"><thead><tr><th>Client</th><th class="wnum">Total contracted</th><th>Close date</th><th>Project folder</th><th>Slack</th><th>Assigned PM</th></tr></thead>
+    <tbody>{"".join(_won_row(p) for p in won_list)}</tbody></table></div>
     """
 
 if losses:

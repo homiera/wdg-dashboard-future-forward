@@ -1716,7 +1716,9 @@
       "budget": "$228,000",
       "notes": "Still in contracting. After the internal review of the contract against the RFP and our proposal, redlines went back to Columbia's lawyer. WDG has signed and the contract is still in Columbia's court for signature (as of 11/13). Columbia signed on 11/18, so the contract is fully executed. Administrative kickoff is slated for next week (week of 11/23), with the project kickoff in early December. Mary is preparing for the project from the PM side. The sales debrief took place 11/10. Homiera and Sheila determining payment schedule approach. Technical Road Map has been accepted as source of truth for the project scope post-Discovery phase.",
       "updated_at": "2026-11-18",
-      "update_note": "Columbia signed; administrative kickoff next week, project kickoff early December"
+      "update_note": "Columbia signed; administrative kickoff next week, project kickoff early December",
+      "close_date": "2026-11-16",
+      "pm": "Mary Henkin"
     },
     {
       "proposal": "Community of Christ",
