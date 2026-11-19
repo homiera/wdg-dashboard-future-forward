@@ -228,6 +228,7 @@ def next_proposal_due(prop):
     presentation or review step doesn't count as a proposal due date."""
     cands = [r for r in rows_by_prop.get(prop, [])
              if r["status"] not in ("Complete", "Cancelled") and r["date"] and r["date"] >= s["as_of"]
+             and not r["milestone"].lower().startswith("questions")
              and ("due" in r["milestone"].lower() or "deadline" in r["milestone"].lower())]
     if cands:
         cands.sort(key=lambda r: r["date"])
