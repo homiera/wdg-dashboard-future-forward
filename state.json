@@ -1648,9 +1648,9 @@
       "owners": "Ab, Homiera, Kurtis, Michael F.",
       "named_staff": "Ab, Homiera, Kurtis, Michael F.",
       "budget": "$500,000",
-      "notes": "Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA. The SOW and MSA are both in legal review (as of 11/13). Update 11/18: WDG sent MSA redlines back to the client for review and agreement.",
-      "updated_at": "2026-11-18",
-      "update_note": "MSA redlines sent back to client for review and agreement"
+      "notes": "Being set up as a Discovery phase followed by an Implementation phase. Intending to begin Discovery while WDG and Heritage legal teams finalize the MSA. The SOW and MSA are both in legal review (as of 11/13). Update 11/18: WDG sent MSA redlines back to the client for review and agreement. This single MSA covers both Heritage.org and Heritage Action.",
+      "updated_at": "2026-11-19",
+      "update_note": "MSA redlines sent back to client (one MSA covers both Heritage.org and Heritage Action)"
     },
     {
       "proposal": "Heritage Action",
@@ -1663,7 +1663,9 @@
       "owners": "Ab, Kurt Shadle, Michael Feder",
       "named_staff": "Ab, Kurt Shadle, Michael Feder",
       "budget": "$300,000 (Homiera's estimate, stated as approximate \"I think\" - not yet confirmed in writing)",
-      "notes": "Discovery engagement complete. Phase 2 SOW is with the client for review as of 10/30. Adding a new SOW for SMS support on their current site until the new site launches at the end of Phase 2. Scoping and pricing to be determined 11/5. Discovery invoices all due."
+      "notes": "Discovery engagement complete. Phase 2 SOW is with the client for review as of 10/30. Adding a new SOW for SMS support on their current site until the new site launches at the end of Phase 2. Scoping and pricing to be determined 11/5. Discovery invoices all due. Update 11/19: the MSA redlines WDG sent back to the client on 11/18 cover both Heritage Action and Heritage.org (one MSA). Awaiting the client's review and agreement.",
+      "updated_at": "2026-11-19",
+      "update_note": "MSA redlines (covering Heritage Action and Heritage.org) sent to client for review and agreement"
     },
     {
       "proposal": "Columbia Association",
