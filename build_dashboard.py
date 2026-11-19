@@ -869,7 +869,7 @@ def _won_row(prop):
     su = next((x for x in s["summary"] if x["proposal"] == prop), {})
     card = next((c for c in ordered_cards if c["prop"] == prop), {})
     cd = su.get("close_date")
-    close = fmt_date(cd) if cd else "Pending contract"
+    close = fmt_date(cd) if cd else "In contract"
     pm = su.get("pm") or "TBD"
     folder = RFP_FOLDER_LINK.get(prop)
     slack = SLACK.get(prop)
