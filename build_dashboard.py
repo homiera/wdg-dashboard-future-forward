@@ -384,6 +384,7 @@ def card_data(prop):
         "owner": OWNER.get(prop, "TBD"),               # Owner (accountable party), per Homiera 10/28
         "stage": su.get("stage", ""),                 # Stage details
         "notes": su.get("notes", ""),                 # Description / latest notes
+        "pm": su.get("pm"),
         "updated_at": su.get("updated_at"),           # date of last update Homiera gave; drives the New Updates tag
         "update_note": su.get("update_note", ""),
         "tier": TIER.get(prop, "TBD"),
@@ -797,6 +798,7 @@ def card_html(c, i):
         <div class="row"><span class="k">Stage details:</span> {esc(c['stage'])}</div>
         <div class="row"><span class="k">Next Due Date:</span> {esc(c['due'])}{(' — ' + esc(c['due_what'])) if c['due_what'] else ''}</div>
         <div class="row"><span class="k">All assigned people:</span> {esc(c['owners'])}</div>
+        {('<div class="row"><span class="k">WDG PM:</span> ' + esc(c['pm']) + '</div>') if c.get('pm') else ''}
         <div class="row"><span class="k">Deck:</span> {deck}</div>
         <div class="row"><span class="k">RFP docs folder:</span> {rfp_folder}</div>
         <div class="row"><span class="k">Notes:</span> {esc(c['notes'])}</div>
