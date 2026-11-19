@@ -1120,15 +1120,15 @@
       "tag": ""
     },
     {
-      "date": "2027-01-01",
-      "through": null,
+      "date": "2026-12-14",
+      "through": "2027-12-31",
       "proposal": "Appalachian Regional Commission",
-      "milestone": "Contract period begins (Jan 1 to Dec 31, 2027)",
+      "milestone": "Contract effective date requested by ARC (12/14/2026 through 12/31/2027)",
       "type": "Prospect-set",
       "owner": "ARC",
       "status": "Open",
       "marker": "",
-      "notes": "Interview and award dates are not stated in the RFP.",
+      "notes": "ARC asked for the contract to be effective 12/14/2026 through 12/31/2027. Ab drafting the contract.",
       "tag": ""
     },
     {
@@ -1737,16 +1737,16 @@
       "proposal": "Appalachian Regional Commission",
       "client": "ARC.gov Web Development and Managed Hosting Services",
       "type": "RFP",
-      "stage": "Verbal award received 11/19; Ab drafting the contract",
+      "stage": "Verbal award received 11/19; Ab drafting the contract (effective 12/14/2026 requested)",
       "key_date": null,
       "key_detail": "Contract being drafted by Ab",
       "submit_to": "contracts@arc.gov",
       "owners": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "named_staff": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "budget": "$71,100 (SMS retainer $36,000 + PSP retainer $35,100; PSP is 15 hours/month at $195/hour)",
-      "notes": "ARC gave WDG a verbal award notice on 11/19 for the SMS/PSP retainer model we proposed on 11/12. SMS is $36,000 and PSP is $35,100 (15 hours per month at $195 per hour), $71,100 combined. Ab is drafting the contract. Contract period begins Jan 1, 2027. Earlier: Andrea requested a copy of the deck used during the 10/29 presentation.",
+      "notes": "ARC gave WDG a verbal award notice on 11/19 for the SMS/PSP retainer model we proposed on 11/12. SMS is $36,000 and PSP is $35,100 (15 hours per month at $195 per hour), $71,100 combined. Ab is drafting the contract. ARC asked for the contract to be effective 12/14/2026 through 12/31/2027. Earlier: Andrea requested a copy of the deck used during the 10/29 presentation.",
       "updated_at": "2026-11-19",
-      "update_note": "Verbal award received; SMS/PSP retainer at $71,100 total; Ab drafting the contract"
+      "update_note": "Verbal award; ARC requested contract effective 12/14/2026 through 12/31/2027; Ab drafting"
     },
     {
       "proposal": "AGA",
