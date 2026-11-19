@@ -882,7 +882,10 @@ def _won_row(prop):
             f'<td data-l="Slack">{link(slack, "Go to Slack")}</td>'
             f'<td data-l="Assigned PM">{esc(pm)}</td></tr>')
 
-won_list = sorted(p for p in WON if any(c["prop"] == p for c in ordered_cards))
+# Only fully signed contracts appear here: a pursuit qualifies once state.json
+# gives it a "close_date" (the day the contract was fully executed).
+won_list = sorted(p for p in WON if any(c["prop"] == p for c in ordered_cards)
+                  and next((x for x in s["summary"] if x["proposal"] == p), {}).get("close_date"))
 if won_list:
     SECTIONS_HTML += f"""
     <h2 class="section"><span class="section-dot progress"></span>Won<span class="section-count">{len(won_list)}</span></h2>
