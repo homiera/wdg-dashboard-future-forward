@@ -1658,6 +1658,18 @@
       "marker": "",
       "notes": "NTSB reportedly meets with its finance team in December.",
       "tag": ""
+    },
+    {
+      "date": "2026-12-02",
+      "through": null,
+      "proposal": "IFRS Foundation",
+      "milestone": "Meeting with IFRS Foundation",
+      "type": "Prospect-set",
+      "owner": "Mary Henkin",
+      "status": "Open",
+      "marker": "",
+      "notes": "Mary running point. Time TBD.",
+      "tag": "MEETING"
     }
   ],
   "summary": [
@@ -1986,16 +1998,16 @@
       "proposal": "IFRS Foundation",
       "client": "IFRS Foundation, Knowledge Hub UX review (former client)",
       "type": "UX consultation",
-      "stage": "Inbound from former client; Ab said yes to an intro call with their Education team; right people to be pulled in",
+      "stage": "Meeting with IFRS set for 12/2; Mary Henkin running point",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Lynne Chauncey (IFRS Foundation)",
       "owners": "Ab, Mary Henkin",
       "named_staff": "Ab, Mary Henkin",
       "budget": "TBD",
-      "notes": "Inbound request from a former client. Lynne Chauncey reached out to Ab (Slack 11/15 and email) about a focused advisory UX review for the IFRS Foundation's Knowledge Hub (ifrs.org/sustainability/knowledge-hub). Their Education team is user testing a proposed information architecture, navigation and menu model, homepage, and prototype, and wants an external UX partner to independently review and stress-test the work before development. Focus areas: accessibility and UX best practice, findability across a large resource library, whether categories and menu structure make sense, the role of search, and any missed issues or opportunities. Expected output: a concise set of prioritized recommendations with reasoning on what to retain, change, or avoid, not new designs. Lynne asked for a short intro call with the Education team to walk through their work and hear how WDG would approach it, likely level of effort and timing, and availability. Ab confirmed we are open. Ab asked Mary Henkin to regroup with him on scoping and who should join. Timing, budget, and tier are not yet known; latest user research and an updated prototype are expected shortly.",
-      "updated_at": "2026-11-16",
-      "update_note": "New inbound UX consultation request; Ab confirmed we are open to an intro call"
+      "notes": "Inbound request from a former client. Lynne Chauncey reached out to Ab (Slack 11/15 and email) about a focused advisory UX review for the IFRS Foundation's Knowledge Hub (ifrs.org/sustainability/knowledge-hub). Their Education team is user testing a proposed information architecture, navigation and menu model, homepage, and prototype, and wants an external UX partner to independently review and stress-test the work before development. Focus areas: accessibility and UX best practice, findability across a large resource library, whether categories and menu structure make sense, the role of search, and any missed issues or opportunities. Expected output: a concise set of prioritized recommendations with reasoning on what to retain, change, or avoid, not new designs. Lynne asked for a short intro call with the Education team to walk through their work and hear how WDG would approach it, likely level of effort and timing, and availability. Ab confirmed we are open. Ab asked Mary Henkin to regroup with him on scoping and who should join. Timing, budget, and tier are not yet known; latest user research and an updated prototype are expected shortly. Update 11/19: a meeting with the IFRS Foundation is set for 12/2. Mary Henkin is running point.",
+      "updated_at": "2026-11-19",
+      "update_note": "Meeting with IFRS set for 12/2; Mary running point"
     },
     {
       "proposal": "FactCheck.org",

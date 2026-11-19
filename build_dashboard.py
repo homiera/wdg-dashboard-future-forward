@@ -91,7 +91,7 @@ OWNER = {
     "American Red Cross": "Ab",
     "Virginia Tourism Corporation": "Homiera",
     "NAI Global": "Homiera",
-    "IFRS Foundation": "Ab",
+    "IFRS Foundation": "Mary Henkin",
     "FactCheck.org": "Ab",
     "Fairfax County EDA": "REQ (Maria Russell)",
 }
