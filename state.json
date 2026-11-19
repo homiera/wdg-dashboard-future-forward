@@ -1618,9 +1618,9 @@
       "milestone": "Meeting with NAI Global and REQ decision makers",
       "type": "Prospect-set",
       "owner": "Homiera, Ab, Jake Rambo",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Learn more about their needs. Time TBD.",
+      "notes": "Held 11/19.",
       "tag": "MEETING"
     }
   ],
@@ -1918,16 +1918,16 @@
       "proposal": "NAI Global",
       "client": "NAI Global, Website Redesign and Digital Platform Modernization",
       "type": "RFP (via REQ)",
-      "stage": "Under consideration; meeting with NAI Global and REQ decision makers 11/19 to learn their needs",
+      "stage": "Meeting held 11/19; Jake Rambo and Izzy to regroup for a technical walkthrough; Homiera drafting the proposal",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Per invitation (PDF proposal)",
-      "owners": "Homiera, Ab, Jake Rambo",
-      "named_staff": "Homiera, Ab, Jake Rambo",
-      "budget": "$400,000+ (comparable to or larger than the Big I effort)",
-      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief. Update 11/18: Homiera, Ab, and Jake Rambo are meeting 11/19 with decision makers at NAI Global and REQ to learn more about their needs.",
-      "updated_at": "2026-11-18",
-      "update_note": "Meeting tomorrow (11/19) with NAI Global and REQ decision makers; Jake Rambo, Ab, Homiera attending"
+      "owners": "Homiera, Ab, Jake Rambo, Izzy",
+      "named_staff": "Homiera, Ab, Jake Rambo, Izzy",
+      "budget": "~$400,000 (current working assumption)",
+      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief. Update 11/18: Homiera, Ab, and Jake Rambo are meeting 11/19 with decision makers at NAI Global and REQ to learn more about their needs. Update 11/19: the meeting with NAI Global and REQ decision makers was held. Next action: Jake Rambo and Izzy regroup to get a technical walkthrough. Homiera is working on the proposal. Current budget assumption is about $400,000.",
+      "updated_at": "2026-11-19",
+      "update_note": "Meeting held; Jake Rambo and Izzy regrouping for a technical walkthrough; budget assumption ~$400k"
     },
     {
       "proposal": "Aspire Schools",
