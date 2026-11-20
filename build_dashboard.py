@@ -888,7 +888,7 @@ def _won_row(prop):
     return (f'<tr><td data-l="Client" class="wname">{esc(prop)}</td>'
             f'<td data-l="Total contracted" class="wnum">{card.get("budget_display") or "TBD"}</td>'
             f'<td data-l="Close date">{esc(close)}</td>'
-            f'<td data-l="Confluence Space">{link(folder, "Open space")}</td>'
+            f'<td data-l="Confluence Space">{link(folder, "Go To Project Space")}</td>'
             f'<td data-l="Slack">{link(slack, "Go to Slack")}</td>'
             f'<td data-l="Assigned PM">{esc(pm)}</td></tr>')
 
