@@ -867,20 +867,24 @@ def loss_row_html(l, i):
 # state.json summary fields "close_date" and "pm"; folder and Slack links come
 # from the same dicts the pursuit cards use.
 # ---------------------------------------------------------------------------
+CONFLUENCE_SPACE = {
+    "Columbia Association": "https://webdevelopmentgroup.atlassian.net/wiki/spaces/CA/",
+}
+
 def _won_row(prop):
     su = next((x for x in s["summary"] if x["proposal"] == prop), {})
     card = next((c for c in ordered_cards if c["prop"] == prop), {})
     cd = su.get("close_date")
     close = fmt_date(cd) if cd else "In contract"
     pm = su.get("pm") or "TBD"
-    folder = RFP_FOLDER_LINK.get(prop)
+    folder = CONFLUENCE_SPACE.get(prop)
     slack = SLACK.get(prop)
     def link(u, label):
         return (f'<a href="{esc(u)}" target="_blank" rel="noopener">{label}</a>' if u else '<span class="wnone">&mdash;</span>')
     return (f'<tr><td data-l="Client" class="wname">{esc(prop)}</td>'
             f'<td data-l="Total contracted" class="wnum">{card.get("budget_display") or "TBD"}</td>'
             f'<td data-l="Close date">{esc(close)}</td>'
-            f'<td data-l="Project folder">{link(folder, "Open folder")}</td>'
+            f'<td data-l="Confluence Space">{link(folder, "Open space")}</td>'
             f'<td data-l="Slack">{link(slack, "Go to Slack")}</td>'
             f'<td data-l="Assigned PM">{esc(pm)}</td></tr>')
 
@@ -891,7 +895,7 @@ won_list = sorted(p for p in WON if any(c["prop"] == p for c in ordered_cards)
 if won_list:
     SECTIONS_HTML += f"""
     <h2 class="section"><span class="section-dot progress"></span>Won<span class="section-count">{len(won_list)}</span></h2>
-    <div class="won-tile"><table class="wontable"><thead><tr><th>Client</th><th class="wnum">Total contracted</th><th>Close date</th><th>Project folder</th><th>Slack</th><th>Assigned PM</th></tr></thead>
+    <div class="won-tile"><table class="wontable"><thead><tr><th>Client</th><th class="wnum">Total contracted</th><th>Close date</th><th>Confluence Space</th><th>Slack</th><th>Assigned PM</th></tr></thead>
     <tbody>{"".join(_won_row(p) for p in won_list)}</tbody></table></div>
     """
 
