@@ -396,7 +396,11 @@ def card_data(prop):
         "rfp_folder_link": RFP_FOLDER_LINK.get(prop),   # Link to RFP docs folder (Google Drive)
     }
 
-cards = [card_data(p) for p in visible]
+all_cards = [card_data(p) for p in visible]
+# Fully signed contracts (state.json "close_date") move out of the pursuit grid
+# and live only in the Won list.
+SIGNED = {x["proposal"] for x in s["summary"] if x.get("close_date")}
+cards = [c for c in all_cards if c["prop"] not in SIGNED]
 no_date_count = sum(1 for c in cards if c["due"] == "No date set")
 
 # Group cards by status label into the four stage sections, in a fixed
@@ -873,7 +877,7 @@ CONFLUENCE_SPACE = {
 
 def _won_row(prop):
     su = next((x for x in s["summary"] if x["proposal"] == prop), {})
-    card = next((c for c in ordered_cards if c["prop"] == prop), {})
+    card = next((c for c in all_cards if c["prop"] == prop), {})
     cd = su.get("close_date")
     close = fmt_date(cd) if cd else "In contract"
     pm = su.get("pm") or "TBD"
@@ -890,7 +894,7 @@ def _won_row(prop):
 
 # Only fully signed contracts appear here: a pursuit qualifies once state.json
 # gives it a "close_date" (the day the contract was fully executed).
-won_list = sorted(p for p in WON if any(c["prop"] == p for c in ordered_cards)
+won_list = sorted(p for p in WON if any(c["prop"] == p for c in all_cards)
                   and next((x for x in s["summary"] if x["proposal"] == p), {}).get("close_date"))
 if won_list:
     SECTIONS_HTML += f"""
