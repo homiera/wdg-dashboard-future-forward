@@ -1682,6 +1682,18 @@
       "marker": "HARD DEADLINE",
       "notes": "Due today. Time of day and submission method to be confirmed.",
       "tag": ""
+    },
+    {
+      "date": "2026-11-23",
+      "through": null,
+      "proposal": "USIP",
+      "milestone": "SOW due to USIP for signature",
+      "type": "Internal (team-set)",
+      "owner": "Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "SMS retainer, PSP hours, and onboarding audit. USIP is moving to Pantheon (migration by Pantheon).",
+      "tag": ""
     }
   ],
   "summary": [
@@ -2042,6 +2054,21 @@
       "notes": "New RFP for consideration, found on the UPenn Marketplace: website redesign for factcheck.org. Proposals due 12/11/2026. Current owner is Ab. Team, tier, and budget to be determined.",
       "updated_at": "2026-11-18",
       "update_note": "New RFP added; proposals due 12/11; Ab owns"
+    },
+    {
+      "proposal": "USIP",
+      "client": "USIP (usip.org), retainer: SMS, PSP, and onboarding audit",
+      "type": "Retainer (verbal agreement)",
+      "stage": "Verbal agreement; Homiera preparing the SOW for USIP to sign (due 11/23)",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "USIP",
+      "owners": "Homiera",
+      "named_staff": "Homiera",
+      "budget": "$45,250 (SMS $30,000 for 12 months; PSP 50 hours at $205/hour, $10,250 for 12 months; $5,000 one-time onboarding audit)",
+      "notes": "New retainer with verbal agreement from USIP. Scope: SMS at $30,000 for 12 months; PSP of 50 hours at $205 per hour ($10,250), good for 12 months; and a $5,000 one-time onboarding audit and documentation of usip.org. Total $45,250. USIP is moving to Pantheon, with the migration being done by Pantheon. Homiera is preparing the SOW for USIP to sign, due 11/23.",
+      "updated_at": "2026-11-20",
+      "update_note": "New retainer added: verbal agreement; SOW due 11/23; $45,250 total"
     }
   ],
   "focus": {
@@ -2130,6 +2157,7 @@
     "NAI Global",
     "Aspire Schools",
     "IFRS Foundation",
-    "FactCheck.org"
+    "FactCheck.org",
+    "USIP"
   ]
 }

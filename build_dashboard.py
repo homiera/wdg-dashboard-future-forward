@@ -22,10 +22,10 @@ def fmt_date(d):
 # bucketed by its own stage text into "in flight."
 # ---------------------------------------------------------------------------
 LOST = {"PHI", "AGA", "Community of Christ"}
-WON = {"Columbia Association", "Heritage Action", "Heritage.org", "Appalachian Regional Commission"}       # used for win-rate (decided bids)
+WON = {"Columbia Association", "Heritage Action", "Heritage.org", "Appalachian Regional Commission", "USIP"}       # used for win-rate (decided bids)
 PAUSED = {"Tinuiti", "GSA.gov"}   # client paused the process; shown in the Pre-RFPs & Under Consideration section
 PRE_RFP = {"Aspen Digital", "GSA.gov"}
-CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org", "Appalachian Regional Commission"}   # status shown as "In Contract"
+CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org", "Appalachian Regional Commission", "USIP"}   # status shown as "In Contract"
 # Manual call, not derived from a status field: these are the pursuits whose
 # own stage text says the proposal is submitted and WDG is waiting on the
 # CLIENT's decision, as opposed to still drafting/shaping/presenting.
@@ -94,6 +94,7 @@ OWNER = {
     "American Red Cross": "Ab",
     "Virginia Tourism Corporation": "Homiera",
     "NAI Global": "Homiera",
+    "USIP": "Homiera",
     "IFRS Foundation": "Mary Henkin",
     "FactCheck.org": "Ab",
     "Fairfax County EDA": "REQ (Maria Russell)",
@@ -297,7 +298,7 @@ for r in s["rows"]:
 due_this_week_rows = []
 for p in due_this_week:
     d, what = next_proposal_due(p)
-    due_this_week_rows.append((p, d, "Proposal due"))
+    due_this_week_rows.append((p, d, "SOW due" if (what or "").lower().startswith("sow") else "Proposal due"))
 
 # Consolidated "What's coming up" list: proposals due and presentations in
 # the next 7 days, merged and sorted by date, per Homiera + Dario 10/28
