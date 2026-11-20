@@ -303,7 +303,9 @@ for p in due_this_week:
 # (replaces two separate stat tiles).
 upcoming = sorted(due_this_week_rows + presentations_this_week + questions_this_week + meetings_this_week + responses_this_week, key=lambda x: x[1])
 
-contracts_in_progress = [p for p in all_props if p in CONTRACTING]
+# Fully signed contracts (those with a close_date) are done contracting and live in the Won list.
+_signed_early = {x["proposal"] for x in s["summary"] if x.get("close_date")}
+contracts_in_progress = [p for p in all_props if p in CONTRACTING and p not in _signed_early]
 
 # ---------------------------------------------------------------------------
 # Budget / dollar-value parsing. Most pursuits have "TBD" or "Not stated" in
