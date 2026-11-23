@@ -42,7 +42,7 @@ AWAITING_DECISION = {"NLC", "UAE Embassy", "American Kidney Fund", "Open Technol
 STATUS_OVERRIDE = {
     # In progress per Homiera 11/19
     "American Red Cross": "In Progress", "Aspire Schools": "In Progress", "FactCheck.org": "In Progress",
-    "IFRS Foundation": "In Progress", "NAI Global": "In Progress", "Virginia Tourism Corporation": "In Progress",
+    "IFRS Foundation": "In Progress", "CRI": "In Progress", "NAI Global": "In Progress", "Virginia Tourism Corporation": "In Progress",
     "Fairfax County EDA": "Submitted",
     "UAE Embassy": "Submitted",
     "Studio.One": "Submitted",
@@ -70,7 +70,7 @@ TIER = {
     "NTSB": 2,
     "GSA.gov": 1,
     "NLC": 1,
-    "Studio.One": 2, "Fairfax County EDA": 2, "American Red Cross": 1,
+    "Studio.One": 2, "Fairfax County EDA": 2, "American Red Cross": 1, "CRI": 3,
     "NAI Global": 2, "Virginia Tourism Corporation": 1,
 }
 
@@ -119,6 +119,7 @@ SLACK = {
     "Studio.One": "https://wdg.slack.com/archives/C0CE28Q6H45",
     "American Red Cross": "https://wdg.slack.com/archives/C0CG3N4E6DC",
     "NAI Global": "https://wdg.slack.com/archives/C0CHCQXTP41",
+    "CRI": "https://wdg.slack.com/archives/C0CL3JU2C1W",
     "FactCheck.org": "https://wdg.slack.com/archives/C0CKRNKH98Q",
     "IFRS Foundation": "https://wdg.slack.com/archives/C0CHZJR6M6Z",
     "Aspire Schools": "https://wdg.slack.com/archives/C0CJ592QR08",
@@ -145,6 +146,7 @@ RFP_FOLDER_LINK = {
     "Fairfax County EDA": "https://drive.google.com/drive/folders/1s4Id7UNt1CM2vIKxnL2y4ZbXt8G97qqk?usp=drive_link",
     "FactCheck.org": "https://drive.google.com/drive/folders/1T1ef736tiM2rS6_W5lzpxtKLQWV3J1o6?usp=drive_link",
     "NAI Global": "https://drive.google.com/drive/folders/1m1yNeuc5ljLv3aMVxjdtVvNwGs7pMRii?usp=drive_link",
+    "CRI": "https://drive.google.com/drive/folders/1qQ_BYgyC9lHzbWYSISu2U8bvcqBG8j8X?usp=drive_link",
     "Aspire Schools": "https://drive.google.com/drive/u/0/folders/1g9cWcbPcp3zJTNlg1fJxc0EVAzODL4Jf",
     "Studio.One": "https://drive.google.com/drive/folders/1WZu-Io-pqXaCrm46V7st6KA4G4T7VXKo?usp=drive_link",
     "Virginia Tourism Corporation": "https://drive.google.com/drive/folders/14SsRG8_2RsxgT7vYP9xcAhAcxJQR4_mt?usp=drive_link",

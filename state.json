@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-20",
+  "as_of": "2026-11-23",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -1408,7 +1408,7 @@
       "tag": ""
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-07",
       "through": null,
       "proposal": "American Red Cross",
       "milestone": "Proposal due, 5:00 PM ET",
@@ -1416,7 +1416,7 @@
       "owner": "Ab",
       "status": "Open",
       "marker": "HARD DEADLINE",
-      "notes": "Schedule table says 12/6 (a Sunday); RFP body text says on or before 12/7. Confirm the controlling date. Full rebuild, redesign, and migration of preparecenter.org.",
+      "notes": "Confirmed 12/7 (RFP schedule table listed 12/6). Internally hands-off from 12/4.",
       "tag": ""
     },
     {
@@ -1558,9 +1558,9 @@
       "milestone": "Submit responses to Studio.One's remaining questions (today)",
       "type": "Prospect-set",
       "owner": "Ab, Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Follow-up to the 11/16 round 2 meeting. Originally planned for 11/17.",
+      "notes": "Sent Friday 11/20.",
       "tag": "DEADLINE"
     },
     {
@@ -1630,9 +1630,9 @@
       "milestone": "Questions due to Aspire Public Schools",
       "type": "Prospect-set",
       "owner": "TBD",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "Time of day and submission method to be confirmed from the RFP.",
+      "notes": "Questions sent.",
       "tag": ""
     },
     {
@@ -1672,15 +1672,15 @@
       "tag": "MEETING"
     },
     {
-      "date": "2026-11-20",
+      "date": "2026-11-23",
       "through": null,
       "proposal": "NAI Global",
-      "milestone": "Proposal due",
+      "milestone": "Proposal due (sending today)",
       "type": "Prospect-set",
       "owner": "Homiera",
       "status": "Open",
       "marker": "HARD DEADLINE",
-      "notes": "Due today. Time of day and submission method to be confirmed.",
+      "notes": "Moved from 11/20. Sending today.",
       "tag": ""
     },
     {
@@ -1693,6 +1693,54 @@
       "status": "Open",
       "marker": "",
       "notes": "SMS retainer, PSP hours, and onboarding audit. USIP is moving to Pantheon (migration by Pantheon).",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-04",
+      "through": null,
+      "proposal": "Aspire Schools",
+      "milestone": "Proposal due",
+      "type": "Prospect-set",
+      "owner": "Josh B., Homiera, Ab",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "Time of day and submission method to be confirmed from the RFP.",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-04",
+      "through": null,
+      "proposal": "American Red Cross",
+      "milestone": "Internal hands-off (proposal locked for submission)",
+      "type": "Internal (team-set)",
+      "owner": "Ab, Homiera",
+      "status": "Open",
+      "marker": "",
+      "notes": "Team stops editing; submission prep only.",
+      "tag": ""
+    },
+    {
+      "date": "2026-11-24",
+      "through": null,
+      "proposal": "CRI",
+      "milestone": "Questions to CIR (sending tomorrow)",
+      "type": "Prospect-set",
+      "owner": "TBD",
+      "status": "Open",
+      "marker": "",
+      "notes": "Questions being sent 11/24.",
+      "tag": ""
+    },
+    {
+      "date": "2026-12-02",
+      "through": null,
+      "proposal": "CRI",
+      "milestone": "Proposal due",
+      "type": "Prospect-set",
+      "owner": "TBD",
+      "status": "Open",
+      "marker": "HARD DEADLINE",
+      "notes": "Time of day and submission method to be confirmed.",
       "tag": ""
     }
   ],
@@ -1822,9 +1870,9 @@
       "owners": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "named_staff": "Ab, Kurt Shadle, Kurtis, Vajaah",
       "budget": "$71,100 (SMS retainer $36,000 + PSP retainer $35,100; PSP is 15 hours/month at $195/hour)",
-      "notes": "ARC gave WDG a verbal award notice on 11/19 for the SMS/PSP retainer model we proposed on 11/12. SMS is $36,000 and PSP is $35,100 (15 hours per month at $195 per hour), $71,100 combined. Ab is drafting the contract. ARC asked for the contract to be effective 12/14/2026 through 12/31/2027. Earlier: Andrea requested a copy of the deck used during the 10/29 presentation.",
-      "updated_at": "2026-11-19",
-      "update_note": "Verbal award; Kurt Shadle likely PM; ARC requested contract effective 12/14/2026 through 12/31/2027; Ab drafting",
+      "notes": "ARC gave WDG a verbal award notice on 11/19 for the SMS/PSP retainer model we proposed on 11/12. SMS is $36,000 and PSP is $35,100 (15 hours per month at $195 per hour), $71,100 combined. Ab is drafting the contract. ARC asked for the contract to be effective 12/14/2026 through 12/31/2027. Earlier: Andrea requested a copy of the deck used during the 10/29 presentation. Update 11/23: ARC Maintenance onboarding is scheduled; contracting is still TBD.",
+      "updated_at": "2026-11-23",
+      "update_note": "Onboarding scheduled; contracting TBD",
       "pm": "Kurt Shadle (likely)"
     },
     {
@@ -1939,16 +1987,16 @@
       "proposal": "Studio.One",
       "client": "Web Platform Technology Partner RFP (Studio.One)",
       "type": "RFP (partner / subcontractor to lead agency)",
-      "stage": "Round 2 meeting held 11/16; responses to their remaining questions being submitted today (11/19)",
+      "stage": "Round 2 follow-ups sent Friday 11/20; awaiting Studio.One's next step",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Kourtney Wong, Studio.One",
       "owners": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
       "named_staff": "Josh, Amanda, Kurtis, Ab, Homiera, Kurt Shadle, Doug, Jake Rambo",
       "budget": "$400,000 to $500,000 (submitted bid, all three phases; Release 1 at $120,000)",
-      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them. Round 2 meeting held Monday 11/16 at 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, and Ab. We are following up with responses to the rest of their questions, now being submitted to Studio.One today, Thursday 11/19 (originally planned for 11/17).",
-      "updated_at": "2026-11-19",
-      "update_note": "Responses to remaining questions being submitted today"
+      "notes": "End client: Wheels Up. Studio.One, the lead agency, seeks a technical partner for a new web platform, starting with a redesigned US marketing site in 2027 (headless CMS; three releases). Two Release 1 estimates requested (front-end only and full-stack), plus order-of-magnitude estimates for Releases 2 and 3. Responses due 11/6; partner selected 11/16. Ab submitted questions 11/2. Internal working session 11/5 with Josh, Amanda, and Kurtis. Proposal submitted by email the morning of 11/9. Submitted at $400,000 to $500,000 for all three phases, with Release 1 at $120,000 (earlier targets: $150,000 to $200,000, then $500,000 to $600,000). RFP is confidential under NDA. Studio.One asked to meet with us for round 2 and was asked for time on Thursday 11/12. They are sharing questions for the meeting on 11/11. Homiera told them we will review the questions and then schedule the right people with them. Round 2 meeting held Monday 11/16 at 1:30 PM. Participating: Kurt Shadle, Kurtis Shaner, Doug, Jake Rambo, and Ab. We are following up with responses to the rest of their questions, sent to Studio.One on Friday 11/20 (originally planned for 11/17). All round 2 follow-ups were sent Friday 11/20.",
+      "updated_at": "2026-11-23",
+      "update_note": "All round 2 follow-ups sent Friday 11/20"
     },
     {
       "proposal": "Fairfax County EDA",
@@ -1969,16 +2017,16 @@
       "proposal": "American Red Cross",
       "client": "American Red Cross, Prepare Center Rebuild (preparecenter.org)",
       "type": "RFP",
-      "stage": "Pursuing (Tier 1); questions sent; proposal due 12/6",
+      "stage": "Pursuing (Tier 1); proposal due Mon 12/7 (PM); internal hands-off 12/4",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Red Cross Supply Chain Management (per RFP)",
       "owners": "Ab, Kurtis, Vajaah, Dario, Mary H.",
       "named_staff": "Ab, Kurtis, Vajaah, Dario, Mary H.",
       "budget": "$200,000 to $325,000 (core rebuild; blended rate based on our current GSA rates)",
-      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Tier 1. Ab leads. Assigned team: Kurtis, Vajaah, Dario, Mary H. Our questions to Red Cross were sent 11/18. Ab noted we should price with a blended rate based on the GSA rates we currently house. Current budget range: $200,000 to $325,000 for the core rebuild. Ab confirmed our interest to bid with Red Cross by email (the intent step is an email requirement). Schedule: answers returned 11/20, proposals due 12/6 (5 PM ET per the schedule table; the RFP body text says 12/7, confirm), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty.",
-      "updated_at": "2026-11-18",
-      "update_note": "Questions sent; team assigned; budget $200k to $325k on a GSA blended rate; proposal due 12/6"
+      "notes": "New RFP: full rebuild, redesign, and migration of preparecenter.org. Tier 1. Ab leads. Assigned team: Kurtis, Vajaah, Dario, Mary H. Our questions to Red Cross were sent 11/18. Ab noted we should price with a blended rate based on the GSA rates we currently house. Current budget range: $200,000 to $325,000 for the core rebuild. Ab confirmed our interest to bid with Red Cross by email (the intent step is an email requirement). Schedule: answers returned 11/20, proposals due 12/7 in the afternoon (confirmed; the RFP schedule table said 12/6), shortlisted vendor presentations week of 12/14, vendor selected by 12/31. Work expected to begin around Feb 2027, with launch targeted by mid-August 2027, plus a minimum 90-day defect warranty. Internally we are hands-off from 12/4.",
+      "updated_at": "2026-11-23",
+      "update_note": "Proposal due Mon 12/7 (PM); internal hands-off 12/4"
     },
     {
       "proposal": "Virginia Tourism Corporation",
@@ -1999,31 +2047,31 @@
       "proposal": "NAI Global",
       "client": "NAI Global, Website Redesign and Digital Platform Modernization",
       "type": "RFP (via REQ)",
-      "stage": "Proposal due today (11/20); Homiera drafting",
+      "stage": "Proposal being sent today (11/23)",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Per invitation (PDF proposal)",
       "owners": "Homiera, Ab, Jake Rambo, Izzy",
       "named_staff": "Homiera, Ab, Jake Rambo, Izzy",
       "budget": "$300,000 to $500,000",
-      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief. Update 11/18: Homiera, Ab, and Jake Rambo are meeting 11/19 with decision makers at NAI Global and REQ to learn more about their needs. Update 11/19: the meeting with NAI Global and REQ decision makers was held. Next action: Jake Rambo and Izzy regroup to get a technical walkthrough. Homiera is working on the proposal. Current budget assumption is about $400,000. Update 11/20: the proposal is due today, Friday 11/20. Budget range is $300,000 to $500,000.",
-      "updated_at": "2026-11-20",
-      "update_note": "Proposal due today (11/20); budget range $300k to $500k"
+      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief. Update 11/18: Homiera, Ab, and Jake Rambo are meeting 11/19 with decision makers at NAI Global and REQ to learn more about their needs. Update 11/19: the meeting with NAI Global and REQ decision makers was held. Next action: Jake Rambo and Izzy regroup to get a technical walkthrough. Homiera is working on the proposal. Current budget assumption is about $400,000. Update 11/20: the proposal is due today, Friday 11/20. Budget range is $300,000 to $500,000. Update 11/23: the proposal will be sent today (it slipped from 11/20).",
+      "updated_at": "2026-11-23",
+      "update_note": "Proposal being sent today (11/23)"
     },
     {
       "proposal": "Aspire Schools",
       "client": "Aspire Schools (California)",
       "type": "RFP",
-      "stage": "Under consideration; questions due Fri 11/20",
+      "stage": "Questions sent; proposal due 12/4",
       "key_date": null,
       "key_detail": null,
       "submit_to": "TBD",
       "owners": "Josh B., Homiera, Ab",
       "named_staff": "Josh B., Homiera, Ab",
       "budget": "TBD",
-      "notes": "New RFP for consideration. Aspire Schools, California. Owner, team, dates, and budget to be added. Update 11/19: questions for Aspire Public Schools are due tomorrow, Friday 11/20. Assigned for now: Josh B., Homiera, Ab.",
-      "updated_at": "2026-11-19",
-      "update_note": "Assigned: Josh B., Homiera, Ab"
+      "notes": "New RFP for consideration. Aspire Schools, California. Owner, team, dates, and budget to be added. Update 11/19: questions for Aspire Public Schools are due tomorrow, Friday 11/20. Assigned for now: Josh B., Homiera, Ab. Update 11/23: our questions were sent to Aspire. Proposal due 12/4.",
+      "updated_at": "2026-11-23",
+      "update_note": "Questions sent; proposal due 12/4"
     },
     {
       "proposal": "IFRS Foundation",
@@ -2036,7 +2084,7 @@
       "owners": "Ab, Mary Henkin, Zaid, Vajaah",
       "named_staff": "Ab, Mary Henkin, Zaid, Vajaah",
       "budget": "TBD",
-      "notes": "Inbound request from a former client. Lynne Chauncey reached out to Ab (Slack 11/15 and email) about a focused advisory UX review for the IFRS Foundation's Knowledge Hub (ifrs.org/sustainability/knowledge-hub). Their Education team is user testing a proposed information architecture, navigation and menu model, homepage, and prototype, and wants an external UX partner to independently review and stress-test the work before development. Focus areas: accessibility and UX best practice, findability across a large resource library, whether categories and menu structure make sense, the role of search, and any missed issues or opportunities. Expected output: a concise set of prioritized recommendations with reasoning on what to retain, change, or avoid, not new designs. Lynne asked for a short intro call with the Education team to walk through their work and hear how WDG would approach it, likely level of effort and timing, and availability. Ab confirmed we are open. Ab asked Mary Henkin to regroup with him on scoping and who should join. Timing, budget, and tier are not yet known; latest user research and an updated prototype are expected shortly. Update 11/19: a meeting with the IFRS Foundation is set for 12/2. Mary Henkin is running point. Zaid and Vajaah are also assigned (11/20).",
+      "notes": "Inbound request from a former client. Lynne Chauncey reached out to Ab (Slack 11/15 and email) about a focused advisory UX review for the IFRS Foundation's Knowledge Hub (ifrs.org/sustainability/knowledge-hub). Their Education team is user testing a proposed information architecture, navigation and menu model, homepage, and prototype, and wants an external UX partner to independently review and stress-test the work before development. Focus areas: accessibility and UX best practice, findability across a large resource library, whether categories and menu structure make sense, the role of search, and any missed issues or opportunities. Expected output: a concise set of prioritized recommendations with reasoning on what to retain, change, or avoid, not new designs. Lynne asked for a short intro call with the Education team to walk through their work and hear how WDG would approach it, likely level of effort and timing, and availability. Ab confirmed we are open. Ab asked Mary Henkin to regroup with him on scoping and who should join. Timing, budget, and tier are not yet known; latest user research and an updated prototype are expected shortly. Update 11/19: a meeting with the IFRS Foundation is set for 12/2. Mary Henkin is running point. Zaid and Vajaah are also assigned (11/20). Priority for the week of 11/30: the IFRS call (12/2).",
       "updated_at": "2026-11-20",
       "update_note": "Zaid and Vajaah added to the team"
     },
@@ -2059,16 +2107,31 @@
       "proposal": "USIP",
       "client": "USIP (usip.org), retainer: SMS, PSP, and onboarding audit",
       "type": "Retainer (verbal agreement)",
-      "stage": "Verbal agreement; Homiera preparing the SOW for USIP to sign (due 11/23)",
+      "stage": "Verbal agreement; SOW in preparation; onboarding scheduling; contracting TBD",
       "key_date": null,
       "key_detail": null,
       "submit_to": "USIP",
       "owners": "Homiera",
       "named_staff": "Homiera",
       "budget": "$45,250 (SMS $30,000 for 12 months; PSP 50 hours at $205/hour, $10,250 for 12 months; $5,000 one-time onboarding audit)",
-      "notes": "New retainer with verbal agreement from USIP. Scope: SMS at $30,000 for 12 months; PSP of 50 hours at $205 per hour ($10,250), good for 12 months; and a $5,000 one-time onboarding audit and documentation of usip.org. Total $45,250. USIP is moving to Pantheon, with the migration being done by Pantheon. Homiera is preparing the SOW for USIP to sign, due 11/23.",
-      "updated_at": "2026-11-20",
-      "update_note": "New retainer added: verbal agreement; SOW due 11/23; $45,250 total"
+      "notes": "New retainer with verbal agreement from USIP. Scope: SMS at $30,000 for 12 months; PSP of 50 hours at $205 per hour ($10,250), good for 12 months; and a $5,000 one-time onboarding audit and documentation of usip.org. Total $45,250. USIP is moving to Pantheon, with the migration being done by Pantheon. Homiera is preparing the SOW for USIP to sign, due 11/23. Update 11/23: onboarding is being scheduled; contracting is still TBD.",
+      "updated_at": "2026-11-23",
+      "update_note": "Onboarding being scheduled; contracting TBD"
+    },
+    {
+      "proposal": "CRI",
+      "client": "CIR, cir-usa.org website redesign",
+      "type": "RFP",
+      "stage": "Tier 3; questions being sent 11/24; proposal due 12/2",
+      "key_date": null,
+      "key_detail": null,
+      "submit_to": "CIR",
+      "owners": "TBD",
+      "named_staff": "TBD",
+      "budget": "TBD (CIR says its budget is limited, especially the initial buildout, but could expand in future phases)",
+      "notes": "New RFP: redesign of cir-usa.org to replace the 'old website' impression, launch CIR's new brand, organize cases, news and other material, work well on mobile and meet recognized accessibility standards, improve search and AI discovery, and let staff update content and make minor visual changes. Proposals should cover content and usability, search visibility and AI discovery, accessibility, maintenance and support (including ongoing fees and ownership of domain, content, and accounts), plus a detailed budget with phasing options. Tier 3. Questions being sent 11/24; proposal due 12/2. Owner and team to be assigned.",
+      "updated_at": "2026-11-23",
+      "update_note": "New RFP added; Tier 3; questions sent 11/24; due 12/2"
     }
   ],
   "focus": {
@@ -2158,6 +2221,7 @@
     "Aspire Schools",
     "IFRS Foundation",
     "FactCheck.org",
-    "USIP"
+    "USIP",
+    "CRI"
   ]
 }
