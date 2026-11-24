@@ -245,6 +245,8 @@ def next_proposal_due(prop):
         return cands[0]["date"], cands[0]["milestone"]
     return None, None
 
+UPCOMING_DAYS = 14   # What's Coming Up window, per Homiera 11/23 (was 7)
+
 due_this_week = []
 for p in all_props:
     if p in LOST:
@@ -252,11 +254,11 @@ for p in all_props:
     d, what = next_proposal_due(p)
     if d:
         delta = (datetime.date.fromisoformat(d) - AS_OF).days
-        if 0 <= delta <= 7:
+        if 0 <= delta <= UPCOMING_DAYS:
             due_this_week.append(p)
 
 # Presentations scheduled this week: rows whose milestone mentions a
-# presentation, not cancelled/complete, dated within the next 7 days.
+# presentation, not cancelled/complete, dated within the next 14 days.
 presentations_this_week = []
 for r in s["rows"]:
     if r["status"] in ("Cancelled", "Complete"):
@@ -266,7 +268,7 @@ for r in s["rows"]:
     if r["proposal"] in LOST or not r["date"]:
         continue
     delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
-    if 0 <= delta <= 7:
+    if 0 <= delta <= UPCOMING_DAYS:
         presentations_this_week.append((r["proposal"], r["date"], "Presentation"))
 
 # Clarifying-question deadlines (e.g. Studio.One 11/2), shown in the same list.
@@ -277,7 +279,7 @@ for r in s["rows"]:
     if not r["milestone"].lower().startswith("questions"):
         continue
     delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
-    if 0 <= delta <= 7:
+    if 0 <= delta <= UPCOMING_DAYS:
         questions_this_week.append((r["proposal"], r["date"], "Questions due"))
 
 # Tagged meetings (state.json row tag "MEETING"), e.g. internal REQ/WDG debriefs.
@@ -288,7 +290,7 @@ for r in s["rows"]:
     if r.get("tag") != "MEETING":
         continue
     delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
-    if 0 <= delta <= 7:
+    if 0 <= delta <= UPCOMING_DAYS:
         meetings_this_week.append((r["proposal"], r["date"], "Internal working session" if ("working session" in r["milestone"].lower() or "work session" in r["milestone"].lower()) else "Meeting"))
 
 # Tagged response deadlines (state.json row tag "DEADLINE"), e.g. answering a client's pricing questions.
@@ -297,7 +299,7 @@ for r in s["rows"]:
     if r["status"] in ("Cancelled", "Complete") or r["proposal"] in LOST or not r["date"] or r.get("tag") != "DEADLINE":
         continue
     delta = (datetime.date.fromisoformat(r["date"]) - AS_OF).days
-    if 0 <= delta <= 7:
+    if 0 <= delta <= UPCOMING_DAYS:
         responses_this_week.append((r["proposal"], r["date"], "Intent to bid due" if r["milestone"].lower().startswith("intent to") else "Response due"))
 
 due_this_week_rows = []
@@ -306,7 +308,7 @@ for p in due_this_week:
     due_this_week_rows.append((p, d, "SOW due" if (what or "").lower().startswith("sow") else "Proposal due"))
 
 # Consolidated "What's coming up" list: proposals due and presentations in
-# the next 7 days, merged and sorted by date, per Homiera + Dario 10/28
+# the next 14 days, merged and sorted by date, per Homiera + Dario 10/28
 # (replaces two separate stat tiles).
 upcoming = sorted(due_this_week_rows + presentations_this_week + questions_this_week + meetings_this_week + responses_this_week, key=lambda x: x[1])
 
@@ -746,13 +748,13 @@ def up_row(p, d, typ):
     return (f'<div class="{cls}"><span class="update">{esc(fmt_date(d))}</span>'
             f'<span class="upname">{esc(p)}{pill}</span><span class="uptype">{esc(typ)}</span></div>')
 
-up_rows_html = "".join(up_row(p, d, typ) for p, d, typ in upcoming) or '<div class="uprow" style="border-top:none; color:var(--ink-muted);">Nothing in the next 7 days.</div>'
+up_rows_html = "".join(up_row(p, d, typ) for p, d, typ in upcoming) or '<div class="uprow" style="border-top:none; color:var(--ink-muted);">Nothing in the next 14 days.</div>'
 
 ROW2_HTML = f"""
 <div class="row2">
   <div class="upcoming-tile">
     <div class="upcoming-title">What's coming up</div>
-    <div class="upcoming-sub">Next 7 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}{(" &middot; Questions due: " + str(len(questions_this_week))) if questions_this_week else ""}{(" &middot; Meetings: " + str(len(meetings_this_week))) if meetings_this_week else ""}{(" &middot; Responses due: " + str(len(responses_this_week))) if responses_this_week else ""}</div>
+    <div class="upcoming-sub">Next 14 days &middot; Proposals due: {len(due_this_week)} &middot; Presentations: {len(presentations_this_week)}{(" &middot; Questions due: " + str(len(questions_this_week))) if questions_this_week else ""}{(" &middot; Meetings: " + str(len(meetings_this_week))) if meetings_this_week else ""}{(" &middot; Responses due: " + str(len(responses_this_week))) if responses_this_week else ""}</div>
     {up_rows_html}
   </div>
   <div class="tile iris" style="padding:18px 20px;">
