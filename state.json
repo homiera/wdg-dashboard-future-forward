@@ -1690,9 +1690,9 @@
       "milestone": "SOW due to USIP for signature",
       "type": "Internal (team-set)",
       "owner": "Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "",
-      "notes": "SMS retainer, PSP hours, and onboarding audit. USIP is moving to Pantheon (migration by Pantheon).",
+      "notes": "Signed by USIP 11/23. SMS retainer, PSP hours, and onboarding audit. USIP is moving to Pantheon (migration by Pantheon).",
       "tag": ""
     },
     {
@@ -2118,17 +2118,19 @@
     {
       "proposal": "USIP",
       "client": "USIP (usip.org), retainer: SMS, PSP, and onboarding audit",
-      "type": "Retainer (verbal agreement)",
-      "stage": "Verbal agreement; SOW in preparation; onboarding scheduling; contracting TBD",
+      "type": "Retainer (signed)",
+      "stage": "Contract fully signed 11/23; onboarding being scheduled",
       "key_date": null,
       "key_detail": null,
       "submit_to": "USIP",
       "owners": "Homiera",
       "named_staff": "Homiera",
       "budget": "$45,250 (SMS $30,000 for 12 months; PSP 50 hours at $205/hour, $10,250 for 12 months; $5,000 one-time onboarding audit)",
-      "notes": "New retainer with verbal agreement from USIP. Scope: SMS at $30,000 for 12 months; PSP of 50 hours at $205 per hour ($10,250), good for 12 months; and a $5,000 one-time onboarding audit and documentation of usip.org. Total $45,250. USIP is moving to Pantheon, with the migration being done by Pantheon. Homiera is preparing the SOW for USIP to sign, due 11/23. Update 11/23: onboarding is being scheduled; contracting is still TBD.",
+      "notes": "New retainer with verbal agreement from USIP. Scope: SMS at $30,000 for 12 months; PSP of 50 hours at $205 per hour ($10,250), good for 12 months; and a $5,000 one-time onboarding audit and documentation of usip.org. Total $45,250. USIP is moving to Pantheon, with the migration being done by Pantheon. Homiera prepared the SOW for USIP. Update 11/23: USIP signed. The contract closed 11/23 at a total of $45,250. Onboarding is being scheduled. Josh Brittenham is the assigned PM.",
       "updated_at": "2026-11-23",
-      "update_note": "Onboarding being scheduled; contracting TBD"
+      "update_note": "USIP signed and closed 11/23 ($45,250); PM Josh Brittenham",
+      "pm": "Josh Brittenham",
+      "close_date": "2026-11-23"
     },
     {
       "proposal": "CRI",
