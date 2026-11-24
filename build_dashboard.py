@@ -121,6 +121,7 @@ SLACK = {
     "American Red Cross": "https://wdg.slack.com/archives/C0CG3N4E6DC",
     "NAI Global": "https://wdg.slack.com/archives/C0CHCQXTP41",
     "CRI": "https://wdg.slack.com/archives/C0CL3JU2C1W",
+    "USIP": "https://wdg.slack.com/archives/C0CHQ08UF39",
     "FactCheck.org": "https://wdg.slack.com/archives/C0CKRNKH98Q",
     "IFRS Foundation": "https://wdg.slack.com/archives/C0CHZJR6M6Z",
     "Aspire Schools": "https://wdg.slack.com/archives/C0CJ592QR08",
