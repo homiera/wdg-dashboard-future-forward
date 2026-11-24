@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-11-23",
+  "as_of": "2026-11-24",
   "focus_note": "- UAE Embassy is back under consideration after being marked withdrawn Oct 19. Due Nov 5, still pending Agital legal and Ab's go/no-go.\n- Open Technology Fund and AKF were both submitted this week (OTF Thu Oct 22, AKF Fri night Oct 23); both confirmed received. Both now awaiting the prospect's next steps.\n- ARC has a presentation meeting Thu Oct 29: 10-minute overview, rest of the hour is ARC's Q&A. Ab confirming attendees.\n- Tinuiti's case-study spec deck was submitted Fri morning Oct 23. Walk-through presentation set for Wed Oct 28, 2-4pm Central; Doug is out, Vajaah/Dario assumed (Ab to confirm).\n- Heritage.org's Stephanie sent a list of follow-up questions after last week's in-person meeting; Ab is drafting responses. Heritage Action (a separate engagement) has discovery complete and is closing on its Phase 2 SOW.\n- Columbia Association remains in contracting.\n- Community of Christ: lost (Homiera confirmed Oct 26); no reason or winning vendor given yet. NLC: no new update this week, still reviewing internally.",
   "rows": [
     {
@@ -2109,11 +2109,11 @@
       "key_detail": null,
       "submit_to": "Via UPenn Marketplace",
       "owners": "Ab",
-      "named_staff": "Ab, Mary H. (PM lead for the proposal)",
+      "named_staff": "Ab, Mary H. (PM lead for the proposal), Kurtis (technical lead)",
       "budget": "$90,000 to $120,000 (target; blended rate of $165/hour, our UPenn partnership rate)",
-      "notes": "New RFP for consideration, found on the UPenn Marketplace: website redesign for factcheck.org. Proposals due 12/11/2026. Current owner is Ab. Mary H. is PM lead for the proposal; other team leads pending. Update 11/23: targeting a $90,000 to $120,000 budget range, priced at a $165/hour blended rate (our UPenn partnership rate). Tier 1. Mary H. supports PM-related topics.",
-      "updated_at": "2026-11-23",
-      "update_note": "Mary H. supporting PM-related topics"
+      "notes": "New RFP for consideration, found on the UPenn Marketplace: website redesign for factcheck.org. Proposals due 12/11/2026. Current owner is Ab. Mary H. is PM lead for the proposal; Kurtis is technical lead; other team leads pending. Update 11/23: targeting a $90,000 to $120,000 budget range, priced at a $165/hour blended rate (our UPenn partnership rate). Tier 1. Mary H. supports PM-related topics.",
+      "updated_at": "2026-11-24",
+      "update_note": "Kurtis named technical lead"
     },
     {
       "proposal": "USIP",
