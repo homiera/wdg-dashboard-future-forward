@@ -1675,12 +1675,12 @@
       "date": "2026-11-23",
       "through": null,
       "proposal": "NAI Global",
-      "milestone": "Proposal due (sending today)",
+      "milestone": "Proposal submitted",
       "type": "Prospect-set",
       "owner": "Homiera",
-      "status": "Open",
+      "status": "Complete",
       "marker": "HARD DEADLINE",
-      "notes": "Moved from 11/20. Sending today.",
+      "notes": "Submitted 11/23 (originally due 11/20).",
       "tag": ""
     },
     {
@@ -2059,16 +2059,16 @@
       "proposal": "NAI Global",
       "client": "NAI Global, Website Redesign and Digital Platform Modernization",
       "type": "RFP (via REQ)",
-      "stage": "Proposal being sent today (11/23)",
+      "stage": "Submitted 11/23; awaiting NAI Global's decision",
       "key_date": null,
       "key_detail": null,
       "submit_to": "Per invitation (PDF proposal)",
       "owners": "Homiera, Ab, Jake Rambo, Izzy",
       "named_staff": "Homiera, Ab, Jake Rambo, Izzy",
-      "budget": "$300,000 to $500,000",
-      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief. Update 11/18: Homiera, Ab, and Jake Rambo are meeting 11/19 with decision makers at NAI Global and REQ to learn more about their needs. Update 11/19: the meeting with NAI Global and REQ decision makers was held. Next action: Jake Rambo and Izzy regroup to get a technical walkthrough. Homiera is working on the proposal. Current budget assumption is about $400,000. Update 11/20: the proposal is due today, Friday 11/20. Budget range is $300,000 to $500,000. Update 11/23: the proposal will be sent today (it slipped from 11/20).",
+      "budget": "$130,000 to $180,000 (proposed: Phase 1 and discovery; full engagement previously estimated at $300,000 to $500,000)",
+      "notes": "RFP comes from REQ, for whom NAI Global is a current client. Member association seeking a WordPress website design and build. NAI Global had signaled a $100,000 ceiling for the core project, but our read as of 11/17 is a comparable project to the Big I effort, if not bigger, at roughly $400,000+. Homiera will schedule a call with NAI Global and Ab while she prepares the proposal. Maria (REQ) is also scheduling a debrief with us on the RFP. REQ's work for NAI Global is PR and content. Scope: redesign the corporate site and modernize the platform behind roughly 74 member websites on WordPress, with a member-site reference architecture, data integrations (Buildout, api.naiglobal.com, Workvivo), migration, SEO/GEO, accessibility, and governance. NAI Global asks for the earliest credible launch window and does not prescribe a schedule. The RFP states no due date; confirm in the debrief. Update 11/18: Homiera, Ab, and Jake Rambo are meeting 11/19 with decision makers at NAI Global and REQ to learn more about their needs. Update 11/19: the meeting with NAI Global and REQ decision makers was held. Next action: Jake Rambo and Izzy regroup to get a technical walkthrough. Homiera is working on the proposal. Current budget assumption is about $400,000. Update 11/20: the proposal is due today, Friday 11/20. Budget range is $300,000 to $500,000. Update 11/23: the proposal was submitted on 11/23 (it slipped from 11/20). Proposed budget covers Phase 1 and discovery at $130,000 to $180,000.",
       "updated_at": "2026-11-23",
-      "update_note": "Proposal being sent today (11/23)"
+      "update_note": "Proposal submitted 11/23; Phase 1 and discovery proposed at $130-180k"
     },
     {
       "proposal": "Aspire Schools",

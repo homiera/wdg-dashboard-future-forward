@@ -33,7 +33,7 @@ CONTRACTING = {"Columbia Association", "Heritage Action", "Heritage.org", "Appal
 # Technology Fund ("pending OTF's next steps"). UAE Embassy's "pending ...
 # decision" is WDG's own internal/legal call, not the client's, so it's
 # left out of this set on purpose.
-AWAITING_DECISION = {"NLC", "UAE Embassy", "American Kidney Fund", "Open Technology Fund", "Fairfax County EDA"}   # per Homiera 11/18: nothing pending on our side
+AWAITING_DECISION = {"NLC", "UAE Embassy", "American Kidney Fund", "Open Technology Fund", "Fairfax County EDA", "NAI Global"}   # per Homiera 11/18: nothing pending on our side
 
 # Per-pursuit badge text for the "In Flight" bucket, per Homiera 10/28.
 # Falls back to "In Flight" for anything not listed here. This also drives
@@ -42,8 +42,9 @@ AWAITING_DECISION = {"NLC", "UAE Embassy", "American Kidney Fund", "Open Technol
 STATUS_OVERRIDE = {
     # In progress per Homiera 11/19
     "American Red Cross": "In Progress", "Aspire Schools": "In Progress", "FactCheck.org": "In Progress",
-    "IFRS Foundation": "In Progress", "CRI": "In Progress", "NAI Global": "In Progress", "Virginia Tourism Corporation": "In Progress",
+    "IFRS Foundation": "In Progress", "CRI": "In Progress", "Virginia Tourism Corporation": "In Progress",
     "Fairfax County EDA": "Submitted",
+    "NAI Global": "Submitted",
     "UAE Embassy": "Submitted",
     "Studio.One": "Submitted",
     "American Kidney Fund": "Submitted",
@@ -131,6 +132,7 @@ SLACK = {
 # so far (Homiera 10/28); everything else still shows "not linked yet" in
 # the detail view until a link is provided.
 DECK_LINK = {
+    "NAI Global": "https://drive.google.com/file/d/1MPYLw7b30iFn0TG2qFRUB_77VnjIc0ck/view?usp=drive_link",
     "Studio.One": "https://claude.ai/artifact/Hsyn8XJjgATV2LhQpHFon6?sk=WgvLblq347wW8Ccq3gEvWA#slide-3dd33bdac6c2",
     "NLC": "https://www.figma.com/slides/NrrNVzBOrKLITZCILPu6BF/NLC-2026-Proposal?t=NmAJoEPcestqr4qc-6",
     "Appalachian Regional Commission": "https://www.figma.com/slides/YUJIbGsp0N15tx7RDLPhuG/Appalachian-Regional-Commission-Presentation-Deck?t=NmAJoEPcestqr4qc-6",
